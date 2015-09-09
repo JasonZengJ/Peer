@@ -7,13 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		374EEB672DF99B043B9F46A3 /* libPods-Peer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 62BB40AEF92723EF99278C70 /* libPods-Peer.a */; };
 		966B517F1B7F8D70000F0EF2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 966B517E1B7F8D70000F0EF2 /* main.m */; };
 		966B51821B7F8D70000F0EF2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 966B51811B7F8D70000F0EF2 /* AppDelegate.m */; };
 		966B51851B7F8D70000F0EF2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 966B51841B7F8D70000F0EF2 /* ViewController.m */; };
-		966B51881B7F8D70000F0EF2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 966B51861B7F8D70000F0EF2 /* Main.storyboard */; };
 		966B518A1B7F8D70000F0EF2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 966B51891B7F8D70000F0EF2 /* Images.xcassets */; };
 		966B518D1B7F8D70000F0EF2 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 966B518B1B7F8D70000F0EF2 /* LaunchScreen.xib */; };
 		966B51991B7F8D70000F0EF2 /* PeerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 966B51981B7F8D70000F0EF2 /* PeerTests.m */; };
+		96C596971BA0784D00A93F9E /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96C596961BA0784D00A93F9E /* LoginViewController.m */; };
+		96C5969C1BA078EB00A93F9E /* PeerNetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 96C5969B1BA078EB00A93F9E /* PeerNetworkManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +29,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		272BA73686C155AAE8390D47 /* Pods-Peer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Peer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Peer/Pods-Peer.debug.xcconfig"; sourceTree = "<group>"; };
+		62BB40AEF92723EF99278C70 /* libPods-Peer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Peer.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		966B51791B7F8D70000F0EF2 /* Peer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Peer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		966B517D1B7F8D70000F0EF2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		966B517E1B7F8D70000F0EF2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -34,12 +38,17 @@
 		966B51811B7F8D70000F0EF2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		966B51831B7F8D70000F0EF2 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		966B51841B7F8D70000F0EF2 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		966B51871B7F8D70000F0EF2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		966B51891B7F8D70000F0EF2 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		966B518C1B7F8D70000F0EF2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		966B51921B7F8D70000F0EF2 /* PeerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PeerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		966B51971B7F8D70000F0EF2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		966B51981B7F8D70000F0EF2 /* PeerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PeerTests.m; sourceTree = "<group>"; };
+		966B51A91B7FA959000F0EF2 /* Peer-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Peer-Prefix.pch"; sourceTree = "<group>"; };
+		96C596951BA0784D00A93F9E /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		96C596961BA0784D00A93F9E /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		96C5969A1BA078EB00A93F9E /* PeerNetworkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PeerNetworkManager.h; sourceTree = "<group>"; };
+		96C5969B1BA078EB00A93F9E /* PeerNetworkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PeerNetworkManager.m; sourceTree = "<group>"; };
+		A1FE296EA4C7788C849801D9 /* Pods-Peer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Peer.release.xcconfig"; path = "Pods/Target Support Files/Pods-Peer/Pods-Peer.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				374EEB672DF99B043B9F46A3 /* libPods-Peer.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,12 +70,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1B4F7B120EE7351ACEF659A5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				62BB40AEF92723EF99278C70 /* libPods-Peer.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		966B51701B7F8D70000F0EF2 = {
 			isa = PBXGroup;
 			children = (
 				966B517B1B7F8D70000F0EF2 /* Peer */,
 				966B51951B7F8D70000F0EF2 /* PeerTests */,
 				966B517A1B7F8D70000F0EF2 /* Products */,
+				A5EF66DA01FA01C7F7BB91CC /* Pods */,
+				1B4F7B120EE7351ACEF659A5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -81,11 +101,11 @@
 		966B517B1B7F8D70000F0EF2 /* Peer */ = {
 			isa = PBXGroup;
 			children = (
+				966B51A71B7FA83E000F0EF2 /* Resources */,
+				966B51A41B7FA7F1000F0EF2 /* Components */,
+				966B51A21B7FA7B5000F0EF2 /* ViewControllers */,
 				966B51801B7F8D70000F0EF2 /* AppDelegate.h */,
 				966B51811B7F8D70000F0EF2 /* AppDelegate.m */,
-				966B51831B7F8D70000F0EF2 /* ViewController.h */,
-				966B51841B7F8D70000F0EF2 /* ViewController.m */,
-				966B51861B7F8D70000F0EF2 /* Main.storyboard */,
 				966B51891B7F8D70000F0EF2 /* Images.xcassets */,
 				966B518B1B7F8D70000F0EF2 /* LaunchScreen.xib */,
 				966B517C1B7F8D70000F0EF2 /* Supporting Files */,
@@ -98,6 +118,7 @@
 			children = (
 				966B517D1B7F8D70000F0EF2 /* Info.plist */,
 				966B517E1B7F8D70000F0EF2 /* main.m */,
+				966B51A91B7FA959000F0EF2 /* Peer-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -119,6 +140,98 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		966B51A21B7FA7B5000F0EF2 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				96C596931BA0783200A93F9E /* User */,
+				966B51831B7F8D70000F0EF2 /* ViewController.h */,
+				966B51841B7F8D70000F0EF2 /* ViewController.m */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		966B51A31B7FA7BE000F0EF2 /* Vendor */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Vendor;
+			sourceTree = "<group>";
+		};
+		966B51A41B7FA7F1000F0EF2 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				96C596991BA0786D00A93F9E /* Services */,
+				96C596981BA0785600A93F9E /* Network */,
+				966B51A61B7FA803000F0EF2 /* Protocol */,
+				966B51A51B7FA7FA000F0EF2 /* Categories */,
+				966B51A31B7FA7BE000F0EF2 /* Vendor */,
+			);
+			name = Components;
+			sourceTree = "<group>";
+		};
+		966B51A51B7FA7FA000F0EF2 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
+		966B51A61B7FA803000F0EF2 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Protocol;
+			sourceTree = "<group>";
+		};
+		966B51A71B7FA83E000F0EF2 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		96C596931BA0783200A93F9E /* User */ = {
+			isa = PBXGroup;
+			children = (
+				96C596941BA0783D00A93F9E /* Login */,
+			);
+			name = User;
+			sourceTree = "<group>";
+		};
+		96C596941BA0783D00A93F9E /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				96C596951BA0784D00A93F9E /* LoginViewController.h */,
+				96C596961BA0784D00A93F9E /* LoginViewController.m */,
+			);
+			name = Login;
+			sourceTree = "<group>";
+		};
+		96C596981BA0785600A93F9E /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				96C5969A1BA078EB00A93F9E /* PeerNetworkManager.h */,
+				96C5969B1BA078EB00A93F9E /* PeerNetworkManager.m */,
+			);
+			name = Network;
+			sourceTree = "<group>";
+		};
+		96C596991BA0786D00A93F9E /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
+		A5EF66DA01FA01C7F7BB91CC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				272BA73686C155AAE8390D47 /* Pods-Peer.debug.xcconfig */,
+				A1FE296EA4C7788C849801D9 /* Pods-Peer.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -126,9 +239,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 966B519C1B7F8D70000F0EF2 /* Build configuration list for PBXNativeTarget "Peer" */;
 			buildPhases = (
+				46241B408D2057210C604892 /* Check Pods Manifest.lock */,
 				966B51751B7F8D70000F0EF2 /* Sources */,
 				966B51761B7F8D70000F0EF2 /* Frameworks */,
 				966B51771B7F8D70000F0EF2 /* Resources */,
+				C11AB9B8FC549C23D541E4F0 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -168,6 +283,7 @@
 				TargetAttributes = {
 					966B51781B7F8D70000F0EF2 = {
 						CreatedOnToolsVersion = 6.4;
+						DevelopmentTeam = 7K4673R67D;
 					};
 					966B51911B7F8D70000F0EF2 = {
 						CreatedOnToolsVersion = 6.4;
@@ -199,7 +315,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				966B51881B7F8D70000F0EF2 /* Main.storyboard in Resources */,
 				966B518D1B7F8D70000F0EF2 /* LaunchScreen.xib in Resources */,
 				966B518A1B7F8D70000F0EF2 /* Images.xcassets in Resources */,
 			);
@@ -214,11 +329,46 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		46241B408D2057210C604892 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C11AB9B8FC549C23D541E4F0 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Peer/Pods-Peer-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		966B51751B7F8D70000F0EF2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96C5969C1BA078EB00A93F9E /* PeerNetworkManager.m in Sources */,
+				96C596971BA0784D00A93F9E /* LoginViewController.m in Sources */,
 				966B51851B7F8D70000F0EF2 /* ViewController.m in Sources */,
 				966B51821B7F8D70000F0EF2 /* AppDelegate.m in Sources */,
 				966B517F1B7F8D70000F0EF2 /* main.m in Sources */,
@@ -244,14 +394,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		966B51861B7F8D70000F0EF2 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				966B51871B7F8D70000F0EF2 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		966B518B1B7F8D70000F0EF2 /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -299,7 +441,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -336,7 +478,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -345,9 +487,14 @@
 		};
 		966B519D1B7F8D70000F0EF2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 272BA73686C155AAE8390D47 /* Pods-Peer.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Peer/Peer-Prefix.pch";
 				INFOPLIST_FILE = Peer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -355,9 +502,14 @@
 		};
 		966B519E1B7F8D70000F0EF2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A1FE296EA4C7788C849801D9 /* Pods-Peer.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Peer/Peer-Prefix.pch";
 				INFOPLIST_FILE = Peer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -371,6 +523,8 @@
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Peer/Peer-prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -390,6 +544,8 @@
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Peer/Peer-prefix.pch";
 				INFOPLIST_FILE = PeerTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -416,6 +572,7 @@
 				966B519E1B7F8D70000F0EF2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		966B519F1B7F8D70000F0EF2 /* Build configuration list for PBXNativeTarget "PeerTests" */ = {
 			isa = XCConfigurationList;
@@ -424,6 +581,7 @@
 				966B51A11B7F8D70000F0EF2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

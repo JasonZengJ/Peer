@@ -1,0 +1,9 @@
+.git/*
+.DS_Store
+Podfile.lock
+Podfile
+Pods
+xcuserdata
+#xcshareddata
+Peer.xcworkspace/contents.xcworkspacedata
+Peer.xcworkspace/xcshareddata/
