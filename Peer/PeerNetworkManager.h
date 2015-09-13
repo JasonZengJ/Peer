@@ -10,4 +10,7 @@
 
 @interface PeerNetworkManager : NSObject
 
+- (void)postWithParams:(NSDictionary *)params url:(NSString *)url target:(id)target callBack:(SEL)callBack;
+- (void)getDataWithParams:(NSDictionary *)params url:(NSString *)url target:(id)target callBack:(SEL)callBack;
+
 @end

@@ -16,6 +16,9 @@
 		966B51991B7F8D70000F0EF2 /* PeerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 966B51981B7F8D70000F0EF2 /* PeerTests.m */; };
 		96C596971BA0784D00A93F9E /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96C596961BA0784D00A93F9E /* LoginViewController.m */; };
 		96C5969C1BA078EB00A93F9E /* PeerNetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 96C5969B1BA078EB00A93F9E /* PeerNetworkManager.m */; };
+		96C5969F1BA07B2400A93F9E /* UIView+Layout.m in Sources */ = {isa = PBXBuildFile; fileRef = 96C5969E1BA07B2400A93F9E /* UIView+Layout.m */; };
+		96C596A21BA07B3700A93F9E /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = 96C596A11BA07B3700A93F9E /* UIColor+Hex.m */; };
+		96C596A51BA07B4200A93F9E /* NSData+JSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 96C596A41BA07B4200A93F9E /* NSData+JSON.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +51,12 @@
 		96C596961BA0784D00A93F9E /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		96C5969A1BA078EB00A93F9E /* PeerNetworkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PeerNetworkManager.h; sourceTree = "<group>"; };
 		96C5969B1BA078EB00A93F9E /* PeerNetworkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PeerNetworkManager.m; sourceTree = "<group>"; };
+		96C5969D1BA07B2400A93F9E /* UIView+Layout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Layout.h"; sourceTree = "<group>"; };
+		96C5969E1BA07B2400A93F9E /* UIView+Layout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Layout.m"; sourceTree = "<group>"; };
+		96C596A01BA07B3700A93F9E /* UIColor+Hex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Hex.h"; sourceTree = "<group>"; };
+		96C596A11BA07B3700A93F9E /* UIColor+Hex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Hex.m"; sourceTree = "<group>"; };
+		96C596A31BA07B4200A93F9E /* NSData+JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+JSON.h"; sourceTree = "<group>"; };
+		96C596A41BA07B4200A93F9E /* NSData+JSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+JSON.m"; sourceTree = "<group>"; };
 		A1FE296EA4C7788C849801D9 /* Pods-Peer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Peer.release.xcconfig"; path = "Pods/Target Support Files/Pods-Peer/Pods-Peer.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -172,6 +181,12 @@
 		966B51A51B7FA7FA000F0EF2 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				96C596A31BA07B4200A93F9E /* NSData+JSON.h */,
+				96C596A41BA07B4200A93F9E /* NSData+JSON.m */,
+				96C596A01BA07B3700A93F9E /* UIColor+Hex.h */,
+				96C596A11BA07B3700A93F9E /* UIColor+Hex.m */,
+				96C5969D1BA07B2400A93F9E /* UIView+Layout.h */,
+				96C5969E1BA07B2400A93F9E /* UIView+Layout.m */,
 			);
 			name = Categories;
 			sourceTree = "<group>";
@@ -367,9 +382,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96C596A51BA07B4200A93F9E /* NSData+JSON.m in Sources */,
 				96C5969C1BA078EB00A93F9E /* PeerNetworkManager.m in Sources */,
 				96C596971BA0784D00A93F9E /* LoginViewController.m in Sources */,
+				96C5969F1BA07B2400A93F9E /* UIView+Layout.m in Sources */,
 				966B51851B7F8D70000F0EF2 /* ViewController.m in Sources */,
+				96C596A21BA07B3700A93F9E /* UIColor+Hex.m in Sources */,
 				966B51821B7F8D70000F0EF2 /* AppDelegate.m in Sources */,
 				966B517F1B7F8D70000F0EF2 /* main.m in Sources */,
 			);
