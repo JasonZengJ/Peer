@@ -10,13 +10,31 @@
 
 @interface LoginViewController ()
 
+@property(nonatomic) UIImageView *backgroundImageView;
+
 @end
 
 @implementation LoginViewController
 
+
+- (UIImageView *)backgroundImageView {
+    if (_backgroundImageView) {
+        _backgroundImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"backgroundimage"]];
+    }
+    return _backgroundImageView;
+}
+
+- (void)loadView {
+    [super loadView];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    
+    
+    
 }
 
 - (void)didReceiveMemoryWarning {

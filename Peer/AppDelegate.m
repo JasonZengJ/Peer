@@ -21,7 +21,7 @@
     // Override point for customization after application launch.
     
     self.window = [[UIWindow alloc] initWithFrame:ScreenBounds];
-    self.window.rootViewController = [[ViewController alloc] init];
+    self.window.rootViewController = [[LoginViewController alloc] init];
     [self.window makeKeyAndVisible];
     
     
