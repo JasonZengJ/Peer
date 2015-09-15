@@ -47,6 +47,8 @@ typedef NS_ENUM(NSInteger, UIViewBorder) {
 - (void)showTopBorder;
 - (void)showBottomBorder;
 
+- (void)setBorderColor:(UIColor *)color withTag:(UIViewBorder)viewBorder;
+
 - (void)addLineWithFrame:(CGRect)frame border:(UIViewBorder)border;
 - (void)addLineWithFrame:(CGRect)frame border:(UIViewBorder)border lineColor:(UIColor *)lineColor;
 - (UITapGestureRecognizer *)addTapGestureWithTarget:(id)target action:(SEL)action;

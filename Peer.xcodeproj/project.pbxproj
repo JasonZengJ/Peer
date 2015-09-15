@@ -8,13 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		374EEB672DF99B043B9F46A3 /* libPods-Peer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 62BB40AEF92723EF99278C70 /* libPods-Peer.a */; };
-		964B342F1BA5CCBF009DD599 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 964B342E1BA5CCBF009DD599 /* background.png */; };
-		964B34361BA5CD72009DD599 /* NSData+JSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 964B34311BA5CD72009DD599 /* NSData+JSON.m */; };
-		964B34371BA5CD72009DD599 /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = 964B34331BA5CD72009DD599 /* UIColor+Hex.m */; };
-		964B34381BA5CD72009DD599 /* UIView+Layout.m in Sources */ = {isa = PBXBuildFile; fileRef = 964B34351BA5CD72009DD599 /* UIView+Layout.m */; };
-		964B343B1BA5CD9D009DD599 /* PeerNetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 964B343A1BA5CD9D009DD599 /* PeerNetworkManager.m */; };
-		964B343E1BA5CDB8009DD599 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 964B343D1BA5CDB8009DD599 /* LoginViewController.m */; };
-		964B34411BA5CDCE009DD599 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 964B34401BA5CDCE009DD599 /* ViewController.m */; };
+		960103F41BA8795500152908 /* PeerNetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 960103EC1BA8795500152908 /* PeerNetworkManager.m */; };
+		960103F51BA8795500152908 /* OpenUDID.m in Sources */ = {isa = PBXBuildFile; fileRef = 960103F01BA8795500152908 /* OpenUDID.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		960103FF1BA879C800152908 /* NSData+JSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 960103F81BA879C800152908 /* NSData+JSON.m */; };
+		960104001BA879C800152908 /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = 960103FA1BA879C800152908 /* UIColor+Hex.m */; };
+		960104011BA879C800152908 /* UIImage+Color.m in Sources */ = {isa = PBXBuildFile; fileRef = 960103FC1BA879C800152908 /* UIImage+Color.m */; };
+		960104021BA879C800152908 /* UIView+Layout.m in Sources */ = {isa = PBXBuildFile; fileRef = 960103FE1BA879C800152908 /* UIView+Layout.m */; };
+		960104081BA879E200152908 /* AppService.m in Sources */ = {isa = PBXBuildFile; fileRef = 960104051BA879E200152908 /* AppService.m */; };
+		960104091BA879E200152908 /* LoginService.m in Sources */ = {isa = PBXBuildFile; fileRef = 960104071BA879E200152908 /* LoginService.m */; };
+		960104131BA879F600152908 /* LoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9601040E1BA879F600152908 /* LoginView.m */; };
+		960104141BA879F600152908 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 960104101BA879F600152908 /* LoginViewController.m */; };
+		960104151BA879F600152908 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 960104121BA879F600152908 /* ViewController.m */; };
+		960104191BA87A1C00152908 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 960104181BA87A1C00152908 /* background.png */; };
+		9601041B1BA87A3A00152908 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 9601041A1BA87A3A00152908 /* logo.png */; };
+		961D2E4A1BA715C200C84C8B /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 961D2E491BA715C200C84C8B /* QuartzCore.framework */; };
+		961D2E4C1BA715D500C84C8B /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 961D2E4B1BA715D500C84C8B /* Accelerate.framework */; };
 		966B517F1B7F8D70000F0EF2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 966B517E1B7F8D70000F0EF2 /* main.m */; };
 		966B51821B7F8D70000F0EF2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 966B51811B7F8D70000F0EF2 /* AppDelegate.m */; };
 		966B518A1B7F8D70000F0EF2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 966B51891B7F8D70000F0EF2 /* Images.xcassets */; };
@@ -35,19 +43,32 @@
 /* Begin PBXFileReference section */
 		272BA73686C155AAE8390D47 /* Pods-Peer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Peer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Peer/Pods-Peer.debug.xcconfig"; sourceTree = "<group>"; };
 		62BB40AEF92723EF99278C70 /* libPods-Peer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Peer.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		964B342E1BA5CCBF009DD599 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = background.png; path = Rsources/images/background.png; sourceTree = "<group>"; };
-		964B34301BA5CD72009DD599 /* NSData+JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSData+JSON.h"; path = "Components/Categories/NSData+JSON.h"; sourceTree = "<group>"; };
-		964B34311BA5CD72009DD599 /* NSData+JSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSData+JSON.m"; path = "Components/Categories/NSData+JSON.m"; sourceTree = "<group>"; };
-		964B34321BA5CD72009DD599 /* UIColor+Hex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIColor+Hex.h"; path = "Components/Categories/UIColor+Hex.h"; sourceTree = "<group>"; };
-		964B34331BA5CD72009DD599 /* UIColor+Hex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIColor+Hex.m"; path = "Components/Categories/UIColor+Hex.m"; sourceTree = "<group>"; };
-		964B34341BA5CD72009DD599 /* UIView+Layout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+Layout.h"; path = "Components/Categories/UIView+Layout.h"; sourceTree = "<group>"; };
-		964B34351BA5CD72009DD599 /* UIView+Layout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+Layout.m"; path = "Components/Categories/UIView+Layout.m"; sourceTree = "<group>"; };
-		964B34391BA5CD9D009DD599 /* PeerNetworkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PeerNetworkManager.h; path = Components/Network/PeerNetworkManager.h; sourceTree = "<group>"; };
-		964B343A1BA5CD9D009DD599 /* PeerNetworkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PeerNetworkManager.m; path = Components/Network/PeerNetworkManager.m; sourceTree = "<group>"; };
-		964B343C1BA5CDB8009DD599 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginViewController.h; path = ViewControllers/User/Login/LoginViewController.h; sourceTree = "<group>"; };
-		964B343D1BA5CDB8009DD599 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginViewController.m; path = ViewControllers/User/Login/LoginViewController.m; sourceTree = "<group>"; };
-		964B343F1BA5CDCE009DD599 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ViewController.h; path = ViewControllers/ViewController.h; sourceTree = "<group>"; };
-		964B34401BA5CDCE009DD599 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ViewController.m; path = ViewControllers/ViewController.m; sourceTree = "<group>"; };
+		960103EB1BA8795500152908 /* PeerNetworkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PeerNetworkManager.h; sourceTree = "<group>"; };
+		960103EC1BA8795500152908 /* PeerNetworkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PeerNetworkManager.m; sourceTree = "<group>"; };
+		960103EF1BA8795500152908 /* OpenUDID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenUDID.h; sourceTree = "<group>"; };
+		960103F01BA8795500152908 /* OpenUDID.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenUDID.m; sourceTree = "<group>"; };
+		960103F71BA879C800152908 /* NSData+JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+JSON.h"; sourceTree = "<group>"; };
+		960103F81BA879C800152908 /* NSData+JSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+JSON.m"; sourceTree = "<group>"; };
+		960103F91BA879C800152908 /* UIColor+Hex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Hex.h"; sourceTree = "<group>"; };
+		960103FA1BA879C800152908 /* UIColor+Hex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Hex.m"; sourceTree = "<group>"; };
+		960103FB1BA879C800152908 /* UIImage+Color.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Color.h"; sourceTree = "<group>"; };
+		960103FC1BA879C800152908 /* UIImage+Color.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Color.m"; sourceTree = "<group>"; };
+		960103FD1BA879C800152908 /* UIView+Layout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Layout.h"; sourceTree = "<group>"; };
+		960103FE1BA879C800152908 /* UIView+Layout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Layout.m"; sourceTree = "<group>"; };
+		960104041BA879E200152908 /* AppService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppService.h; sourceTree = "<group>"; };
+		960104051BA879E200152908 /* AppService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppService.m; sourceTree = "<group>"; };
+		960104061BA879E200152908 /* LoginService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginService.h; sourceTree = "<group>"; };
+		960104071BA879E200152908 /* LoginService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginService.m; sourceTree = "<group>"; };
+		9601040D1BA879F600152908 /* LoginView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginView.h; sourceTree = "<group>"; };
+		9601040E1BA879F600152908 /* LoginView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginView.m; sourceTree = "<group>"; };
+		9601040F1BA879F600152908 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		960104101BA879F600152908 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		960104111BA879F600152908 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		960104121BA879F600152908 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		960104181BA87A1C00152908 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
+		9601041A1BA87A3A00152908 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
+		961D2E491BA715C200C84C8B /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		961D2E4B1BA715D500C84C8B /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
 		966B51791B7F8D70000F0EF2 /* Peer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Peer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		966B517D1B7F8D70000F0EF2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		966B517E1B7F8D70000F0EF2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -67,6 +88,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				961D2E4C1BA715D500C84C8B /* Accelerate.framework in Frameworks */,
+				961D2E4A1BA715C200C84C8B /* QuartzCore.framework in Frameworks */,
 				374EEB672DF99B043B9F46A3 /* libPods-Peer.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -84,9 +107,119 @@
 		1B4F7B120EE7351ACEF659A5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				961D2E4B1BA715D500C84C8B /* Accelerate.framework */,
+				961D2E491BA715C200C84C8B /* QuartzCore.framework */,
 				62BB40AEF92723EF99278C70 /* libPods-Peer.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		960103E21BA8795500152908 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				960103F61BA879C800152908 /* Categories */,
+				960103EA1BA8795500152908 /* Network */,
+				960103ED1BA8795500152908 /* Vendor */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		960103EA1BA8795500152908 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				960103EB1BA8795500152908 /* PeerNetworkManager.h */,
+				960103EC1BA8795500152908 /* PeerNetworkManager.m */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		960103ED1BA8795500152908 /* Vendor */ = {
+			isa = PBXGroup;
+			children = (
+				960103EE1BA8795500152908 /* OpenUDID */,
+			);
+			path = Vendor;
+			sourceTree = "<group>";
+		};
+		960103EE1BA8795500152908 /* OpenUDID */ = {
+			isa = PBXGroup;
+			children = (
+				960103EF1BA8795500152908 /* OpenUDID.h */,
+				960103F01BA8795500152908 /* OpenUDID.m */,
+			);
+			path = OpenUDID;
+			sourceTree = "<group>";
+		};
+		960103F61BA879C800152908 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				960103F71BA879C800152908 /* NSData+JSON.h */,
+				960103F81BA879C800152908 /* NSData+JSON.m */,
+				960103F91BA879C800152908 /* UIColor+Hex.h */,
+				960103FA1BA879C800152908 /* UIColor+Hex.m */,
+				960103FB1BA879C800152908 /* UIImage+Color.h */,
+				960103FC1BA879C800152908 /* UIImage+Color.m */,
+				960103FD1BA879C800152908 /* UIView+Layout.h */,
+				960103FE1BA879C800152908 /* UIView+Layout.m */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		960104031BA879E200152908 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				960104041BA879E200152908 /* AppService.h */,
+				960104051BA879E200152908 /* AppService.m */,
+				960104061BA879E200152908 /* LoginService.h */,
+				960104071BA879E200152908 /* LoginService.m */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		9601040A1BA879F600152908 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				9601040B1BA879F600152908 /* User */,
+				960104111BA879F600152908 /* ViewController.h */,
+				960104121BA879F600152908 /* ViewController.m */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		9601040B1BA879F600152908 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				9601040C1BA879F600152908 /* Login */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		9601040C1BA879F600152908 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				9601040D1BA879F600152908 /* LoginView.h */,
+				9601040E1BA879F600152908 /* LoginView.m */,
+				9601040F1BA879F600152908 /* LoginViewController.h */,
+				960104101BA879F600152908 /* LoginViewController.m */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		960104161BA87A1C00152908 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				960104171BA87A1C00152908 /* images */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		960104171BA87A1C00152908 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				9601041A1BA87A3A00152908 /* logo.png */,
+				960104181BA87A1C00152908 /* background.png */,
+			);
+			path = images;
 			sourceTree = "<group>";
 		};
 		966B51701B7F8D70000F0EF2 = {
@@ -112,10 +245,10 @@
 		966B517B1B7F8D70000F0EF2 /* Peer */ = {
 			isa = PBXGroup;
 			children = (
-				966B51A41B7FA7F1000F0EF2 /* Components */,
-				96C596991BA0786D00A93F9E /* Services */,
-				966B51A21B7FA7B5000F0EF2 /* ViewControllers */,
-				966B51A71B7FA83E000F0EF2 /* Resources */,
+				960104161BA87A1C00152908 /* Resources */,
+				960103E21BA8795500152908 /* Components */,
+				960104031BA879E200152908 /* Services */,
+				9601040A1BA879F600152908 /* ViewControllers */,
 				966B51801B7F8D70000F0EF2 /* AppDelegate.h */,
 				966B51811B7F8D70000F0EF2 /* AppDelegate.m */,
 				966B51891B7F8D70000F0EF2 /* Images.xcassets */,
@@ -150,95 +283,6 @@
 				966B51971B7F8D70000F0EF2 /* Info.plist */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		966B51A21B7FA7B5000F0EF2 /* ViewControllers */ = {
-			isa = PBXGroup;
-			children = (
-				964B343F1BA5CDCE009DD599 /* ViewController.h */,
-				964B34401BA5CDCE009DD599 /* ViewController.m */,
-				96C596931BA0783200A93F9E /* User */,
-			);
-			name = ViewControllers;
-			sourceTree = "<group>";
-		};
-		966B51A31B7FA7BE000F0EF2 /* Vendor */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Vendor;
-			sourceTree = "<group>";
-		};
-		966B51A41B7FA7F1000F0EF2 /* Components */ = {
-			isa = PBXGroup;
-			children = (
-				96C596981BA0785600A93F9E /* Network */,
-				966B51A51B7FA7FA000F0EF2 /* Categories */,
-				966B51A31B7FA7BE000F0EF2 /* Vendor */,
-			);
-			name = Components;
-			sourceTree = "<group>";
-		};
-		966B51A51B7FA7FA000F0EF2 /* Categories */ = {
-			isa = PBXGroup;
-			children = (
-				964B34301BA5CD72009DD599 /* NSData+JSON.h */,
-				964B34311BA5CD72009DD599 /* NSData+JSON.m */,
-				964B34321BA5CD72009DD599 /* UIColor+Hex.h */,
-				964B34331BA5CD72009DD599 /* UIColor+Hex.m */,
-				964B34341BA5CD72009DD599 /* UIView+Layout.h */,
-				964B34351BA5CD72009DD599 /* UIView+Layout.m */,
-			);
-			name = Categories;
-			sourceTree = "<group>";
-		};
-		966B51A71B7FA83E000F0EF2 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				969CE57B1BA5CC16009D833E /* images */,
-			);
-			name = Resources;
-			sourceTree = "<group>";
-		};
-		969CE57B1BA5CC16009D833E /* images */ = {
-			isa = PBXGroup;
-			children = (
-				964B342E1BA5CCBF009DD599 /* background.png */,
-			);
-			name = images;
-			sourceTree = "<group>";
-		};
-		96C596931BA0783200A93F9E /* User */ = {
-			isa = PBXGroup;
-			children = (
-				96C596941BA0783D00A93F9E /* Login */,
-			);
-			name = User;
-			sourceTree = "<group>";
-		};
-		96C596941BA0783D00A93F9E /* Login */ = {
-			isa = PBXGroup;
-			children = (
-				964B343C1BA5CDB8009DD599 /* LoginViewController.h */,
-				964B343D1BA5CDB8009DD599 /* LoginViewController.m */,
-			);
-			name = Login;
-			sourceTree = "<group>";
-		};
-		96C596981BA0785600A93F9E /* Network */ = {
-			isa = PBXGroup;
-			children = (
-				964B34391BA5CD9D009DD599 /* PeerNetworkManager.h */,
-				964B343A1BA5CD9D009DD599 /* PeerNetworkManager.m */,
-			);
-			name = Network;
-			sourceTree = "<group>";
-		};
-		96C596991BA0786D00A93F9E /* Services */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Services;
 			sourceTree = "<group>";
 		};
 		A5EF66DA01FA01C7F7BB91CC /* Pods */ = {
@@ -333,8 +377,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9601041B1BA87A3A00152908 /* logo.png in Resources */,
 				966B518D1B7F8D70000F0EF2 /* LaunchScreen.xib in Resources */,
-				964B342F1BA5CCBF009DD599 /* background.png in Resources */,
+				960104191BA87A1C00152908 /* background.png in Resources */,
 				966B518A1B7F8D70000F0EF2 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -386,13 +431,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				964B343E1BA5CDB8009DD599 /* LoginViewController.m in Sources */,
-				964B343B1BA5CD9D009DD599 /* PeerNetworkManager.m in Sources */,
-				964B34411BA5CDCE009DD599 /* ViewController.m in Sources */,
+				960103F51BA8795500152908 /* OpenUDID.m in Sources */,
+				960104081BA879E200152908 /* AppService.m in Sources */,
+				960104021BA879C800152908 /* UIView+Layout.m in Sources */,
 				966B51821B7F8D70000F0EF2 /* AppDelegate.m in Sources */,
-				964B34381BA5CD72009DD599 /* UIView+Layout.m in Sources */,
-				964B34371BA5CD72009DD599 /* UIColor+Hex.m in Sources */,
-				964B34361BA5CD72009DD599 /* NSData+JSON.m in Sources */,
+				960103FF1BA879C800152908 /* NSData+JSON.m in Sources */,
+				960104131BA879F600152908 /* LoginView.m in Sources */,
+				960104151BA879F600152908 /* ViewController.m in Sources */,
+				960104091BA879E200152908 /* LoginService.m in Sources */,
+				960103F41BA8795500152908 /* PeerNetworkManager.m in Sources */,
+				960104141BA879F600152908 /* LoginViewController.m in Sources */,
+				960104001BA879C800152908 /* UIColor+Hex.m in Sources */,
+				960104011BA879C800152908 /* UIImage+Color.m in Sources */,
 				966B517F1B7F8D70000F0EF2 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

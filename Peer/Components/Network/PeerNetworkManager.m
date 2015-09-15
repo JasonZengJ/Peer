@@ -8,8 +8,17 @@
 
 #import "PeerNetworkManager.h"
 #import "NSData+JSON.h"
+#import "OpenUDID.h"
 
 #import <AFNetworking.h>
+
+
+const NSString *TestHostName = @"http://localhost";
+const NSString *TestSecureHostName = @"https://localhost";
+
+
+const NSString *device  = @"mobile";
+const NSString *version = @"v1";
 
 @implementation PeerNetworkManager
 
@@ -24,6 +33,19 @@
     
     return peerNetworkManager;
 }
+
+- (void)postWithParams:(NSDictionary *)params apiPath:(NSString *)apiPath target:(id)target callBack:(SEL)callBack {
+    NSString *url = [NSString stringWithFormat:@"%@/%@/%@/%@/?udid=%@&appVer=%@",TestHostName,apiPath,device,version,[OpenUDID value]];
+    [self postWithParams:params url:url target:target callBack:callBack];
+}
+
+- (void)getWithParams:(NSDictionary *)params apiPath:(NSString *)apiPath target:(id)target callBack:(SEL)callBack {
+    NSString *url = [NSString stringWithFormat:@"%@/%@/%@/%@/?udid=%@appVer=%@",TestHostName,apiPath,device,version,[OpenUDID value]];
+    [self getWithParams:params apiPath:url target:target callBack:callBack];
+}
+
+
+
 
 - (void)postWithParams:(NSDictionary *)params url:(NSString *)url target:(id)target callBack:(SEL)callBack {
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];

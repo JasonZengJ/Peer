@@ -171,6 +171,14 @@
     [self addLineWithFrame:CGRectMake(0, self.bottom - 0.5, self.width, 0.5) border:UIViewBorderBottomLine];
 }
 
+- (void)setBorderColor:(UIColor *)color withTag:(UIViewBorder)viewBorder
+{
+    UIView *border = [self viewWithTag:viewBorder];
+    if (border) {
+        border.backgroundColor = color;
+    }
+}
+
 - (void)addLineWithFrame:(CGRect)frame border:(UIViewBorder)border
 {
     [self addLineWithFrame:frame border:border lineColor:[UIColor colorWithHex:0xcccccc alpha:1.0]];
