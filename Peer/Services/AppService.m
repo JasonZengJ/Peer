@@ -5,9 +5,9 @@
 //  Created by jason on 9/15/15.
 //  Copyright (c) 2015 goodpeer. All rights reserved.
 //
-
 #import "AppService.h"
 #import "OpenUDID.h"
+#import <UIKit/UIKit.h>
 
 @implementation AppService
 
@@ -26,15 +26,26 @@
     NSString *version    = infoDictionary[@"CFBundleShortVersionString"];
     NSString *build      = infoDictionary[(NSString*)kCFBundleVersionKey];
     NSString *bundleName = infoDictionary[(NSString *)kCFBundleNameKey];
+    NSString *sysVer     = [[UIDevice currentDevice] systemVersion];
     
     NSDictionary *appConfiguration = @{
                                        @"udid":[OpenUDID value],
                                        @"appName":bundleName,
                                        @"appVer":version,
-                                       @"build":build
+                                       @"build":build,
+                                       @"sysVer":sysVer,
+                                       @"deviceType":@""
                                        };
     
     [[NSUserDefaults standardUserDefaults] setObject:appConfiguration forKey:@"app"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+    
+    
+}
+
+- (void)registerDevice {
+    
+    
     
     
 }

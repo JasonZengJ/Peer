@@ -9,7 +9,9 @@
 #import "LoginViewController.h"
 #import "LoginView.h"
 #import "LoginService.h"
-#import "OpenUDID.h"
+#import "PeerNetworkManager.h"
+#import "PhoneVerifyViewController.h"
+#import "UserModel.h"
 
 @interface LoginViewController () <LoginViewDelegate,LoginServiceDelegate>
 
@@ -39,24 +41,21 @@
 
 - (void)loadView {
     [super loadView];
+    self.view.backgroundColor = [UIColor whiteColor];
+    [self.view addSubview:self.loginView];
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.view.backgroundColor = [UIColor whiteColor];
-    [self.view addSubview:self.loginView];
 
     
-    DLog(@"%@",[OpenUDID value]);
+    [[PeerNetworkManager shareInstance] securePostWithParams:@{} apiPath:@"user/login" target:self callBack:@selector(back)];
+   
+}
+
+- (void)back {
     
-    NSDictionary *infoDictionary = [[NSBundle mainBundle]infoDictionary];
-    
-    NSString *version = infoDictionary[@"CFBundleShortVersionString"];
-    NSString *name  = infoDictionary[(NSString*)kCFBundleNameKey];
-    
-    
-    DLog(@"");
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -70,13 +69,32 @@
 - (void)clickedLoginButtonWithPhone:(NSString *)phone password:(NSString *)password {
     
     //TODO: phone 和 password 校验
-    [self.loginService loginWithParams:@{@"phone":phone,@"password":password}];
+    
+    UserModel *model = [[UserModel alloc] init];
+    model.phone      = phone;
+    model.password   = password;
+//    [self.loginService loginWithParams:@{@"phone":phone,@"password":password}];
     
     
 }
 
+- (void)clickedRegisterButton {
+    
+//    NSString *phone = @"18501638736";
+    
+//    UINavigationController *nav = [[PhoneVerifyViewController alloc] init];
+    
+//    [self presentViewController:nav animated:YES completion:^{
+//        
+//    }];
+}
+
 
 #pragma mark - -- <LoginServiceDelegate>
+
+- (void)loginCompleteWithError:(NSDictionary *)error {
+    
+}
 
 - (void)loginSuccessWithData:(NSDictionary *)data {
     

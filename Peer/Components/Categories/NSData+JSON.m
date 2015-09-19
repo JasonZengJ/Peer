@@ -13,7 +13,7 @@
 - (NSDictionary *)jsonObject
 {
     NSError *error = nil;
-    NSDictionary *jsonObject = [NSJSONSerialization JSONObjectWithData:self options:kNilOptions error:&error];
+    NSDictionary *jsonObject = [NSJSONSerialization JSONObjectWithData:self options:NSJSONReadingMutableLeaves error:&error];
     
     if (error) {
         return nil;

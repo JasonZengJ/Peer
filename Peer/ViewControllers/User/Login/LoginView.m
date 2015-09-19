@@ -18,6 +18,8 @@
 @property(nonatomic) UITextField *phoneTextField;
 @property(nonatomic) UITextField *passwordTextField;
 @property(nonatomic) UIButton    *loginButton;
+@property(nonatomic) UIButton    *registerButton;
+
 @property(nonatomic) UIButton    *wechatLoginButton;
 @property(nonatomic) UIButton    *weiboLoginButton;
 @property(nonatomic) UIButton    *qqLoginButton;
@@ -83,7 +85,22 @@
         [_loginButton addTarget:self action:@selector(clickedLoginButton) forControlEvents:UIControlEventTouchUpInside];
     }
     return _loginButton;
-    
+}
+
+- (UIButton *)registerButton {
+    if (!_registerButton) {
+        _registerButton = [[UIButton alloc] initWithFrame:CGRectMake(50, self.loginButton.bottom + 20, self.loginButton.width, 40)];
+        _registerButton.layer.borderWidth  = 1;
+        _registerButton.layer.borderColor  = [UIColor whiteColor].CGColor;
+        _registerButton.layer.cornerRadius = 3;
+        _registerButton.clipsToBounds      = YES;
+        [_registerButton setTitle:@"注 册" forState:UIControlStateNormal];
+        [_registerButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+        [_registerButton setTitleColor:[UIColor colorWithHex:0xFFB100 alpha:1.0] forState:UIControlStateHighlighted];
+        [_registerButton setBackgroundImage:[UIImage imageWithColor:[UIColor whiteColor]] forState:UIControlStateHighlighted];
+        [_registerButton addTarget:self action:@selector(clickedRegisterButton) forControlEvents:UIControlEventTouchUpInside];
+    }
+    return _registerButton;
 }
 
 
@@ -97,17 +114,27 @@
 
 - (void)initSubViews {
     
+    UITapGestureRecognizer *tapGR = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapLoginView)];
+    tapGR.numberOfTapsRequired = 1;
+    [self addGestureRecognizer:tapGR];
+    
     [self addSubview:self.backgroundImageView];
     [self addSubview:self.logoImageView];
     [self addSubview:self.phoneTextField];
     [self addSubview:self.passwordTextField];
     [self addSubview:self.loginButton];
+    [self addSubview:self.registerButton];
     
     
     
 }
 
 #pragma mark - -- Action
+
+- (void)tapLoginView {
+    [self.phoneTextField resignFirstResponder];
+    [self.passwordTextField resignFirstResponder];
+}
 
 - (void)clickedLoginButton {
     
@@ -118,6 +145,12 @@
         [self.delegate clickedLoginButtonWithPhone:phone password:password];
     }
     
+}
+
+- (void)clickedRegisterButton {
+    if (self.delegate && [self.delegate respondsToSelector:@selector(clickedRegisterButton)]) {
+        [self.delegate clickedRegisterButton];
+    }
 }
 
 

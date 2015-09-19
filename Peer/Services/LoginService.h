@@ -8,10 +8,12 @@
 
 #import <Foundation/Foundation.h>
 
+@class UserModel;
+
 @protocol LoginServiceDelegate <NSObject>
 
-- (void)loginSuccessWithData:(NSDictionary *)data;
-- (void)loginFailureWithData:(NSDictionary *)data;
+- (void)loginCompleteWithError:(NSDictionary *)error;
+- (void)registerCompleteWithError:(NSDictionary *)error;
 
 @end
 
@@ -20,8 +22,9 @@
 
 @property(nonatomic,weak) id<LoginServiceDelegate> delegate;
 
-- (void)loginWithParams:(NSDictionary *)params ;
+- (void)loginWithUserModel:(UserModel *)userModel ;
+- (void)registerWithUserModel:(UserModel *)userModel;
 
-- (NSDictionary *)currentUserData;
++ (UserModel *)currentUser;
 
 @end

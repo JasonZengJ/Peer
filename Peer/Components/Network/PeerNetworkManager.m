@@ -9,12 +9,22 @@
 #import "PeerNetworkManager.h"
 #import "NSData+JSON.h"
 #import "OpenUDID.h"
+#import "AppService.h"
 
 #import <AFNetworking.h>
 
 
-const NSString *TestHostName = @"http://localhost";
-const NSString *TestSecureHostName = @"https://localhost";
+#ifdef DEBUG
+
+const NSString *HostName = @"http://localhost";
+const NSString *SecureHostName = @"https://localhost";
+
+#else
+
+const NSString *HostName = @"http://localhost";
+const NSString *SecureHostName = @"https://192.168.1.107";
+
+#endif
 
 
 const NSString *device  = @"mobile";
@@ -35,38 +45,57 @@ const NSString *version = @"v1";
 }
 
 - (void)postWithParams:(NSDictionary *)params apiPath:(NSString *)apiPath target:(id)target callBack:(SEL)callBack {
-    NSString *url = [NSString stringWithFormat:@"%@/%@/%@/%@/?udid=%@&appVer=%@",TestHostName,apiPath,device,version,[OpenUDID value]];
+    
+    NSString *url = [self encapsulationUrlWithApiPath:apiPath];
     [self postWithParams:params url:url target:target callBack:callBack];
 }
 
 - (void)getWithParams:(NSDictionary *)params apiPath:(NSString *)apiPath target:(id)target callBack:(SEL)callBack {
-    NSString *url = [NSString stringWithFormat:@"%@/%@/%@/%@/?udid=%@appVer=%@",TestHostName,apiPath,device,version,[OpenUDID value]];
+    NSString *url = [self encapsulationUrlWithApiPath:apiPath];
     [self getWithParams:params apiPath:url target:target callBack:callBack];
 }
 
 
+- (void)securePostWithParams:(NSDictionary *)params apiPath:(NSString *)apiPath target:(id)target callBack:(SEL)callBack {
+    NSString *url = [self encapsulationSecureUrlWithApiPath:apiPath];
+    [self postWithParams:params url:url target:target callBack:callBack];
+}
+
+- (NSString *)encapsulationSecureUrlWithApiPath:(NSString *)apiPath {
+    NSString *appVer = [[AppService shareInstance] appVersion];
+    return [NSString stringWithFormat:@"%@/%@/%@/%@?udid=%@&appVer=%@",SecureHostName,device,version,apiPath,[OpenUDID value],appVer];
+}
+
+
+- (NSString *)encapsulationUrlWithApiPath:(NSString *)apiPath {
+    NSString *appVer = [[AppService shareInstance] appVersion];
+    return [NSString stringWithFormat:@"%@/%@/%@/%@?udid=%@&appVer=%@",HostName,device,version,apiPath,[OpenUDID value],appVer];
+}
 
 
 - (void)postWithParams:(NSDictionary *)params url:(NSString *)url target:(id)target callBack:(SEL)callBack {
+    
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
-    manager.responseSerializer = [AFHTTPResponseSerializer serializer];
+    [manager.responseSerializer setValue:@(YES) forKey:@"removesKeysWithNullValues"];
+    manager.securityPolicy.allowInvalidCertificates = YES;
+    
+    
     [manager POST:url parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
-        [self performCallBack:callBack withTarget:target data:[responseObject jsonObject]];
+        
+        [self performCallBack:callBack withTarget:target data:responseObject];
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        [self performCallBack:callBack withTarget:target data:@{@"error":error}];
+        NSString *errorString = [[NSString alloc] initWithData:operation.responseData encoding:NSUTF8StringEncoding];
+        [self performCallBack:callBack withTarget:target data:@{@"code":@(-1000),@"msg":errorString,@"data":error}];
     }];
 }
 
 - (void)getDataWithParams:(NSDictionary *)params url:(NSString *)url target:(id)target callBack:(SEL)callBack {
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
-    manager.responseSerializer = [AFHTTPResponseSerializer serializer];
     [manager GET:url parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
-        [self performCallBack:callBack withTarget:target data:[responseObject jsonObject]];
+        [self performCallBack:callBack withTarget:target data:responseObject];
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        NSString *responseString = [[NSString alloc] initWithData:operation.responseData encoding:NSUTF8StringEncoding];
-        NSLog(@"Error: %@", error);
-        NSLog(@"-------\n %@",responseString);
-        [self performCallBack:callBack withTarget:target data:@{@"error":error}];
+        NSString *errorString = [[NSString alloc] initWithData:operation.responseData encoding:NSUTF8StringEncoding];
+        [self performCallBack:callBack withTarget:target data:@{@"code":@(-1000),@"msg":errorString,@"data":error}];
     }];
 }
 

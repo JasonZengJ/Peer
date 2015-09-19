@@ -9,7 +9,10 @@
 #import "AppDelegate.h"
 #import "ViewController.h"
 #import "LoginViewController.h"
+#import "TestViewController.h"
 #import "AppService.h"
+#import "UserModel.h"
+#import "LoginService.h"
 
 @interface AppDelegate ()
 
@@ -21,11 +24,11 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
-    self.window = [[UIWindow alloc] initWithFrame:ScreenBounds];
-    self.window.rootViewController = [[LoginViewController alloc] init];
-    [self.window makeKeyAndVisible];
-    
     [[AppService shareInstance] initAppService];
+    self.window = [[UIWindow alloc] initWithFrame:ScreenBounds];
+    self.window.rootViewController = [[TestViewController alloc] init];
+    [self.window makeKeyAndVisible];
+ 
     
     return YES;
 }

@@ -11,6 +11,7 @@
 @protocol LoginViewDelegate <NSObject>
 
 - (void)clickedLoginButtonWithPhone:(NSString *)phone password:(NSString *)password;
+- (void)clickedRegisterButton;
 
 @end
 
