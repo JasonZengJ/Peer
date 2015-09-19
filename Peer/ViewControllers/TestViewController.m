@@ -30,8 +30,22 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    [self testUserRegister];
+    [self testGetVerificationCode];
 }
+
+
+- (void)testGetVerificationCode {
+    [self.loginService getVerificationCodeWithPhone:@"18501638736" result:^(BOOL isSuccess) {
+        
+    }];
+}
+
+- (void)testConfirmVerificationCode {
+    [self.loginService confirmVerificationCode:@"123" result:^(BOOL isSuccess) {
+        
+    }];
+}
+
 
 - (void)testUserRegister {
     
@@ -43,7 +57,6 @@
     userModel.city     = @"深圳";
     userModel.avatar   = @"http://img3.imgtn.bdimg.com/it/u=2117727038,2641018931&fm=21&gp=0.jpg";
     
-    [self.loginService registerWithUserModel:userModel];
     
 }
 

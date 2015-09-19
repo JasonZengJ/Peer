@@ -28,6 +28,11 @@
 		9601042E1BAB1C5000152908 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9601042D1BAB1C5000152908 /* RegisterViewController.m */; };
 		960104301BAC4F2900152908 /* LoginServiceTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 9601042F1BAC4F2900152908 /* LoginServiceTest.m */; };
 		960104351BAD6AB700152908 /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 960104341BAD6AB700152908 /* TestViewController.m */; };
+		960104481BADC9D800152908 /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 960104471BADC9D800152908 /* libicucore.dylib */; };
+		9601044A1BADC9DF00152908 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 960104491BADC9DF00152908 /* libz.dylib */; };
+		9601044C1BADC9EA00152908 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9601044B1BADC9EA00152908 /* MessageUI.framework */; };
+		960104521BADD08600152908 /* SMS_SDKLocalizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9601044E1BADD08600152908 /* SMS_SDKLocalizable.strings */; };
+		960104531BADD08600152908 /* SMS_SDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 960104501BADD08600152908 /* SMS_SDK.framework */; };
 		961D2E4A1BA715C200C84C8B /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 961D2E491BA715C200C84C8B /* QuartzCore.framework */; };
 		961D2E4C1BA715D500C84C8B /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 961D2E4B1BA715D500C84C8B /* Accelerate.framework */; };
 		966B517F1B7F8D70000F0EF2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 966B517E1B7F8D70000F0EF2 /* main.m */; };
@@ -88,6 +93,12 @@
 		960104311BAC54B400152908 /* libPods-Peer.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-Peer.a"; path = "Pods/build/Debug-iphoneos/libPods-Peer.a"; sourceTree = "<group>"; };
 		960104331BAD6AB700152908 /* TestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
 		960104341BAD6AB700152908 /* TestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
+		960104471BADC9D800152908 /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
+		960104491BADC9DF00152908 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		9601044B1BADC9EA00152908 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		9601044F1BADD08600152908 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/SMS_SDKLocalizable.strings; sourceTree = "<group>"; };
+		960104501BADD08600152908 /* SMS_SDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SMS_SDK.framework; sourceTree = "<group>"; };
+		960104511BADD08600152908 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/SMS_SDKLocalizable.strings"; sourceTree = "<group>"; };
 		961D2E491BA715C200C84C8B /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		961D2E4B1BA715D500C84C8B /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
 		966B51791B7F8D70000F0EF2 /* Peer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Peer.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -109,7 +120,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9601044C1BADC9EA00152908 /* MessageUI.framework in Frameworks */,
+				9601044A1BADC9DF00152908 /* libz.dylib in Frameworks */,
+				960104481BADC9D800152908 /* libicucore.dylib in Frameworks */,
 				961D2E4C1BA715D500C84C8B /* Accelerate.framework in Frameworks */,
+				960104531BADD08600152908 /* SMS_SDK.framework in Frameworks */,
 				961D2E4A1BA715C200C84C8B /* QuartzCore.framework in Frameworks */,
 				374EEB672DF99B043B9F46A3 /* libPods-Peer.a in Frameworks */,
 			);
@@ -128,6 +143,9 @@
 		1B4F7B120EE7351ACEF659A5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9601044B1BADC9EA00152908 /* MessageUI.framework */,
+				960104491BADC9DF00152908 /* libz.dylib */,
+				960104471BADC9D800152908 /* libicucore.dylib */,
 				960104311BAC54B400152908 /* libPods-Peer.a */,
 				961D2E4B1BA715D500C84C8B /* Accelerate.framework */,
 				961D2E491BA715C200C84C8B /* QuartzCore.framework */,
@@ -158,6 +176,7 @@
 		960103ED1BA8795500152908 /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				9601044D1BADD08600152908 /* SMS_SDK */,
 				960103EE1BA8795500152908 /* OpenUDID */,
 			);
 			path = Vendor;
@@ -269,6 +288,15 @@
 				9601042D1BAB1C5000152908 /* RegisterViewController.m */,
 			);
 			path = Register;
+			sourceTree = "<group>";
+		};
+		9601044D1BADD08600152908 /* SMS_SDK */ = {
+			isa = PBXGroup;
+			children = (
+				9601044E1BADD08600152908 /* SMS_SDKLocalizable.strings */,
+				960104501BADD08600152908 /* SMS_SDK.framework */,
+			);
+			path = SMS_SDK;
 			sourceTree = "<group>";
 		};
 		966B51701B7F8D70000F0EF2 = {
@@ -411,6 +439,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hans",
 			);
 			mainGroup = 966B51701B7F8D70000F0EF2;
 			productRefGroup = 966B517A1B7F8D70000F0EF2 /* Products */;
@@ -430,6 +459,7 @@
 			files = (
 				9601041B1BA87A3A00152908 /* logo.png in Resources */,
 				966B518D1B7F8D70000F0EF2 /* LaunchScreen.xib in Resources */,
+				960104521BADD08600152908 /* SMS_SDKLocalizable.strings in Resources */,
 				960104191BA87A1C00152908 /* background.png in Resources */,
 				966B518A1B7F8D70000F0EF2 /* Images.xcassets in Resources */,
 			);
@@ -524,6 +554,15 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		9601044E1BADD08600152908 /* SMS_SDKLocalizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9601044F1BADD08600152908 /* en */,
+				960104511BADD08600152908 /* zh-Hans */,
+			);
+			name = SMS_SDKLocalizable.strings;
+			sourceTree = "<group>";
+		};
 		966B518B1B7F8D70000F0EF2 /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -621,6 +660,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Peer/Components/Vendor/OpenUDID/SMS_SDK",
+					"$(PROJECT_DIR)/Peer/Components/Vendor/SMS_SDK",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Peer/Peer-Prefix.pch";
 				INFOPLIST_FILE = Peer/Info.plist;
@@ -636,6 +680,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Peer/Components/Vendor/OpenUDID/SMS_SDK",
+					"$(PROJECT_DIR)/Peer/Components/Vendor/SMS_SDK",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Peer/Peer-Prefix.pch";
 				INFOPLIST_FILE = Peer/Info.plist;

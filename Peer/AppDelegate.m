@@ -7,12 +7,17 @@
 //
 
 #import "AppDelegate.h"
-#import "ViewController.h"
-#import "LoginViewController.h"
-#import "TestViewController.h"
 #import "AppService.h"
-#import "UserModel.h"
-#import "LoginService.h"
+
+#pragma mark - -- Vendor
+#import <SMS_SDK/SMS_SDK.h>
+
+
+#warning TEST
+#import "TestViewController.h"
+
+
+
 
 @interface AppDelegate ()
 
@@ -25,6 +30,10 @@
     // Override point for customization after application launch.
     
     [[AppService shareInstance] initAppService];
+    [SMS_SDK registerApp:@"a72297a4628e" withSecret:@"52cf6cd4ef00aec3e52f8e7af55bbaa1"];
+    
+    
+    
     self.window = [[UIWindow alloc] initWithFrame:ScreenBounds];
     self.window.rootViewController = [[TestViewController alloc] init];
     [self.window makeKeyAndVisible];

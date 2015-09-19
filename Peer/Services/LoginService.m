@@ -9,13 +9,13 @@
 #import "LoginService.h"
 #import "PeerNetworkManager.h"
 #import "UserModel.h"
+#import <SMS_SDK/SMS_SDK.h>
+//#import "us"
 
 #define LoginApiPath @"user/login"
 #define RegisterApiPath @"user/register"
 
 @interface LoginService ()
-
-
 
 @end
 
@@ -31,7 +31,7 @@
 }
 
 
-// 用户登录
+#pragma mark - -- Login
 - (void)loginWithUserModel:(UserModel *)userModel {
     
     NSDictionary *params = @{@"phone":userModel.phone,@"password":userModel.password};
@@ -53,9 +53,40 @@
     
 }
 
-// 用户注册
-- (void)registerWithUserModel:(UserModel *)userModel {
+#pragma mark - -- Register
+
+- (void)getVerificationCodeWithPhone:(NSString *)phone result:(void(^)(BOOL isSuccess))result {
     
+    [SMS_SDK getVerificationCodeBySMSWithPhone:phone zone:@"86" result:^(SMS_SDKError *error) {
+        //注意区号和手机号码前面都不要加“＋”号，有的开发者喜欢这样写，@“＋86”，这种是错误的写法
+        if (!error) {
+            NSLog(@"获取验证码成功");
+            result(YES);
+        } else {
+            NSLog(@"错误吗：%zi,错误描述：%@",error.errorCode,error.errorDescription);
+            result(NO);
+        }
+    }];
+    
+}
+
+- (void)confirmVerificationCode:(NSString *)veryficationCode result:(void(^)(BOOL isSuccess))result {
+    
+    [SMS_SDK commitVerifyCode:veryficationCode result:^(enum SMS_ResponseState state) {
+        //self.verfyCode.text这里传的是获取到的验证码，可以把获取到的验证码填写在文本框里面，然后获取到文本框里面的值传进参数里
+        if (1==state) {
+            NSLog(@"验证成功");
+            result(YES);
+        } else if (0==state){
+            NSLog(@"验证失败");
+            result(NO);
+        }
+    }];
+    
+}
+
+
+- (void)registerWithUserModel:(UserModel *)userModel {
     
     NSDictionary *params = [userModel toDictionary];
     [[PeerNetworkManager shareInstance] securePostWithParams:params apiPath:RegisterApiPath target:self callBack:@selector(registerCompleted:)];
