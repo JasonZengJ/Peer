@@ -81,7 +81,8 @@ const NSString *version = @"v1";
     
     
     [manager POST:url parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
-        
+       
+        [self printSuccessResponseData:responseObject url:operation.request.URL.absoluteString];
         [self performCallBack:callBack withTarget:target data:responseObject];
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSString *errorString = [[NSString alloc] initWithData:operation.responseData encoding:NSUTF8StringEncoding];
@@ -92,11 +93,19 @@ const NSString *version = @"v1";
 - (void)getDataWithParams:(NSDictionary *)params url:(NSString *)url target:(id)target callBack:(SEL)callBack {
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     [manager GET:url parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        [self printSuccessResponseData:responseObject url:operation.request.URL.absoluteString];
         [self performCallBack:callBack withTarget:target data:responseObject];
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSString *errorString = [[NSString alloc] initWithData:operation.responseData encoding:NSUTF8StringEncoding];
         [self performCallBack:callBack withTarget:target data:@{@"code":@(-1000),@"msg":errorString,@"data":error}];
     }];
+}
+
+- (void)printSuccessResponseData:(id)responseData url:(NSString *)url {
+    DLog(@"============ Request Success   =============");
+    DLog(@"reqeust url:%@",url);
+    DLog(@"response: %@",responseData);
+    DLog(@"============================================");
 }
 
 - (void)performCallBack:(SEL)selector withTarget:(id)target data:(NSDictionary *)data

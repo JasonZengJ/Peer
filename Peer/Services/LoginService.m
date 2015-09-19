@@ -30,6 +30,8 @@
     return  self;
 }
 
+
+// 用户登录
 - (void)loginWithUserModel:(UserModel *)userModel {
     
     NSDictionary *params = @{@"phone":userModel.phone,@"password":userModel.password};
@@ -37,10 +39,8 @@
     
 }
 
+// 用户登录完成，如果登录成功，则保存用户数据到本地
 - (void)loginCompleted:(NSDictionary *)dataDic {
-    
-    
-    DLog(@"%@",dataDic);
     
     NSDictionary *error = nil;
     if ([dataDic[@"code"] integerValue] == 0) {
@@ -53,6 +53,7 @@
     
 }
 
+// 用户注册
 - (void)registerWithUserModel:(UserModel *)userModel {
     
     NSDictionary *params = @{@"phone":userModel.phone,@"password":userModel.password};
@@ -86,9 +87,9 @@
     NSDictionary *userDic = [[NSUserDefaults standardUserDefaults] objectForKey:@"user"];
     if (userDic) {
         return [[UserModel alloc] initWithDictionary:userDic error:nil];
-    } else {
     }
-        return nil;
+    return nil;
+    
 }
 
 
