@@ -56,7 +56,8 @@
 // 用户注册
 - (void)registerWithUserModel:(UserModel *)userModel {
     
-    NSDictionary *params = @{@"phone":userModel.phone,@"password":userModel.password};
+    
+    NSDictionary *params = [userModel toDictionary];
     [[PeerNetworkManager shareInstance] securePostWithParams:params apiPath:RegisterApiPath target:self callBack:@selector(registerCompleted:)];
     
 }
@@ -66,6 +67,8 @@
     NSDictionary *error = nil;
     if (dataDic[@"errCode"] != 0) {
         error = dataDic;
+    } else {
+        [self persistUserData:dataDic[@"data"]];
     }
     if (self.delegate && [self.delegate respondsToSelector:@selector(registerCompleteWithError:)]) {
         [self.delegate registerCompleteWithError:error];

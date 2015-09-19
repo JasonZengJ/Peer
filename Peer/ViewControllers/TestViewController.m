@@ -30,7 +30,21 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    [self testUserLogin];
+    [self testUserRegister];
+}
+
+- (void)testUserRegister {
+    
+    UserModel *userModel = [[UserModel alloc] init];
+    userModel.phone    = @"18511111112";
+    userModel.password = @"123456";
+    userModel.nickname = @"jason";
+    userModel.sex      = @1;
+    userModel.city     = @"深圳";
+    userModel.avatar   = @"http://img3.imgtn.bdimg.com/it/u=2117727038,2641018931&fm=21&gp=0.jpg";
+    
+    [self.loginService registerWithUserModel:userModel];
+    
 }
 
 - (void)testUserLogin {
