@@ -17,8 +17,6 @@
 #import "TestViewController.h"
 
 
-
-
 @interface AppDelegate ()
 
 @end
@@ -29,7 +27,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
-    [[AppService shareInstance] initAppService];
+    [AppService initAppService];
     [SMS_SDK registerApp:@"a72297a4628e" withSecret:@"52cf6cd4ef00aec3e52f8e7af55bbaa1"];
     
     

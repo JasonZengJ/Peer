@@ -40,8 +40,6 @@
 - (void)testCheckPhoneNumber {
     
     NSString *phoneNumber = @"";
-    BOOL result = [self.loginService checkPhoneNumber:phoneNumber];
-    XCTAssert(result,@"Pass");
     
     
     

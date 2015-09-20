@@ -11,16 +11,18 @@
 @interface AppService : NSObject
 
 
-+ (id)shareInstance;
++ (void)initAppService;
 
-- (void)initAppService;
++ (NSString *)token;
 
-- (NSString *)appVersion;
++ (NSString *)deviceType;
 
-- (NSString *)udid;
++ (NSString *)appVersion;
 
-- (NSString *)appName;
++ (NSString *)udid;
 
-- (NSString *)remoteToken;
++ (NSString *)appName;
+
++ (NSString *)remoteToken;
 
 @end
