@@ -13,6 +13,8 @@
 
 + (void)initAppService;
 
++ (BOOL)isRegisteringDevice;
+
 + (NSString *)token;
 
 + (NSString *)deviceType;

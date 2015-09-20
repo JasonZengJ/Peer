@@ -17,7 +17,7 @@
 #ifdef DEBUG
 
 const NSString *HostName = @"http://localhost";
-const NSString *SecureHostName = @"https://localhost";
+const NSString *SecureHostName = @"https://192.168.1.103";
 
 #else
 
@@ -99,17 +99,18 @@ const NSString *version = @"v1";
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     [manager.responseSerializer setValue:@(YES) forKey:@"removesKeysWithNullValues"];
     manager.securityPolicy.allowInvalidCertificates = YES;
-    
-    
-    
-    
-    
+    [self printStartRequestWithUrl:url params:params];
     [manager POST:url parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        
         [self printSuccessResponseData:responseObject url:operation.request.URL.absoluteString];
         callBackBlock(responseObject);
+        
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        
         NSString *errorString = [[NSString alloc] initWithData:operation.responseData encoding:NSUTF8StringEncoding];
-        callBackBlock(@{@"code":@(-1000),@"msg":errorString,@"data":error});
+        [self printFailedResponseData:errorString ? errorString : error url:operation.request.URL.absoluteString];
+        callBackBlock(@{@"code":@(error.code),@"msg":errorString,@"data":error});
+        
     }];
 }
 
@@ -119,31 +120,58 @@ const NSString *version = @"v1";
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     [manager.responseSerializer setValue:@(YES) forKey:@"removesKeysWithNullValues"];
     manager.securityPolicy.allowInvalidCertificates = YES;
-    
-    
+    [self printStartRequestWithUrl:url params:params];
     [manager POST:url parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
        
         [self printSuccessResponseData:responseObject url:operation.request.URL.absoluteString];
         [self performCallBack:callBack withTarget:target data:responseObject];
+        
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        
         NSString *errorString = [[NSString alloc] initWithData:operation.responseData encoding:NSUTF8StringEncoding];
-        [self performCallBack:callBack withTarget:target data:@{@"code":@(-1000),@"msg":errorString,@"data":error}];
+        [self printFailedResponseData:errorString ? errorString : error url:operation.request.URL.absoluteString];
+        [self performCallBack:callBack withTarget:target data:@{@"code":@(error.code),@"msg":errorString,@"data":error}];
+        
     }];
 }
 
 - (void)getWithParams:(NSDictionary *)params url:(NSString *)url target:(id)target callBack:(SEL)callBack {
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    [self printStartRequestWithUrl:url params:params];
+    
     [manager GET:url parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        
         [self printSuccessResponseData:responseObject url:operation.request.URL.absoluteString];
         [self performCallBack:callBack withTarget:target data:responseObject];
+        
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        
         NSString *errorString = [[NSString alloc] initWithData:operation.responseData encoding:NSUTF8StringEncoding];
-        [self performCallBack:callBack withTarget:target data:@{@"code":@(-1000),@"msg":errorString,@"data":error}];
+        [self printFailedResponseData:errorString ? errorString : error url:operation.request.URL.absoluteString];
+        [self performCallBack:callBack withTarget:target data:@{@"code":@(error.code),@"msg":errorString,@"data":error}];
+        
     }];
+}
+
+- (void)printStartRequestWithUrl:(NSString *)url params:(NSDictionary *)params {
+    
+    DLog(@"============ Request start   =============");
+    DLog(@"url:  %@",url);
+    DLog(@"params:  %@",params);
+    
+    DLog(@"============================================");
+    
 }
 
 - (void)printSuccessResponseData:(id)responseData url:(NSString *)url {
     DLog(@"============ Request Success   =============");
+    DLog(@"reqeust url:%@",url);
+    DLog(@"response: %@",responseData);
+    DLog(@"============================================");
+}
+
+- (void)printFailedResponseData:(id)responseData url:(NSString *)url {
+    DLog(@"============ Request Failed   ==============");
     DLog(@"reqeust url:%@",url);
     DLog(@"response: %@",responseData);
     DLog(@"============================================");

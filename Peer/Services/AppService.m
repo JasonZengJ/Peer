@@ -12,8 +12,8 @@
 #import <sys/utsname.h>
 #import <UIKit/UIKit.h>
 
-#define RegisterDevicePath  @"sys/registerDevice"
-#define RegisterRemoteToken @"sys/registerRemoteToken"
+#define RegisterDevicePath  @"sys/register-device"
+#define RegisterRemoteToken @"sys/register-remoteToken"
 
 
 @implementation AppService
@@ -33,8 +33,6 @@
     NSString *version    = infoDictionary[@"CFBundleShortVersionString"];
     NSString *sysName    = [[UIDevice currentDevice] systemName];
     NSString *sysVer     = [[UIDevice currentDevice] systemVersion];
-    
-    
     NSDictionary *appConfiguration = @{
                                        @"udid":[OpenUDID value],
                                        @"appVer":version,
@@ -46,26 +44,40 @@
     [[NSUserDefaults standardUserDefaults] setObject:appConfiguration forKey:@"app"];
     [[NSUserDefaults standardUserDefaults] synchronize];
     
+    [AppService registerDevice];
+    
     [[AFNetworkReachabilityManager sharedManager] startMonitoring];
     [[AFNetworkReachabilityManager sharedManager] setReachabilityStatusChangeBlock:^(AFNetworkReachabilityStatus status){
+        DLog(@"network status changed :%d",status);
         [[NSUserDefaults standardUserDefaults] setObject:@(status) forKey:@"NetworkStatus"];
+        [[NSNotificationCenter defaultCenter]  postNotificationName:kNetworkChangedNotification object:@(status)];
+        if (![AppService token] && status > 0 && ![AppService isRegisteringDevice] ) {
+            [AppService registerDevice];
+        }
     }];
+    
 }
+
 
 + (void)registerDevice {
     
+    NSLog(@"register device");
     NSDictionary *appConfiguration = [[NSUserDefaults standardUserDefaults] objectForKey:@"app"];
     if (appConfiguration) {
+       [[NSUserDefaults standardUserDefaults] setObject:@(1) forKey:@"isRegisteringDevice"];
        [[PeerNetworkManager shareInstance] securePostWithParams:appConfiguration apiPath:RegisterDevicePath callBackBlock:^(id responseObject) {
-           
            if (responseObject && [responseObject objectForKey:@"code"] == 0) {
                NSMutableDictionary *appConfig = [NSMutableDictionary dictionaryWithDictionary:appConfiguration];
                [appConfig setObject:@"token" forKey:@"token"];
            }
-           
+           [[NSUserDefaults standardUserDefaults] setObject:nil forKey:@"isRegisteringDevice"];
        }];
     }
     
+}
+
++ (BOOL)isRegisteringDevice {
+   return [[[NSUserDefaults standardUserDefaults] objectForKey:@"isRegisteringDevice"] integerValue];
 }
 
 + (AFNetworkReachabilityStatus)networkState {
