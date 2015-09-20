@@ -25,6 +25,8 @@
 
 + (NSString *)appVersion;
 
++ (NSString *)systemVersion;
+
 + (NSString *)udid;
 
 + (NSString *)appName;

@@ -16,19 +16,19 @@
 
 #ifdef DEBUG
 
-const NSString *HostName = @"http://localhost";
-const NSString *SecureHostName = @"https://192.168.1.103";
+ NSString *HostName = @"http://localhost";
+ NSString *SecureHostName = @"https://192.168.1.103";
 
 #else
 
-const NSString *HostName = @"http://localhost";
-const NSString *SecureHostName = @"https://192.168.1.107";
+ NSString *HostName = @"http://localhost";
+ NSString *SecureHostName = @"https://192.168.1.107";
 
 #endif
 
 
-const NSString *device  = @"mobile";
-const NSString *version = @"v1";
+ NSString *device  = @"mobile";
+ NSString *version = @"v1";
 
 @implementation PeerNetworkManager
 
@@ -48,13 +48,13 @@ const NSString *version = @"v1";
 #pragma mark - -- HTTP POST
 - (void)postWithParams:(NSDictionary *)params apiPath:(NSString *)apiPath target:(id)target callBack:(SEL)callBack {
     
-    NSString *url = [self encapsulationUrlWithApiPath:apiPath];
+    NSString *url = [self encapsulationUrlWithApiPath:apiPath host:HostName];
     [self postWithParams:params url:url target:target callBack:callBack];
 }
 
 - (void)postWithParams:(NSDictionary *)params apiPath:(NSString *)apiPath callBackBlock:(void(^)(id responseObject))callBackBlock {
     
-    NSString *url = [self encapsulationUrlWithApiPath:apiPath];
+    NSString *url = [self encapsulationUrlWithApiPath:apiPath host:HostName];
     [self postWithParams:params url:url callBackBlock:callBackBlock];
     
 }
@@ -62,12 +62,12 @@ const NSString *version = @"v1";
 #pragma mark - -- HTTPS POST
 
 - (void)securePostWithParams:(NSDictionary *)params apiPath:(NSString *)apiPath target:(id)target callBack:(SEL)callBack {
-    NSString *url = [self encapsulationSecureUrlWithApiPath:apiPath];
+    NSString *url = [self encapsulationUrlWithApiPath:apiPath host:SecureHostName];
     [self postWithParams:params url:url target:target callBack:callBack];
 }
 
 - (void)securePostWithParams:(NSDictionary *)params apiPath:(NSString *)apiPath callBackBlock:(void(^)(id responseObject))callBackBlock {
-    NSString *url = [self encapsulationSecureUrlWithApiPath:apiPath];
+    NSString *url = [self encapsulationUrlWithApiPath:apiPath host:SecureHostName];
     [self postWithParams:params url:url callBackBlock:callBackBlock];
 }
 
@@ -75,22 +75,22 @@ const NSString *version = @"v1";
 #pragma mark - -- HTTP GET
 
 - (void)getWithParams:(NSDictionary *)params apiPath:(NSString *)apiPath target:(id)target callBack:(SEL)callBack {
-    NSString *url = [self encapsulationUrlWithApiPath:apiPath];
+    NSString *url = [self encapsulationUrlWithApiPath:apiPath host:HostName];
     [self getWithParams:params apiPath:url target:target callBack:callBack];
 }
 
 #pragma mark - -- URL Encapsulation
 
-- (NSString *)encapsulationSecureUrlWithApiPath:(NSString *)apiPath {
-    NSString *appVer = [AppService  appVersion];
-    return [NSString stringWithFormat:@"%@/%@/%@/%@?udid=%@&appVer=%@",SecureHostName,device,version,apiPath,[AppService udid],appVer];
+- (NSString *)encapsulationUrlWithApiPath:(NSString *)apiPath host:(NSString *)host {
+    return [NSString stringWithFormat:@"%@/%@/%@/%@?udid=%@&appVer=%@&sysVer=%@",
+            SecureHostName,device,version,apiPath,[AppService udid],[AppService appVersion],[AppService systemVersion]];
 }
 
 
-- (NSString *)encapsulationUrlWithApiPath:(NSString *)apiPath {
-    NSString *appVer = [AppService  appVersion];
-    return [NSString stringWithFormat:@"%@/%@/%@/%@?udid=%@&appVer=%@",HostName,device,version,apiPath,[AppService udid],appVer];
-}
+//- (NSString *)encapsulationUrlWithApiPath:(NSString *)apiPath {
+//    NSString *appVer = [AppService  appVersion];
+//    return [NSString stringWithFormat:@"%@/%@/%@/%@?udid=%@&appVer=%@",HostName,device,version,apiPath,[AppService udid],appVer];
+//}
 
 #pragma mark - -- Low Level
 

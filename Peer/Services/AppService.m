@@ -13,7 +13,7 @@
 #import <UIKit/UIKit.h>
 
 #define RegisterDevicePath  @"sys/register-device"
-#define RegisterRemoteToken @"sys/register-remoteToken"
+#define RegisterRemoteToken @"sys/register-remote-token"
 
 
 @implementation AppService
@@ -93,7 +93,7 @@
 + (void)registerRemoteToken:(NSString *)remoteToken {
     
     [[NSUserDefaults standardUserDefaults] setObject:remoteToken forKey:@"remoteToken"];
-    [[PeerNetworkManager shareInstance] securePostWithParams:@{@"udid":[AppService udid],@"remoteToken":remoteToken}
+    [[PeerNetworkManager shareInstance] securePostWithParams:@{@"remoteToken":remoteToken}
                                                      apiPath:RegisterRemoteToken
                                                callBackBlock:^(id responseObject) {
                                                }];
@@ -169,9 +169,15 @@
     return [[[NSUserDefaults standardUserDefaults] objectForKey:@"app"] objectForKey:@"appVer"];
 }
 
++ (NSString *)systemVersion {
+    return [[[NSUserDefaults standardUserDefaults] objectForKey:@"app"] objectForKey:@"sysVer"];
+}
+
 + (NSString *)udid {
     return [[[NSUserDefaults standardUserDefaults] objectForKey:@"app"] objectForKey:@"udid"];
 }
+
+
 
 + (NSString *)appName {
     return [[[NSUserDefaults standardUserDefaults] objectForKey:@"app"] objectForKey:@"appName"];
