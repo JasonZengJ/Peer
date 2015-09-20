@@ -30,7 +30,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    [self testGetVerificationCode];
+//    [self testGetVerificationCode];
+    [self testConfirmVerificationCode];
+  
 }
 
 
@@ -41,7 +43,7 @@
 }
 
 - (void)testConfirmVerificationCode {
-    [self.loginService confirmVerificationCode:@"123" result:^(BOOL isSuccess) {
+    [self.loginService confirmVerificationCode:@"3299" result:^(BOOL isSuccess) {
         
     }];
 }

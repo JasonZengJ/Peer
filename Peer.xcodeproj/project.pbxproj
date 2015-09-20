@@ -33,6 +33,7 @@
 		9601044C1BADC9EA00152908 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9601044B1BADC9EA00152908 /* MessageUI.framework */; };
 		960104521BADD08600152908 /* SMS_SDKLocalizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9601044E1BADD08600152908 /* SMS_SDKLocalizable.strings */; };
 		960104531BADD08600152908 /* SMS_SDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 960104501BADD08600152908 /* SMS_SDK.framework */; };
+		960104561BAE80C100152908 /* ValidationService.m in Sources */ = {isa = PBXBuildFile; fileRef = 960104551BAE80C100152908 /* ValidationService.m */; };
 		961D2E4A1BA715C200C84C8B /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 961D2E491BA715C200C84C8B /* QuartzCore.framework */; };
 		961D2E4C1BA715D500C84C8B /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 961D2E4B1BA715D500C84C8B /* Accelerate.framework */; };
 		966B517F1B7F8D70000F0EF2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 966B517E1B7F8D70000F0EF2 /* main.m */; };
@@ -99,6 +100,8 @@
 		9601044F1BADD08600152908 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/SMS_SDKLocalizable.strings; sourceTree = "<group>"; };
 		960104501BADD08600152908 /* SMS_SDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SMS_SDK.framework; sourceTree = "<group>"; };
 		960104511BADD08600152908 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/SMS_SDKLocalizable.strings"; sourceTree = "<group>"; };
+		960104541BAE80C100152908 /* ValidationService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ValidationService.h; sourceTree = "<group>"; };
+		960104551BAE80C100152908 /* ValidationService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ValidationService.m; sourceTree = "<group>"; };
 		961D2E491BA715C200C84C8B /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		961D2E4B1BA715D500C84C8B /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
 		966B51791B7F8D70000F0EF2 /* Peer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Peer.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -215,6 +218,8 @@
 				960104071BA879E200152908 /* LoginService.m */,
 				9601041E1BA9CAC300152908 /* UserService.h */,
 				9601041F1BA9CAC300152908 /* UserService.m */,
+				960104541BAE80C100152908 /* ValidationService.h */,
+				960104551BAE80C100152908 /* ValidationService.m */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -526,6 +531,7 @@
 				960104351BAD6AB700152908 /* TestViewController.m in Sources */,
 				960104091BA879E200152908 /* LoginService.m in Sources */,
 				960103F41BA8795500152908 /* PeerNetworkManager.m in Sources */,
+				960104561BAE80C100152908 /* ValidationService.m in Sources */,
 				9601042E1BAB1C5000152908 /* RegisterViewController.m in Sources */,
 				960104141BA879F600152908 /* LoginViewController.m in Sources */,
 				960104001BA879C800152908 /* UIColor+Hex.m in Sources */,

@@ -12,7 +12,7 @@
 
 
 
-@interface LoginServiceTest : XCTestCase <LoginServiceDelegate>
+@interface LoginServiceTest : XCTestCase
 
 @property(nonatomic)LoginService *loginService;
 
@@ -37,23 +37,14 @@
     XCTAssert(YES, @"Pass");
 }
 
-- (void)testUserModelHasPropertyPhoneAndName {
+- (void)testCheckPhoneNumber {
     
-}
-
-- (void)testUserLogin {
+    NSString *phoneNumber = @"";
+    BOOL result = [self.loginService checkPhoneNumber:phoneNumber];
+    XCTAssert(result,@"Pass");
     
-}
-
-- (void)testRegisterWithPhonePassword {
     
-}
-
-- (void)loginCompleteWithError:(NSDictionary *)error {
     
-}
-
-- (void)registerCompleteWithError:(NSDictionary *)error {
     
 }
 
