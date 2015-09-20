@@ -49,7 +49,7 @@
     [[AFNetworkReachabilityManager sharedManager] startMonitoring];
     [[AFNetworkReachabilityManager sharedManager] setReachabilityStatusChangeBlock:^(AFNetworkReachabilityStatus status){
         DLog(@"network status changed :%d",status);
-        [[NSUserDefaults standardUserDefaults] setObject:@(status) forKey:@"NetworkStatus"];
+        [[NSUserDefaults standardUserDefaults] setObject:@(status) forKey:@"networkStatus"];
         [[NSNotificationCenter defaultCenter]  postNotificationName:kNetworkChangedNotification object:@(status)];
         if (![AppService token] && status > 0 && ![AppService isRegisteringDevice] ) {
             [AppService registerDevice];
@@ -59,14 +59,14 @@
 }
 
 
+
 + (void)registerDevice {
     
-    NSLog(@"register device");
     NSDictionary *appConfiguration = [[NSUserDefaults standardUserDefaults] objectForKey:@"app"];
     if (appConfiguration) {
        [[NSUserDefaults standardUserDefaults] setObject:@(1) forKey:@"isRegisteringDevice"];
        [[PeerNetworkManager shareInstance] securePostWithParams:appConfiguration apiPath:RegisterDevicePath callBackBlock:^(id responseObject) {
-           if (responseObject && [responseObject objectForKey:@"code"] == 0) {
+           if (responseObject && [[responseObject objectForKey:@"code"] integerValue] == 0) {
                NSMutableDictionary *appConfig = [NSMutableDictionary dictionaryWithDictionary:appConfiguration];
                [appConfig setObject:@"token" forKey:@"token"];
            }
@@ -76,12 +76,37 @@
     
 }
 
+
++ (void)registerRemoteNotification
+{
+    float version=  [[UIDevice currentDevice].systemVersion floatValue];
+    if (version >= 8.0) {
+        [[UIApplication sharedApplication] registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:(UIUserNotificationTypeSound | UIUserNotificationTypeAlert | UIUserNotificationTypeBadge) categories:nil]];
+        [[UIApplication sharedApplication] registerForRemoteNotifications];
+    } else {
+        [[UIApplication sharedApplication] registerForRemoteNotificationTypes:UIRemoteNotificationTypeAlert | UIRemoteNotificationTypeBadge | UIRemoteNotificationTypeSound];
+        
+    }
+    
+}
+
++ (void)registerRemoteToken:(NSString *)remoteToken {
+    
+    [[NSUserDefaults standardUserDefaults] setObject:remoteToken forKey:@"remoteToken"];
+    [[PeerNetworkManager shareInstance] securePostWithParams:@{@"udid":[AppService udid],@"remoteToken":remoteToken}
+                                                     apiPath:RegisterRemoteToken
+                                               callBackBlock:^(id responseObject) {
+                                               }];
+    
+    
+}
+
 + (BOOL)isRegisteringDevice {
    return [[[NSUserDefaults standardUserDefaults] objectForKey:@"isRegisteringDevice"] integerValue];
 }
 
 + (AFNetworkReachabilityStatus)networkState {
-    return [[[NSUserDefaults standardUserDefaults] objectForKey:@"NetworkStatus"] integerValue];
+    return [[[NSUserDefaults standardUserDefaults] objectForKey:@"networkStatus"] integerValue];
 }
 
 + (NSString *)token {
@@ -140,8 +165,6 @@
     return @"";
 }
 
-
-
 + (NSString *)appVersion {
     return [[[NSUserDefaults standardUserDefaults] objectForKey:@"app"] objectForKey:@"appVer"];
 }
@@ -155,7 +178,7 @@
 }
 
 + (NSString *)remoteToken {
-    return [[[NSUserDefaults standardUserDefaults] objectForKey:@"app"] objectForKey:@"remoteToken"];
+    return [[NSUserDefaults standardUserDefaults]  objectForKey:@"remoteToken"];
 }
 
 @end

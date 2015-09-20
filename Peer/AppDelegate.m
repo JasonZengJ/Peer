@@ -28,9 +28,8 @@
     // Override point for customization after application launch.
     
     [AppService initAppService];
+    [AppService registerRemoteNotification];
     [SMS_SDK registerApp:@"a72297a4628e" withSecret:@"52cf6cd4ef00aec3e52f8e7af55bbaa1"];
-    
-    
     
     self.window = [[UIWindow alloc] initWithFrame:ScreenBounds];
     self.window.rootViewController = [[TestViewController alloc] init];
@@ -39,6 +38,9 @@
     
     return YES;
 }
+
+
+
 
 
 - (void)applicationWillResignActive:(UIApplication *)application {
@@ -61,8 +63,6 @@
 - (void)applicationWillEnterForeground:(UIApplication *)application {
     // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
     
-    DLog(@"");
-
     DLog(@"enter foreground %ld",(long)[UIApplication sharedApplication].applicationState);
     
 }
@@ -76,5 +76,49 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     DLog(@"terminate %ld",(long)[UIApplication sharedApplication].applicationState);
 }
+
+
+#pragma mark - -- Notification
+
+- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken
+{
+    NSString *token = [[[[deviceToken description]
+                         stringByReplacingOccurrencesOfString: @"<" withString: @""]
+                        stringByReplacingOccurrencesOfString: @">" withString: @""]
+                       stringByReplacingOccurrencesOfString: @" " withString: @""] ;
+    
+    DLog(@"%@", token);
+    [AppService registerRemoteToken:token];
+}
+
+- (void)application:(UIApplication *)application didFailToRegisterForRemoteNotificationsWithError:(NSError *)error
+{
+    DLog(@"register error :%@",error);
+}
+
+- (void)application:(UIApplication *)application handleActionWithIdentifier:(NSString *)identifier forLocalNotification:(UILocalNotification *)notification completionHandler:(void(^)())completionHandler NS_AVAILABLE_IOS(8_0) {
+    
+    NSLog(@"LocalNotification 8_0");
+    completionHandler();
+}
+
+- (void)application:(UIApplication *)application handleActionWithIdentifier:(NSString *)identifier forRemoteNotification:(NSDictionary *)userInfo completionHandler:(void(^)())completionHandler
+{
+    NSLog(@"RemoteNotification 8_0");
+    //handle the actions
+    if ([identifier isEqualToString:@"declineAction"]){
+    }
+    else if ([identifier isEqualToString:@"answerAction"]){
+    }
+}
+
+- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo
+{
+    NSLog(@"RemoteNotification 3_0");
+//    [[UIApplication sharedApplication] setApplicationIconBadgeNumber:2];
+}
+
+
+
 
 @end

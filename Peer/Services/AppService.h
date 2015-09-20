@@ -15,6 +15,10 @@
 
 + (BOOL)isRegisteringDevice;
 
++ (void)registerRemoteNotification;
+
++ (void)registerRemoteToken:(NSString *)remoteToken;
+
 + (NSString *)token;
 
 + (NSString *)deviceType;
