@@ -19,7 +19,6 @@
     if (isMatch) {
         return false;
     }
-    
     if (phoneNumber.length != 11) {
         return false;
     }
