@@ -12,8 +12,8 @@
 #import <sys/utsname.h>
 #import <UIKit/UIKit.h>
 
-#define RegisterDevicePath  @"sys/register-device"
-#define RegisterRemoteToken @"sys/register-remote-token"
+#define RegisterDevicePath  @"v1/sys/register-device"
+#define RegisterRemoteToken @"v1/sys/register-remote-token"
 
 
 @implementation AppService
@@ -48,7 +48,7 @@
     
     [[AFNetworkReachabilityManager sharedManager] startMonitoring];
     [[AFNetworkReachabilityManager sharedManager] setReachabilityStatusChangeBlock:^(AFNetworkReachabilityStatus status){
-        DLog(@"network status changed :%d",status);
+        DLog(@"network status changed :%ld",(long)status);
         [[NSUserDefaults standardUserDefaults] setObject:@(status) forKey:@"networkStatus"];
         [[NSNotificationCenter defaultCenter]  postNotificationName:kNetworkChangedNotification object:@(status)];
         if (![AppService token] && status > 0 && ![AppService isRegisteringDevice] ) {
@@ -68,7 +68,8 @@
        [[PeerNetworkManager shareInstance] securePostWithParams:appConfiguration apiPath:RegisterDevicePath callBackBlock:^(id responseObject) {
            if (responseObject && [[responseObject objectForKey:@"code"] integerValue] == 0) {
                NSMutableDictionary *appConfig = [NSMutableDictionary dictionaryWithDictionary:appConfiguration];
-               [appConfig setObject:@"token" forKey:@"token"];
+               [appConfig setObject:responseObject[@"data"][@"token"] forKey:@"token"];
+               [appConfig setObject:responseObject[@"data"][@"id"]    forKey:@"deviceId"];
            }
            [[NSUserDefaults standardUserDefaults] setObject:nil forKey:@"isRegisteringDevice"];
        }];

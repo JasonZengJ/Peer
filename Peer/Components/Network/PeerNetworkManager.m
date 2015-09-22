@@ -8,6 +8,7 @@
 
 #import "PeerNetworkManager.h"
 #import "NSData+JSON.h"
+#import "NSDictionary+AddObject.h"
 #import "OpenUDID.h"
 #import "AppService.h"
 
@@ -28,7 +29,6 @@
 
 
  NSString *device  = @"mobile";
- NSString *version = @"v1";
 
 @implementation PeerNetworkManager
 
@@ -82,8 +82,8 @@
 #pragma mark - -- URL Encapsulation
 
 - (NSString *)encapsulationUrlWithApiPath:(NSString *)apiPath host:(NSString *)host {
-    return [NSString stringWithFormat:@"%@/%@/%@/%@?udid=%@&appVer=%@&sysVer=%@",
-            SecureHostName,device,version,apiPath,[AppService udid],[AppService appVersion],[AppService systemVersion]];
+    return [NSString stringWithFormat:@"%@/%@/%@?udid=%@&appVer=%@&sysVer=%@",
+            SecureHostName,device,apiPath,[AppService udid],[AppService appVersion],[AppService systemVersion]];
 }
 
 
@@ -96,6 +96,9 @@
 
 
 - (void)postWithParams:(NSDictionary *)params url:(NSString *)url callBackBlock:(void(^)(id responseObject))callBackBlock {
+    
+    params = [params addObject:[AppService token] forKey:@"token"];
+    
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     [manager.responseSerializer setValue:@(YES) forKey:@"removesKeysWithNullValues"];
     manager.securityPolicy.allowInvalidCertificates = YES;
@@ -117,6 +120,8 @@
 
 - (void)postWithParams:(NSDictionary *)params url:(NSString *)url target:(id)target callBack:(SEL)callBack {
     
+    params = [params addObject:[AppService token] forKey:@"token"];
+    
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     [manager.responseSerializer setValue:@(YES) forKey:@"removesKeysWithNullValues"];
     manager.securityPolicy.allowInvalidCertificates = YES;
@@ -136,6 +141,8 @@
 }
 
 - (void)getWithParams:(NSDictionary *)params url:(NSString *)url target:(id)target callBack:(SEL)callBack {
+    
+    params = [params addObject:[AppService token] forKey:@"token"];
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     [self printStartRequestWithUrl:url params:params];
     

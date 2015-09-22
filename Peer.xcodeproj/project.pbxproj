@@ -41,6 +41,9 @@
 		966B518A1B7F8D70000F0EF2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 966B51891B7F8D70000F0EF2 /* Images.xcassets */; };
 		966B518D1B7F8D70000F0EF2 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 966B518B1B7F8D70000F0EF2 /* LaunchScreen.xib */; };
 		966B51991B7F8D70000F0EF2 /* PeerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 966B51981B7F8D70000F0EF2 /* PeerTests.m */; };
+		96E5CB2A1BB1A9C3005503CD /* PetsService.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E5CB291BB1A9C3005503CD /* PetsService.m */; };
+		96E5CB2D1BB1A9EA005503CD /* PetsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E5CB2C1BB1A9EA005503CD /* PetsModel.m */; };
+		96E5CB301BB1B18E005503CD /* NSDictionary+AddObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E5CB2F1BB1B18E005503CD /* NSDictionary+AddObject.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -115,6 +118,12 @@
 		966B51971B7F8D70000F0EF2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		966B51981B7F8D70000F0EF2 /* PeerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PeerTests.m; sourceTree = "<group>"; };
 		966B51A91B7FA959000F0EF2 /* Peer-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Peer-Prefix.pch"; sourceTree = "<group>"; };
+		96E5CB281BB1A9C3005503CD /* PetsService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PetsService.h; sourceTree = "<group>"; };
+		96E5CB291BB1A9C3005503CD /* PetsService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PetsService.m; sourceTree = "<group>"; };
+		96E5CB2B1BB1A9EA005503CD /* PetsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PetsModel.h; sourceTree = "<group>"; };
+		96E5CB2C1BB1A9EA005503CD /* PetsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PetsModel.m; sourceTree = "<group>"; };
+		96E5CB2E1BB1B18E005503CD /* NSDictionary+AddObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+AddObject.h"; sourceTree = "<group>"; };
+		96E5CB2F1BB1B18E005503CD /* NSDictionary+AddObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+AddObject.m"; sourceTree = "<group>"; };
 		A1FE296EA4C7788C849801D9 /* Pods-Peer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Peer.release.xcconfig"; path = "Pods/Target Support Files/Pods-Peer/Pods-Peer.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -205,6 +214,8 @@
 				960103FC1BA879C800152908 /* UIImage+Color.m */,
 				960103FD1BA879C800152908 /* UIView+Layout.h */,
 				960103FE1BA879C800152908 /* UIView+Layout.m */,
+				96E5CB2E1BB1B18E005503CD /* NSDictionary+AddObject.h */,
+				96E5CB2F1BB1B18E005503CD /* NSDictionary+AddObject.m */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -220,6 +231,8 @@
 				9601041F1BA9CAC300152908 /* UserService.m */,
 				960104541BAE80C100152908 /* ValidationService.h */,
 				960104551BAE80C100152908 /* ValidationService.m */,
+				96E5CB281BB1A9C3005503CD /* PetsService.h */,
+				96E5CB291BB1A9C3005503CD /* PetsService.m */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -280,6 +293,8 @@
 				960104231BAB117200152908 /* AppModel.m */,
 				960104251BAB1B2300152908 /* UserModel.h */,
 				960104261BAB1B2300152908 /* UserModel.m */,
+				96E5CB2B1BB1A9EA005503CD /* PetsModel.h */,
+				96E5CB2C1BB1A9EA005503CD /* PetsModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -522,11 +537,14 @@
 				960104201BA9CAC300152908 /* UserService.m in Sources */,
 				960104021BA879C800152908 /* UIView+Layout.m in Sources */,
 				966B51821B7F8D70000F0EF2 /* AppDelegate.m in Sources */,
+				96E5CB301BB1B18E005503CD /* NSDictionary+AddObject.m in Sources */,
 				960103FF1BA879C800152908 /* NSData+JSON.m in Sources */,
 				960104271BAB1B2300152908 /* UserModel.m in Sources */,
+				96E5CB2D1BB1A9EA005503CD /* PetsModel.m in Sources */,
 				9601042B1BAB1C4600152908 /* PhoneVerifyViewController.m in Sources */,
 				960104131BA879F600152908 /* LoginView.m in Sources */,
 				960104241BAB117200152908 /* AppModel.m in Sources */,
+				96E5CB2A1BB1A9C3005503CD /* PetsService.m in Sources */,
 				960104151BA879F600152908 /* ViewController.m in Sources */,
 				960104351BAD6AB700152908 /* TestViewController.m in Sources */,
 				960104091BA879E200152908 /* LoginService.m in Sources */,

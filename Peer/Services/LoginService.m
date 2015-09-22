@@ -10,10 +10,9 @@
 #import "PeerNetworkManager.h"
 #import "UserModel.h"
 #import <SMS_SDK/SMS_SDK.h>
-//#import "us"
 
-#define LoginApiPath    @"user/login"
-#define RegisterApiPath @"user/register"
+#define LoginApiPath    @"v1/user/login"
+#define RegisterApiPath @"v1/user/register"
 
 @interface LoginService ()
 

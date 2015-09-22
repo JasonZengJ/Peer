@@ -9,6 +9,7 @@
 #import "TestViewController.h"
 #import "LoginService.h"
 #import "UserModel.h"
+#import "UIView+Layout.h"
 
 @interface TestViewController ()
 
@@ -33,7 +34,36 @@
 //    [self testGetVerificationCode];
 //    [self testConfirmVerificationCode];
 //    [self testUserLogin];
+    self.view.backgroundColor = [UIColor whiteColor];
   
+    
+    UIView *leftView = [[UIView alloc] initWithFrame:CGRectMake(100, 100, 100, 100)];
+    leftView.backgroundColor = [UIColor purpleColor];
+    [self.view addSubview:leftView];
+    [self addLabelToView:leftView text:@"LeftView"];
+    
+    
+    
+    UIView *bottomView = [[UIView alloc] initWithFrame:CGRectMake(leftView.left, leftView.bottom + 20, 100, 100)];
+    bottomView.backgroundColor = [UIColor grayColor];
+    [self.view addSubview:bottomView];
+    [self addLabelToView:bottomView text:@"BottomView"];
+    
+    
+    UIView *rightView = [[UIView alloc] initWithFrame:CGRectMake(leftView.right + 20, leftView.top, 100, 100)];
+    rightView.backgroundColor = [UIColor blackColor];
+    [self.view addSubview:rightView];
+    [self addLabelToView:rightView text:@"RightView"];
+    
+}
+
+- (void)addLabelToView:(UIView *)view text:(NSString *)text {
+    UILabel *label  = [[UILabel alloc] initWithFrame:view.bounds];
+    label.text      = text;
+    label.textColor = [UIColor whiteColor];
+    label.backgroundColor = [UIColor clearColor];
+    label.textAlignment = NSTextAlignmentCenter;
+    [view addSubview:label];
 }
 
 
