@@ -49,12 +49,14 @@
 - (void)postWithParams:(NSDictionary *)params apiPath:(NSString *)apiPath target:(id)target callBack:(SEL)callBack {
     
     NSString *url = [self encapsulationUrlWithApiPath:apiPath host:HostName];
+    params = [self encapsulationParams:params];
     [self postWithParams:params url:url target:target callBack:callBack];
 }
 
 - (void)postWithParams:(NSDictionary *)params apiPath:(NSString *)apiPath callBackBlock:(void(^)(id responseObject))callBackBlock {
     
     NSString *url = [self encapsulationUrlWithApiPath:apiPath host:HostName];
+    params = [self encapsulationParams:params];
     [self postWithParams:params url:url callBackBlock:callBackBlock];
     
 }
@@ -63,11 +65,13 @@
 
 - (void)securePostWithParams:(NSDictionary *)params apiPath:(NSString *)apiPath target:(id)target callBack:(SEL)callBack {
     NSString *url = [self encapsulationUrlWithApiPath:apiPath host:SecureHostName];
+    params = [self encapsulationParams:params];
     [self postWithParams:params url:url target:target callBack:callBack];
 }
 
 - (void)securePostWithParams:(NSDictionary *)params apiPath:(NSString *)apiPath callBackBlock:(void(^)(id responseObject))callBackBlock {
     NSString *url = [self encapsulationUrlWithApiPath:apiPath host:SecureHostName];
+    params = [self encapsulationParams:params];
     [self postWithParams:params url:url callBackBlock:callBackBlock];
 }
 
@@ -76,28 +80,48 @@
 
 - (void)getWithParams:(NSDictionary *)params apiPath:(NSString *)apiPath target:(id)target callBack:(SEL)callBack {
     NSString *url = [self encapsulationUrlWithApiPath:apiPath host:HostName];
+    params = [self encapsulationParams:params];
     [self getWithParams:params apiPath:url target:target callBack:callBack];
+}
+
+#pragma mark - -- HTTPS GET
+
+- (void)secureGetWithParams:(NSDictionary *)params apiPath:(NSString *)apiPath target:(id)target callBack:(SEL)callBack {
+    NSString *url = [self encapsulationUrlWithApiPath:apiPath host:SecureHostName];
+    params = [self encapsulationParams:params];
+    [self getWithParams:params apiPath:url target:target callBack:callBack];
+}
+
+
+- (void)secureGetWithParams:(NSDictionary *)params apiPath:(NSString *)apiPath callBackBlock:(void(^)(id responseObject))callBackBlock {
+    
+    NSString *url = [self encapsulationUrlWithApiPath:apiPath host:SecureHostName];
 }
 
 #pragma mark - -- URL Encapsulation
 
 - (NSString *)encapsulationUrlWithApiPath:(NSString *)apiPath host:(NSString *)host {
-    return [NSString stringWithFormat:@"%@/%@/%@?udid=%@&appVer=%@&sysVer=%@",
-            SecureHostName,device,apiPath,[AppService udid],[AppService appVersion],[AppService systemVersion]];
+    return [NSString stringWithFormat:@"%@/%@/%@?appVer=%@&sysVer=%@",
+            SecureHostName,device,apiPath,[AppService appVersion],[AppService systemVersion]];
 }
 
-
-//- (NSString *)encapsulationUrlWithApiPath:(NSString *)apiPath {
-//    NSString *appVer = [AppService  appVersion];
-//    return [NSString stringWithFormat:@"%@/%@/%@/%@?udid=%@&appVer=%@",HostName,device,version,apiPath,[AppService udid],appVer];
-//}
+- (NSDictionary *)encapsulationParams:(NSDictionary *)params {
+    
+    if ([AppService token]) {
+        params = [params addObject:[AppService token] forKey:@"token"];
+    }
+    
+    if ([AppService udid]) {
+        params = [params addObject:[AppService udid] forKey:@"udid"];
+    }
+    
+    return params;
+}
 
 #pragma mark - -- Low Level
 
 
 - (void)postWithParams:(NSDictionary *)params url:(NSString *)url callBackBlock:(void(^)(id responseObject))callBackBlock {
-    
-    params = [params addObject:[AppService token] forKey:@"token"];
     
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     [manager.responseSerializer setValue:@(YES) forKey:@"removesKeysWithNullValues"];
@@ -119,8 +143,6 @@
 
 
 - (void)postWithParams:(NSDictionary *)params url:(NSString *)url target:(id)target callBack:(SEL)callBack {
-    
-    params = [params addObject:[AppService token] forKey:@"token"];
     
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     [manager.responseSerializer setValue:@(YES) forKey:@"removesKeysWithNullValues"];
@@ -159,6 +181,8 @@
         
     }];
 }
+
+
 
 - (void)printStartRequestWithUrl:(NSString *)url params:(NSDictionary *)params {
     

@@ -18,4 +18,11 @@
     
 }
 
+- (NSDictionary *)addDictionary:(NSDictionary *)dictionary {
+    
+    NSMutableDictionary *mutableDic = [NSMutableDictionary dictionaryWithDictionary:self];
+    [mutableDic addDictionary:dictionary];
+    return [mutableDic copy];
+}
+
 @end

@@ -26,16 +26,61 @@
     return image;
 }
 
+
 +(UIImage *)captureView:(UIView *)view{
     
-    UIGraphicsBeginImageContext([UIScreen mainScreen].bounds.size);
+    UIGraphicsBeginImageContextWithOptions(view.bounds.size, NO, 0);
     CGContextRef ctx = UIGraphicsGetCurrentContext();
-    CGContextFillRect(ctx, [UIScreen mainScreen].bounds);
-    [view.layer renderInContext:ctx];
+    
+    CGContextSaveGState(ctx);
+    
+    CGContextTranslateCTM(ctx, [view center].x, [view center].y);
+    
+    CGContextConcatCTM(ctx, [view transform]);
+    
+    CGContextTranslateCTM(ctx,
+                          -[view bounds].size.width * [[view layer] anchorPoint].x,
+                          -[view bounds].size.height * [[view layer] anchorPoint].y);
+    
+    [[view layer] renderInContext:ctx];
+    CGContextRestoreGState(ctx);
     UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
     
     return newImage;
+}
+
++ (UIImage *)screenshot
+{
+    CGSize imageSize = [[UIScreen mainScreen] bounds].size;
+    
+    UIGraphicsBeginImageContextWithOptions(imageSize, NO, 0);
+    
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    
+    for (UIWindow *window in [[UIApplication sharedApplication] windows]) {
+        if (![window respondsToSelector:@selector(screen)] || [window screen] == [UIScreen mainScreen]) {
+            CGContextSaveGState(context);
+            
+            CGContextTranslateCTM(context, [window center].x, [window center].y);
+            
+            CGContextConcatCTM(context, [window transform]);
+            
+            CGContextTranslateCTM(context,
+                                  -[window bounds].size.width * [[window layer] anchorPoint].x,
+                                  -[window bounds].size.height * [[window layer] anchorPoint].y);
+            
+            [[window layer] renderInContext:context];
+            
+            CGContextRestoreGState(context);
+        }
+    }
+    
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    
+    UIGraphicsEndImageContext();
+    
+    return image;
 }
 
 - (UIImage *)blurImageWithRadius:(CGFloat)blurRadius{

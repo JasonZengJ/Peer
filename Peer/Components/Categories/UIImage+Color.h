@@ -16,4 +16,6 @@
 - (UIImage *)blurImageWithRadius:(CGFloat)blurRadius;
 
 + (UIImage *)captureView:(UIView *)view;
+
++ (UIImage *)screenshot;
 @end

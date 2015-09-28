@@ -12,4 +12,6 @@
 
 - (NSDictionary *)addObject:(id)object forKey:(NSString *)key;
 
+- (NSDictionary *)addDictionary:(NSDictionary *)dictionary;
+
 @end

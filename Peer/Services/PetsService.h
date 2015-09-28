@@ -13,9 +13,10 @@
 
 @interface PetsService : NSObject
 
+- (void)getPetsWithPetsId:(NSNumber *)petsId callBackBlock:(void(^)(PetsModel *pets))callBackBlock;
 
-- (void)addPets:(PetsModel *)petsModel callBack:(void(^)(NSDictionary* responseObject))callBackBlock;
+- (void)getAllPetsWithCallBackBlock:(void(^)(NSArray* allPets))callBackBlock;
 
-
+- (void)addOrUpdatePets:(PetsModel *)petsModel callBack:(void(^)(NSDictionary* responseObject))callBackBlock;
 
 @end
