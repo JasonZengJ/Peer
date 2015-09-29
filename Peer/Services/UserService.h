@@ -10,4 +10,6 @@
 
 @interface UserService : NSObject
 
+- (void)updateUserInfo:(NSDictionary *)userInfo callBackBlock:(void(^)(NSDictionary *responseObject))callBackBlock;
+
 @end

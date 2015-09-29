@@ -13,7 +13,7 @@
 #import "PhoneVerifyViewController.h"
 #import "UserModel.h"
 
-@interface LoginViewController () <LoginViewDelegate,LoginServiceDelegate>
+@interface LoginViewController () <LoginViewDelegate>
 
 @property(nonatomic) LoginView *loginView;
 @property(nonatomic) LoginService* loginService;

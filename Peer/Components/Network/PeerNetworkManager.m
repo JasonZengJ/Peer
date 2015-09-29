@@ -93,11 +93,6 @@
 }
 
 
-- (void)secureGetWithParams:(NSDictionary *)params apiPath:(NSString *)apiPath callBackBlock:(void(^)(id responseObject))callBackBlock {
-    
-    NSString *url = [self encapsulationUrlWithApiPath:apiPath host:SecureHostName];
-}
-
 #pragma mark - -- URL Encapsulation
 
 - (NSString *)encapsulationUrlWithApiPath:(NSString *)apiPath host:(NSString *)host {

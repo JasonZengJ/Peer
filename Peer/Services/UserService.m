@@ -7,7 +7,25 @@
 //
 
 #import "UserService.h"
+#import "PeerNetworkManager.h"
+
+#define UpdateUserInfoPath @"v1/user/update-user-info"
 
 @implementation UserService
+
+
+- (void)updateUserInfo:(NSDictionary *)userInfo callBackBlock:(void(^)(NSDictionary *responseObject))callBackBlock {
+    
+    [[PeerNetworkManager shareInstance] securePostWithParams:userInfo apiPath:UpdateUserInfoPath callBackBlock:^(id responseObject) {
+        
+        if ([[responseObject objectForKey:@"code"] integerValue] == 0) {
+            
+        } else {
+            
+        }
+        
+    }];
+    
+}
 
 @end
