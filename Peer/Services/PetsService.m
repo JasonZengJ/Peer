@@ -15,12 +15,60 @@
 #define AddPetsPath @"v1/add-pets"
 #define GetPetsByIdPath @"v1/pets-by-id"
 #define GetAllPetsPath @"v1/all-pets"
+#define GetPetsWithBreedIdPath @"v1/pets-with-breed-id"
+#define LikePetsPath @"v1/like-pets"
+#define FollowPetsPath @"v1/follow-pets"
 
 
 @implementation PetsService
 
 
-- (void)getPetsWithPetsId:(NSNumber *)petsId callBackBlock:(void(^)(PetsModel *pets))callBackBlock {
+- (void)likePetsWithPetsId:(NSString *)petsId userId:(NSString *)userId callBackBlock:(void (^)(bool success))callBackBlock {
+    [[PeerNetworkManager shareInstance] postWithParams:@{@"userId":userId,@"petsId":petsId} apiPath:LikePetsPath callBackBlock:^(id responseObject) {
+        if (![[responseObject objectForKey:@"code"] integerValue]) {
+            callBackBlock(true);
+        } else {
+            callBackBlock(false);
+        }
+    }];
+}
+
+- (void)followPetsWithPetsId:(NSString *)petsId userId:(NSString *)userId callBackBlock:(void (^)(bool success))callBackBlock {
+    
+    [[PeerNetworkManager shareInstance] postWithParams:@{@"userId":userId,@"petsId":petsId} apiPath:FollowPetsPath callBackBlock:^(id responseObject) {
+        if (![[responseObject objectForKey:@"code"] integerValue]) {
+            callBackBlock(true);
+        } else {
+            callBackBlock(false);
+        }
+    }];
+    
+}
+
+- (void)getPetsArrayWithBreedId:(NSNumber *)breedId callBackBlock:(void (^)(NSArray *petsArray))callBackBlock {
+    
+    [[PeerNetworkManager shareInstance] postWithParams:@{@"breedId":breedId} apiPath:GetPetsWithBreedIdPath callBackBlock:^(id responseObject) {
+        
+        if ([responseObject objectForKey:@"code"] == 0) {
+            
+            NSArray *petsArray = [self makePetsModelArrayWithResponseData:responseObject];
+            if ([petsArray count]) {
+                callBackBlock(petsArray);
+            } else {
+                callBackBlock(nil);
+            }
+            
+        } else {
+            callBackBlock(nil);
+        }
+        
+        
+    }];
+    
+}
+
+
+- (void)getPetWithPetsId:(NSNumber *)petsId callBackBlock:(void(^)(PetsModel *pets))callBackBlock {
     
     NSString *apiPath = [NSString stringWithFormat:@"%@/%@",GetPetsByIdPath,petsId];
     [[PeerNetworkManager shareInstance] postWithParams:nil apiPath:apiPath callBackBlock:^(id responseObject) {
@@ -48,13 +96,10 @@
         
         if ([responseObject objectForKey:@"code"] == 0) {
             
-            NSMutableArray *mutableArray = [NSMutableArray arrayWithCapacity:[[responseObject objectForKey:@"data"] count]];
-            for (NSDictionary *dic in [responseObject objectForKey:@"data"]) {
-                PetsModel *pets = [[PetsModel alloc] initWithDictionary:dic error:nil];
-                [mutableArray addObject:pets];
-            }
-            if ([mutableArray count]) {
-                callBackBlock([mutableArray copy]);
+            NSArray *petsArray = [self makePetsModelArrayWithResponseData:responseObject];
+            
+            if ([petsArray count]) {
+                callBackBlock(petsArray);
             } else {
                 callBackBlock(nil);
             }
@@ -73,6 +118,18 @@
     [[PeerNetworkManager shareInstance] postWithParams:params apiPath:AddPetsPath callBackBlock:^(id responseObject) {
         callBackBlock(responseObject);
     }];
+    
+}
+
+
+- (NSArray *)makePetsModelArrayWithResponseData:(NSDictionary *)responseData {
+    
+    NSMutableArray *mutableArray = [NSMutableArray arrayWithCapacity:[[responseData objectForKey:@"data"] count]];
+    for (NSDictionary *dic in [responseData objectForKey:@"data"]) {
+        PetsModel *pets = [[PetsModel alloc] initWithDictionary:dic error:nil];
+        [mutableArray addObject:pets];
+    }
+    return [mutableArray copy];
     
 }
 

@@ -27,13 +27,21 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
-    [AppService initAppService];
-    [AppService registerRemoteNotification];
-    [SMS_SDK registerApp:@"a72297a4628e" withSecret:@"52cf6cd4ef00aec3e52f8e7af55bbaa1"];
-    
+//    [AppService initAppService];
+//    [AppService registerRemoteNotification];
+//    [SMS_SDK registerApp:@"a72297a4628e" withSecret:@"52cf6cd4ef00aec3e52f8e7af55bbaa1"];
+//    
     self.window = [[UIWindow alloc] initWithFrame:ScreenBounds];
     self.window.rootViewController = [[TestViewController alloc] init];
     [self.window makeKeyAndVisible];
+    
+    int code = 0 ;
+    if (code) {
+        NSLog(@"123");
+    } else {
+        NSLog(@"nil");
+    }
+    
  
     
     return YES;
