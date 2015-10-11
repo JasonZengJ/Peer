@@ -10,4 +10,11 @@
 
 @interface CommentModel : JSONModel
 
+@property(nonatomic)NSNumber *commentId;
+@property(nonatomic)NSString *content;
+@property(nonatomic)NSNumber *userId;
+@property(nonatomic)NSNumber *momentId;
+@property(nonatomic)NSNumber *parentId;
+@property(nonatomic)NSString *createdAt;
+
 @end

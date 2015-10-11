@@ -11,6 +11,6 @@
 @interface Pagination : JSONModel
 
 @property(nonatomic)NSInteger page;  // 第几页，默认为0
-@property(nonatomic)NSInteger limit; // 每页多少条数据，默认为10
+@property(nonatomic)NSInteger limit; // 每页多少条数据，默认为10 ,最多15
 
 @end

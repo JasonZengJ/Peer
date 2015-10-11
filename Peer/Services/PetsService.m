@@ -12,12 +12,12 @@
 #import "PetsModel.h"
 #import "UserModel.h"
 
-#define AddPetsPath @"v1/add-pets"
-#define GetPetsByIdPath @"v1/pets-by-id"
-#define GetAllPetsPath @"v1/all-pets"
-#define GetPetsWithBreedIdPath @"v1/pets-with-breed-id"
-#define LikePetsPath @"v1/like-pets"
-#define FollowPetsPath @"v1/follow-pets"
+#define AddPetsPath            @"v1/pets/add-pets"
+#define GetPetsByIdPath        @"v1/pets/pets-by-id"
+#define GetAllPetsPath         @"v1/pets/all-pets"
+#define GetPetsWithBreedIdPath @"v1/pets/pets-with-breed-id"
+#define LikePetsPath           @"v1/pets/like-pets"
+#define FollowPetsPath         @"v1/pets/follow-pets"
 
 
 @implementation PetsService

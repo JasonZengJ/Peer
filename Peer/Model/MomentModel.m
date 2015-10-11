@@ -10,4 +10,19 @@
 
 @implementation MomentModel
 
+- (instancetype)initWithDictionary:(NSDictionary *)dict error:(NSError *__autoreleasing *)err {
+    
+    self = [super init];
+    if (self) {
+        
+        self.momentId = [dict objectForKey:@"id"];
+        
+        
+        
+    }
+    
+    return self;
+    
+}
+
 @end
