@@ -94,6 +94,12 @@
 
 - (void)loginCompleteWithError:(NSDictionary *)error {
     
+    if (error) {
+        
+    } else {
+        
+    }
+    
 }
 
 - (void)loginSuccessWithData:(NSDictionary *)data {

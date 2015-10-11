@@ -42,6 +42,10 @@
 		966B518D1B7F8D70000F0EF2 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 966B518B1B7F8D70000F0EF2 /* LaunchScreen.xib */; };
 		966B51991B7F8D70000F0EF2 /* PeerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 966B51981B7F8D70000F0EF2 /* PeerTests.m */; };
 		968B3BD41BCAA21D00B8723A /* FileUploadService.m in Sources */ = {isa = PBXBuildFile; fileRef = 968B3BD31BCAA21D00B8723A /* FileUploadService.m */; settings = {ASSET_TAGS = (); }; };
+		968B3BD71BCAA52400B8723A /* MomentsService.m in Sources */ = {isa = PBXBuildFile; fileRef = 968B3BD61BCAA52400B8723A /* MomentsService.m */; settings = {ASSET_TAGS = (); }; };
+		968B3BDA1BCAA59400B8723A /* Pagination.m in Sources */ = {isa = PBXBuildFile; fileRef = 968B3BD91BCAA59400B8723A /* Pagination.m */; settings = {ASSET_TAGS = (); }; };
+		968B3BDD1BCAA60B00B8723A /* MomentModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 968B3BDC1BCAA60B00B8723A /* MomentModel.m */; settings = {ASSET_TAGS = (); }; };
+		968B3BE01BCAA67000B8723A /* CommentModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 968B3BDF1BCAA67000B8723A /* CommentModel.m */; settings = {ASSET_TAGS = (); }; };
 		96A2D8D41BC032200016AE3F /* ApplicationDirectoryService.m in Sources */ = {isa = PBXBuildFile; fileRef = 96A2D8D31BC032200016AE3F /* ApplicationDirectoryService.m */; settings = {ASSET_TAGS = (); }; };
 		96A2D8DA1BC118AA0016AE3F /* ALBB_OSS_IOS_SDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96A2D8D91BC118AA0016AE3F /* ALBB_OSS_IOS_SDK.framework */; settings = {ASSET_TAGS = (); }; };
 		96A2D8DD1BC119C70016AE3F /* OSSFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 96A2D8DC1BC119C70016AE3F /* OSSFileManager.m */; settings = {ASSET_TAGS = (); }; };
@@ -124,6 +128,14 @@
 		966B51A91B7FA959000F0EF2 /* Peer-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Peer-Prefix.pch"; sourceTree = "<group>"; };
 		968B3BD21BCAA21D00B8723A /* FileUploadService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileUploadService.h; sourceTree = "<group>"; };
 		968B3BD31BCAA21D00B8723A /* FileUploadService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileUploadService.m; sourceTree = "<group>"; };
+		968B3BD51BCAA52400B8723A /* MomentsService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MomentsService.h; sourceTree = "<group>"; };
+		968B3BD61BCAA52400B8723A /* MomentsService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MomentsService.m; sourceTree = "<group>"; };
+		968B3BD81BCAA59400B8723A /* Pagination.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Pagination.h; sourceTree = "<group>"; };
+		968B3BD91BCAA59400B8723A /* Pagination.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Pagination.m; sourceTree = "<group>"; };
+		968B3BDB1BCAA60B00B8723A /* MomentModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MomentModel.h; sourceTree = "<group>"; };
+		968B3BDC1BCAA60B00B8723A /* MomentModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MomentModel.m; sourceTree = "<group>"; };
+		968B3BDE1BCAA67000B8723A /* CommentModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommentModel.h; sourceTree = "<group>"; };
+		968B3BDF1BCAA67000B8723A /* CommentModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommentModel.m; sourceTree = "<group>"; };
 		96A2D8D21BC032200016AE3F /* ApplicationDirectoryService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApplicationDirectoryService.h; sourceTree = "<group>"; };
 		96A2D8D31BC032200016AE3F /* ApplicationDirectoryService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApplicationDirectoryService.m; sourceTree = "<group>"; };
 		96A2D8D91BC118AA0016AE3F /* ALBB_OSS_IOS_SDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ALBB_OSS_IOS_SDK.framework; sourceTree = "<group>"; };
@@ -250,6 +262,8 @@
 				96A2D8D31BC032200016AE3F /* ApplicationDirectoryService.m */,
 				968B3BD21BCAA21D00B8723A /* FileUploadService.h */,
 				968B3BD31BCAA21D00B8723A /* FileUploadService.m */,
+				968B3BD51BCAA52400B8723A /* MomentsService.h */,
+				968B3BD61BCAA52400B8723A /* MomentsService.m */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -312,6 +326,12 @@
 				960104261BAB1B2300152908 /* UserModel.m */,
 				96E5CB2B1BB1A9EA005503CD /* PetsModel.h */,
 				96E5CB2C1BB1A9EA005503CD /* PetsModel.m */,
+				968B3BD81BCAA59400B8723A /* Pagination.h */,
+				968B3BD91BCAA59400B8723A /* Pagination.m */,
+				968B3BDB1BCAA60B00B8723A /* MomentModel.h */,
+				968B3BDC1BCAA60B00B8723A /* MomentModel.m */,
+				968B3BDE1BCAA67000B8723A /* CommentModel.h */,
+				968B3BDF1BCAA67000B8723A /* CommentModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -568,6 +588,7 @@
 				96A2D8DD1BC119C70016AE3F /* OSSFileManager.m in Sources */,
 				960103FF1BA879C800152908 /* NSData+JSON.m in Sources */,
 				960104271BAB1B2300152908 /* UserModel.m in Sources */,
+				968B3BD71BCAA52400B8723A /* MomentsService.m in Sources */,
 				96A2D8D41BC032200016AE3F /* ApplicationDirectoryService.m in Sources */,
 				96E5CB2D1BB1A9EA005503CD /* PetsModel.m in Sources */,
 				9601042B1BAB1C4600152908 /* PhoneVerifyViewController.m in Sources */,
@@ -579,7 +600,10 @@
 				960104351BAD6AB700152908 /* TestViewController.m in Sources */,
 				960104091BA879E200152908 /* LoginService.m in Sources */,
 				960103F41BA8795500152908 /* PeerNetworkManager.m in Sources */,
+				968B3BE01BCAA67000B8723A /* CommentModel.m in Sources */,
+				968B3BDA1BCAA59400B8723A /* Pagination.m in Sources */,
 				960104561BAE80C100152908 /* ValidationService.m in Sources */,
+				968B3BDD1BCAA60B00B8723A /* MomentModel.m in Sources */,
 				9601042E1BAB1C5000152908 /* RegisterViewController.m in Sources */,
 				960104141BA879F600152908 /* LoginViewController.m in Sources */,
 				960104001BA879C800152908 /* UIColor+Hex.m in Sources */,
