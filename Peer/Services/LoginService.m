@@ -55,8 +55,6 @@
 #pragma mark - -- Register
 
 
-
-
 - (void)getVerificationCodeWithPhone:(NSString *)phone result:(void(^)(BOOL isSuccess))result {
     
     [SMS_SDK getVerificationCodeBySMSWithPhone:phone zone:@"86" result:^(SMS_SDKError *error) {

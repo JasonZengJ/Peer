@@ -13,6 +13,11 @@
 
 @interface PetsService : NSObject
 
+
+- (void)likePetsWithPetsId:(NSString *)petsId userId:(NSString *)userId callBackBlock:(void (^)(bool success))callBackBlock;
+
+- (void)followPetsWithPetsId:(NSString *)petsId userId:(NSString *)userId callBackBlock:(void (^)(bool success))callBackBlock;
+
 - (void)getPetsArrayWithBreedId:(NSNumber *)breedId callBackBlock:(void (^)(NSArray *petsArray))callBackBlock;
 
 - (void)getPetWithPetsId:(NSNumber *)petsId callBackBlock:(void(^)(PetsModel *pets))callBackBlock;

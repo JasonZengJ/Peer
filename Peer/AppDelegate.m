@@ -15,7 +15,7 @@
 
 #warning TEST
 #import "TestViewController.h"
-
+#import "ApplicationDirectoryService.h"
 
 @interface AppDelegate ()
 
@@ -35,12 +35,21 @@
     self.window.rootViewController = [[TestViewController alloc] init];
     [self.window makeKeyAndVisible];
     
-    int code = 0 ;
-    if (code) {
-        NSLog(@"123");
-    } else {
-        NSLog(@"nil");
-    }
+    
+    NSURL *imgUrl = [[NSBundle mainBundle] URLForResource:@"logo" withExtension:@"png"];
+    
+    NSData *data = [NSData dataWithContentsOfURL:imgUrl];
+
+    
+    
+    DLog(@"%@",[ApplicationDirectoryService applicationImageDirectory]);
+    
+    
+    NSString *filePath = [NSString stringWithFormat:@"%@/%@",[ApplicationDirectoryService applicationDocumentsDirectory],@"test.png"];
+    
+    bool success = [data writeToFile:filePath atomically:NO];
+    
+    bool fileExist = [[NSFileManager defaultManager] fileExistsAtPath:filePath];
     
  
     

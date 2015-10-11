@@ -70,6 +70,8 @@
                NSMutableDictionary *appConfig = [NSMutableDictionary dictionaryWithDictionary:appConfiguration];
                [appConfig setObject:responseObject[@"data"][@"token"] forKey:@"token"];
                [appConfig setObject:responseObject[@"data"][@"id"]    forKey:@"deviceId"];
+               [[NSUserDefaults standardUserDefaults] setObject:responseObject[@"data"][@"access_key"] forKey:@"AccessKey"];
+               [[NSUserDefaults standardUserDefaults] setObject:responseObject[@"data"][@"secret_key"] forKey:@"SecretKey"];
            }
            [[NSUserDefaults standardUserDefaults] setObject:nil forKey:@"isRegisteringDevice"];
        }];

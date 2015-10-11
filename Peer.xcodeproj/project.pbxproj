@@ -41,6 +41,10 @@
 		966B518A1B7F8D70000F0EF2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 966B51891B7F8D70000F0EF2 /* Images.xcassets */; };
 		966B518D1B7F8D70000F0EF2 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 966B518B1B7F8D70000F0EF2 /* LaunchScreen.xib */; };
 		966B51991B7F8D70000F0EF2 /* PeerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 966B51981B7F8D70000F0EF2 /* PeerTests.m */; };
+		968B3BD41BCAA21D00B8723A /* FileUploadService.m in Sources */ = {isa = PBXBuildFile; fileRef = 968B3BD31BCAA21D00B8723A /* FileUploadService.m */; settings = {ASSET_TAGS = (); }; };
+		96A2D8D41BC032200016AE3F /* ApplicationDirectoryService.m in Sources */ = {isa = PBXBuildFile; fileRef = 96A2D8D31BC032200016AE3F /* ApplicationDirectoryService.m */; settings = {ASSET_TAGS = (); }; };
+		96A2D8DA1BC118AA0016AE3F /* ALBB_OSS_IOS_SDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96A2D8D91BC118AA0016AE3F /* ALBB_OSS_IOS_SDK.framework */; settings = {ASSET_TAGS = (); }; };
+		96A2D8DD1BC119C70016AE3F /* OSSFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 96A2D8DC1BC119C70016AE3F /* OSSFileManager.m */; settings = {ASSET_TAGS = (); }; };
 		96E5CB2A1BB1A9C3005503CD /* PetsService.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E5CB291BB1A9C3005503CD /* PetsService.m */; };
 		96E5CB2D1BB1A9EA005503CD /* PetsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E5CB2C1BB1A9EA005503CD /* PetsModel.m */; };
 		96E5CB301BB1B18E005503CD /* NSDictionary+AddObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E5CB2F1BB1B18E005503CD /* NSDictionary+AddObject.m */; };
@@ -118,6 +122,13 @@
 		966B51971B7F8D70000F0EF2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		966B51981B7F8D70000F0EF2 /* PeerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PeerTests.m; sourceTree = "<group>"; };
 		966B51A91B7FA959000F0EF2 /* Peer-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Peer-Prefix.pch"; sourceTree = "<group>"; };
+		968B3BD21BCAA21D00B8723A /* FileUploadService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileUploadService.h; sourceTree = "<group>"; };
+		968B3BD31BCAA21D00B8723A /* FileUploadService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileUploadService.m; sourceTree = "<group>"; };
+		96A2D8D21BC032200016AE3F /* ApplicationDirectoryService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApplicationDirectoryService.h; sourceTree = "<group>"; };
+		96A2D8D31BC032200016AE3F /* ApplicationDirectoryService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApplicationDirectoryService.m; sourceTree = "<group>"; };
+		96A2D8D91BC118AA0016AE3F /* ALBB_OSS_IOS_SDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ALBB_OSS_IOS_SDK.framework; sourceTree = "<group>"; };
+		96A2D8DB1BC119C70016AE3F /* OSSFileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSSFileManager.h; sourceTree = "<group>"; };
+		96A2D8DC1BC119C70016AE3F /* OSSFileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSSFileManager.m; sourceTree = "<group>"; };
 		96E5CB281BB1A9C3005503CD /* PetsService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PetsService.h; sourceTree = "<group>"; };
 		96E5CB291BB1A9C3005503CD /* PetsService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PetsService.m; sourceTree = "<group>"; };
 		96E5CB2B1BB1A9EA005503CD /* PetsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PetsModel.h; sourceTree = "<group>"; };
@@ -138,6 +149,7 @@
 				961D2E4C1BA715D500C84C8B /* Accelerate.framework in Frameworks */,
 				960104531BADD08600152908 /* SMS_SDK.framework in Frameworks */,
 				961D2E4A1BA715C200C84C8B /* QuartzCore.framework in Frameworks */,
+				96A2D8DA1BC118AA0016AE3F /* ALBB_OSS_IOS_SDK.framework in Frameworks */,
 				374EEB672DF99B043B9F46A3 /* libPods-Peer.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -188,6 +200,7 @@
 		960103ED1BA8795500152908 /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				96A2D8D51BC117DF0016AE3F /* OSS1.3 */,
 				9601044D1BADD08600152908 /* SMS_SDK */,
 				960103EE1BA8795500152908 /* OpenUDID */,
 			);
@@ -233,6 +246,10 @@
 				960104551BAE80C100152908 /* ValidationService.m */,
 				96E5CB281BB1A9C3005503CD /* PetsService.h */,
 				96E5CB291BB1A9C3005503CD /* PetsService.m */,
+				96A2D8D21BC032200016AE3F /* ApplicationDirectoryService.h */,
+				96A2D8D31BC032200016AE3F /* ApplicationDirectoryService.m */,
+				968B3BD21BCAA21D00B8723A /* FileUploadService.h */,
+				968B3BD31BCAA21D00B8723A /* FileUploadService.m */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -342,7 +359,6 @@
 		966B517B1B7F8D70000F0EF2 /* Peer */ = {
 			isa = PBXGroup;
 			children = (
-				960104161BA87A1C00152908 /* Resources */,
 				960103E21BA8795500152908 /* Components */,
 				960104211BAB113A00152908 /* Model */,
 				960104031BA879E200152908 /* Services */,
@@ -359,6 +375,7 @@
 		966B517C1B7F8D70000F0EF2 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				960104161BA87A1C00152908 /* Resources */,
 				966B517D1B7F8D70000F0EF2 /* Info.plist */,
 				966B517E1B7F8D70000F0EF2 /* main.m */,
 				966B51A91B7FA959000F0EF2 /* Peer-Prefix.pch */,
@@ -382,6 +399,16 @@
 				966B51971B7F8D70000F0EF2 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		96A2D8D51BC117DF0016AE3F /* OSS1.3 */ = {
+			isa = PBXGroup;
+			children = (
+				96A2D8D91BC118AA0016AE3F /* ALBB_OSS_IOS_SDK.framework */,
+				96A2D8DB1BC119C70016AE3F /* OSSFileManager.h */,
+				96A2D8DC1BC119C70016AE3F /* OSSFileManager.m */,
+			);
+			path = OSS1.3;
 			sourceTree = "<group>";
 		};
 		A5EF66DA01FA01C7F7BB91CC /* Pods */ = {
@@ -538,13 +565,16 @@
 				960104021BA879C800152908 /* UIView+Layout.m in Sources */,
 				966B51821B7F8D70000F0EF2 /* AppDelegate.m in Sources */,
 				96E5CB301BB1B18E005503CD /* NSDictionary+AddObject.m in Sources */,
+				96A2D8DD1BC119C70016AE3F /* OSSFileManager.m in Sources */,
 				960103FF1BA879C800152908 /* NSData+JSON.m in Sources */,
 				960104271BAB1B2300152908 /* UserModel.m in Sources */,
+				96A2D8D41BC032200016AE3F /* ApplicationDirectoryService.m in Sources */,
 				96E5CB2D1BB1A9EA005503CD /* PetsModel.m in Sources */,
 				9601042B1BAB1C4600152908 /* PhoneVerifyViewController.m in Sources */,
 				960104131BA879F600152908 /* LoginView.m in Sources */,
 				960104241BAB117200152908 /* AppModel.m in Sources */,
 				96E5CB2A1BB1A9C3005503CD /* PetsService.m in Sources */,
+				968B3BD41BCAA21D00B8723A /* FileUploadService.m in Sources */,
 				960104151BA879F600152908 /* ViewController.m in Sources */,
 				960104351BAD6AB700152908 /* TestViewController.m in Sources */,
 				960104091BA879E200152908 /* LoginService.m in Sources */,
@@ -688,6 +718,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Peer/Components/Vendor/OpenUDID/SMS_SDK",
 					"$(PROJECT_DIR)/Peer/Components/Vendor/SMS_SDK",
+					"$(PROJECT_DIR)/Peer/Components/Vendor/OSS1.3",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Peer/Peer-Prefix.pch";
@@ -708,6 +739,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Peer/Components/Vendor/OpenUDID/SMS_SDK",
 					"$(PROJECT_DIR)/Peer/Components/Vendor/SMS_SDK",
+					"$(PROJECT_DIR)/Peer/Components/Vendor/OSS1.3",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Peer/Peer-Prefix.pch";
