@@ -11,10 +11,13 @@
 
 @interface AppModel : JSONModel
 
-@property(nonatomic)NSString *uuid;
-@property(nonatomic)NSString *appName;
+@property(nonatomic)NSString *deviceId;
+@property(nonatomic)NSString *udid;
 @property(nonatomic)NSString *appVer;
-@property(nonatomic)NSString *build;
+@property(nonatomic)NSString<Optional> *build;
 @property(nonatomic)NSString *sysVer;
+@property(nonatomic)NSString *sysName;
+@property(nonatomic)NSString *deviceType;
+@property(nonatomic)NSString<Optional> *remoteToken;
 
 @end

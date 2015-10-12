@@ -16,7 +16,16 @@
     if (self) {
         
         self.momentId = [dict objectForKey:@"id"];
-        
+        self.petsId   = [dict objectForKey:@"pets_id"];
+        self.userId   = [dict objectForKey:@"user_id"];
+        self.momentTitle       = [dict objectForKey:@"moment_title"] ? [dict objectForKey:@"moment_title"] : nil;
+        self.momentDescription = [dict objectForKey:@"moment_description"] ? [dict objectForKey:@"moment_description"] : nil;
+        self.momentType        = [dict objectForKey:@"moment_type"];
+        self.momentTargetUrl   = [dict objectForKey:@"moment_target_url"];
+        self.viewAmount        = [dict objectForKey:@"view_amount"];
+        self.commentsAmount    = [dict objectForKey:@"comments_amount"];
+        self.likeAmount        = [dict objectForKey:@"likeAmount"];
+        self.createdAt         = [dict objectForKey:@"created_at"];
         
         
     }

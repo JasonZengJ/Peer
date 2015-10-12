@@ -19,7 +19,7 @@
 #define LikeMomentPath           @"v1/moments/like-moment"
 #define UnlikeMomentPath         @"v1/moments/unlike-moment"
 
-#define CommentsWithMomentIdPath @"v1/moments/comments-with-moment-id"
+#define CommentsPath             @"v1/moments/comments"
 #define SendCommentPath          @"v1/moments/send-comment"
 #define DeleteCommentPath        @"v1/moments/delete-comment"
 
@@ -152,7 +152,7 @@
 - (void)getCommentsWithMomentId:(NSNumber *)momentId pagination:(Pagination *)pagination callBackBlock:(void(^)(NSArray *coments))callBackBlock {
     
     NSDictionary *params = [[pagination toDictionary] addObject:momentId forKey:@"momentId"];
-    [self.peerNetworkManager securePostWithParams:params apiPath:CommentsWithMomentIdPath callBackBlock:^(id responseObject) {
+    [self.peerNetworkManager securePostWithParams:params apiPath:CommentsPath callBackBlock:^(id responseObject) {
         if (responseObject && ![[responseObject objectForKey:@"code"] integerValue]) {
             
             NSArray *commentsArray = [self makeCommentsArrayWithData:[responseObject objectForKey:@"data"]];

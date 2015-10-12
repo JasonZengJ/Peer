@@ -11,12 +11,13 @@
 
 @interface UserModel : JSONModel
 
-@property(nonatomic)NSString *id;
+@property(nonatomic)NSString *userId;
 @property(nonatomic)NSString *nickname;
 @property(nonatomic)NSString *phone;
 @property(nonatomic)NSString *password;
 @property(nonatomic)NSNumber *sex;
 @property(nonatomic)NSString<Optional> *city;
 @property(nonatomic)NSString<Optional> *avatar;
+@property(nonatomic)NSNumber *deviceId;
 
 @end
