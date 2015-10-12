@@ -17,7 +17,9 @@
 #define GetAllPetsPath         @"v1/pets/all-pets"
 #define GetPetsWithBreedIdPath @"v1/pets/pets-with-breed-id"
 #define LikePetsPath           @"v1/pets/like-pets"
+#define UnlikePetsPath         @"v1/pets/unlike-pets"
 #define FollowPetsPath         @"v1/pets/follow-pets"
+#define UnfollowPetsPath       @"v1/pets/unfollow-pets"
 
 
 @implementation PetsService
@@ -33,9 +35,31 @@
     }];
 }
 
+- (void)unlikePetsWithPetsId:(NSString *)petsId userId:(NSString *)userId callBackBlock:(void (^)(bool success))callBackBlock {
+    [[PeerNetworkManager shareInstance] postWithParams:@{@"userId":userId,@"petsId":petsId} apiPath:UnlikePetsPath callBackBlock:^(id responseObject) {
+        if (![[responseObject objectForKey:@"code"] integerValue]) {
+            callBackBlock(true);
+        } else {
+            callBackBlock(false);
+        }
+    }];
+}
+
 - (void)followPetsWithPetsId:(NSString *)petsId userId:(NSString *)userId callBackBlock:(void (^)(bool success))callBackBlock {
     
     [[PeerNetworkManager shareInstance] postWithParams:@{@"userId":userId,@"petsId":petsId} apiPath:FollowPetsPath callBackBlock:^(id responseObject) {
+        if (![[responseObject objectForKey:@"code"] integerValue]) {
+            callBackBlock(true);
+        } else {
+            callBackBlock(false);
+        }
+    }];
+    
+}
+
+- (void)unfollowPetsWithPetsId:(NSString *)petsId userId:(NSString *)userId callBackBlock:(void (^)(bool success))callBackBlock {
+    
+    [[PeerNetworkManager shareInstance] postWithParams:@{@"userId":userId,@"petsId":petsId} apiPath:UnfollowPetsPath callBackBlock:^(id responseObject) {
         if (![[responseObject objectForKey:@"code"] integerValue]) {
             callBackBlock(true);
         } else {

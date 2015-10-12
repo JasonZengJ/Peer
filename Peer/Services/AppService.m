@@ -110,6 +110,29 @@
     return [[[NSUserDefaults standardUserDefaults] objectForKey:@"app"] objectForKey:@"token"];
 }
 
+
++ (NSString *)appVersion {
+    return [[[NSUserDefaults standardUserDefaults] objectForKey:@"app"] objectForKey:@"appVer"];
+}
+
++ (NSString *)systemVersion {
+    return [[[NSUserDefaults standardUserDefaults] objectForKey:@"app"] objectForKey:@"sysVer"];
+}
+
++ (NSString *)udid {
+    return [[[NSUserDefaults standardUserDefaults] objectForKey:@"app"] objectForKey:@"udid"];
+}
+
+
+
++ (NSString *)appName {
+    return [[[NSUserDefaults standardUserDefaults] objectForKey:@"app"] objectForKey:@"appName"];
+}
+
++ (NSString *)remoteToken {
+    return [[NSUserDefaults standardUserDefaults]  objectForKey:@"remoteToken"];
+}
+
 + (NSString *)deviceType {
     
     struct utsname systemInfo;
@@ -161,27 +184,6 @@
     return @"";
 }
 
-+ (NSString *)appVersion {
-    return [[[NSUserDefaults standardUserDefaults] objectForKey:@"app"] objectForKey:@"appVer"];
-}
-
-+ (NSString *)systemVersion {
-    return [[[NSUserDefaults standardUserDefaults] objectForKey:@"app"] objectForKey:@"sysVer"];
-}
-
-+ (NSString *)udid {
-    return [[[NSUserDefaults standardUserDefaults] objectForKey:@"app"] objectForKey:@"udid"];
-}
-
-
-
-+ (NSString *)appName {
-    return [[[NSUserDefaults standardUserDefaults] objectForKey:@"app"] objectForKey:@"appName"];
-}
-
-+ (NSString *)remoteToken {
-    return [[NSUserDefaults standardUserDefaults]  objectForKey:@"remoteToken"];
-}
 
 @end
 
