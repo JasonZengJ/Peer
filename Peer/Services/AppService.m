@@ -72,8 +72,10 @@
                [appConfig setObject:responseObject[@"data"][@"id"]    forKey:@"deviceId"];
                [[NSUserDefaults standardUserDefaults] setObject:responseObject[@"data"][@"access_key"] forKey:@"AccessKey"];
                [[NSUserDefaults standardUserDefaults] setObject:responseObject[@"data"][@"secret_key"] forKey:@"SecretKey"];
+               [[NSUserDefaults standardUserDefaults] setObject:appConfig forKey:@"app"];
            }
            [[NSUserDefaults standardUserDefaults] setObject:nil forKey:@"isRegisteringDevice"];
+           [[NSUserDefaults standardUserDefaults] synchronize];
        }];
     }
     
@@ -103,6 +105,11 @@
 
 + (AFNetworkReachabilityStatus)networkState {
     return [[[NSUserDefaults standardUserDefaults] objectForKey:@"networkStatus"] integerValue];
+}
+
++ (NSString *)deviceId {
+    
+    return [[[NSUserDefaults standardUserDefaults] objectForKey:@"app"] objectForKey:@"deviceId"];
 }
 
 + (NSString *)token {

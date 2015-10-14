@@ -10,10 +10,10 @@
 
 @interface OSSFileManager : NSObject
 
-- (void)uploadImageData:(NSData *)imageData key:(NSString *)key callback:(void(^)(BOOL isSuccess,NSError *error))callback progressCallback:(void(^)(float progress))progressCallback;
+- (void)uploadImageData:(NSData *)imageData callback:(void(^)(BOOL isSuccess,NSError *error,NSString *fileUrl))callback progressCallback:(void(^)(float progress))progressCallback;
 
-- (void)uploadVideoData:(NSData *)videoData key:(NSString *)key callback:(void(^)(BOOL isSuccess,NSError *error))callback progressCallback:(void(^)(float progress))progressCallback;
+- (void)uploadVideoData:(NSData *)videoData callback:(void(^)(BOOL isSuccess,NSError *error,NSString *fileUrl))callback progressCallback:(void(^)(float progress))progressCallback;
 
-- (void)uploadVoiceData:(NSData *)voiceData key:(NSString *)key callback:(void(^)(BOOL isSuccess,NSError *error))callback progressCallback:(void(^)(float progress))progressCallback;
+- (void)uploadVoiceData:(NSData *)voiceData callback:(void(^)(BOOL isSuccess,NSError *error,NSString *fileUrl))callback progressCallback:(void(^)(float progress))progressCallback;
 
 @end

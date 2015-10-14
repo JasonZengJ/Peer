@@ -13,7 +13,7 @@
 - (NSDictionary *)addObject:(id)object forKey:(NSString *)key {
     
     NSMutableDictionary *mutableDic = [NSMutableDictionary dictionaryWithDictionary:self];
-    [mutableDic addObject:object forKey:key];
+    [mutableDic setObject:object forKey:key];
     return [mutableDic copy];
     
 }
@@ -21,7 +21,11 @@
 - (NSDictionary *)addDictionary:(NSDictionary *)dictionary {
     
     NSMutableDictionary *mutableDic = [NSMutableDictionary dictionaryWithDictionary:self];
-    [mutableDic addDictionary:dictionary];
+    
+    for (NSString *key in dictionary) {
+        [mutableDic setObject:dictionary[key] forKey:key];
+    }
+    
     return [mutableDic copy];
 }
 

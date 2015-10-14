@@ -35,13 +35,7 @@
 
 + (PeerNetworkManager *)shareInstance {
     
-    static dispatch_once_t onceToken;
-    static PeerNetworkManager *peerNetworkManager;
-    dispatch_once(&onceToken, ^{
-        peerNetworkManager = [[PeerNetworkManager alloc] init];
-    });
-    
-    return peerNetworkManager;
+    return [[PeerNetworkManager alloc] init];
 }
 
 
@@ -103,11 +97,15 @@
 - (NSDictionary *)encapsulationParams:(NSDictionary *)params {
     
     if ([AppService token]) {
-        params = [params addObject:[AppService token] forKey:@"token"];
+        NSMutableDictionary *mutableDic = [NSMutableDictionary dictionaryWithDictionary:params];
+        [mutableDic setObject:[AppService token] forKey:@"token"];
+        params = [mutableDic copy];
     }
     
     if ([AppService udid]) {
-        params = [params addObject:[AppService udid] forKey:@"udid"];
+        NSMutableDictionary *mutableDic = [NSMutableDictionary dictionaryWithDictionary:params];
+        [mutableDic setObject:[AppService udid] forKey:@"udid"];
+        params = [mutableDic copy];
     }
     
     return params;
@@ -181,26 +179,17 @@
 
 - (void)printStartRequestWithUrl:(NSString *)url params:(NSDictionary *)params {
     
-    DLog(@"============ Request start   =============");
-    DLog(@"url:  %@",url);
-    DLog(@"params:  %@",params);
-    
-    DLog(@"============================================");
+    DLog(@"\n\n============ Request start   =============\nurl:  %@\nparams:  %@\n============================================",url,params);
+
     
 }
 
 - (void)printSuccessResponseData:(id)responseData url:(NSString *)url {
-    DLog(@"============ Request Success   =============");
-    DLog(@"reqeust url:%@",url);
-    DLog(@"response: %@",responseData);
-    DLog(@"============================================");
+    DLog(@"\n============ Request Success   =============\nreqeust url:%@\nresponse: %@\n============================================",url,responseData);
 }
 
 - (void)printFailedResponseData:(id)responseData url:(NSString *)url {
-    DLog(@"============ Request Failed   ==============");
-    DLog(@"reqeust url:%@",url);
-    DLog(@"response: %@",responseData);
-    DLog(@"============================================");
+    DLog(@"============ Request Failed   ==============\nreqeust url:%@\nresponse: %@\n============================================",url,responseData);
 }
 
 - (void)performCallBack:(SEL)selector withTarget:(id)target data:(NSDictionary *)data

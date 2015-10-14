@@ -16,17 +16,7 @@ NSString *const OSSHostId   = @"oss-cn-shenzhen.aliyuncs.com";
 NSString *const Bucket      = @"jasonlife";
 //NSString *const VideoBucket = @"jasonlife-video";
 
-#if DEBUG
-
-
-#else
-
-
-#endif
-
-
 @interface OSSFileManager ()
-
 
 @property(nonatomic) TaskHandler *taskHandler;
 @property(nonatomic) OSSBucket *imgBucket;
@@ -88,48 +78,70 @@ NSString *const Bucket      = @"jasonlife";
 }
 
 
-- (void)uploadImageData:(NSData *)imageData key:(NSString *)key callback:(void(^)(BOOL isSuccess,NSError *error))callback progressCallback:(void(^)(float progress))progressCallback   {
+- (void)uploadImageData:(NSData *)imageData  callback:(void(^)(BOOL isSuccess,NSError *error,NSString *fileUrl))callback progressCallback:(void(^)(float progress))progressCallback   {
     
-    NSString *uploadKey = [NSString stringWithFormat:@"%@/image/%@",[[LoginService currentUser] phone],key];
+    NSString *phone = [[LoginService currentUser] phone];
+    if (!phone || [phone isEqualToString:@""]) {
+        return;
+    }
+    NSString *uploadKey = [NSString stringWithFormat:@"%@/image/%@",[self userKey],[self uniqueFileKey]];
+    DLog(@"upload key : %@",uploadKey);
     OSSData *uploadImageData = [self.ossService getOSSDataWithBucket:self.imgBucket key:uploadKey];
     [uploadImageData setData:imageData withType:@"image/png"];
     [uploadImageData enableUploadCheckMd5sum:YES];
     [uploadImageData uploadWithUploadCallback:^(BOOL isSuccess,  NSError *error) {
-        callback(isSuccess,error);
+        callback(isSuccess,error,[uploadImageData getResourceURL]);
     } withProgressCallback:^(float progress) {
         progressCallback(progress);
     }];
     
 }
 
-- (void)uploadVideoData:(NSData *)videoData key:(NSString *)key callback:(void(^)(BOOL isSuccess,NSError *error))callback progressCallback:(void(^)(float progress))progressCallback {
+- (void)uploadVideoData:(NSData *)videoData callback:(void(^)(BOOL isSuccess,NSError *error,NSString *fileUrl))callback progressCallback:(void(^)(float progress))progressCallback {
     
-    NSString *uploadKey = [NSString stringWithFormat:@"%@/video/%@",[[LoginService currentUser] phone],key];
+    if ([LoginService currentUser]) {
+        return;
+    }
+    NSString *uploadKey = [NSString stringWithFormat:@"%@/video/%@",[self userKey],[self uniqueFileKey]];
+    DLog(@"upload key : %@",uploadKey);
     OSSData *uploadVideoData = [self.ossService getOSSDataWithBucket:self.videoBucket key:uploadKey];
-    [uploadVideoData setData:videoData withType:@"image/png"];
+    [uploadVideoData setData:videoData withType:@"image/mp4"];
     [uploadVideoData enableUploadCheckMd5sum:YES];
      [uploadVideoData uploadWithUploadCallback:^(BOOL isSuccess,  NSError *error) {
-        callback(isSuccess,error);
+        callback(isSuccess,error,[uploadVideoData getResourceURL]);
     } withProgressCallback:^(float progress) {
         progressCallback(progress);
     }];
-    
     
     
 }
 
-- (void)uploadVoiceData:(NSData *)voiceData key:(NSString *)key callback:(void(^)(BOOL isSuccess,NSError *error))callback progressCallback:(void(^)(float progress))progressCallback {
+- (void)uploadVoiceData:(NSData *)voiceData  callback:(void(^)(BOOL isSuccess,NSError *error,NSString *fileUrl))callback progressCallback:(void(^)(float progress))progressCallback {
     
-    NSString *uploadKey = [NSString stringWithFormat:@"%@/voice/%@",[[LoginService currentUser] phone],key];
+    NSString *phone = [[LoginService currentUser] phone];
+    if (!phone || [phone isEqualToString:@""]) {
+        return;
+    }
+    NSString *uploadKey = [NSString stringWithFormat:@"%@/voice/%@",[self userKey],[self uniqueFileKey]];
+    DLog(@"upload key : %@",uploadKey);
     OSSData *uploadVideoData = [self.ossService getOSSDataWithBucket:self.voiceBucket key:uploadKey];
-    [uploadVideoData setData:voiceData withType:@"image/png"];
+    [uploadVideoData setData:voiceData withType:@"image/mp3"];
     [uploadVideoData enableUploadCheckMd5sum:YES];
     [uploadVideoData uploadWithUploadCallback:^(BOOL isSuccess,  NSError *error) {
-        callback(isSuccess,error);
+        callback(isSuccess,error,[uploadVideoData getResourceURL]);
     } withProgressCallback:^(float progress) {
         progressCallback(progress);
     }];
     
+}
+
+- (NSString *)userKey {
+   return  [[[OSSTool calBase64Sha1WithData:[[LoginService currentUser] phone] withKey:[self AccessKey]] stringByReplacingOccurrencesOfString:@"/" withString:@"-"] stringByReplacingOccurrencesOfString:@"+" withString:@"_"];
+}
+
+- (NSString *)uniqueFileKey {
+    
+    return [[[OSSTool calBase64Sha1WithData:[[NSUUID UUID] UUIDString]  withKey:@"peer"] stringByReplacingOccurrencesOfString:@"/" withString:@"-"] stringByReplacingOccurrencesOfString:@"+" withString:@"_"];
 }
 
 @end

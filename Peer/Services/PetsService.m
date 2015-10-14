@@ -115,7 +115,7 @@
         callBackBlock(nil);
     }
     
-    NSDictionary *params = @{@"userId":userModel.id};
+    NSDictionary *params = @{@"userId":userModel.userId};
     [[PeerNetworkManager shareInstance] postWithParams:params apiPath:GetAllPetsPath callBackBlock:^(id responseObject) {
         
         if ([responseObject objectForKey:@"code"] == 0) {

@@ -9,6 +9,7 @@
 #import "LoginService.h"
 #import "PeerNetworkManager.h"
 #import "UserModel.h"
+#import "AppService.h"
 #import <SMS_SDK/SMS_SDK.h>
 
 #define LoginApiPath    @"v1/user/login"
@@ -33,7 +34,7 @@
 #pragma mark - -- Login
 - (void)loginWithUserModel:(UserModel *)userModel {
     
-    NSDictionary *params = @{@"phone":userModel.phone,@"password":userModel.password};
+    NSDictionary *params = @{@"phone":userModel.phone,@"password":userModel.password,@"deviceId":[AppService deviceId]};
     [[PeerNetworkManager shareInstance] securePostWithParams:params apiPath:LoginApiPath target:self callBack:@selector(loginCompleted:)];
     
 }
@@ -43,6 +44,7 @@
     
     NSDictionary *error = nil;
     if ([dataDic[@"code"] integerValue] == 0) {
+        DLog(@"登录成功！");
         [self persistUserData:dataDic[@"data"]];
     }
     

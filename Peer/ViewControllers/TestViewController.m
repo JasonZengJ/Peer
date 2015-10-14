@@ -10,6 +10,10 @@
 #import "LoginService.h"
 #import "UserModel.h"
 #import "UIView+Layout.h"
+#import "AppService.h"
+#import "OSSFileManager.h"
+#import <ALBB_OSS_IOS_SDK/OSSTool.h>
+#import <AFNetworking/UIImageView+AFNetworking.h>
 
 @interface TestViewController ()
 
@@ -36,7 +40,45 @@
 //    [self testUserLogin];
     self.view.backgroundColor = [UIColor whiteColor];
   
+    [self testUploadFileToOSS];
     
+    
+    UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(50, 100, 219, 202)];
+    [imageView setImageWithURL:[NSURL URLWithString:@"http://jasonlife.oss-cn-shenzhen.aliyuncs.com/Q9EIDKm8Lf3pX9ioCG8AbOZ4-4M=/image/DOXlA_8A9Innc6OPdYtQCGetc="] placeholderImage:[UIImage imageNamed:@"logo"]];
+//
+    [self.view addSubview:imageView];
+    
+    
+//    [self testUserLogin];
+    
+}
+
+- (void)addLabelToView:(UIView *)view text:(NSString *)text {
+    UILabel *label  = [[UILabel alloc] initWithFrame:view.bounds];
+    label.text      = text;
+    label.textColor = [UIColor whiteColor];
+    label.backgroundColor = [UIColor clearColor];
+    label.textAlignment = NSTextAlignmentCenter;
+    [view addSubview:label];
+}
+
+- (void)testUploadFileToOSS {
+    
+    NSURL *imgUrl = [[NSBundle mainBundle] URLForResource:@"background" withExtension:@"png"];
+    NSData *data  = [NSData dataWithContentsOfURL:imgUrl];
+    
+    OSSFileManager *fileManager = [[OSSFileManager alloc] init];
+    [fileManager uploadImageData:data  callback:^(BOOL isSuccess, NSError *error,NSString *fileUrl) {
+        NSLog(@"file:%@ %@",fileUrl,isSuccess ? @"YES" : @"NO");
+    } progressCallback:^(float progress) {
+        DLog(@"uploaded : %f",progress);
+    }];
+    
+    
+    
+}
+
+- (void)testAutoresize {
     UIView *leftView = [[UIView alloc] initWithFrame:CGRectMake(100, 100, 100, 100)];
     leftView.backgroundColor = [UIColor purpleColor];
     [self.view addSubview:leftView];
@@ -54,18 +96,7 @@
     rightView.backgroundColor = [UIColor blackColor];
     [self.view addSubview:rightView];
     [self addLabelToView:rightView text:@"RightView"];
-    
 }
-
-- (void)addLabelToView:(UIView *)view text:(NSString *)text {
-    UILabel *label  = [[UILabel alloc] initWithFrame:view.bounds];
-    label.text      = text;
-    label.textColor = [UIColor whiteColor];
-    label.backgroundColor = [UIColor clearColor];
-    label.textAlignment = NSTextAlignmentCenter;
-    [view addSubview:label];
-}
-
 
 - (void)testGetVerificationCode {
     [self.loginService getVerificationCodeWithPhone:@"18501638736" result:^(BOOL isSuccess) {

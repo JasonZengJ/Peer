@@ -28,29 +28,16 @@
     // Override point for customization after application launch.
     
 //    [AppService initAppService];
-//    [AppService registerRemoteNotification];
-//    [SMS_SDK registerApp:@"a72297a4628e" withSecret:@"52cf6cd4ef00aec3e52f8e7af55bbaa1"];
-//    
+    [AppService registerRemoteNotification];
+    [SMS_SDK registerApp:@"a72297a4628e" withSecret:@"52cf6cd4ef00aec3e52f8e7af55bbaa1"];
+//
     self.window = [[UIWindow alloc] initWithFrame:ScreenBounds];
     self.window.rootViewController = [[TestViewController alloc] init];
     [self.window makeKeyAndVisible];
     
     
-    NSURL *imgUrl = [[NSBundle mainBundle] URLForResource:@"logo" withExtension:@"png"];
-    
-    NSData *data = [NSData dataWithContentsOfURL:imgUrl];
 
-    
-    
-    DLog(@"%@",[ApplicationDirectoryService applicationImageDirectory]);
-    
-    
-    NSString *filePath = [NSString stringWithFormat:@"%@/%@",[ApplicationDirectoryService applicationDocumentsDirectory],@"test.png"];
-    
-    bool success = [data writeToFile:filePath atomically:NO];
-    
-    bool fileExist = [[NSFileManager defaultManager] fileExistsAtPath:filePath];
-    
+
  
     
     return YES;

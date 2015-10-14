@@ -19,6 +19,8 @@
 
 + (void)registerRemoteToken:(NSString *)remoteToken;
 
++ (NSString *)deviceId;
+
 + (NSString *)token;
 
 + (NSString *)deviceType;
