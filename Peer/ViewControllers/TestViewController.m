@@ -35,21 +35,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-//    [self testGetVerificationCode];
-//    [self testConfirmVerificationCode];
-//    [self testUserLogin];
     self.view.backgroundColor = [UIColor whiteColor];
-  
-    [self testUploadFileToOSS];
-    
     
     UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(50, 100, 219, 202)];
-    [imageView setImageWithURL:[NSURL URLWithString:@"http://jasonlife.oss-cn-shenzhen.aliyuncs.com/Q9EIDKm8Lf3pX9ioCG8AbOZ4-4M=/image/DOXlA_8A9Innc6OPdYtQCGetc="] placeholderImage:[UIImage imageNamed:@"logo"]];
-//
+    [imageView setImageWithURL:[NSURL URLWithString:@"http://peer-love.oss-cn-shenzhen.aliyuncs.com/E91E747403024DC0E4963A1C9872D147.png"] placeholderImage:[UIImage imageNamed:@"background"]];
     [self.view addSubview:imageView];
     
-    
-//    [self testUserLogin];
     
 }
 

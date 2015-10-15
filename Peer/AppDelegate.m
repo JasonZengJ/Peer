@@ -11,11 +11,13 @@
 
 #pragma mark - -- Vendor
 #import <SMS_SDK/SMS_SDK.h>
+#import "MobClick.h"
 
 
 #warning TEST
 #import "TestViewController.h"
 #import "ApplicationDirectoryService.h"
+#import "CardTableViewTestViewController.h"
 
 @interface AppDelegate ()
 
@@ -29,16 +31,20 @@
     
 //    [AppService initAppService];
     [AppService registerRemoteNotification];
+    
+// 第三方手机验证码工具初始化
     [SMS_SDK registerApp:@"a72297a4628e" withSecret:@"52cf6cd4ef00aec3e52f8e7af55bbaa1"];
-//
+    
+// 友盟统计工具初始化
+    [MobClick startWithAppkey:@"561f4307e0f55a8ae2002752" reportPolicy:BATCH   channelId:nil];
+    NSString *version = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"];
+    [MobClick setAppVersion:version];
+
+    
     self.window = [[UIWindow alloc] initWithFrame:ScreenBounds];
-    self.window.rootViewController = [[TestViewController alloc] init];
+    self.window.rootViewController = [[CardTableViewTestViewController alloc] init];
     [self.window makeKeyAndVisible];
     
-    
-
-
- 
     
     return YES;
 }

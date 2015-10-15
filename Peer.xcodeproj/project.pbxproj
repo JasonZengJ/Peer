@@ -29,7 +29,6 @@
 		960104301BAC4F2900152908 /* LoginServiceTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 9601042F1BAC4F2900152908 /* LoginServiceTest.m */; };
 		960104351BAD6AB700152908 /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 960104341BAD6AB700152908 /* TestViewController.m */; };
 		960104481BADC9D800152908 /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 960104471BADC9D800152908 /* libicucore.dylib */; };
-		9601044A1BADC9DF00152908 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 960104491BADC9DF00152908 /* libz.dylib */; };
 		9601044C1BADC9EA00152908 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9601044B1BADC9EA00152908 /* MessageUI.framework */; };
 		960104521BADD08600152908 /* SMS_SDKLocalizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9601044E1BADD08600152908 /* SMS_SDKLocalizable.strings */; };
 		960104531BADD08600152908 /* SMS_SDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 960104501BADD08600152908 /* SMS_SDK.framework */; };
@@ -49,6 +48,10 @@
 		96A2D8D41BC032200016AE3F /* ApplicationDirectoryService.m in Sources */ = {isa = PBXBuildFile; fileRef = 96A2D8D31BC032200016AE3F /* ApplicationDirectoryService.m */; settings = {ASSET_TAGS = (); }; };
 		96A2D8DA1BC118AA0016AE3F /* ALBB_OSS_IOS_SDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96A2D8D91BC118AA0016AE3F /* ALBB_OSS_IOS_SDK.framework */; settings = {ASSET_TAGS = (); }; };
 		96A2D8DD1BC119C70016AE3F /* OSSFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 96A2D8DC1BC119C70016AE3F /* OSSFileManager.m */; settings = {ASSET_TAGS = (); }; };
+		96DC2C4A1BCF5F8F00126AB6 /* HorizontalCardTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 96DC2C491BCF5F8F00126AB6 /* HorizontalCardTableView.m */; settings = {ASSET_TAGS = (); }; };
+		96DC2C4F1BCF6E9300126AB6 /* CardTableViewTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96DC2C4E1BCF6E9300126AB6 /* CardTableViewTestViewController.m */; settings = {ASSET_TAGS = (); }; };
+		96DC2C541BCF7CF500126AB6 /* libMobClickLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 96DC2C511BCF7CF500126AB6 /* libMobClickLibrary.a */; settings = {ASSET_TAGS = (); }; };
+		96DC2C561BCF7E0800126AB6 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 96DC2C551BCF7E0800126AB6 /* libz.tbd */; };
 		96E5CB2A1BB1A9C3005503CD /* PetsService.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E5CB291BB1A9C3005503CD /* PetsService.m */; };
 		96E5CB2D1BB1A9EA005503CD /* PetsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E5CB2C1BB1A9EA005503CD /* PetsModel.m */; };
 		96E5CB301BB1B18E005503CD /* NSDictionary+AddObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E5CB2F1BB1B18E005503CD /* NSDictionary+AddObject.m */; };
@@ -141,6 +144,14 @@
 		96A2D8D91BC118AA0016AE3F /* ALBB_OSS_IOS_SDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ALBB_OSS_IOS_SDK.framework; sourceTree = "<group>"; };
 		96A2D8DB1BC119C70016AE3F /* OSSFileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSSFileManager.h; sourceTree = "<group>"; };
 		96A2D8DC1BC119C70016AE3F /* OSSFileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSSFileManager.m; sourceTree = "<group>"; };
+		96DC2C481BCF5F8F00126AB6 /* HorizontalCardTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HorizontalCardTableView.h; sourceTree = "<group>"; };
+		96DC2C491BCF5F8F00126AB6 /* HorizontalCardTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HorizontalCardTableView.m; sourceTree = "<group>"; };
+		96DC2C4D1BCF6E9300126AB6 /* CardTableViewTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardTableViewTestViewController.h; sourceTree = "<group>"; };
+		96DC2C4E1BCF6E9300126AB6 /* CardTableViewTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardTableViewTestViewController.m; sourceTree = "<group>"; };
+		96DC2C511BCF7CF500126AB6 /* libMobClickLibrary.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libMobClickLibrary.a; sourceTree = "<group>"; };
+		96DC2C521BCF7CF500126AB6 /* MobClick.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MobClick.h; sourceTree = "<group>"; };
+		96DC2C531BCF7CF500126AB6 /* MobClickSocialAnalytics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MobClickSocialAnalytics.h; sourceTree = "<group>"; };
+		96DC2C551BCF7E0800126AB6 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		96E5CB281BB1A9C3005503CD /* PetsService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PetsService.h; sourceTree = "<group>"; };
 		96E5CB291BB1A9C3005503CD /* PetsService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PetsService.m; sourceTree = "<group>"; };
 		96E5CB2B1BB1A9EA005503CD /* PetsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PetsModel.h; sourceTree = "<group>"; };
@@ -155,8 +166,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96DC2C561BCF7E0800126AB6 /* libz.tbd in Frameworks */,
+				96DC2C541BCF7CF500126AB6 /* libMobClickLibrary.a in Frameworks */,
 				9601044C1BADC9EA00152908 /* MessageUI.framework in Frameworks */,
-				9601044A1BADC9DF00152908 /* libz.dylib in Frameworks */,
 				960104481BADC9D800152908 /* libicucore.dylib in Frameworks */,
 				961D2E4C1BA715D500C84C8B /* Accelerate.framework in Frameworks */,
 				960104531BADD08600152908 /* SMS_SDK.framework in Frameworks */,
@@ -179,6 +191,7 @@
 		1B4F7B120EE7351ACEF659A5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				96DC2C551BCF7E0800126AB6 /* libz.tbd */,
 				9601044B1BADC9EA00152908 /* MessageUI.framework */,
 				960104491BADC9DF00152908 /* libz.dylib */,
 				960104471BADC9D800152908 /* libicucore.dylib */,
@@ -193,6 +206,7 @@
 		960103E21BA8795500152908 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				96DC2C461BCF5F3200126AB6 /* Peer */,
 				960103F61BA879C800152908 /* Categories */,
 				960103EA1BA8795500152908 /* Network */,
 				960103ED1BA8795500152908 /* Vendor */,
@@ -212,6 +226,7 @@
 		960103ED1BA8795500152908 /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				96DC2C501BCF7CE700126AB6 /* UMeng */,
 				96A2D8D51BC117DF0016AE3F /* OSS1.3 */,
 				9601044D1BADD08600152908 /* SMS_SDK */,
 				960103EE1BA8795500152908 /* OpenUDID */,
@@ -271,6 +286,7 @@
 		9601040A1BA879F600152908 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				96DC2C4B1BCF6DF300126AB6 /* Home */,
 				9601040B1BA879F600152908 /* User */,
 				960104111BA879F600152908 /* ViewController.h */,
 				960104121BA879F600152908 /* ViewController.m */,
@@ -379,6 +395,7 @@
 		966B517B1B7F8D70000F0EF2 /* Peer */ = {
 			isa = PBXGroup;
 			children = (
+				96DC2C4C1BCF6E7100126AB6 /* Test */,
 				960103E21BA8795500152908 /* Components */,
 				960104211BAB113A00152908 /* Model */,
 				960104031BA879E200152908 /* Services */,
@@ -429,6 +446,49 @@
 				96A2D8DC1BC119C70016AE3F /* OSSFileManager.m */,
 			);
 			path = OSS1.3;
+			sourceTree = "<group>";
+		};
+		96DC2C461BCF5F3200126AB6 /* Peer */ = {
+			isa = PBXGroup;
+			children = (
+				96DC2C471BCF5F7800126AB6 /* HorizontalCardTableView */,
+			);
+			path = Peer;
+			sourceTree = "<group>";
+		};
+		96DC2C471BCF5F7800126AB6 /* HorizontalCardTableView */ = {
+			isa = PBXGroup;
+			children = (
+				96DC2C481BCF5F8F00126AB6 /* HorizontalCardTableView.h */,
+				96DC2C491BCF5F8F00126AB6 /* HorizontalCardTableView.m */,
+			);
+			path = HorizontalCardTableView;
+			sourceTree = "<group>";
+		};
+		96DC2C4B1BCF6DF300126AB6 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		96DC2C4C1BCF6E7100126AB6 /* Test */ = {
+			isa = PBXGroup;
+			children = (
+				96DC2C4D1BCF6E9300126AB6 /* CardTableViewTestViewController.h */,
+				96DC2C4E1BCF6E9300126AB6 /* CardTableViewTestViewController.m */,
+			);
+			path = Test;
+			sourceTree = "<group>";
+		};
+		96DC2C501BCF7CE700126AB6 /* UMeng */ = {
+			isa = PBXGroup;
+			children = (
+				96DC2C511BCF7CF500126AB6 /* libMobClickLibrary.a */,
+				96DC2C521BCF7CF500126AB6 /* MobClick.h */,
+				96DC2C531BCF7CF500126AB6 /* MobClickSocialAnalytics.h */,
+			);
+			path = UMeng;
 			sourceTree = "<group>";
 		};
 		A5EF66DA01FA01C7F7BB91CC /* Pods */ = {
@@ -587,9 +647,11 @@
 				96E5CB301BB1B18E005503CD /* NSDictionary+AddObject.m in Sources */,
 				96A2D8DD1BC119C70016AE3F /* OSSFileManager.m in Sources */,
 				960103FF1BA879C800152908 /* NSData+JSON.m in Sources */,
+				96DC2C4F1BCF6E9300126AB6 /* CardTableViewTestViewController.m in Sources */,
 				960104271BAB1B2300152908 /* UserModel.m in Sources */,
 				968B3BD71BCAA52400B8723A /* MomentsService.m in Sources */,
 				96A2D8D41BC032200016AE3F /* ApplicationDirectoryService.m in Sources */,
+				96DC2C4A1BCF5F8F00126AB6 /* HorizontalCardTableView.m in Sources */,
 				96E5CB2D1BB1A9EA005503CD /* PetsModel.m in Sources */,
 				9601042B1BAB1C4600152908 /* PhoneVerifyViewController.m in Sources */,
 				960104131BA879F600152908 /* LoginView.m in Sources */,
@@ -749,6 +811,10 @@
 				INFOPLIST_FILE = Peer/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Peer/Components/Vendor/UMeng",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -770,6 +836,10 @@
 				INFOPLIST_FILE = Peer/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Peer/Components/Vendor/UMeng",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
