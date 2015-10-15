@@ -40,6 +40,7 @@
 		966B518A1B7F8D70000F0EF2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 966B51891B7F8D70000F0EF2 /* Images.xcassets */; };
 		966B518D1B7F8D70000F0EF2 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 966B518B1B7F8D70000F0EF2 /* LaunchScreen.xib */; };
 		966B51991B7F8D70000F0EF2 /* PeerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 966B51981B7F8D70000F0EF2 /* PeerTests.m */; };
+		96740D051BCFF2D40035A1DB /* SendMomentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96740D041BCFF2D40035A1DB /* SendMomentViewController.m */; settings = {ASSET_TAGS = (); }; };
 		968B3BD41BCAA21D00B8723A /* FileUploadService.m in Sources */ = {isa = PBXBuildFile; fileRef = 968B3BD31BCAA21D00B8723A /* FileUploadService.m */; settings = {ASSET_TAGS = (); }; };
 		968B3BD71BCAA52400B8723A /* MomentsService.m in Sources */ = {isa = PBXBuildFile; fileRef = 968B3BD61BCAA52400B8723A /* MomentsService.m */; settings = {ASSET_TAGS = (); }; };
 		968B3BDA1BCAA59400B8723A /* Pagination.m in Sources */ = {isa = PBXBuildFile; fileRef = 968B3BD91BCAA59400B8723A /* Pagination.m */; settings = {ASSET_TAGS = (); }; };
@@ -49,9 +50,10 @@
 		96A2D8DA1BC118AA0016AE3F /* ALBB_OSS_IOS_SDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96A2D8D91BC118AA0016AE3F /* ALBB_OSS_IOS_SDK.framework */; settings = {ASSET_TAGS = (); }; };
 		96A2D8DD1BC119C70016AE3F /* OSSFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 96A2D8DC1BC119C70016AE3F /* OSSFileManager.m */; settings = {ASSET_TAGS = (); }; };
 		96DC2C4A1BCF5F8F00126AB6 /* HorizontalCardTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 96DC2C491BCF5F8F00126AB6 /* HorizontalCardTableView.m */; settings = {ASSET_TAGS = (); }; };
-		96DC2C4F1BCF6E9300126AB6 /* CardTableViewTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96DC2C4E1BCF6E9300126AB6 /* CardTableViewTestViewController.m */; settings = {ASSET_TAGS = (); }; };
 		96DC2C541BCF7CF500126AB6 /* libMobClickLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 96DC2C511BCF7CF500126AB6 /* libMobClickLibrary.a */; settings = {ASSET_TAGS = (); }; };
 		96DC2C561BCF7E0800126AB6 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 96DC2C551BCF7E0800126AB6 /* libz.tbd */; };
+		96DC2C591BCF82F800126AB6 /* PeerHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96DC2C581BCF82F800126AB6 /* PeerHomeViewController.m */; settings = {ASSET_TAGS = (); }; };
+		96DC2C5C1BCF84E300126AB6 /* HCTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 96DC2C5B1BCF84E300126AB6 /* HCTableViewCell.m */; settings = {ASSET_TAGS = (); }; };
 		96E5CB2A1BB1A9C3005503CD /* PetsService.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E5CB291BB1A9C3005503CD /* PetsService.m */; };
 		96E5CB2D1BB1A9EA005503CD /* PetsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E5CB2C1BB1A9EA005503CD /* PetsModel.m */; };
 		96E5CB301BB1B18E005503CD /* NSDictionary+AddObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E5CB2F1BB1B18E005503CD /* NSDictionary+AddObject.m */; };
@@ -129,6 +131,8 @@
 		966B51971B7F8D70000F0EF2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		966B51981B7F8D70000F0EF2 /* PeerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PeerTests.m; sourceTree = "<group>"; };
 		966B51A91B7FA959000F0EF2 /* Peer-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Peer-Prefix.pch"; sourceTree = "<group>"; };
+		96740D031BCFF2D40035A1DB /* SendMomentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SendMomentViewController.h; sourceTree = "<group>"; };
+		96740D041BCFF2D40035A1DB /* SendMomentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SendMomentViewController.m; sourceTree = "<group>"; };
 		968B3BD21BCAA21D00B8723A /* FileUploadService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileUploadService.h; sourceTree = "<group>"; };
 		968B3BD31BCAA21D00B8723A /* FileUploadService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileUploadService.m; sourceTree = "<group>"; };
 		968B3BD51BCAA52400B8723A /* MomentsService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MomentsService.h; sourceTree = "<group>"; };
@@ -146,12 +150,14 @@
 		96A2D8DC1BC119C70016AE3F /* OSSFileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSSFileManager.m; sourceTree = "<group>"; };
 		96DC2C481BCF5F8F00126AB6 /* HorizontalCardTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HorizontalCardTableView.h; sourceTree = "<group>"; };
 		96DC2C491BCF5F8F00126AB6 /* HorizontalCardTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HorizontalCardTableView.m; sourceTree = "<group>"; };
-		96DC2C4D1BCF6E9300126AB6 /* CardTableViewTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardTableViewTestViewController.h; sourceTree = "<group>"; };
-		96DC2C4E1BCF6E9300126AB6 /* CardTableViewTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardTableViewTestViewController.m; sourceTree = "<group>"; };
 		96DC2C511BCF7CF500126AB6 /* libMobClickLibrary.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libMobClickLibrary.a; sourceTree = "<group>"; };
 		96DC2C521BCF7CF500126AB6 /* MobClick.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MobClick.h; sourceTree = "<group>"; };
 		96DC2C531BCF7CF500126AB6 /* MobClickSocialAnalytics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MobClickSocialAnalytics.h; sourceTree = "<group>"; };
 		96DC2C551BCF7E0800126AB6 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		96DC2C571BCF82F800126AB6 /* PeerHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PeerHomeViewController.h; sourceTree = "<group>"; };
+		96DC2C581BCF82F800126AB6 /* PeerHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PeerHomeViewController.m; sourceTree = "<group>"; };
+		96DC2C5A1BCF84E300126AB6 /* HCTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCTableViewCell.h; sourceTree = "<group>"; };
+		96DC2C5B1BCF84E300126AB6 /* HCTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCTableViewCell.m; sourceTree = "<group>"; };
 		96E5CB281BB1A9C3005503CD /* PetsService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PetsService.h; sourceTree = "<group>"; };
 		96E5CB291BB1A9C3005503CD /* PetsService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PetsService.m; sourceTree = "<group>"; };
 		96E5CB2B1BB1A9EA005503CD /* PetsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PetsModel.h; sourceTree = "<group>"; };
@@ -286,6 +292,7 @@
 		9601040A1BA879F600152908 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				96740D021BCFF2BB0035A1DB /* Moment */,
 				96DC2C4B1BCF6DF300126AB6 /* Home */,
 				9601040B1BA879F600152908 /* User */,
 				960104111BA879F600152908 /* ViewController.h */,
@@ -395,7 +402,6 @@
 		966B517B1B7F8D70000F0EF2 /* Peer */ = {
 			isa = PBXGroup;
 			children = (
-				96DC2C4C1BCF6E7100126AB6 /* Test */,
 				960103E21BA8795500152908 /* Components */,
 				960104211BAB113A00152908 /* Model */,
 				960104031BA879E200152908 /* Services */,
@@ -438,6 +444,14 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		96740D021BCFF2BB0035A1DB /* Moment */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Moment;
+			path = Home/Moment;
+			sourceTree = "<group>";
+		};
 		96A2D8D51BC117DF0016AE3F /* OSS1.3 */ = {
 			isa = PBXGroup;
 			children = (
@@ -461,6 +475,8 @@
 			children = (
 				96DC2C481BCF5F8F00126AB6 /* HorizontalCardTableView.h */,
 				96DC2C491BCF5F8F00126AB6 /* HorizontalCardTableView.m */,
+				96DC2C5A1BCF84E300126AB6 /* HCTableViewCell.h */,
+				96DC2C5B1BCF84E300126AB6 /* HCTableViewCell.m */,
 			);
 			path = HorizontalCardTableView;
 			sourceTree = "<group>";
@@ -468,17 +484,12 @@
 		96DC2C4B1BCF6DF300126AB6 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				96DC2C571BCF82F800126AB6 /* PeerHomeViewController.h */,
+				96DC2C581BCF82F800126AB6 /* PeerHomeViewController.m */,
+				96740D031BCFF2D40035A1DB /* SendMomentViewController.h */,
+				96740D041BCFF2D40035A1DB /* SendMomentViewController.m */,
 			);
 			path = Home;
-			sourceTree = "<group>";
-		};
-		96DC2C4C1BCF6E7100126AB6 /* Test */ = {
-			isa = PBXGroup;
-			children = (
-				96DC2C4D1BCF6E9300126AB6 /* CardTableViewTestViewController.h */,
-				96DC2C4E1BCF6E9300126AB6 /* CardTableViewTestViewController.m */,
-			);
-			path = Test;
 			sourceTree = "<group>";
 		};
 		96DC2C501BCF7CE700126AB6 /* UMeng */ = {
@@ -647,17 +658,19 @@
 				96E5CB301BB1B18E005503CD /* NSDictionary+AddObject.m in Sources */,
 				96A2D8DD1BC119C70016AE3F /* OSSFileManager.m in Sources */,
 				960103FF1BA879C800152908 /* NSData+JSON.m in Sources */,
-				96DC2C4F1BCF6E9300126AB6 /* CardTableViewTestViewController.m in Sources */,
 				960104271BAB1B2300152908 /* UserModel.m in Sources */,
+				96DC2C591BCF82F800126AB6 /* PeerHomeViewController.m in Sources */,
 				968B3BD71BCAA52400B8723A /* MomentsService.m in Sources */,
 				96A2D8D41BC032200016AE3F /* ApplicationDirectoryService.m in Sources */,
 				96DC2C4A1BCF5F8F00126AB6 /* HorizontalCardTableView.m in Sources */,
 				96E5CB2D1BB1A9EA005503CD /* PetsModel.m in Sources */,
 				9601042B1BAB1C4600152908 /* PhoneVerifyViewController.m in Sources */,
+				96DC2C5C1BCF84E300126AB6 /* HCTableViewCell.m in Sources */,
 				960104131BA879F600152908 /* LoginView.m in Sources */,
 				960104241BAB117200152908 /* AppModel.m in Sources */,
 				96E5CB2A1BB1A9C3005503CD /* PetsService.m in Sources */,
 				968B3BD41BCAA21D00B8723A /* FileUploadService.m in Sources */,
+				96740D051BCFF2D40035A1DB /* SendMomentViewController.m in Sources */,
 				960104151BA879F600152908 /* ViewController.m in Sources */,
 				960104351BAD6AB700152908 /* TestViewController.m in Sources */,
 				960104091BA879E200152908 /* LoginService.m in Sources */,

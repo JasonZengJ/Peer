@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "AppService.h"
+#import "PeerHomeViewController.h"
 
 #pragma mark - -- Vendor
 #import <SMS_SDK/SMS_SDK.h>
@@ -17,7 +18,7 @@
 #warning TEST
 #import "TestViewController.h"
 #import "ApplicationDirectoryService.h"
-#import "CardTableViewTestViewController.h"
+#import "SendMomentViewController.h"
 
 @interface AppDelegate ()
 
@@ -29,9 +30,10 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
-//    [AppService initAppService];
+    if (![AppService appLaunched]) {
+        [AppService initAppService];
+    }
     [AppService registerRemoteNotification];
-    
 // 第三方手机验证码工具初始化
     [SMS_SDK registerApp:@"a72297a4628e" withSecret:@"52cf6cd4ef00aec3e52f8e7af55bbaa1"];
     
@@ -42,7 +44,7 @@
 
     
     self.window = [[UIWindow alloc] initWithFrame:ScreenBounds];
-    self.window.rootViewController = [[CardTableViewTestViewController alloc] init];
+    self.window.rootViewController = [[SendMomentViewController alloc] init];
     [self.window makeKeyAndVisible];
     
     

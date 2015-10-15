@@ -1,5 +1,5 @@
 //
-//  CardTableViewTestViewController.h
+//  HCTableViewCell.h
 //  Peer
 //
 //  Created by jason on 10/15/15.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CardTableViewTestViewController : UIViewController
+@interface HCTableViewCell : UIView
 
 @end

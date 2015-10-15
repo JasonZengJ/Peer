@@ -29,6 +29,7 @@
 
 + (void)initAppService {
     
+
     NSDictionary *infoDictionary = [[NSBundle mainBundle]infoDictionary];
     NSString *version    = infoDictionary[@"CFBundleShortVersionString"];
     NSString *sysName    = [[UIDevice currentDevice] systemName];
@@ -73,9 +74,11 @@
                [[NSUserDefaults standardUserDefaults] setObject:responseObject[@"data"][@"access_key"] forKey:@"AccessKey"];
                [[NSUserDefaults standardUserDefaults] setObject:responseObject[@"data"][@"secret_key"] forKey:@"SecretKey"];
                [[NSUserDefaults standardUserDefaults] setObject:appConfig forKey:@"app"];
+               [[NSUserDefaults standardUserDefaults] setObject:nil forKey:@"isRegisteringDevice"];
+               [[NSUserDefaults standardUserDefaults] synchronize];
+               [self setAppLaunched];
            }
-           [[NSUserDefaults standardUserDefaults] setObject:nil forKey:@"isRegisteringDevice"];
-           [[NSUserDefaults standardUserDefaults] synchronize];
+           
        }];
     }
     
@@ -138,6 +141,17 @@
 
 + (NSString *)remoteToken {
     return [[NSUserDefaults standardUserDefaults]  objectForKey:@"remoteToken"];
+}
+
+
++ (void)setAppLaunched {
+    
+    [[NSUserDefaults standardUserDefaults] setObject:@(YES) forKey:@"appLaunched"];
+    
+}
+
++ (BOOL)appLaunched {
+    return [[NSUserDefaults standardUserDefaults] objectForKey:@"appLaunched"];
 }
 
 + (NSString *)deviceType {

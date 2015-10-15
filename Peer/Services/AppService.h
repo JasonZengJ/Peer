@@ -35,4 +35,6 @@
 
 + (NSString *)remoteToken;
 
++ (BOOL)appLaunched;
+
 @end
