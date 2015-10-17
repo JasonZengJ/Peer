@@ -61,9 +61,7 @@
     [super viewDidLoad];
     self.momentsArray = [NSArray array];
     
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        [self loadData];
-    });
+    [self loadData];
 }
 
 - (void)loadData {
