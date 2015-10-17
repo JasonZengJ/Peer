@@ -61,7 +61,24 @@
     [super viewDidLoad];
     self.momentsArray = [NSArray array];
     
-    [self loadData];
+//    [self loadData];
+    
+    
+    MomentModel *momentModel1 = [[MomentModel alloc] init];
+    momentModel1.momentTitle  = @"123456";
+    
+    MomentModel *momentModel2 = [[MomentModel alloc] init];
+    momentModel2.momentTitle  = @"123";
+    
+    MomentModel *momentModel3 = [[MomentModel alloc] init];
+    momentModel3.momentTitle  = @"few 风";
+    
+    MomentModel *momentModel4 = [[MomentModel alloc] init];
+    momentModel4.momentTitle  = @"nice";
+    
+    
+    self.momentsArray = @[momentModel1,momentModel2,momentModel3,momentModel4];
+    
 }
 
 - (void)loadData {

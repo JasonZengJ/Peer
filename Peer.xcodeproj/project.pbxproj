@@ -62,6 +62,8 @@
 		96E5CB2A1BB1A9C3005503CD /* PetsService.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E5CB291BB1A9C3005503CD /* PetsService.m */; };
 		96E5CB2D1BB1A9EA005503CD /* PetsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E5CB2C1BB1A9EA005503CD /* PetsModel.m */; };
 		96E5CB301BB1B18E005503CD /* NSDictionary+AddObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E5CB2F1BB1B18E005503CD /* NSDictionary+AddObject.m */; };
+		CE2C57031BD2CBF700DEAF32 /* tmp.png in Resources */ = {isa = PBXBuildFile; fileRef = CE2C57021BD2CBF700DEAF32 /* tmp.png */; settings = {ASSET_TAGS = (); }; };
+		CE2C57051BD2CE8F00DEAF32 /* avatar.png in Resources */ = {isa = PBXBuildFile; fileRef = CE2C57041BD2CE8F00DEAF32 /* avatar.png */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -180,6 +182,8 @@
 		96E5CB2E1BB1B18E005503CD /* NSDictionary+AddObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+AddObject.h"; sourceTree = "<group>"; };
 		96E5CB2F1BB1B18E005503CD /* NSDictionary+AddObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+AddObject.m"; sourceTree = "<group>"; };
 		A1FE296EA4C7788C849801D9 /* Pods-Peer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Peer.release.xcconfig"; path = "Pods/Target Support Files/Pods-Peer/Pods-Peer.release.xcconfig"; sourceTree = "<group>"; };
+		CE2C57021BD2CBF700DEAF32 /* tmp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tmp.png; sourceTree = "<group>"; };
+		CE2C57041BD2CE8F00DEAF32 /* avatar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = avatar.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -349,6 +353,8 @@
 		960104171BA87A1C00152908 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				CE2C57041BD2CE8F00DEAF32 /* avatar.png */,
+				CE2C57021BD2CBF700DEAF32 /* tmp.png */,
 				9601041A1BA87A3A00152908 /* logo.png */,
 				960104181BA87A1C00152908 /* background.png */,
 			);
@@ -629,8 +635,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				9601041B1BA87A3A00152908 /* logo.png in Resources */,
+				CE2C57051BD2CE8F00DEAF32 /* avatar.png in Resources */,
 				966B518D1B7F8D70000F0EF2 /* LaunchScreen.xib in Resources */,
 				960104521BADD08600152908 /* SMS_SDKLocalizable.strings in Resources */,
+				CE2C57031BD2CBF700DEAF32 /* tmp.png in Resources */,
 				960104191BA87A1C00152908 /* background.png in Resources */,
 				966B518A1B7F8D70000F0EF2 /* Images.xcassets in Resources */,
 			);
@@ -862,7 +870,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Peer/Peer-Prefix.pch";
 				INFOPLIST_FILE = Peer/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -889,7 +897,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Peer/Peer-Prefix.pch";
 				INFOPLIST_FILE = Peer/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
