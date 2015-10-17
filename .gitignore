@@ -1,7 +1,7 @@
 .git/*
 .DS_Store
 Podfile.lock
-Podfile
+#Podfile
 Pods
 xcuserdata
 #xcshareddata
