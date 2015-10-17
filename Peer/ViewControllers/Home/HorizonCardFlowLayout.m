@@ -12,8 +12,10 @@
 
 
 
-#define CardWidth  ConvertToiPhone6XYZ(250)
-#define CardHeight ConvertToiPhone6XYZ(430)
+#define CardWidth  ConvertToiPhone6XYZ(250.0)
+#define CardHeight ConvertToiPhone6XYZ(420.0)
+#define CardTopEdge 15
+#define CardTop 81.0
 
 
 @implementation HorizonCardFlowLayout
@@ -36,6 +38,46 @@
     
 }
 
+//  初始的layout外观将由该方法返回的UICollctionViewLayoutAttributes来决定
+-(NSArray*)layoutAttributesForElementsInRect:(CGRect)rect
+{
+    
+    NSLog(@"\n");
+    NSArray* array = [super layoutAttributesForElementsInRect:rect];
+    CGRect visibleRect;
+    visibleRect.origin = self.collectionView.contentOffset;
+    visibleRect.size = self.collectionView.bounds.size;
+    for (UICollectionViewLayoutAttributes* attributes in array) {
+        if (CGRectIntersectsRect(attributes.frame, rect)) {
+            
+            
+            NSLog(@"center x:---%f   origin:%f",attributes.center.x,attributes.frame.origin.y);
+            CGFloat distance = CGRectGetMidX(visibleRect) - attributes.center.x;
+            NSLog(@"distance :---%f",distance);
+
+            CGFloat normalizedDistance = distance * 2 / CardWidth;
+            NSLog(@"normalizedDistance :---%f     ",normalizedDistance);
+            if (ABS(distance) < CardWidth/2.0f) {
+                CGFloat zoom = CardTopEdge*(ABS(normalizedDistance) - 1);
+                CGRect frame = attributes.frame;
+                frame.origin.y = ConvertToiPhone6XYZ(CardTop) + zoom;
+                frame.size.height = CardHeight - zoom + 2*((ABS(normalizedDistance) - 1));
+                
+                NSLog(@"zoom :----%f  frame--y: %f",zoom,frame.origin.y);
+                attributes.frame = frame;
+//                attributes.transform3D = CATransform3DMakeScale(zoom, zoom, 1.0);
+//                attributes.zIndex = 1;
+                
+            } else {
+                CGRect frame = attributes.frame;
+                frame.origin.y = ConvertToiPhone6XYZ(CardTop);
+                attributes.frame = frame;
+            }
+        }
+    }
+    return array;
+}
+
 - (BOOL)shouldInvalidateLayoutForBoundsChange:(CGRect)oldBounds {
     return YES;
 }
@@ -46,7 +88,7 @@
    CGFloat horizontalCenter = proposedContentOffset.x + (CGRectGetWidth(self.collectionView.bounds) / 2.0);
     
    //  当前显示的区域
-   CGRect targetRect = CGRectMake(proposedContentOffset.x, 0.0, self.collectionView.width, self.collectionView.height);
+   CGRect targetRect = CGRectMake(proposedContentOffset.x, 0.0, self.collectionView.bounds.size.width, self.collectionView.bounds.size.height);
     
     //  取当前显示的item
    NSArray* array = [super layoutAttributesForElementsInRect:targetRect];
