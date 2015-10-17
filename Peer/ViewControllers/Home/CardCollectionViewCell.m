@@ -124,6 +124,7 @@
     self.contentLabel.text = @"今天把 啊duan 牵了出来溜溜，趁今天天气不错，求约妹子～";
     self.contentLabel.height = [self heightWithString:self.contentLabel.text width:self.contentLabel.width font:self.contentLabel.font];
     
+    
 }
 
 - (CGFloat)heightWithString:(NSString *)string width:(CGFloat)width font:(UIFont *)font {
