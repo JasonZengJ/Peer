@@ -8,7 +8,6 @@
 
 #import "AppDelegate.h"
 #import "AppService.h"
-#import "PeerHomeViewController.h"
 
 #pragma mark - -- Vendor
 #import <SMS_SDK/SMS_SDK.h>
@@ -31,7 +30,11 @@
     // Override point for customization after application launch.
     
     if (![AppService appLaunched]) {
-        [AppService initAppService];
+        
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+            [AppService initAppService];
+        });
+        
     }
     [AppService registerRemoteNotification];
 // 第三方手机验证码工具初始化
@@ -42,8 +45,12 @@
     NSString *version = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"];
     [MobClick setAppVersion:version];
     
+// 让启动画面多停留1秒
+    [NSThread sleepForTimeInterval:1.0];
+    
+    self.homeViewController = [[PeerHomeViewController alloc] init];
     self.window = [[UIWindow alloc] initWithFrame:ScreenBounds];
-    self.window.rootViewController = [[PeerHomeViewController alloc] init];
+    self.window.rootViewController = self.homeViewController;
     [self.window makeKeyAndVisible];
     
     

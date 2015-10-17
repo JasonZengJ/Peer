@@ -10,4 +10,6 @@
 
 @interface PeerHomeViewController : UIViewController
 
+- (void)loadData;
+
 @end

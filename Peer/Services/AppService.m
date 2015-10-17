@@ -8,6 +8,7 @@
 #import "AppService.h"
 #import "OpenUDID.h"
 #import "PeerNetworkManager.h"
+#import "AppDelegate.h"
 #import <AFNetworkReachabilityManager.h>
 #import <sys/utsname.h>
 #import <UIKit/UIKit.h>
@@ -76,6 +77,10 @@
                [[NSUserDefaults standardUserDefaults] setObject:appConfig forKey:@"app"];
                [[NSUserDefaults standardUserDefaults] setObject:nil forKey:@"isRegisteringDevice"];
                [[NSUserDefaults standardUserDefaults] synchronize];
+               
+               AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+               [appDelegate.homeViewController loadData];
+               
                [self setAppLaunched];
            }
            
