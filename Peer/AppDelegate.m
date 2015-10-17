@@ -18,7 +18,7 @@
 #warning TEST
 #import "TestViewController.h"
 #import "ApplicationDirectoryService.h"
-#import "SendMomentViewController.h"
+#import "SendPhotoMomentViewController.h"
 
 @interface AppDelegate ()
 
@@ -41,10 +41,9 @@
     [MobClick startWithAppkey:@"561f4307e0f55a8ae2002752" reportPolicy:BATCH   channelId:nil];
     NSString *version = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"];
     [MobClick setAppVersion:version];
-
     
     self.window = [[UIWindow alloc] initWithFrame:ScreenBounds];
-    self.window.rootViewController = [[SendMomentViewController alloc] init];
+    self.window.rootViewController = [[PeerHomeViewController alloc] init];
     [self.window makeKeyAndVisible];
     
     

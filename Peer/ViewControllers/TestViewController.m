@@ -36,11 +36,12 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor whiteColor];
+  
     
-    UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(50, 100, 219, 202)];
-    [imageView setImageWithURL:[NSURL URLWithString:@"http://peer-love.oss-cn-shenzhen.aliyuncs.com/E91E747403024DC0E4963A1C9872D147.png"] placeholderImage:[UIImage imageNamed:@"background"]];
-    [self.view addSubview:imageView];
-    
+}
+
+
+- (void)testGetApp {
     
 }
 

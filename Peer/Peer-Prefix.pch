@@ -17,10 +17,31 @@
 #define Color(r,g,b,a) [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:a]
 
 
+
 #pragma mark - -- Notification
 
 #define kNetworkChangedNotification @"kPeerNetworkChangedNotification"
 
+
+
+#pragma mark - -- Define
+
+#define PortraitScreenWidth [[UIScreen mainScreen] bounds].size.width
+#define PortraitScreenHeight [[UIScreen mainScreen] bounds].size.height
+
+#define IS_OS_8_OR_LATER    ([[[UIDevice currentDevice] systemVersion] integerValue] >= 8.0f)
+#define IS_IPAD (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
+#define IS_IPHONE (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
+
+#define IS_IPHONE_5 (IS_IPHONE && (PortraitScreenHeight == 568.0f) && ((IS_OS_8_OR_LATER && [UIScreen mainScreen].nativeScale >= [UIScreen mainScreen].scale) || !IS_OS_8_OR_LATER))
+#define IS_ZOOMED_IPHONE_6 (IS_IPHONE && PortraitScreenHeight == 568.0f && IS_OS_8_OR_LATER && [UIScreen mainScreen].nativeScale > [UIScreen mainScreen].scale)
+
+#define IS_STANDARD_IPHONE_6 (IS_IPHONE && PortraitScreenHeight == 667.0f  && IS_OS_8_OR_LATER && [UIScreen mainScreen].nativeScale == [UIScreen mainScreen].scale)
+#define IS_STANDARD_IPHONE_6_PLUS (IS_IPHONE && PortraitScreenHeight == 736.0f)
+#define IS_ZOOMED_IPHONE_6_PLUS (IS_IPHONE && PortraitScreenHeight == 667.0f && IS_OS_8_OR_LATER && [UIScreen mainScreen].nativeScale < [UIScreen mainScreen].scale)
+
+#define IS_IPHONE_6 IS_STANDARD_IPHONE_6 || IS_ZOOMED_IPHONE_6_PLUS
+#define IS_IPHONE_6_PLUS IS_STANDARD_IPHONE_6_PLUS
 
 #ifdef __OBJC__
 

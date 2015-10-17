@@ -8,15 +8,23 @@
 
 #import "JSONModel.h"
 
+
+typedef NS_ENUM(NSInteger,MomentType) {
+    MomentTypePhoto = 1,
+    MomentTypeVideo = 2,
+    
+};
+
 @interface MomentModel : JSONModel
 
 @property(nonatomic) NSNumber *momentId;
 @property(nonatomic) NSNumber *petsId;
 @property(nonatomic) NSNumber *userId;
 @property(nonatomic) NSString<Optional> *momentTitle;
-@property(nonatomic) NSString<Optional> *momentDescription;
+@property(nonatomic) NSString *momentDescription;
 @property(nonatomic) NSString *momentType;
 @property(nonatomic) NSString *momentTargetUrl;
+@property(nonatomic) NSString *momentThumbnailUrl;
 @property(nonatomic) NSNumber *viewAmount;
 @property(nonatomic) NSNumber *commentsAmount;
 @property(nonatomic) NSNumber *likeAmount;

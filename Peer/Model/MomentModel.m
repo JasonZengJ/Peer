@@ -27,6 +27,9 @@
         self.likeAmount        = [dict objectForKey:@"likeAmount"];
         self.createdAt         = [dict objectForKey:@"created_at"];
         
+        if ([self.momentType integerValue] == MomentTypeVideo) {
+            self.momentThumbnailUrl = [dict objectForKey:@"moment_thumbnail_url"];
+        }
         
     }
     

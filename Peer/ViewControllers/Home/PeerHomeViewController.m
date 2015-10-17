@@ -8,14 +8,19 @@
 
 #import "PeerHomeViewController.h"
 #import "HorizontalCardTableView.h"
+#import "CardCollectionViewCell.h"
+#import "HorizonCardFlowLayout.h"
+#import "MomentsService.h"
+#import "MomentModel.h"
+#import "UIColor+Hex.h"
 
-#define CardCollectionViewCell @"CardCollectionViewCell"
 
 @interface PeerHomeViewController () <UICollectionViewDataSource,UICollectionViewDelegate>
 
 //@property(nonatomic) HorizontalCardTableView *cardTableView;
 @property(nonatomic) UICollectionView *collectionView;
-
+@property(nonatomic) MomentsService   *momentService;
+@property(nonatomic) NSArray *momentsArray;
 
 @end
 
@@ -25,30 +30,50 @@
 - (UICollectionView *)collectionView {
     
     if (!_collectionView) {
-        _collectionView = [[UICollectionView alloc] initWithFrame:self.view.frame ];
+        
+        HorizonCardFlowLayout *cardFlowLayout = [[HorizonCardFlowLayout alloc] init];
+        _collectionView = [[UICollectionView alloc] initWithFrame:self.view.frame collectionViewLayout:cardFlowLayout];
+        _collectionView.delegate = self;
+        _collectionView.dataSource = self;
+        _collectionView.backgroundColor = [UIColor clearColor];
+        [_collectionView registerClass:[CardCollectionViewCell class] forCellWithReuseIdentifier:@"CardCollectionViewCell"];
     }
     return _collectionView;
     
 }
 
-//- (HorizontalCardTableView *)cardTableView {
-//    if (!_cardTableView) {
-//        _cardTableView = [[HorizontalCardTableView alloc] init];
-//    }
-//    return _cardTableView;
-//}
+- (MomentsService *)momentService {
+    if (!_momentService) {
+        _momentService = [[MomentsService alloc] init];
+    }
+    return _momentService;
+}
+
 
 - (void)loadView {
+    
     [super loadView];
-    self.view.backgroundColor = [UIColor whiteColor];
-    
-    
+    self.view.backgroundColor = [UIColor colorWithHex:0xfafafa alpha:1.0];
+    [self.view addSubview:self.collectionView];
 }
 
 -  (void)viewDidLoad {
     [super viewDidLoad];
+    self.momentsArray = [NSArray array];
     
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        [self loadData];
+    });
+}
+
+- (void)loadData {
     
+    PeerHomeViewController __weak *weakSelf = self;
+    [self.momentService getAllMomentsWithPagination:nil callBackBlock:^(NSArray *moments) {
+        PeerHomeViewController *strongSelf = weakSelf;
+        strongSelf.momentsArray = moments;
+        [strongSelf.collectionView reloadData];
+    }];
     
 }
 
@@ -58,15 +83,17 @@
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     
-    return 3;
+    return [self.momentsArray count];
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     
-    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:CardCollectionViewCell forIndexPath:indexPath];
+    CardCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"CardCollectionViewCell" forIndexPath:indexPath];
     if (!cell) {
-        cell = [[UICollectionViewCell alloc] init];
+        cell = [[CardCollectionViewCell alloc] init];
     }
+    
+    [cell configureWithMoments:[self.momentsArray objectAtIndex:indexPath.row]];
     
     return cell;
     
