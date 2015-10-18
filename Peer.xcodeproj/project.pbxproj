@@ -63,6 +63,15 @@
 		CE2C57081BD37AC900DEAF32 /* NSString+Size.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2C57071BD37AC900DEAF32 /* NSString+Size.m */; settings = {ASSET_TAGS = (); }; };
 		CE2C570B1BD3885800DEAF32 /* HomeHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2C570A1BD3885800DEAF32 /* HomeHeaderView.m */; settings = {ASSET_TAGS = (); }; };
 		CE2C570E1BD3889700DEAF32 /* HomeBottomView.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2C570D1BD3889700DEAF32 /* HomeBottomView.m */; settings = {ASSET_TAGS = (); }; };
+		CE2C57181BD39B7A00DEAF32 /* weather in Resources */ = {isa = PBXBuildFile; fileRef = CE2C570F1BD39B7A00DEAF32 /* weather */; settings = {ASSET_TAGS = (); }; };
+		CE2C57191BD39B7A00DEAF32 /* 浏览详细_spec.png in Resources */ = {isa = PBXBuildFile; fileRef = CE2C57101BD39B7A00DEAF32 /* 浏览详细_spec.png */; settings = {ASSET_TAGS = (); }; };
+		CE2C571A1BD39B7A00DEAF32 /* 首页－推荐.png in Resources */ = {isa = PBXBuildFile; fileRef = CE2C57111BD39B7A00DEAF32 /* 首页－推荐.png */; settings = {ASSET_TAGS = (); }; };
+		CE2C571B1BD39B7A00DEAF32 /* 浏览详细.png in Resources */ = {isa = PBXBuildFile; fileRef = CE2C57121BD39B7A00DEAF32 /* 浏览详细.png */; settings = {ASSET_TAGS = (); }; };
+		CE2C571C1BD39B7A00DEAF32 /* 宠物详细.png in Resources */ = {isa = PBXBuildFile; fileRef = CE2C57131BD39B7A00DEAF32 /* 宠物详细.png */; settings = {ASSET_TAGS = (); }; };
+		CE2C571D1BD39B7A00DEAF32 /* 宠物详细_spec.png in Resources */ = {isa = PBXBuildFile; fileRef = CE2C57141BD39B7A00DEAF32 /* 宠物详细_spec.png */; settings = {ASSET_TAGS = (); }; };
+		CE2C571E1BD39B7A00DEAF32 /* 首页－推荐_spec(1).png in Resources */ = {isa = PBXBuildFile; fileRef = CE2C57151BD39B7A00DEAF32 /* 首页－推荐_spec(1).png */; settings = {ASSET_TAGS = (); }; };
+		CE2C571F1BD39B7A00DEAF32 /* 首页－推荐_spec.png in Resources */ = {isa = PBXBuildFile; fileRef = CE2C57161BD39B7A00DEAF32 /* 首页－推荐_spec.png */; settings = {ASSET_TAGS = (); }; };
+		CE2C57201BD39B7A00DEAF32 /* images in Resources */ = {isa = PBXBuildFile; fileRef = CE2C57171BD39B7A00DEAF32 /* images */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -185,6 +194,15 @@
 		CE2C570A1BD3885800DEAF32 /* HomeHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeHeaderView.m; sourceTree = "<group>"; };
 		CE2C570C1BD3889700DEAF32 /* HomeBottomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeBottomView.h; sourceTree = "<group>"; };
 		CE2C570D1BD3889700DEAF32 /* HomeBottomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeBottomView.m; sourceTree = "<group>"; };
+		CE2C570F1BD39B7A00DEAF32 /* weather */ = {isa = PBXFileReference; lastKnownFileType = folder; path = weather; sourceTree = "<group>"; };
+		CE2C57101BD39B7A00DEAF32 /* 浏览详细_spec.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "浏览详细_spec.png"; sourceTree = "<group>"; };
+		CE2C57111BD39B7A00DEAF32 /* 首页－推荐.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "首页－推荐.png"; sourceTree = "<group>"; };
+		CE2C57121BD39B7A00DEAF32 /* 浏览详细.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "浏览详细.png"; sourceTree = "<group>"; };
+		CE2C57131BD39B7A00DEAF32 /* 宠物详细.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "宠物详细.png"; sourceTree = "<group>"; };
+		CE2C57141BD39B7A00DEAF32 /* 宠物详细_spec.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "宠物详细_spec.png"; sourceTree = "<group>"; };
+		CE2C57151BD39B7A00DEAF32 /* 首页－推荐_spec(1).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "首页－推荐_spec(1).png"; sourceTree = "<group>"; };
+		CE2C57161BD39B7A00DEAF32 /* 首页－推荐_spec.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "首页－推荐_spec.png"; sourceTree = "<group>"; };
+		CE2C57171BD39B7A00DEAF32 /* images */ = {isa = PBXFileReference; lastKnownFileType = folder; path = images; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -356,6 +374,15 @@
 		960104171BA87A1C00152908 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				CE2C570F1BD39B7A00DEAF32 /* weather */,
+				CE2C57101BD39B7A00DEAF32 /* 浏览详细_spec.png */,
+				CE2C57111BD39B7A00DEAF32 /* 首页－推荐.png */,
+				CE2C57121BD39B7A00DEAF32 /* 浏览详细.png */,
+				CE2C57131BD39B7A00DEAF32 /* 宠物详细.png */,
+				CE2C57141BD39B7A00DEAF32 /* 宠物详细_spec.png */,
+				CE2C57151BD39B7A00DEAF32 /* 首页－推荐_spec(1).png */,
+				CE2C57161BD39B7A00DEAF32 /* 首页－推荐_spec.png */,
+				CE2C57171BD39B7A00DEAF32 /* images */,
 			);
 			path = images;
 			sourceTree = "<group>";
@@ -637,9 +664,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE2C57201BD39B7A00DEAF32 /* images in Resources */,
+				CE2C571E1BD39B7A00DEAF32 /* 首页－推荐_spec(1).png in Resources */,
+				CE2C571C1BD39B7A00DEAF32 /* 宠物详细.png in Resources */,
+				CE2C571A1BD39B7A00DEAF32 /* 首页－推荐.png in Resources */,
 				966B518D1B7F8D70000F0EF2 /* LaunchScreen.xib in Resources */,
+				CE2C571F1BD39B7A00DEAF32 /* 首页－推荐_spec.png in Resources */,
 				960104521BADD08600152908 /* SMS_SDKLocalizable.strings in Resources */,
+				CE2C571D1BD39B7A00DEAF32 /* 宠物详细_spec.png in Resources */,
 				966B518A1B7F8D70000F0EF2 /* Images.xcassets in Resources */,
+				CE2C57191BD39B7A00DEAF32 /* 浏览详细_spec.png in Resources */,
+				CE2C57181BD39B7A00DEAF32 /* weather in Resources */,
+				CE2C571B1BD39B7A00DEAF32 /* 浏览详细.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
