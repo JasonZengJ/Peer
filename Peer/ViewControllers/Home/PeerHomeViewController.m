@@ -9,10 +9,16 @@
 #import "PeerHomeViewController.h"
 #import "HorizontalCardTableView.h"
 #import "CardCollectionViewCell.h"
+
 #import "HorizonCardFlowLayout.h"
 #import "MomentsService.h"
 #import "MomentModel.h"
 #import "UIColor+Hex.h"
+#import "UIView+Layout.h"
+#import "LayoutUtil.h"
+
+#import "HomeBottomView.h"
+#import "HomeHeaderView.h"
 
 
 @interface PeerHomeViewController () <UICollectionViewDataSource,UICollectionViewDelegate>
@@ -20,6 +26,8 @@
 //@property(nonatomic) HorizontalCardTableView *cardTableView;
 @property(nonatomic) UICollectionView *collectionView;
 @property(nonatomic) MomentsService   *momentService;
+@property(nonatomic) HomeHeaderView   *homeHeaderView;
+@property(nonatomic) HomeBottomView   *homeBottomView;
 @property(nonatomic) NSArray *momentsArray;
 
 @end
@@ -42,6 +50,26 @@
     
 }
 
+- (HomeBottomView *)homeBottomView {
+    if (!_homeBottomView) {
+        _homeBottomView = [[HomeBottomView alloc] initWithFrame:CGRectZero];
+        _homeBottomView.height = self.collectionView.height - CardHeight - self.homeHeaderView.height;
+        _homeBottomView.width  = self.view.width;
+        _homeBottomView.top    = self.view.height - _homeBottomView.height;
+        
+    }
+    return _homeBottomView;
+}
+
+- (HomeHeaderView *)homeHeaderView {
+    if (!_homeHeaderView) {
+        _homeHeaderView = [[HomeHeaderView alloc] initWithFrame:CGRectMake(0, 0, self.view.width, 80)];
+        
+    }
+    return _homeHeaderView;
+}
+
+
 - (MomentsService *)momentService {
     if (!_momentService) {
         _momentService = [[MomentsService alloc] init];
@@ -55,6 +83,8 @@
     [super loadView];
     self.view.backgroundColor = [UIColor colorWithHex:0xfafafa alpha:1.0];
     [self.view addSubview:self.collectionView];
+    [self.view addSubview:self.homeHeaderView];
+    [self.view addSubview:self.homeBottomView];
 }
 
 -  (void)viewDidLoad {

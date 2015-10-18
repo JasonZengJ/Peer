@@ -19,8 +19,6 @@
 		960104131BA879F600152908 /* LoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9601040E1BA879F600152908 /* LoginView.m */; };
 		960104141BA879F600152908 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 960104101BA879F600152908 /* LoginViewController.m */; };
 		960104151BA879F600152908 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 960104121BA879F600152908 /* ViewController.m */; };
-		960104191BA87A1C00152908 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 960104181BA87A1C00152908 /* background.png */; };
-		9601041B1BA87A3A00152908 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 9601041A1BA87A3A00152908 /* logo.png */; };
 		960104201BA9CAC300152908 /* UserService.m in Sources */ = {isa = PBXBuildFile; fileRef = 9601041F1BA9CAC300152908 /* UserService.m */; };
 		960104241BAB117200152908 /* AppModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 960104231BAB117200152908 /* AppModel.m */; };
 		960104271BAB1B2300152908 /* UserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 960104261BAB1B2300152908 /* UserModel.m */; };
@@ -62,8 +60,9 @@
 		96E5CB2A1BB1A9C3005503CD /* PetsService.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E5CB291BB1A9C3005503CD /* PetsService.m */; };
 		96E5CB2D1BB1A9EA005503CD /* PetsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E5CB2C1BB1A9EA005503CD /* PetsModel.m */; };
 		96E5CB301BB1B18E005503CD /* NSDictionary+AddObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E5CB2F1BB1B18E005503CD /* NSDictionary+AddObject.m */; };
-		CE2C57031BD2CBF700DEAF32 /* tmp.png in Resources */ = {isa = PBXBuildFile; fileRef = CE2C57021BD2CBF700DEAF32 /* tmp.png */; settings = {ASSET_TAGS = (); }; };
-		CE2C57051BD2CE8F00DEAF32 /* avatar.png in Resources */ = {isa = PBXBuildFile; fileRef = CE2C57041BD2CE8F00DEAF32 /* avatar.png */; settings = {ASSET_TAGS = (); }; };
+		CE2C57081BD37AC900DEAF32 /* NSString+Size.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2C57071BD37AC900DEAF32 /* NSString+Size.m */; settings = {ASSET_TAGS = (); }; };
+		CE2C570B1BD3885800DEAF32 /* HomeHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2C570A1BD3885800DEAF32 /* HomeHeaderView.m */; settings = {ASSET_TAGS = (); }; };
+		CE2C570E1BD3889700DEAF32 /* HomeBottomView.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2C570D1BD3889700DEAF32 /* HomeBottomView.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -101,8 +100,6 @@
 		960104101BA879F600152908 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		960104111BA879F600152908 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		960104121BA879F600152908 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		960104181BA87A1C00152908 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
-		9601041A1BA87A3A00152908 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 		9601041E1BA9CAC300152908 /* UserService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserService.h; sourceTree = "<group>"; };
 		9601041F1BA9CAC300152908 /* UserService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserService.m; sourceTree = "<group>"; };
 		960104221BAB117200152908 /* AppModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppModel.h; sourceTree = "<group>"; };
@@ -182,8 +179,12 @@
 		96E5CB2E1BB1B18E005503CD /* NSDictionary+AddObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+AddObject.h"; sourceTree = "<group>"; };
 		96E5CB2F1BB1B18E005503CD /* NSDictionary+AddObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+AddObject.m"; sourceTree = "<group>"; };
 		A1FE296EA4C7788C849801D9 /* Pods-Peer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Peer.release.xcconfig"; path = "Pods/Target Support Files/Pods-Peer/Pods-Peer.release.xcconfig"; sourceTree = "<group>"; };
-		CE2C57021BD2CBF700DEAF32 /* tmp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tmp.png; sourceTree = "<group>"; };
-		CE2C57041BD2CE8F00DEAF32 /* avatar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = avatar.png; sourceTree = "<group>"; };
+		CE2C57061BD37AC900DEAF32 /* NSString+Size.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Size.h"; sourceTree = "<group>"; };
+		CE2C57071BD37AC900DEAF32 /* NSString+Size.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Size.m"; sourceTree = "<group>"; };
+		CE2C57091BD3885800DEAF32 /* HomeHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeHeaderView.h; sourceTree = "<group>"; };
+		CE2C570A1BD3885800DEAF32 /* HomeHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeHeaderView.m; sourceTree = "<group>"; };
+		CE2C570C1BD3889700DEAF32 /* HomeBottomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeBottomView.h; sourceTree = "<group>"; };
+		CE2C570D1BD3889700DEAF32 /* HomeBottomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeBottomView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -281,6 +282,8 @@
 				960103FE1BA879C800152908 /* UIView+Layout.m */,
 				96E5CB2E1BB1B18E005503CD /* NSDictionary+AddObject.h */,
 				96E5CB2F1BB1B18E005503CD /* NSDictionary+AddObject.m */,
+				CE2C57061BD37AC900DEAF32 /* NSString+Size.h */,
+				CE2C57071BD37AC900DEAF32 /* NSString+Size.m */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -353,10 +356,6 @@
 		960104171BA87A1C00152908 /* images */ = {
 			isa = PBXGroup;
 			children = (
-				CE2C57041BD2CE8F00DEAF32 /* avatar.png */,
-				CE2C57021BD2CBF700DEAF32 /* tmp.png */,
-				9601041A1BA87A3A00152908 /* logo.png */,
-				960104181BA87A1C00152908 /* background.png */,
 			);
 			path = images;
 			sourceTree = "<group>";
@@ -527,6 +526,10 @@
 				9656F9441BD1321C0043FA38 /* CardCollectionViewCell.m */,
 				9656F9461BD145240043FA38 /* HorizonCardFlowLayout.h */,
 				9656F9471BD145240043FA38 /* HorizonCardFlowLayout.m */,
+				CE2C57091BD3885800DEAF32 /* HomeHeaderView.h */,
+				CE2C570A1BD3885800DEAF32 /* HomeHeaderView.m */,
+				CE2C570C1BD3889700DEAF32 /* HomeBottomView.h */,
+				CE2C570D1BD3889700DEAF32 /* HomeBottomView.m */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -634,12 +637,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9601041B1BA87A3A00152908 /* logo.png in Resources */,
-				CE2C57051BD2CE8F00DEAF32 /* avatar.png in Resources */,
 				966B518D1B7F8D70000F0EF2 /* LaunchScreen.xib in Resources */,
 				960104521BADD08600152908 /* SMS_SDKLocalizable.strings in Resources */,
-				CE2C57031BD2CBF700DEAF32 /* tmp.png in Resources */,
-				960104191BA87A1C00152908 /* background.png in Resources */,
 				966B518A1B7F8D70000F0EF2 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -692,6 +691,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				960103F51BA8795500152908 /* OpenUDID.m in Sources */,
+				CE2C570B1BD3885800DEAF32 /* HomeHeaderView.m in Sources */,
 				960104081BA879E200152908 /* AppService.m in Sources */,
 				960104201BA9CAC300152908 /* UserService.m in Sources */,
 				960104021BA879C800152908 /* UIView+Layout.m in Sources */,
@@ -704,6 +704,7 @@
 				96740D0B1BCFF4B50035A1DB /* SendVideoMomentViewController.m in Sources */,
 				968B3BD71BCAA52400B8723A /* MomentsService.m in Sources */,
 				96A2D8D41BC032200016AE3F /* ApplicationDirectoryService.m in Sources */,
+				CE2C570E1BD3889700DEAF32 /* HomeBottomView.m in Sources */,
 				9656F9481BD145240043FA38 /* HorizonCardFlowLayout.m in Sources */,
 				96DC2C4A1BCF5F8F00126AB6 /* HorizontalCardTableView.m in Sources */,
 				96E5CB2D1BB1A9EA005503CD /* PetsModel.m in Sources */,
@@ -715,6 +716,7 @@
 				96E5CB2A1BB1A9C3005503CD /* PetsService.m in Sources */,
 				968B3BD41BCAA21D00B8723A /* FileUploadService.m in Sources */,
 				96740D051BCFF2D40035A1DB /* SendMomentViewController.m in Sources */,
+				CE2C57081BD37AC900DEAF32 /* NSString+Size.m in Sources */,
 				960104151BA879F600152908 /* ViewController.m in Sources */,
 				960104351BAD6AB700152908 /* TestViewController.m in Sources */,
 				960104091BA879E200152908 /* LoginService.m in Sources */,

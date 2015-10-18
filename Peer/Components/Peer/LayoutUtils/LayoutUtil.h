@@ -11,6 +11,8 @@
 
 CG_EXTERN CGFloat ConvertToiPhone6XYZ(CGFloat v);
 
+CG_EXTERN CGFloat ConvertiPhone5Or6pSize(CGFloat v);
+
 @interface LayoutUtil : NSObject
 
 @end

@@ -11,12 +11,8 @@
 #import "UIView+Layout.h"
 
 
-
-#define CardWidth  ConvertToiPhone6XYZ(250.0)
-#define CardHeight ConvertToiPhone6XYZ(420.0)
-#define CardTopEdge ConvertToiPhone6XYZ(10.0)
-#define CardTop ConvertToiPhone6XYZ(81.0)
-
+#define CardEdge ConvertiPhone5Or6pSize(10.0)
+#define CardTop  ConvertiPhone5Or6pSize(90.0)
 
 @implementation HorizonCardFlowLayout
 
@@ -33,7 +29,7 @@
     self.itemSize = CGSizeMake(CardWidth, CardHeight);
     self.scrollDirection = UICollectionViewScrollDirectionHorizontal;
     self.sectionInset = UIEdgeInsetsMake(0, 40, 0, 40);
-    self.minimumLineSpacing = ConvertToiPhone6XYZ(22);
+    self.minimumLineSpacing = ConvertiPhone5Or6pSize(25);
 }
 
 //  初始的layout外观将由该方法返回的UICollctionViewLayoutAttributes来决定
@@ -47,25 +43,33 @@
     for (UICollectionViewLayoutAttributes* attributes in array) {
         if (CGRectIntersectsRect(attributes.frame, rect)) {
             
-            NSLog(@"center x:---%f   origin:%f",attributes.center.x,attributes.frame.origin.y);
+//            NSLog(@"center x:---%f   origin:%f",attributes.center.x,attributes.frame.origin.y);
             CGFloat distance = CGRectGetMidX(visibleRect) - attributes.center.x;
-            NSLog(@"distance :---%f",distance);
+//            NSLog(@"distance :---%f",distance);
 
             CGFloat normalizedDistance = distance / (CardWidth + self.minimumLineSpacing - 1);
-            NSLog(@"normalizedDistance :---%f     ",normalizedDistance);
-            if (ABS(distance) < (CardWidth + self.minimumLineSpacing)) {
-                CGFloat zoom = CardTopEdge * (ABS(normalizedDistance) - 1);
+//            NSLog(@"normalizedDistance :---%f     ",normalizedDistance);
+            if ( ABS(distance) < (CardWidth + self.minimumLineSpacing)) {
+                
+                CGFloat zoom = CardEdge * (ABS(normalizedDistance) - 1);
                 CGRect frame = attributes.frame;
-                frame.origin.y = CardTop + zoom;
+                
+                frame.origin.y   = CardTop + zoom;
+//                frame.size.width = CardWidth - (ABS(zoom) * normalizedDistance);
                 frame.size.height = CardHeight - zoom + 2*((ABS(normalizedDistance) - 1));
                 
                 NSLog(@"zoom :----%f  frame--y: %f",zoom,frame.origin.y);
                 attributes.frame = frame;
             } else {
+                
                 CGRect frame = attributes.frame;
                 frame.origin.y = CardTop;
+//                frame.size.width = CardWidth  - CardEdge - 1 ;
                 attributes.frame = frame;
+                
             }
+            
+//            NSLog(@"frame:  %@",NSStringFromCGRect(attributes.frame));
         }
     }
     return array;

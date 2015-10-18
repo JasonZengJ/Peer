@@ -181,7 +181,7 @@
 
 - (void)addLineWithFrame:(CGRect)frame border:(UIViewBorder)border
 {
-    [self addLineWithFrame:frame border:border lineColor:[UIColor colorWithHex:0xcccccc alpha:1.0]];
+    [self addLineWithFrame:frame border:border lineColor:[UIColor colorWithHex:0xe5e5e5 alpha:1.0]];
 }
 
 - (void)addLineWithFrame:(CGRect)frame border:(UIViewBorder)border lineColor:(UIColor *)lineColor

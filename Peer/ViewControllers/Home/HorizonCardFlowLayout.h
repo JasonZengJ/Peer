@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
+#define CardWidth   ConvertiPhone5Or6pSize(295.0)
+#define CardHeight  ConvertiPhone5Or6pSize(495.0)
+
 @interface HorizonCardFlowLayout : UICollectionViewFlowLayout
 
 @end
