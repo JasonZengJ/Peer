@@ -11,7 +11,6 @@
 #import "UIView+Layout.h"
 
 
-#define CardEdge ConvertiPhone5Or6pSize(10.0)
 #define CardTop  ConvertiPhone5Or6pSize(90.0)
 
 @implementation HorizonCardFlowLayout

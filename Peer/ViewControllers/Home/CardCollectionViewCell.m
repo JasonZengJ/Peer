@@ -18,8 +18,12 @@
 @property(nonatomic) UILabel *monthLabel;
 @property(nonatomic) UILabel *daysLabel;
 @property(nonatomic) UIImageView *weatherImageView;
+@property(nonatomic) UIView  *dateWeatherView;
+
 @property(nonatomic) UIImageView *photoImageView;
 @property(nonatomic) UIImageView *petsAvatarImageView;
+@property(nonatomic) UIView      *petsAvatarImageBgView;
+
 @property(nonatomic) UILabel     *detailsLabel;
 @property(nonatomic) UILabel     *contentLabel;
 
@@ -31,6 +35,8 @@
 @property(nonatomic) UILabel     *commentsAmountLabel;
 @property(nonatomic) UIImageView *likeImageView;
 
+@property(nonatomic,assign) BOOL isLiked;
+
 @end
 
 @implementation CardCollectionViewCell
@@ -38,17 +44,38 @@
 
 - (UILabel *)monthLabel {
     if (!_monthLabel) {
-        _monthLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 0, 0)];
+        _monthLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 1, 0, 14)];
+        _monthLabel.font = [UIFont systemFontOfSize:ConvertiPhone5Or6pSize(11)];
+        _monthLabel.textColor = [UIColor whiteColor];
     }
     return _monthLabel;
 }
 
 - (UILabel *)daysLabel {
     if (!_daysLabel) {
-        _daysLabel = [[UILabel alloc] initWithFrame:CGRectMake(100, 50, 200, 100)];
-        _daysLabel.backgroundColor = [UIColor clearColor];
+        _daysLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 13, 0, 15)];
+        _daysLabel.font = [UIFont boldSystemFontOfSize:ConvertiPhone5Or6pSize(13)];
+        _daysLabel.textColor = [UIColor whiteColor];
     }
     return _daysLabel;
+}
+
+- (UIImageView *)weatherImageView {
+    if (!_weatherImageView) {
+        _weatherImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, ConvertiPhone5Or6pSize(23), ConvertiPhone5Or6pSize(23))];
+        _weatherImageView.centerY = self.dateWeatherView.height / 2;
+    }
+    return _weatherImageView;
+}
+
+- (UIView *)dateWeatherView {
+    if (!_dateWeatherView) {
+        _dateWeatherView = [[UIView alloc] initWithFrame:CGRectMake(0, 7.5, ConvertiPhone5Or6pSize(55), ConvertiPhone5Or6pSize(30))];
+        _dateWeatherView.backgroundColor = [UIColor colorWithHex:0x000000 alpha:0.5];
+        _dateWeatherView.left = self.width - _dateWeatherView.width;
+    }
+    return _dateWeatherView;
+    
 }
 
 - (UIImageView *)photoImageView {
@@ -63,14 +90,28 @@
 - (UIImageView *)petsAvatarImageView {
     if (!_petsAvatarImageView) {
         _petsAvatarImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, ConvertiPhone5Or6pSize(55), ConvertiPhone5Or6pSize(55))];
-        _petsAvatarImageView.layer.cornerRadius = _petsAvatarImageView.width / 2;
+        _petsAvatarImageView.backgroundColor =[UIColor clearColor];
         _petsAvatarImageView.clipsToBounds = YES;
         _petsAvatarImageView.centerX = self.photoImageView.centerX;
         _petsAvatarImageView.centerY = self.photoImageView.bottom;
-        _petsAvatarImageView.layer.borderWidth = 2;
-        _petsAvatarImageView.layer.borderColor = [UIColor whiteColor].CGColor;
+        _petsAvatarImageView.layer.cornerRadius = _petsAvatarImageView.width / 2;
+        
+        UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, ConvertiPhone5Or6pSize(59), ConvertiPhone5Or6pSize(59))];
+        view.backgroundColor = [UIColor whiteColor];
+        view.center = _petsAvatarImageView.center;
+        view.layer.cornerRadius = view.width / 2;
+        [self.contentView addSubview:view];
     }
+    
     return _petsAvatarImageView;
+}
+
+- (UIView *)petsAvatarImageBgView {
+    if (!_petsAvatarImageBgView) {
+        _petsAvatarImageBgView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, ConvertiPhone5Or6pSize(59), ConvertiPhone5Or6pSize(59))];
+//        _petsAvatarImageBgView.backgroundColor = [];
+    }
+    return _petsAvatarImageBgView;
 }
 
 - (UILabel *)detailsLabel {
@@ -162,6 +203,7 @@
 }
 
 - (void)initSubviews {
+    
     self.backgroundColor = [UIColor whiteColor];
     self.contentView.layer.borderWidth = 1.0f;
     self.contentView.layer.borderColor = [UIColor colorWithHex:0xe1e1e1 alpha:1.0].CGColor;
@@ -174,6 +216,11 @@
     [self.contentView addSubview:self.contentLabel];
     [self.contentView addSubview:self.daysLabel];
     [self.contentView addSubview:self.bottomView];
+    [self.contentView addSubview:self.dateWeatherView];
+    
+    [self.dateWeatherView addSubview:self.weatherImageView];
+    [self.dateWeatherView addSubview:self.monthLabel];
+    [self.dateWeatherView addSubview:self.daysLabel];
     
     [self.bottomView addSubview:self.locationIcon];
     [self.bottomView addSubview:self.locationLabel];
@@ -181,15 +228,25 @@
     [self.bottomView addSubview:self.commentsAmountLabel];
     [self.bottomView addSubview:self.likeImageView];
     
-    
-    
 }
 
 - (void)configureWithMoments:(MomentModel *)momentModel {
     
 //    self.daysLabel.text = momentModel.momentTitle;
-    self.detailsLabel.text = [NSString stringWithFormat:@"%@ - %@ - %@个月",@"Duan",@"DD",@"7"];
+    
+    
+    self.weatherImageView.image = [UIImage imageNamed:@"多云"];
+    self.monthLabel.text  = @"9月";
+    self.monthLabel.width = [self.monthLabel.text widthWithFont:self.monthLabel.font];
+    self.monthLabel.left  = self.weatherImageView.right + 5;
+    
+    self.daysLabel.text  = @"15";
+    self.daysLabel.width = [self.daysLabel.text widthWithFont:self.daysLabel.font];
+    self.daysLabel.left  = self.monthLabel.left;
+    
     self.photoImageView.image = [UIImage imageNamed:@"tmp"];
+    
+    self.detailsLabel.text = [NSString stringWithFormat:@"%@ - %@ - %@个月",@"Duan",@"DD",@"7"];
     self.petsAvatarImageView.image = [UIImage imageNamed:@"avatar"];
     self.contentLabel.text = @"今天把 啊duan 牵了出来溜溜，趁今天天气不错，求约妹子～";
     self.contentLabel.height = [self.contentLabel.text sizeWithFont:self.contentLabel.font constraintsSize:CGSizeMake(self.contentLabel.width, 45.0f)].height;
@@ -209,7 +266,14 @@
 
 - (void)tapLikePets {
     
-    self.likeImageView.image = [UIImage imageNamed:@"HomeLikeHeart"];
+    if (!self.isLiked) {
+        self.isLiked = YES;
+        self.likeImageView.image = [UIImage imageNamed:@"HomeLikeHeart"];
+    } else {
+        self.isLiked = NO;
+        self.likeImageView.image = [UIImage imageNamed:@"HomeUnlikeHeart"];
+    }
+    
     
 }
 

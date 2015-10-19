@@ -53,7 +53,7 @@
 - (HomeBottomView *)homeBottomView {
     if (!_homeBottomView) {
         _homeBottomView = [[HomeBottomView alloc] initWithFrame:CGRectZero];
-        _homeBottomView.height = self.collectionView.height - CardHeight - self.homeHeaderView.height;
+        _homeBottomView.height = self.collectionView.height - CardHeight - self.homeHeaderView.height - CardEdge;
         _homeBottomView.width  = self.view.width;
         _homeBottomView.top    = self.view.height - _homeBottomView.height;
         
