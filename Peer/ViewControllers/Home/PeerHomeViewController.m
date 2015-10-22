@@ -7,6 +7,8 @@
 //
 
 #import "PeerHomeViewController.h"
+#import "MomentDetailsViewController.h"
+
 #import "HorizontalCardTableView.h"
 #import "CardCollectionViewCell.h"
 
@@ -44,6 +46,7 @@
         _collectionView.delegate = self;
         _collectionView.dataSource = self;
         _collectionView.backgroundColor = [UIColor clearColor];
+        _collectionView.showsHorizontalScrollIndicator = false;
         [_collectionView registerClass:[CardCollectionViewCell class] forCellWithReuseIdentifier:@"CardCollectionViewCell"];
     }
     return _collectionView;
@@ -145,6 +148,21 @@
 }
 
 #pragma mark - -- <UICollectionViewDelegate>
+
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    
+    
+    MomentDetailsViewController *momentDetailsViewController = [[MomentDetailsViewController alloc] init];
+    momentDetailsViewController.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
+    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:momentDetailsViewController];
+    
+    [self presentViewController:navController animated:YES completion:^{
+        
+    }];
+    
+    
+}
 
 
 

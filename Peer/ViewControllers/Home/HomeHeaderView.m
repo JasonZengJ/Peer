@@ -41,7 +41,7 @@
 
 - (UIView *)bottomLineView {
     if (!_bottomLineView) {
-        _bottomLineView = [[UIView alloc] initWithFrame:CGRectMake(0, self.recomandLabel.bottom + 3, ConvertiPhone5Or6pSize(35), ConvertiPhone5Or6pSize(3))];
+        _bottomLineView = [[UIView alloc] initWithFrame:CGRectMake(0, self.recomandLabel.bottom + 3, ConvertiPhone5Or6pSize(35), ConvertiPhone5Or6pSize(2))];
         _bottomLineView.backgroundColor = HighlightColor;
         _bottomLineView.centerX = _recomandLabel.centerX;
     }
@@ -63,7 +63,7 @@
     if (!_messagesImageView) {
         _messagesImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, ConvertiPhone5Or6pSize(25.0f), ConvertiPhone5Or6pSize(25.0f))];
         _messagesImageView.image   = [UIImage imageNamed:@"HomeMessages"];
-        _messagesImageView.left    = self.width - _messagesImageView.width - 20;
+        _messagesImageView.left    = self.width - _messagesImageView.width - 15;
         _messagesImageView.centerY = self.recomandLabel.centerY;
     }
     return _messagesImageView;

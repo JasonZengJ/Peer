@@ -33,10 +33,7 @@
 
 @end
 
-CG_EXTERN CGFloat ConvertiPhone5Or6pSize(CGFloat v) {
-    
-    return (CGFloat)(v > 0 ? ceil(v * [LayoutUtil iPhone6BaseScale]) : floor(v * [LayoutUtil iPhone6BaseScale]));
-}
+
 
 #define ScaleSize       1.134
 CG_EXTERN CGFloat ConvertToiPhone6XYZ(CGFloat v) {
@@ -45,6 +42,16 @@ CG_EXTERN CGFloat ConvertToiPhone6XYZ(CGFloat v) {
         return (CGFloat)(v > 0 ? ceil(v * ScaleSize) : floor(v * ScaleSize));
     } else {
         return (CGFloat)(v > 0 ? ceil(v * [LayoutUtil iPhone5BaseScale]) : floor(v * [LayoutUtil iPhone5BaseScale]));
+    }
+    
+}
+
+CG_EXTERN CGFloat ConvertiPhone5Or6pSize(CGFloat v) {
+    
+    if (IS_IPHONE_6_PLUS) {
+        return (CGFloat)(v > 0 ? ceil(v * ScaleSize) : floor(v * ScaleSize));
+    } else {
+        return (CGFloat)(v > 0 ? ceil(v * [LayoutUtil iPhone6BaseScale]) : floor(v * [LayoutUtil iPhone6BaseScale]));
     }
     
 }

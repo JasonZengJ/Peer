@@ -11,6 +11,13 @@
 @implementation ValidationService
 
 
+- (BOOL)validateNumber:(NSString *) textString
+{
+    NSString* number=@"^[0-9]+$";
+    NSPredicate *numberPre = [NSPredicate predicateWithFormat:@"SELF MATCHES %@",number];
+    return [numberPre evaluateWithObject:textString];
+}
+
 + (BOOL)checkPhoneNumber:(NSString *)phoneNumber {
     
     NSString *rule = @"^1(3|5|7|8|4)\\d{9}";

@@ -18,7 +18,7 @@
 @property(nonatomic) UILabel *monthLabel;
 @property(nonatomic) UILabel *daysLabel;
 @property(nonatomic) UIImageView *weatherImageView;
-@property(nonatomic) UIView  *dateWeatherView;
+@property(nonatomic) UIImageView *dateWeatherView;
 
 @property(nonatomic) UIImageView *photoImageView;
 @property(nonatomic) UIImageView *petsAvatarImageView;
@@ -44,8 +44,8 @@
 
 - (UILabel *)monthLabel {
     if (!_monthLabel) {
-        _monthLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 1, 0, 14)];
-        _monthLabel.font = [UIFont systemFontOfSize:ConvertiPhone5Or6pSize(11)];
+        _monthLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 1, 0, ConvertiPhone5Or6pSize(14))];
+        _monthLabel.font = [UIFont systemFontOfSize:ConvertiPhone5Or6pSize(10)];
         _monthLabel.textColor = [UIColor whiteColor];
     }
     return _monthLabel;
@@ -53,8 +53,8 @@
 
 - (UILabel *)daysLabel {
     if (!_daysLabel) {
-        _daysLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 13, 0, 15)];
-        _daysLabel.font = [UIFont boldSystemFontOfSize:ConvertiPhone5Or6pSize(13)];
+        _daysLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, ConvertiPhone5Or6pSize(13), 0, ConvertiPhone5Or6pSize(15))];
+        _daysLabel.font = [UIFont boldSystemFontOfSize:ConvertiPhone5Or6pSize(14)];
         _daysLabel.textColor = [UIColor whiteColor];
     }
     return _daysLabel;
@@ -62,17 +62,27 @@
 
 - (UIImageView *)weatherImageView {
     if (!_weatherImageView) {
-        _weatherImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, ConvertiPhone5Or6pSize(23), ConvertiPhone5Or6pSize(23))];
+        _weatherImageView = [[UIImageView alloc] initWithFrame:CGRectMake(3, 0, ConvertiPhone5Or6pSize(23), ConvertiPhone5Or6pSize(23))];
         _weatherImageView.centerY = self.dateWeatherView.height / 2;
     }
     return _weatherImageView;
 }
 
-- (UIView *)dateWeatherView {
+- (UIImageView *)dateWeatherView {
     if (!_dateWeatherView) {
-        _dateWeatherView = [[UIView alloc] initWithFrame:CGRectMake(0, 7.5, ConvertiPhone5Or6pSize(55), ConvertiPhone5Or6pSize(30))];
-        _dateWeatherView.backgroundColor = [UIColor colorWithHex:0x000000 alpha:0.5];
+        _dateWeatherView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 10, ConvertiPhone5Or6pSize(60), ConvertiPhone5Or6pSize(30))];
+//        _dateWeatherView.backgroundColor = [UIColor colorWithHex:0x000000 alpha:0.8];
         _dateWeatherView.left = self.width - _dateWeatherView.width;
+        _dateWeatherView.image = [UIImage imageNamed:@"HomeWeatherDateBg"];
+        
+        CAGradientLayer *gradientLayer = [CAGradientLayer layer];
+        gradientLayer.frame = CGRectMake(0, 0, _dateWeatherView.width, _dateWeatherView.height);
+        gradientLayer.startPoint   = CGPointMake(0, 0);
+        gradientLayer.endPoint     = CGPointMake(1, 0);
+        gradientLayer.colors = [NSArray arrayWithObjects:(id)[UIColor colorWithHex:0x000000 alpha:0.0].CGColor,
+                           (id)[UIColor blackColor].CGColor,nil];
+        [_dateWeatherView.layer addSublayer:gradientLayer];
+        
     }
     return _dateWeatherView;
     
@@ -106,13 +116,6 @@
     return _petsAvatarImageView;
 }
 
-- (UIView *)petsAvatarImageBgView {
-    if (!_petsAvatarImageBgView) {
-        _petsAvatarImageBgView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, ConvertiPhone5Or6pSize(59), ConvertiPhone5Or6pSize(59))];
-//        _petsAvatarImageBgView.backgroundColor = [];
-    }
-    return _petsAvatarImageBgView;
-}
 
 - (UILabel *)detailsLabel {
     if (!_detailsLabel) {
@@ -139,7 +142,7 @@
 - (UIView *)bottomView {
     if (!_bottomView) {
         _bottomView = [[UIView alloc] initWithFrame:CGRectMake(10,  self.height - ConvertiPhone5Or6pSize(35), self.width - 20, ConvertiPhone5Or6pSize(35.0f))];
-        [_bottomView addLineWithFrame:CGRectMake(10, 0 , _bottomView.width, 0.5) border:UIViewBorderBottomLine];
+        [_bottomView addLineWithFrame:CGRectMake(0, 0 , _bottomView.width, 0.5) border:UIViewBorderBottomLine];
     }
     return _bottomView;
 }
@@ -205,9 +208,12 @@
 - (void)initSubviews {
     
     self.backgroundColor = [UIColor whiteColor];
-    self.contentView.layer.borderWidth = 1.0f;
-    self.contentView.layer.borderColor = [UIColor colorWithHex:0xe1e1e1 alpha:1.0].CGColor;
-    self.contentView.layer.cornerRadius = 4;
+    self.layer.shadowOpacity = 0.2;
+    self.layer.shadowColor   = [UIColor blackColor].CGColor;
+    self.layer.shadowOffset  = CGSizeMake(0, 0);
+    self.layer.cornerRadius = 6;
+    
+    self.contentView.layer.cornerRadius = 6;
     self.contentView.clipsToBounds = YES;
     
     [self.contentView addSubview:self.photoImageView];
@@ -232,13 +238,10 @@
 
 - (void)configureWithMoments:(MomentModel *)momentModel {
     
-//    self.daysLabel.text = momentModel.momentTitle;
-    
-    
     self.weatherImageView.image = [UIImage imageNamed:@"多云"];
     self.monthLabel.text  = @"9月";
     self.monthLabel.width = [self.monthLabel.text widthWithFont:self.monthLabel.font];
-    self.monthLabel.left  = self.weatherImageView.right + 5;
+    self.monthLabel.left  = self.weatherImageView.right + 10;
     
     self.daysLabel.text  = @"15";
     self.daysLabel.width = [self.daysLabel.text widthWithFont:self.daysLabel.font];
@@ -263,6 +266,11 @@
     
 }
 
+- (void)layoutSubviews {
+    
+    self.bottomView.top = self.height - self.bottomView.height;
+    
+}
 
 - (void)tapLikePets {
     

@@ -10,8 +10,7 @@
 #import "LayoutUtil.h"
 #import "UIView+Layout.h"
 
-
-#define CardTop  ConvertiPhone5Or6pSize(90.0)
+#define CardTop  90.0
 
 @implementation HorizonCardFlowLayout
 
@@ -25,16 +24,16 @@
 
 - (void)prepareLayout {
     [super prepareLayout];
-    self.itemSize = CGSizeMake(CardWidth, CardHeight);
+    self.itemSize  = CGSizeMake(CardWidth, CardHeight);
     self.scrollDirection = UICollectionViewScrollDirectionHorizontal;
-    self.sectionInset = UIEdgeInsetsMake(0, 40, 0, 40);
+    self.sectionInset = UIEdgeInsetsMake(80, 40, 88, 40);
     self.minimumLineSpacing = ConvertiPhone5Or6pSize(25);
 }
 
 //  初始的layout外观将由该方法返回的UICollctionViewLayoutAttributes来决定
 -(NSArray*)layoutAttributesForElementsInRect:(CGRect)rect  {
     
-    NSLog(@"\n");
+//    NSLog(@"\n");
     NSArray* array = [super layoutAttributesForElementsInRect:rect];
     CGRect visibleRect;
     visibleRect.origin = self.collectionView.contentOffset;
@@ -57,7 +56,7 @@
 //                frame.size.width = CardWidth - (ABS(zoom) * normalizedDistance);
                 frame.size.height = CardHeight - zoom + 2*((ABS(normalizedDistance) - 1));
                 
-                NSLog(@"zoom :----%f  frame--y: %f",zoom,frame.origin.y);
+//                NSLog(@"zoom :----%f  frame--y: %f",zoom,frame.origin.y);
                 attributes.frame = frame;
             } else {
                 
