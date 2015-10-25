@@ -12,6 +12,7 @@
 #import "UIView+Layout.h"
 #import "LayoutUtil.h"
 #import "NSString+Size.h"
+#import <UIImageView+AFNetworking.h>
 
 @interface CardCollectionViewCell ()
 
@@ -71,7 +72,6 @@
 - (UIImageView *)dateWeatherView {
     if (!_dateWeatherView) {
         _dateWeatherView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 10, ConvertiPhone5Or6pSize(60), ConvertiPhone5Or6pSize(30))];
-//        _dateWeatherView.backgroundColor = [UIColor colorWithHex:0x000000 alpha:0.8];
         _dateWeatherView.left = self.width - _dateWeatherView.width;
         _dateWeatherView.image = [UIImage imageNamed:@"HomeWeatherDateBg"];
         
@@ -247,11 +247,13 @@
     self.daysLabel.width = [self.daysLabel.text widthWithFont:self.daysLabel.font];
     self.daysLabel.left  = self.monthLabel.left;
     
-    self.photoImageView.image = [UIImage imageNamed:@"tmp"];
+    if ([momentModel.momentType integerValue] == 1) {
+        [self.photoImageView setImageWithURL:[NSURL URLWithString:momentModel.momentTargetUrl]];
+    }
     
     self.detailsLabel.text = [NSString stringWithFormat:@"%@ - %@ - %@个月",@"Duan",@"DD",@"7"];
     self.petsAvatarImageView.image = [UIImage imageNamed:@"avatar"];
-    self.contentLabel.text = @"今天把 啊duan 牵了出来溜溜，趁今天天气不错，求约妹子～";
+    self.contentLabel.text = momentModel.momentDescription;
     self.contentLabel.height = [self.contentLabel.text sizeWithFont:self.contentLabel.font constraintsSize:CGSizeMake(self.contentLabel.width, 45.0f)].height;
     
     self.locationLabel.text = [NSString stringWithFormat:@"%@ - %@",@"广州",@"白云"];

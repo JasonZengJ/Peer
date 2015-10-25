@@ -11,12 +11,14 @@
 #import "MomentDetailsHeaderView.h"
 
 #import "MomentModel.h"
+#import "CommentModel.h"
 
 
 @interface MomentDetailsViewController () <UITableViewDataSource,UITableViewDelegate>
 
 @property(nonatomic) UITableView *tableView;
 @property(nonatomic) MomentDetailsHeaderView *headerView;
+@property(nonatomic) NSArray *commentsDataArray;
 
 @end
 
@@ -29,6 +31,7 @@
         _tableView.delegate = self;
         _tableView.dataSource = self;
         _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+        _tableView.tableHeaderView = self.headerView;
         
     }
     return _tableView;
@@ -37,24 +40,27 @@
 - (MomentDetailsHeaderView *)headerView {
     if (!_headerView) {
         _headerView = [[MomentDetailsHeaderView alloc] initWithFrame:CGRectMake(0, 0, self.view.width, 0)];
-        
-        
+        [_headerView configureWithMomentModel:self.momentModel];
     }
     return _headerView;
 }
 
 - (void)loadView {
     [super loadView];
+    
+    [self.view addSubview:self.tableView];
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"浏览详细";
+    
     self.view.backgroundColor = [UIColor colorWithHex:0xfdfdfd alpha:1.0];
     
     UIBarButtonItem *leftBarItem = [self leftBackBarButtonItem];
     self.navigationItem.leftBarButtonItem = leftBarItem;
 }
+
 
 - (UIBarButtonItem *)leftBackBarButtonItem {
     UIButton *aButton = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -79,6 +85,12 @@
 
 - (void)loadDataWithMomentModel:(MomentModel *)model {
     
+//    [self.headerView configureWithMomentModel:model];
+//    
+//    [self.tableView beginUpdates];
+//    self.tableView.tableHeaderView = self.headerView;
+//    [self.tableView endUpdates];
+    
 }
 
 #pragma mark - -- <UITableViewDataSource>
@@ -94,6 +106,8 @@
     if (!cell) {
         cell = [[MomentDetailsCommentTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CommentTableViewCell];
     }
+    
+    
     
     return cell;
 }

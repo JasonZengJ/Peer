@@ -97,21 +97,19 @@
 //    [self loadData];
     
     
-    MomentModel *momentModel1 = [[MomentModel alloc] init];
-    momentModel1.momentTitle  = @"123456";
     
-    MomentModel *momentModel2 = [[MomentModel alloc] init];
-    momentModel2.momentTitle  = @"123";
+    NSMutableArray *muteArray = [NSMutableArray array];
     
-    MomentModel *momentModel3 = [[MomentModel alloc] init];
-    momentModel3.momentTitle  = @"few 风";
-    
-    MomentModel *momentModel4 = [[MomentModel alloc] init];
-    momentModel4.momentTitle  = @"nice";
-    
-    
-    self.momentsArray = @[momentModel1,momentModel2,momentModel3,momentModel4];
-    
+    for (int i = 0 ; i < 4; i++) {
+        
+        MomentModel *momentModel = [[MomentModel alloc] init];
+        momentModel.momentDescription = @"今天把 啊duan 牵了出来溜溜，趁今天天气不错，求约妹子～";
+        momentModel.momentTargetUrl   = @"http://jasonlife.oss-cn-shenzhen.aliyuncs.com/temp.png";
+        momentModel.momentType        = @(1);
+        [muteArray addObject:momentModel];
+        
+    }
+    self.momentsArray = [muteArray copy];
 }
 
 - (void)loadData {
@@ -142,7 +140,6 @@
     }
     
     [cell configureWithMoments:[self.momentsArray objectAtIndex:indexPath.row]];
-    
     return cell;
     
 }
@@ -154,6 +151,7 @@
     
     
     MomentDetailsViewController *momentDetailsViewController = [[MomentDetailsViewController alloc] init];
+    momentDetailsViewController.momentModel = [self.momentsArray objectAtIndex:indexPath.row];
     momentDetailsViewController.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
     UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:momentDetailsViewController];
     
