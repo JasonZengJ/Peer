@@ -11,7 +11,7 @@
 
 - (CGSize)sizeWithFont:(UIFont *)font constraintsSize:(CGSize)size;
 
-- (CGFloat)heightWithFont:(UIFont *)font ;
+- (CGFloat)heightWithFont:(UIFont *)font width:(CGFloat)width ;
 
 
 - (CGFloat)widthWithFont:(UIFont *)font ;

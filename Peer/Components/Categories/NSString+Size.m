@@ -15,9 +15,9 @@
    return [self boundingRectWithSize:size options:NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading attributes:@{NSFontAttributeName:font} context:nil].size;
 }
 
-- (CGFloat)heightWithFont:(UIFont *)font {
+- (CGFloat)heightWithFont:(UIFont *)font width:(CGFloat)width {
     
-    return [self sizeWithFont:font constraintsSize:CGSizeMake(ScreenWidth, ScreenHeight)].height;
+    return [self sizeWithFont:font constraintsSize:CGSizeMake(width, MAXFLOAT)].height;
 }
 
 - (CGFloat)widthWithFont:(UIFont *)font {

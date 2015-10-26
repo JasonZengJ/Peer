@@ -11,8 +11,6 @@
 
 @interface MomentDetailsViewController : UIViewController
 
-
 @property(nonatomic) MomentModel *momentModel;
-- (void)loadDataWithMomentModel:(MomentModel *)model;
 
 @end

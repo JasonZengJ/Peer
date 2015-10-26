@@ -12,12 +12,15 @@
 
 #import "MomentModel.h"
 #import "CommentModel.h"
+#import "Pagination.h"
 
+#import "MomentsService.h"
 
 @interface MomentDetailsViewController () <UITableViewDataSource,UITableViewDelegate>
 
 @property(nonatomic) UITableView *tableView;
 @property(nonatomic) MomentDetailsHeaderView *headerView;
+@property(nonatomic) MomentsService *momentsService;
 @property(nonatomic) NSArray *commentsDataArray;
 
 @end
@@ -27,11 +30,12 @@
 
 - (UITableView *)tableView {
     if (!_tableView) {
-        _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, self.view.width, self.view.height - 64.0)];
+        _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, self.view.width, self.view.height )];
         _tableView.delegate = self;
         _tableView.dataSource = self;
         _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
         _tableView.tableHeaderView = self.headerView;
+        _tableView.backgroundColor = [UIColor colorWithHex:0xfafafa alpha:1.0];
         
     }
     return _tableView;
@@ -39,10 +43,18 @@
 
 - (MomentDetailsHeaderView *)headerView {
     if (!_headerView) {
-        _headerView = [[MomentDetailsHeaderView alloc] initWithFrame:CGRectMake(0, 0, self.view.width, 0)];
+        _headerView = [[MomentDetailsHeaderView alloc] initWithFrame:CGRectMake(0, 0, self.view.width, self.view.height - 64.0)];
+        _headerView.backgroundColor = [UIColor whiteColor];
         [_headerView configureWithMomentModel:self.momentModel];
     }
     return _headerView;
+}
+
+- (MomentsService *)momentsService {
+    if (!_momentsService) {
+        _momentsService = [[MomentsService alloc] init];
+    }
+    return _momentsService;
 }
 
 - (void)loadView {
@@ -59,8 +71,22 @@
     
     UIBarButtonItem *leftBarItem = [self leftBackBarButtonItem];
     self.navigationItem.leftBarButtonItem = leftBarItem;
+    
+    [self.headerView configureLikedUsersAvatarWithArray:@[]];
+    [self loadCommentData];
 }
 
+- (void)loadCommentData {
+    
+    
+//    [self.momentsService getCommentsWithMomentId:self.momentModel.momentId pagination:nil callBackBlock:^(NSArray *comments) {
+//        
+//        self.commentsDataArray = comments;
+//        [self.tableView reloadData];
+//        
+//    }];
+    
+}
 
 - (UIBarButtonItem *)leftBackBarButtonItem {
     UIButton *aButton = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -83,26 +109,16 @@
     
 }
 
-- (void)loadDataWithMomentModel:(MomentModel *)model {
-    
-//    [self.headerView configureWithMomentModel:model];
-//    
-//    [self.tableView beginUpdates];
-//    self.tableView.tableHeaderView = self.headerView;
-//    [self.tableView endUpdates];
-    
-}
 
 #pragma mark - -- <UITableViewDataSource>
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 1;
+    return 4;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     MomentDetailsCommentTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CommentTableViewCell];
-    
     if (!cell) {
         cell = [[MomentDetailsCommentTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CommentTableViewCell];
     }

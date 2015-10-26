@@ -20,7 +20,7 @@
 #define ScreenBounds   [UIScreen mainScreen].bounds
 #define Color(r,g,b,a) [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:a]
 
-
+#define WeakSelf __weak __typeof(self) weakSelf = self;
 
 #pragma mark - -- Notification
 

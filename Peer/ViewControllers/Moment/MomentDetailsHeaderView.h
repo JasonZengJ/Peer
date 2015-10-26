@@ -12,6 +12,10 @@
 
 
 
+
 - (void)configureWithMomentModel:(MomentModel *)momentModel;
+
+
+- (void)configureLikedUsersAvatarWithArray:(NSArray *)likedUsersAvatarUrlArray;
 
 @end

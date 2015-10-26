@@ -39,6 +39,7 @@
 		9653C6B21BDCA32700D517C8 /* SendMomentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9653C6AD1BDCA32700D517C8 /* SendMomentViewController.m */; settings = {ASSET_TAGS = (); }; };
 		9653C6B31BDCA32700D517C8 /* SendPhotoMomentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9653C6AF1BDCA32700D517C8 /* SendPhotoMomentViewController.m */; settings = {ASSET_TAGS = (); }; };
 		9653C6B41BDCA32700D517C8 /* SendVideoMomentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9653C6B11BDCA32700D517C8 /* SendVideoMomentViewController.m */; settings = {ASSET_TAGS = (); }; };
+		9653C6B81BDCF20400D517C8 /* RootNavViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9653C6B71BDCF20400D517C8 /* RootNavViewController.m */; settings = {ASSET_TAGS = (); }; };
 		9656F9451BD1321C0043FA38 /* CardCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9656F9441BD1321C0043FA38 /* CardCollectionViewCell.m */; settings = {ASSET_TAGS = (); }; };
 		9656F9481BD145240043FA38 /* HorizonCardFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 9656F9471BD145240043FA38 /* HorizonCardFlowLayout.m */; settings = {ASSET_TAGS = (); }; };
 		9656F94C1BD147B00043FA38 /* LayoutUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 9656F94B1BD147B00043FA38 /* LayoutUtil.m */; settings = {ASSET_TAGS = (); }; };
@@ -139,6 +140,8 @@
 		9653C6AF1BDCA32700D517C8 /* SendPhotoMomentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SendPhotoMomentViewController.m; sourceTree = "<group>"; };
 		9653C6B01BDCA32700D517C8 /* SendVideoMomentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SendVideoMomentViewController.h; sourceTree = "<group>"; };
 		9653C6B11BDCA32700D517C8 /* SendVideoMomentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SendVideoMomentViewController.m; sourceTree = "<group>"; };
+		9653C6B61BDCF20400D517C8 /* RootNavViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootNavViewController.h; sourceTree = "<group>"; };
+		9653C6B71BDCF20400D517C8 /* RootNavViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootNavViewController.m; sourceTree = "<group>"; };
 		9656F9431BD1321C0043FA38 /* CardCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardCollectionViewCell.h; sourceTree = "<group>"; };
 		9656F9441BD1321C0043FA38 /* CardCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardCollectionViewCell.m; sourceTree = "<group>"; };
 		9656F9461BD145240043FA38 /* HorizonCardFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HorizonCardFlowLayout.h; sourceTree = "<group>"; };
@@ -411,6 +414,7 @@
 		961F04991BDA90E9002A475E /* Framework */ = {
 			isa = PBXGroup;
 			children = (
+				9653C6B51BDCF1F200D517C8 /* RootNavViewController */,
 			);
 			path = Framework;
 			sourceTree = "<group>";
@@ -440,6 +444,15 @@
 				9653C6B11BDCA32700D517C8 /* SendVideoMomentViewController.m */,
 			);
 			path = SendMoment;
+			sourceTree = "<group>";
+		};
+		9653C6B51BDCF1F200D517C8 /* RootNavViewController */ = {
+			isa = PBXGroup;
+			children = (
+				9653C6B61BDCF20400D517C8 /* RootNavViewController.h */,
+				9653C6B71BDCF20400D517C8 /* RootNavViewController.m */,
+			);
+			path = RootNavViewController;
 			sourceTree = "<group>";
 		};
 		9656F9491BD147840043FA38 /* LayoutUtils */ = {
@@ -758,6 +771,7 @@
 				960104561BAE80C100152908 /* ValidationService.m in Sources */,
 				968B3BDD1BCAA60B00B8723A /* MomentModel.m in Sources */,
 				9653C6A51BDCA31100D517C8 /* MomentDetailsCommentTableViewCell.m in Sources */,
+				9653C6B81BDCF20400D517C8 /* RootNavViewController.m in Sources */,
 				9653C6B31BDCA32700D517C8 /* SendPhotoMomentViewController.m in Sources */,
 				9601042E1BAB1C5000152908 /* RegisterViewController.m in Sources */,
 				960104141BA879F600152908 /* LoginViewController.m in Sources */,

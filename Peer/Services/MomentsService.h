@@ -34,7 +34,7 @@
 
 
 
-- (void)getCommentsWithMomentId:(NSNumber *)momentId pagination:(Pagination *)pagination callBackBlock:(void(^)(NSArray *coments))callBackBlock;
+- (void)getCommentsWithMomentId:(NSNumber *)momentId pagination:(Pagination *)pagination callBackBlock:(void(^)(NSArray *comments))callBackBlock;
 - (void)sendComment:(CommentModel *)comment callBackBlock:(void(^)(CommentModel *moment))callBackBlock;
 
 
