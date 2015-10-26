@@ -11,7 +11,7 @@
 
 @interface UserModel : JSONModel
 
-@property(nonatomic)NSString *userId;
+@property(nonatomic)NSNumber *userId;
 @property(nonatomic)NSString *nickname;
 @property(nonatomic)NSString *phone;
 @property(nonatomic)NSString *password;

@@ -31,6 +31,7 @@
 		960104521BADD08600152908 /* SMS_SDKLocalizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9601044E1BADD08600152908 /* SMS_SDKLocalizable.strings */; };
 		960104531BADD08600152908 /* SMS_SDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 960104501BADD08600152908 /* SMS_SDK.framework */; };
 		960104561BAE80C100152908 /* ValidationService.m in Sources */ = {isa = PBXBuildFile; fileRef = 960104551BAE80C100152908 /* ValidationService.m */; };
+		96105B111BDE932200F9BEFA /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96105B101BDE932200F9BEFA /* CoreText.framework */; };
 		961D2E4A1BA715C200C84C8B /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 961D2E491BA715C200C84C8B /* QuartzCore.framework */; };
 		961D2E4C1BA715D500C84C8B /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 961D2E4B1BA715D500C84C8B /* Accelerate.framework */; };
 		9653C6A51BDCA31100D517C8 /* MomentDetailsCommentTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9653C6991BDCA31100D517C8 /* MomentDetailsCommentTableViewCell.m */; settings = {ASSET_TAGS = (); }; };
@@ -126,6 +127,7 @@
 		960104511BADD08600152908 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/SMS_SDKLocalizable.strings"; sourceTree = "<group>"; };
 		960104541BAE80C100152908 /* ValidationService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ValidationService.h; sourceTree = "<group>"; };
 		960104551BAE80C100152908 /* ValidationService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ValidationService.m; sourceTree = "<group>"; };
+		96105B101BDE932200F9BEFA /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 		961D2E491BA715C200C84C8B /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		961D2E4B1BA715D500C84C8B /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
 		9653C6981BDCA31100D517C8 /* MomentDetailsCommentTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MomentDetailsCommentTableViewCell.h; sourceTree = "<group>"; };
@@ -204,6 +206,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96105B111BDE932200F9BEFA /* CoreText.framework in Frameworks */,
 				96DC2C561BCF7E0800126AB6 /* libz.tbd in Frameworks */,
 				96DC2C541BCF7CF500126AB6 /* libMobClickLibrary.a in Frameworks */,
 				9601044C1BADC9EA00152908 /* MessageUI.framework in Frameworks */,
@@ -229,6 +232,7 @@
 		1B4F7B120EE7351ACEF659A5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				96105B101BDE932200F9BEFA /* CoreText.framework */,
 				96DC2C551BCF7E0800126AB6 /* libz.tbd */,
 				9601044B1BADC9EA00152908 /* MessageUI.framework */,
 				960104491BADC9DF00152908 /* libz.dylib */,

@@ -18,7 +18,7 @@
 #ifdef DEBUG
 
  NSString *HostName = @"http://localhost";
- NSString *SecureHostName = @"https://192.168.1.103";
+ NSString *SecureHostName = @"https://localhost";
 
 #else
 
@@ -149,7 +149,7 @@
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         
         NSString *errorString = [[NSString alloc] initWithData:operation.responseData encoding:NSUTF8StringEncoding];
-        [self printFailedResponseData:errorString ? errorString : error url:operation.request.URL.absoluteString];
+        [self printFailedResponseData:errorString && ![errorString isEqualToString:@""] ? errorString : error url:operation.request.URL.absoluteString];
         [self performCallBack:callBack withTarget:target data:@{@"code":@(error.code),@"msg":errorString,@"data":error}];
         
     }];
@@ -185,11 +185,11 @@
 }
 
 - (void)printSuccessResponseData:(id)responseData url:(NSString *)url {
-    DLog(@"\n============ Request Success   =============\nreqeust url:%@\nresponse: %@\n============================================",url,responseData);
+    DLog(@"\n\n============ Request Success   =============\nreqeust url:%@\nresponse: %@\n============================================",url,responseData);
 }
 
 - (void)printFailedResponseData:(id)responseData url:(NSString *)url {
-    DLog(@"============ Request Failed   ==============\nreqeust url:%@\nresponse: %@\n============================================",url,responseData);
+    DLog(@"\n\n============ Request Failed   ==============\nreqeust url:%@\nresponse: %@\n============================================",url,responseData);
 }
 
 - (void)performCallBack:(SEL)selector withTarget:(id)target data:(NSDictionary *)data

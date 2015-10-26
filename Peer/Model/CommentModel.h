@@ -7,6 +7,7 @@
 //
 
 #import "JSONModel.h"
+#import "UserModel.h"
 
 @interface CommentModel : JSONModel
 
@@ -16,5 +17,6 @@
 @property(nonatomic)NSNumber *momentId;
 @property(nonatomic)NSNumber *parentId;
 @property(nonatomic)NSString *createdAt;
+@property(nonatomic)UserModel *user;
 
 @end

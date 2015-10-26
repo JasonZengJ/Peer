@@ -14,6 +14,6 @@
 @interface MomentDetailsCommentTableViewCell : UITableViewCell
 
 
-- (void)configureWithCommentModel:(CommentModel *)commentModel;
+- (CGFloat)configureWithCommentModel:(CommentModel *)commentModel;
 
 @end
