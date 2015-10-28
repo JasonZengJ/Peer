@@ -255,9 +255,11 @@
     if ([momentModel.momentType integerValue] == 1) {
         [self.photoImageView setImageWithURL:[NSURL URLWithString:momentModel.momentTargetUrl]];
     }
-    self.petsAvatarImageView.image = [UIImage imageNamed:@"avatar"];
     
-    self.detailsLabel.text   = [NSString stringWithFormat:@"%@ - %@ - %@个月",@"Duan",@"DD",@"7"];
+    [self.petsAvatarImageView setImageWithURL:[NSURL URLWithString:momentModel.pet.petsAvatar]];
+    
+    NSString  *sex = momentModel.pet.petsSex.integerValue == 1 ? @"DD" : @"MM";
+    self.detailsLabel.text   = [NSString stringWithFormat:@"%@ - %@ - %@个月",momentModel.pet.petsName,sex,momentModel.pet.petsMonth];
     
     self.contentLabel.text   = momentModel.momentDescription;
     self.contentLabel.height = [self.contentLabel.text sizeWithFont:self.contentLabel.font constraintsSize:CGSizeMake(self.contentLabel.width, 45.0f)].height;

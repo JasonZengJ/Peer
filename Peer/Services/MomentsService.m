@@ -151,7 +151,8 @@
 
 - (void)getCommentsWithMomentId:(NSNumber *)momentId pagination:(Pagination *)pagination callBackBlock:(void(^)(NSArray *comments))callBackBlock {
     
-    NSDictionary *params = [[pagination toDictionary] addObject:momentId forKey:@"momentId"];
+    NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary:[pagination toDictionary]];
+    [params setObject:momentId forKey:@"momentId"];
     [self.peerNetworkManager securePostWithParams:params apiPath:CommentsPath callBackBlock:^(id responseObject) {
         if (responseObject && ![[responseObject objectForKey:@"code"] integerValue]) {
             

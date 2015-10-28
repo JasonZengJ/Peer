@@ -190,27 +190,22 @@
 - (void)configureWithMomentModel:(MomentModel *)momentModel {
     
     
-#warning Test
-    
-    momentModel.createdAt = @"9月25日 12:33:33";
-    
-#warning Test
-    
     self.momentModel = momentModel;
     if ([momentModel.momentType integerValue] == 1) {
         [self.photoImageView setImageWithURL:[NSURL URLWithString:momentModel.momentTargetUrl]];
     }
     
-    self.detailsLabel.text         = [NSString stringWithFormat:@"%@ - %@ - %@个月",@"Duan",@"DD",@"7"];
-    self.petsAvatarImageView.image = [UIImage imageNamed:@"avatar"];
+    NSString  *sex = momentModel.pet.petsSex.integerValue == 1 ? @"DD" : @"MM";
+    self.detailsLabel.text   = [NSString stringWithFormat:@"%@ - %@ - %@个月",momentModel.pet.petsName,sex,momentModel.pet.petsMonth];
+    [self.petsAvatarImageView setImageWithURL:[NSURL URLWithString:momentModel.pet.petsAvatar]];
     
     self.contentLabel.text   = momentModel.momentDescription;
     self.contentLabel.height = [self.contentLabel.text heightWithFont:self.contentLabel.font width:self.contentLabel.width];
     
-    self.locationLabel.text  = [NSString stringWithFormat:@"%@ - %@",@"广州",@"白云"];
+    self.locationLabel.text  = [NSString stringWithFormat:@"%@ - %@",momentModel.city,momentModel.area];
     self.locationLabel.width = [self.locationLabel.text sizeWithFont:self.locationLabel.font constraintsSize:CGSizeMake(self.width, self.bottomView.height)].width;
     
-    self.weatherImageView.image = [UIImage imageNamed:@"晴"];
+    self.weatherImageView.image = [UIImage imageNamed:momentModel.weather];
     self.weatherImageView.left  = self.locationLabel.right + 15;
     
     self.dateLabel.text = momentModel.createdAt;

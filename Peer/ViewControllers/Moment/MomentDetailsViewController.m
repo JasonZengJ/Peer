@@ -79,6 +79,7 @@
     self.title = @"浏览详细";
     self.view.backgroundColor = [UIColor colorWithHex:0xfdfdfd alpha:1.0];
     self.cellHeightArray      = [NSMutableArray array];
+    self.commentsDataArray    = [NSArray array];
     
     UIBarButtonItem *leftBarItem = [self leftBackBarButtonItem];
     self.navigationItem.leftBarButtonItem = leftBarItem;
@@ -91,41 +92,41 @@
     
 #warning Test
     
-    CommentModel *comment1 = [[CommentModel alloc] init];
-    comment1.content = @"好漂亮的啊啦，能见它一面吗？";
-    comment1.commentId = @(1);
-    comment1.user = [[UserModel alloc] init];
-    
-    comment1.user.nickname = @"jason";
-    comment1.user.avatar   = @"http://jasonlife.oss-cn-shenzhen.aliyuncs.com/test/avatar.png";
-    
-    CommentModel *comment2 = [[CommentModel alloc] init];
-    comment2.content = @"我也想见";
-    comment2.commentId = @(2);
-    comment2.parentId  = @(1);
-    comment2.user = [[UserModel alloc] init];
-    comment2.user.nickname = @"baby";
-    comment2.user.avatar   = @"http://jasonlife.oss-cn-shenzhen.aliyuncs.com/test/avatar.png";
-    
-    
-    CommentModel *comment3 = [[CommentModel alloc] init];
-    comment3.content = @"可以啊，都过来看jacky";
-    comment3.commentId = @(3);
-    comment3.userId    = @(6);
-    comment3.user = [[UserModel alloc] init];
-    comment3.user.nickname = @"duan";
-    comment3.user.avatar   = @"http://jasonlife.oss-cn-shenzhen.aliyuncs.com/test/avatar.png";
-    
-    self.commentsDataArray = @[comment1,comment2,comment3];
+//    CommentModel *comment1 = [[CommentModel alloc] init];
+//    comment1.content = @"好漂亮的啊啦，能见它一面吗？";
+//    comment1.commentId = @(1);
+//    comment1.user = [[UserModel alloc] init];
+//    
+//    comment1.user.nickname = @"jason";
+//    comment1.user.avatar   = @"http://jasonlife.oss-cn-shenzhen.aliyuncs.com/test/avatar.png";
+//    
+//    CommentModel *comment2 = [[CommentModel alloc] init];
+//    comment2.content = @"我也想见";
+//    comment2.commentId = @(2);
+//    comment2.parentId  = @(1);
+//    comment2.user = [[UserModel alloc] init];
+//    comment2.user.nickname = @"baby";
+//    comment2.user.avatar   = @"http://jasonlife.oss-cn-shenzhen.aliyuncs.com/test/avatar.png";
+//    
+//    
+//    CommentModel *comment3 = [[CommentModel alloc] init];
+//    comment3.content = @"可以啊，都过来看jacky";
+//    comment3.commentId = @(3);
+//    comment3.userId    = @(6);
+//    comment3.user = [[UserModel alloc] init];
+//    comment3.user.nickname = @"duan";
+//    comment3.user.avatar   = @"http://jasonlife.oss-cn-shenzhen.aliyuncs.com/test/avatar.png";
+//    
+//    self.commentsDataArray = @[comment1,comment2,comment3];
     
 #warning Test
     
-//    [self.momentsService getCommentsWithMomentId:self.momentModel.momentId pagination:nil callBackBlock:^(NSArray *comments) {
-//        
-//        self.commentsDataArray = comments;
-//        [self.tableView reloadData];
-//        
-//    }];
+    [self.momentsService getCommentsWithMomentId:self.momentModel.momentId pagination:nil callBackBlock:^(NSArray *comments) {
+        
+        self.commentsDataArray = comments;
+        [self.tableView reloadData];
+        
+    }];
     
 }
 

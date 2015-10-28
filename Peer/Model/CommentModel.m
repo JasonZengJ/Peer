@@ -22,6 +22,7 @@
         self.momentId  = [dict objectForKey:@"moment_id"];
         self.parentId  = [dict objectForKey:@"parent_id"];
         self.createdAt = [dict objectForKey:@"created_at"];
+        self.user      = [dict objectForKey:@"user"] ? [[UserModel alloc] initWithDictionary:dict[@"user"] error:nil] : nil;
         
     }
     

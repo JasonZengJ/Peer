@@ -32,6 +32,6 @@ typedef NS_ENUM(NSInteger,MomentType) {
 @property(nonatomic) NSString  *weather;
 @property(nonatomic) NSString  *city;
 @property(nonatomic) NSString  *area;
-@property(nonatomic) PetsModel *pet;
+@property(nonatomic) PetsModel<Optional> *pet;
 
 @end

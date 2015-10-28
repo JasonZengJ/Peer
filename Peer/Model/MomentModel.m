@@ -29,6 +29,7 @@
         self.weather           = [dict objectForKey:@"weather"];
         self.city              = [dict objectForKey:@"city"];
         self.area              = [dict objectForKey:@"area"];
+        self.pet               = [dict objectForKey:@"pets"] ? [[PetsModel alloc] initWithDictionary:dict[@"pets"] error:nil] : nil;
         
         if ([self.momentType integerValue] == MomentTypeVideo) {
             self.momentThumbnailUrl = [dict objectForKey:@"moment_thumbnail_url"];
