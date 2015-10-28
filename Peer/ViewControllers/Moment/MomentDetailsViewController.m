@@ -9,6 +9,7 @@
 #import "MomentDetailsViewController.h"
 #import "MomentDetailsCommentTableViewCell.h"
 #import "MomentDetailsHeaderView.h"
+#import "MomentDetailsBottomView.h"
 
 #import "MomentModel.h"
 #import "CommentModel.h"
@@ -20,6 +21,7 @@
 
 @property(nonatomic) UITableView *tableView;
 @property(nonatomic) MomentDetailsHeaderView *headerView;
+@property(nonatomic) MomentDetailsBottomView *bottomView;
 @property(nonatomic) MomentsService *momentsService;
 @property(nonatomic) NSArray *commentsDataArray;
 @property(nonatomic) NSMutableArray *cellHeightArray;
@@ -31,7 +33,7 @@
 
 - (UITableView *)tableView {
     if (!_tableView) {
-        _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, self.view.width, self.view.height )];
+        _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, self.view.width, self.view.height - self.bottomView.height )];
         _tableView.delegate = self;
         _tableView.dataSource = self;
         _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
@@ -51,6 +53,13 @@
     return _headerView;
 }
 
+- (MomentDetailsBottomView *)bottomView {
+    if (!_bottomView) {
+        _bottomView = [[MomentDetailsBottomView alloc] initWithFrame:CGRectMake(0, self.view.height - ConvertiPhone5Or6pSize(45.0f), self.view.width, ConvertiPhone5Or6pSize(45.0f))];
+    }
+    return _bottomView;
+}
+
 - (MomentsService *)momentsService {
     if (!_momentsService) {
         _momentsService = [[MomentsService alloc] init];
@@ -62,6 +71,7 @@
     [super loadView];
     
     [self.view addSubview:self.tableView];
+    [self.view addSubview:self.bottomView];
 }
 
 - (void)viewDidLoad {

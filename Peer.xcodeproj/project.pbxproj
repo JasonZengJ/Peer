@@ -31,6 +31,9 @@
 		960104521BADD08600152908 /* SMS_SDKLocalizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9601044E1BADD08600152908 /* SMS_SDKLocalizable.strings */; };
 		960104531BADD08600152908 /* SMS_SDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 960104501BADD08600152908 /* SMS_SDK.framework */; };
 		960104561BAE80C100152908 /* ValidationService.m in Sources */ = {isa = PBXBuildFile; fileRef = 960104551BAE80C100152908 /* ValidationService.m */; };
+		960810041BDFBB6F00F6F9E2 /* MomentDetailsBottomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 960810031BDFBB6F00F6F9E2 /* MomentDetailsBottomView.m */; settings = {ASSET_TAGS = (); }; };
+		960810071BDFCE7300F6F9E2 /* NSDate+Formatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 960810061BDFCE7300F6F9E2 /* NSDate+Formatter.m */; settings = {ASSET_TAGS = (); }; };
+		9608100B1BDFD11300F6F9E2 /* PeerDateFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9608100A1BDFD11300F6F9E2 /* PeerDateFormatter.m */; settings = {ASSET_TAGS = (); }; };
 		96105B111BDE932200F9BEFA /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96105B101BDE932200F9BEFA /* CoreText.framework */; };
 		961D2E4A1BA715C200C84C8B /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 961D2E491BA715C200C84C8B /* QuartzCore.framework */; };
 		961D2E4C1BA715D500C84C8B /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 961D2E4B1BA715D500C84C8B /* Accelerate.framework */; };
@@ -127,6 +130,12 @@
 		960104511BADD08600152908 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/SMS_SDKLocalizable.strings"; sourceTree = "<group>"; };
 		960104541BAE80C100152908 /* ValidationService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ValidationService.h; sourceTree = "<group>"; };
 		960104551BAE80C100152908 /* ValidationService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ValidationService.m; sourceTree = "<group>"; };
+		960810021BDFBB6F00F6F9E2 /* MomentDetailsBottomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MomentDetailsBottomView.h; sourceTree = "<group>"; };
+		960810031BDFBB6F00F6F9E2 /* MomentDetailsBottomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MomentDetailsBottomView.m; sourceTree = "<group>"; };
+		960810051BDFCE7300F6F9E2 /* NSDate+Formatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Formatter.h"; sourceTree = "<group>"; };
+		960810061BDFCE7300F6F9E2 /* NSDate+Formatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Formatter.m"; sourceTree = "<group>"; };
+		960810091BDFD11300F6F9E2 /* PeerDateFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PeerDateFormatter.h; sourceTree = "<group>"; };
+		9608100A1BDFD11300F6F9E2 /* PeerDateFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PeerDateFormatter.m; sourceTree = "<group>"; };
 		96105B101BDE932200F9BEFA /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 		961D2E491BA715C200C84C8B /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		961D2E4B1BA715D500C84C8B /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
@@ -300,6 +309,8 @@
 				96E5CB2F1BB1B18E005503CD /* NSDictionary+AddObject.m */,
 				CE2C57061BD37AC900DEAF32 /* NSString+Size.h */,
 				CE2C57071BD37AC900DEAF32 /* NSString+Size.m */,
+				960810051BDFCE7300F6F9E2 /* NSDate+Formatter.h */,
+				960810061BDFCE7300F6F9E2 /* NSDate+Formatter.m */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -415,9 +426,19 @@
 			path = SMS_SDK;
 			sourceTree = "<group>";
 		};
+		960810081BDFD0F200F6F9E2 /* Formatter */ = {
+			isa = PBXGroup;
+			children = (
+				960810091BDFD11300F6F9E2 /* PeerDateFormatter.h */,
+				9608100A1BDFD11300F6F9E2 /* PeerDateFormatter.m */,
+			);
+			path = Formatter;
+			sourceTree = "<group>";
+		};
 		961F04991BDA90E9002A475E /* Framework */ = {
 			isa = PBXGroup;
 			children = (
+				960810081BDFD0F200F6F9E2 /* Formatter */,
 				9653C6B51BDCF1F200D517C8 /* RootNavViewController */,
 			);
 			path = Framework;
@@ -433,6 +454,8 @@
 				9653C69B1BDCA31100D517C8 /* MomentDetailsHeaderView.m */,
 				9653C69C1BDCA31100D517C8 /* MomentDetailsViewController.h */,
 				9653C69D1BDCA31100D517C8 /* MomentDetailsViewController.m */,
+				960810021BDFBB6F00F6F9E2 /* MomentDetailsBottomView.h */,
+				960810031BDFBB6F00F6F9E2 /* MomentDetailsBottomView.m */,
 			);
 			path = Moment;
 			sourceTree = "<group>";
@@ -748,6 +771,7 @@
 				960103FF1BA879C800152908 /* NSData+JSON.m in Sources */,
 				960104271BAB1B2300152908 /* UserModel.m in Sources */,
 				96DC2C591BCF82F800126AB6 /* PeerHomeViewController.m in Sources */,
+				960810071BDFCE7300F6F9E2 /* NSDate+Formatter.m in Sources */,
 				968B3BD71BCAA52400B8723A /* MomentsService.m in Sources */,
 				96A2D8D41BC032200016AE3F /* ApplicationDirectoryService.m in Sources */,
 				CE2C570E1BD3889700DEAF32 /* HomeBottomView.m in Sources */,
@@ -759,10 +783,12 @@
 				960104131BA879F600152908 /* LoginView.m in Sources */,
 				9653C6B21BDCA32700D517C8 /* SendMomentViewController.m in Sources */,
 				9653C6A61BDCA31100D517C8 /* MomentDetailsHeaderView.m in Sources */,
+				9608100B1BDFD11300F6F9E2 /* PeerDateFormatter.m in Sources */,
 				960104241BAB117200152908 /* AppModel.m in Sources */,
 				9656F94C1BD147B00043FA38 /* LayoutUtil.m in Sources */,
 				96E5CB2A1BB1A9C3005503CD /* PetsService.m in Sources */,
 				968B3BD41BCAA21D00B8723A /* FileUploadService.m in Sources */,
+				960810041BDFBB6F00F6F9E2 /* MomentDetailsBottomView.m in Sources */,
 				CE2C57081BD37AC900DEAF32 /* NSString+Size.m in Sources */,
 				960104151BA879F600152908 /* ViewController.m in Sources */,
 				9653C6B41BDCA32700D517C8 /* SendVideoMomentViewController.m in Sources */,

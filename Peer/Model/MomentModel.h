@@ -17,18 +17,21 @@ typedef NS_ENUM(NSInteger,MomentType) {
 
 @interface MomentModel : JSONModel
 
-@property(nonatomic) NSNumber *momentId;
-@property(nonatomic) NSNumber *petsId;
-@property(nonatomic) NSNumber *userId;
+@property(nonatomic) NSNumber  *momentId;
+@property(nonatomic) NSNumber  *petsId;
+@property(nonatomic) NSNumber  *userId;
 @property(nonatomic) NSString<Optional> *momentTitle;
-@property(nonatomic) NSString *momentDescription;
-@property(nonatomic) NSNumber *momentType;
-@property(nonatomic) NSString *momentTargetUrl;
-@property(nonatomic) NSString *momentThumbnailUrl;
-@property(nonatomic) NSNumber *viewAmount;
-@property(nonatomic) NSNumber *commentsAmount;
-@property(nonatomic) NSNumber *likeAmount;
-@property(nonatomic) NSString *createdAt;
-@property(nonatomic) PetsModel *petsModel;
+@property(nonatomic) NSString  *momentDescription;
+@property(nonatomic) NSNumber  *momentType;
+@property(nonatomic) NSString  *momentTargetUrl;
+@property(nonatomic) NSString  *momentThumbnailUrl;
+@property(nonatomic) NSNumber  *viewAmount;
+@property(nonatomic) NSNumber  *commentsAmount;
+@property(nonatomic) NSNumber  *likeAmount;
+@property(nonatomic) NSString  *createdAt;
+@property(nonatomic) NSString  *weather;
+@property(nonatomic) NSString  *city;
+@property(nonatomic) NSString  *area;
+@property(nonatomic) PetsModel *pet;
 
 @end

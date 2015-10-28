@@ -26,6 +26,9 @@
         self.commentsAmount    = [dict objectForKey:@"comments_amount"];
         self.likeAmount        = [dict objectForKey:@"likeAmount"];
         self.createdAt         = [dict objectForKey:@"created_at"];
+        self.weather           = [dict objectForKey:@"weather"];
+        self.city              = [dict objectForKey:@"city"];
+        self.area              = [dict objectForKey:@"area"];
         
         if ([self.momentType integerValue] == MomentTypeVideo) {
             self.momentThumbnailUrl = [dict objectForKey:@"moment_thumbnail_url"];

@@ -94,22 +94,20 @@
     [super viewDidLoad];
     self.momentsArray = [NSArray array];
     
-//    [self loadData];
+    [self loadData];
     
-    
-    
-    NSMutableArray *muteArray = [NSMutableArray array];
-    
-    for (int i = 0 ; i < 4; i++) {
-        
-        MomentModel *momentModel = [[MomentModel alloc] init];
-        momentModel.momentDescription = @"今天把 啊duan 牵了出来溜溜，趁今天天气不错，求约妹子～";
-        momentModel.momentTargetUrl   = @"http://jasonlife.oss-cn-shenzhen.aliyuncs.com/temp.png";
-        momentModel.momentType        = @(1);
-        [muteArray addObject:momentModel];
-        
-    }
-    self.momentsArray = [muteArray copy];
+//    NSMutableArray *muteArray = [NSMutableArray array];
+//    
+//    for (int i = 0 ; i < 4; i++) {
+//        
+//        MomentModel *momentModel = [[MomentModel alloc] init];
+//        momentModel.momentDescription = @"今天把 啊duan 牵了出来溜溜，趁今天天气不错，求约妹子～";
+//        momentModel.momentTargetUrl   = @"http://jasonlife.oss-cn-shenzhen.aliyuncs.com/temp.png";
+//        momentModel.momentType        = @(1);
+//        [muteArray addObject:momentModel];
+//        
+//    }
+//    self.momentsArray = [muteArray copy];
 }
 
 - (void)loadData {

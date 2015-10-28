@@ -9,7 +9,6 @@
 #import "OpenUDID.h"
 #import "PeerNetworkManager.h"
 #import "AppDelegate.h"
-#import <AFNetworkReachabilityManager.h>
 #import <sys/utsname.h>
 #import <UIKit/UIKit.h>
 
@@ -47,19 +46,22 @@
     [[NSUserDefaults standardUserDefaults] synchronize];
     
     [AppService registerDevice];
+    [self monitorNetwork];
+
     
+}
+
++ (void)monitorNetwork {
     [[AFNetworkReachabilityManager sharedManager] startMonitoring];
     [[AFNetworkReachabilityManager sharedManager] setReachabilityStatusChangeBlock:^(AFNetworkReachabilityStatus status){
         DLog(@"network status changed :%ld",(long)status);
-        [[NSUserDefaults standardUserDefaults] setObject:@(status) forKey:@"networkStatus"];
+        [[NSUserDefaults standardUserDefaults] setObject:@(status) forKey:@"NetworkStatus"];
         [[NSNotificationCenter defaultCenter]  postNotificationName:kNetworkChangedNotification object:@(status)];
         if (![AppService token] && status > 0 && ![AppService isRegisteringDevice] ) {
             [AppService registerDevice];
         }
     }];
-    
 }
-
 
 
 + (void)registerDevice {
@@ -157,6 +159,10 @@
 
 + (BOOL)appLaunched {
     return [[NSUserDefaults standardUserDefaults] objectForKey:@"appLaunched"];
+}
+
++ (AFNetworkReachabilityStatus)networkStatus {
+    return [[[NSUserDefaults standardUserDefaults] objectForKey:@"NetworkStatus"] integerValue];
 }
 
 + (NSString *)deviceType {

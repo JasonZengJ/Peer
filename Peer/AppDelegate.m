@@ -30,12 +30,15 @@
     // Override point for customization after application launch.
     
     if (![AppService appLaunched]) {
-        
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
             [AppService initAppService];
         });
-        
+    } else {
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+            [AppService monitorNetwork];
+        });
     }
+    
     [AppService registerRemoteNotification];
 // 第三方手机验证码工具初始化
     [SMS_SDK registerApp:@"a72297a4628e" withSecret:@"52cf6cd4ef00aec3e52f8e7af55bbaa1"];

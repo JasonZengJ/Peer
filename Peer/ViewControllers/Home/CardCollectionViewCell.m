@@ -12,6 +12,7 @@
 #import "UIView+Layout.h"
 #import "LayoutUtil.h"
 #import "NSString+Size.h"
+#import "PeerDateFormatter.h"
 #import <UIImageView+AFNetworking.h>
 
 @interface CardCollectionViewCell ()
@@ -211,7 +212,7 @@
     self.layer.shadowOpacity = 0.2;
     self.layer.shadowColor   = [UIColor blackColor].CGColor;
     self.layer.shadowOffset  = CGSizeMake(0, 0);
-    self.layer.cornerRadius = 6;
+    self.layer.cornerRadius  = 6;
     
     self.contentView.layer.cornerRadius = 6;
     self.contentView.clipsToBounds = YES;
@@ -238,29 +239,35 @@
 
 - (void)configureWithMoments:(MomentModel *)momentModel {
     
-    self.weatherImageView.image = [UIImage imageNamed:@"多云"];
-    self.monthLabel.text  = @"9月";
+    [[PeerDateFormatter shareInstance] formateDateString:momentModel.createdAt];
+    NSInteger month = [[PeerDateFormatter shareInstance] month];
+    NSInteger day   = [[PeerDateFormatter shareInstance] day];
+    
+    self.weatherImageView.image = [UIImage imageNamed:momentModel.weather];
+    self.monthLabel.text  = [NSString stringWithFormat:@"%ld月",month];
     self.monthLabel.width = [self.monthLabel.text widthWithFont:self.monthLabel.font];
     self.monthLabel.left  = self.weatherImageView.right + 10;
     
-    self.daysLabel.text  = @"15";
+    self.daysLabel.text  = [NSString stringWithFormat:@"%ld",day];
     self.daysLabel.width = [self.daysLabel.text widthWithFont:self.daysLabel.font];
     self.daysLabel.left  = self.monthLabel.left;
     
     if ([momentModel.momentType integerValue] == 1) {
         [self.photoImageView setImageWithURL:[NSURL URLWithString:momentModel.momentTargetUrl]];
     }
-    
-    self.detailsLabel.text = [NSString stringWithFormat:@"%@ - %@ - %@个月",@"Duan",@"DD",@"7"];
     self.petsAvatarImageView.image = [UIImage imageNamed:@"avatar"];
-    self.contentLabel.text = momentModel.momentDescription;
+    
+    self.detailsLabel.text   = [NSString stringWithFormat:@"%@ - %@ - %@个月",@"Duan",@"DD",@"7"];
+    
+    self.contentLabel.text   = momentModel.momentDescription;
     self.contentLabel.height = [self.contentLabel.text sizeWithFont:self.contentLabel.font constraintsSize:CGSizeMake(self.contentLabel.width, 45.0f)].height;
     
-    self.locationLabel.text = [NSString stringWithFormat:@"%@ - %@",@"广州",@"白云"];
+    self.locationLabel.text  = [NSString stringWithFormat:@"%@ - %@",momentModel.city,momentModel.area];
     self.locationLabel.width = [self.locationLabel.text sizeWithFont:self.locationLabel.font constraintsSize:CGSizeMake(self.width, self.bottomView.height)].width;
     
-    self.commentsAmountLabel.text  = @"88";
     self.commentsIcon.left = self.locationLabel.right + 10;
+    
+    self.commentsAmountLabel.text = [momentModel.commentsAmount stringValue];
     self.commentsAmountLabel.left = self.commentsIcon.right + 3;
     
     self.likeImageView.image = [UIImage imageNamed:@"HomeUnlikeHeart"];
@@ -283,7 +290,6 @@
         self.isLiked = NO;
         self.likeImageView.image = [UIImage imageNamed:@"HomeUnlikeHeart"];
     }
-    
     
 }
 

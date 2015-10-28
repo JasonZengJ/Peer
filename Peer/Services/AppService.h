@@ -7,6 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <AFNetworkReachabilityManager.h>
+
 
 @interface AppService : NSObject
 
@@ -18,6 +20,8 @@
 + (void)registerRemoteNotification;
 
 + (void)registerRemoteToken:(NSString *)remoteToken;
+
++ (void)monitorNetwork;
 
 + (NSString *)deviceId;
 
@@ -36,5 +40,7 @@
 + (NSString *)remoteToken;
 
 + (BOOL)appLaunched;
+
++ (AFNetworkReachabilityStatus)networkStatus;
 
 @end
