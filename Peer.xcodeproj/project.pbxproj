@@ -47,6 +47,7 @@
 		9656F9451BD1321C0043FA38 /* CardCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9656F9441BD1321C0043FA38 /* CardCollectionViewCell.m */; settings = {ASSET_TAGS = (); }; };
 		9656F9481BD145240043FA38 /* HorizonCardFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 9656F9471BD145240043FA38 /* HorizonCardFlowLayout.m */; settings = {ASSET_TAGS = (); }; };
 		9656F94C1BD147B00043FA38 /* LayoutUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 9656F94B1BD147B00043FA38 /* LayoutUtil.m */; settings = {ASSET_TAGS = (); }; };
+		966144591BE129E4003BD75A /* PetDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 966144581BE129E4003BD75A /* PetDetailsViewController.m */; settings = {ASSET_TAGS = (); }; };
 		966B517F1B7F8D70000F0EF2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 966B517E1B7F8D70000F0EF2 /* main.m */; };
 		966B51821B7F8D70000F0EF2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 966B51811B7F8D70000F0EF2 /* AppDelegate.m */; };
 		966B518D1B7F8D70000F0EF2 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 966B518B1B7F8D70000F0EF2 /* LaunchScreen.xib */; };
@@ -159,6 +160,8 @@
 		9656F9471BD145240043FA38 /* HorizonCardFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HorizonCardFlowLayout.m; sourceTree = "<group>"; };
 		9656F94A1BD147B00043FA38 /* LayoutUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LayoutUtil.h; sourceTree = "<group>"; };
 		9656F94B1BD147B00043FA38 /* LayoutUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LayoutUtil.m; sourceTree = "<group>"; };
+		966144571BE129E4003BD75A /* PetDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PetDetailsViewController.h; sourceTree = "<group>"; };
+		966144581BE129E4003BD75A /* PetDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PetDetailsViewController.m; sourceTree = "<group>"; };
 		966B51791B7F8D70000F0EF2 /* Peer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Peer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		966B517D1B7F8D70000F0EF2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		966B517E1B7F8D70000F0EF2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -341,6 +344,7 @@
 		9601040A1BA879F600152908 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				966144561BE129C7003BD75A /* Pet */,
 				9653C6971BDCA31100D517C8 /* Moment */,
 				96DC2C4B1BCF6DF300126AB6 /* Home */,
 				9601040B1BA879F600152908 /* User */,
@@ -375,16 +379,8 @@
 		960104161BA87A1C00152908 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				960104171BA87A1C00152908 /* images */,
 			);
 			path = Resources;
-			sourceTree = "<group>";
-		};
-		960104171BA87A1C00152908 /* images */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = images;
 			sourceTree = "<group>";
 		};
 		960104211BAB113A00152908 /* Model */ = {
@@ -489,6 +485,15 @@
 				9656F94B1BD147B00043FA38 /* LayoutUtil.m */,
 			);
 			path = LayoutUtils;
+			sourceTree = "<group>";
+		};
+		966144561BE129C7003BD75A /* Pet */ = {
+			isa = PBXGroup;
+			children = (
+				966144571BE129E4003BD75A /* PetDetailsViewController.h */,
+				966144581BE129E4003BD75A /* PetDetailsViewController.m */,
+			);
+			path = Pet;
 			sourceTree = "<group>";
 		};
 		966B51701B7F8D70000F0EF2 = {
@@ -789,6 +794,7 @@
 				96E5CB2A1BB1A9C3005503CD /* PetsService.m in Sources */,
 				968B3BD41BCAA21D00B8723A /* FileUploadService.m in Sources */,
 				960810041BDFBB6F00F6F9E2 /* MomentDetailsBottomView.m in Sources */,
+				966144591BE129E4003BD75A /* PetDetailsViewController.m in Sources */,
 				CE2C57081BD37AC900DEAF32 /* NSString+Size.m in Sources */,
 				960104151BA879F600152908 /* ViewController.m in Sources */,
 				9653C6B41BDCA32700D517C8 /* SendVideoMomentViewController.m in Sources */,

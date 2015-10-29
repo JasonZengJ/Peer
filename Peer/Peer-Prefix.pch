@@ -3,7 +3,7 @@
 //  Peer
 //
 //  Created by jason on 8/16/15.
-//  Copyright (c) 2015 goodpeer. All rights reserved.
+//  Copyright © 2015 peers. All rights reserved.
 //
 
 #ifndef Peer_Peer_Prefix_pch
@@ -20,15 +20,14 @@
 #define ScreenBounds   [UIScreen mainScreen].bounds
 #define Color(r,g,b,a) [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:a]
 
-#define WeakSelf __weak __typeof(self) weakSelf = self;
 
 #pragma mark - -- Notification
-
 #define kNetworkChangedNotification @"kPeerNetworkChangedNotification"
 
 
 
 #pragma mark - -- Define
+#define WeakSelf __weak __typeof(self) weakSelf = self;
 
 #define PortraitScreenWidth [[UIScreen mainScreen] bounds].size.width
 #define PortraitScreenHeight [[UIScreen mainScreen] bounds].size.height
