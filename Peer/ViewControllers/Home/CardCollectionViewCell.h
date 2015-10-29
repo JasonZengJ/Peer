@@ -10,8 +10,16 @@
 
 @class MomentModel;
 
+@protocol CardCollectionViewCellDelegate <NSObject>
+
+- (void)tapPetAvatarWithIndex:(NSInteger)index;
+
+@end
+
 @interface CardCollectionViewCell : UICollectionViewCell
 
+@property(nonatomic,assign)NSInteger index;
+@property(nonatomic,weak) id<CardCollectionViewCellDelegate> delegate;
 
 - (void)configureWithMoments:(MomentModel *)momentModel;
 

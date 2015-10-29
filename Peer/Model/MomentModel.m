@@ -24,7 +24,7 @@
         self.momentTargetUrl   = [dict objectForKey:@"moment_target_url"];
         self.viewAmount        = [dict objectForKey:@"view_amount"];
         self.commentsAmount    = [dict objectForKey:@"comments_amount"];
-        self.likeAmount        = [dict objectForKey:@"likeAmount"];
+        self.likeAmount        = [dict objectForKey:@"like_amount"];
         self.createdAt         = [dict objectForKey:@"created_at"];
         self.weather           = [dict objectForKey:@"weather"];
         self.city              = [dict objectForKey:@"city"];

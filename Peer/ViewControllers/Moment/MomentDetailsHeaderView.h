@@ -8,9 +8,19 @@
 
 @class MomentModel;
 
+@protocol MomentDetailsHeaderViewDelegate <NSObject>
+
+
+- (void)tapPetAvatar;
+- (void)tapUserAvatar;
+- (void)tapLikeMoment;
+
+@end
+
 @interface MomentDetailsHeaderView : UIView
 
 
+@property(nonatomic,weak) id<MomentDetailsHeaderViewDelegate> delegate;
 
 
 - (void)configureWithMomentModel:(MomentModel *)momentModel;

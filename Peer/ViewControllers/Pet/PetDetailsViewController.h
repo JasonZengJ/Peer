@@ -7,7 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "RootNavViewController.h"
 
-@interface PetDetailsViewController : UIViewController
+@class PetsModel;
+
+
+@interface PetDetailsViewController : RootNavViewController
+
+@property(nonatomic,strong)PetsModel *petsModel;
+
 
 @end

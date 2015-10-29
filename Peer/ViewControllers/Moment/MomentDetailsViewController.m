@@ -10,6 +10,7 @@
 #import "MomentDetailsCommentTableViewCell.h"
 #import "MomentDetailsHeaderView.h"
 #import "MomentDetailsBottomView.h"
+#import "PetDetailsViewController.h"
 
 #import "MomentModel.h"
 #import "CommentModel.h"
@@ -17,7 +18,7 @@
 
 #import "MomentsService.h"
 
-@interface MomentDetailsViewController () <UITableViewDataSource,UITableViewDelegate>
+@interface MomentDetailsViewController () <UITableViewDataSource,UITableViewDelegate,MomentDetailsHeaderViewDelegate>
 
 @property(nonatomic) UITableView *tableView;
 @property(nonatomic) MomentDetailsHeaderView *headerView;
@@ -48,6 +49,7 @@
     if (!_headerView) {
         _headerView = [[MomentDetailsHeaderView alloc] initWithFrame:CGRectMake(0, 0, self.view.width, self.view.height - 64.0)];
         _headerView.backgroundColor = [UIColor whiteColor];
+        _headerView.delegate        = self;
         [_headerView configureWithMomentModel:self.momentModel];
     }
     return _headerView;
@@ -72,17 +74,17 @@
     
     [self.view addSubview:self.tableView];
     [self.view addSubview:self.bottomView];
+    
+    UIView *navbarBgView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.width, 64.0f)];
+    navbarBgView.backgroundColor = self.tableView.backgroundColor;
+    [self.view addSubview:navbarBgView];
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"浏览详细";
-    self.view.backgroundColor = [UIColor colorWithHex:0xfdfdfd alpha:1.0];
     self.cellHeightArray      = [NSMutableArray array];
     self.commentsDataArray    = [NSArray array];
-    
-    UIBarButtonItem *leftBarItem = [self leftBackBarButtonItem];
-    self.navigationItem.leftBarButtonItem = leftBarItem;
     
     [self.headerView configureLikedUsersAvatarWithArray:@[]];
     [self loadCommentData];
@@ -138,27 +140,26 @@
     
 }
 
-- (UIBarButtonItem *)leftBackBarButtonItem {
-    UIButton *aButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    aButton.titleEdgeInsets = UIEdgeInsetsMake(1, 0, 0, 0);
-    aButton.titleLabel.adjustsFontSizeToFitWidth = YES;
-    
-    UIImage *backImage = [UIImage imageNamed:@"MomentDetailsLeftArrow"];
-    aButton.frame= CGRectMake(-2, 0.0f,ConvertiPhone5Or6pSize(25), ConvertiPhone5Or6pSize(25));
-    [aButton setImage:backImage forState:UIControlStateNormal];
-    [aButton addTarget:self action:@selector(backButtonAction:) forControlEvents:UIControlEventTouchUpInside];
-    UIBarButtonItem *barButton = [[UIBarButtonItem alloc] initWithCustomView:aButton];
-    return barButton;
-}
 
-- (void)backButtonAction:(UIButton *)sender {
+#pragma mark - -- <MomentDetailsHeaderViewDelegate>
+
+- (void)tapPetAvatar {
     
-    [self dismissViewControllerAnimated:YES completion:^{
-        
-    }];
+    PetDetailsViewController *petDetailsViewController = [[PetDetailsViewController alloc] init];
+    petDetailsViewController.petsModel = self.momentModel.pet;
+    petDetailsViewController.backActionType = BackActionTypeDismiss;
+    petDetailsViewController.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
+    [self.navigationController pushViewController:petDetailsViewController animated:YES];
     
 }
 
+- (void)tapUserAvatar {
+    
+}
+
+- (void)tapLikeMoment {
+    
+}
 
 #pragma mark - -- <UITableViewDataSource>
 

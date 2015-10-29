@@ -14,6 +14,7 @@
 
 #define MomentsAllPath           @"v1/moments/moments-all"
 #define ViewPetsMomentCountPath  @"v1/moments/view-pets-moment-count"
+#define PetMomentsPath           @"v1/moments/pet-moments"
 #define SendMomentPath           @"v1/moments/send-moment"
 #define DeleteMomentPath         @"v1/moments/delete-moment"
 #define LikeMomentPath           @"v1/moments/like-moment"
@@ -65,7 +66,7 @@
 
 - (void)getAllMomentsWithPetsId:(NSNumber *)petsId callBackBlock:(void(^)(NSArray *moments))callBackBlock {
     
-    [self.peerNetworkManager securePostWithParams:@{@"petsId":petsId} apiPath:ViewPetsMomentCountPath callBackBlock:^(id responseObject) {
+    [self.peerNetworkManager securePostWithParams:@{@"petsId":petsId} apiPath:PetMomentsPath callBackBlock:^(id responseObject) {
         
         if (responseObject && ![[responseObject objectForKey:@"code"] integerValue]) {
             

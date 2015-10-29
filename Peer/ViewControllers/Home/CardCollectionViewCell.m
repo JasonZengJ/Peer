@@ -103,24 +103,31 @@
         _petsAvatarImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, ConvertiPhone5Or6pSize(55), ConvertiPhone5Or6pSize(55))];
         _petsAvatarImageView.backgroundColor =[UIColor clearColor];
         _petsAvatarImageView.clipsToBounds = YES;
-        _petsAvatarImageView.centerX = self.photoImageView.centerX;
-        _petsAvatarImageView.centerY = self.photoImageView.bottom;
+        _petsAvatarImageView.centerX = self.petsAvatarImageBgView.width / 2;
+        _petsAvatarImageView.centerY = self.petsAvatarImageBgView.height / 2;
         _petsAvatarImageView.layer.cornerRadius = _petsAvatarImageView.width / 2;
         
-        UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, ConvertiPhone5Or6pSize(59), ConvertiPhone5Or6pSize(59))];
-        view.backgroundColor = [UIColor whiteColor];
-        view.center = _petsAvatarImageView.center;
-        view.layer.cornerRadius = view.width / 2;
-        [self.contentView addSubview:view];
     }
     
     return _petsAvatarImageView;
 }
 
+- (UIView *)petsAvatarImageBgView {
+    if (!_petsAvatarImageBgView) {
+        _petsAvatarImageBgView =  [[UIView alloc] initWithFrame:CGRectMake(0, 0, ConvertiPhone5Or6pSize(59), ConvertiPhone5Or6pSize(59))];
+        _petsAvatarImageBgView.backgroundColor = [UIColor whiteColor];
+        _petsAvatarImageBgView.centerX = self.photoImageView.centerX;
+        _petsAvatarImageBgView.centerY = self.photoImageView.bottom;
+        _petsAvatarImageBgView.layer.cornerRadius = _petsAvatarImageBgView.width / 2;
+        [_petsAvatarImageBgView addTapGestureWithTarget:self action:@selector(tapPetAvatar)];
+    }
+    return _petsAvatarImageBgView;
+}
+
 
 - (UILabel *)detailsLabel {
     if (!_detailsLabel) {
-        _detailsLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, self.petsAvatarImageView.bottom + 3, self.width, ConvertToiPhone6XYZ(20))];
+        _detailsLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, self.petsAvatarImageBgView.bottom + 3, self.width, ConvertToiPhone6XYZ(20))];
         _detailsLabel.font = [UIFont systemFontOfSize:ConvertiPhone5Or6pSize(12)];
         _detailsLabel.textColor = [UIColor colorWithHex:0x999999 alpha:1.0];
         _detailsLabel.textAlignment = NSTextAlignmentCenter;
@@ -218,12 +225,14 @@
     self.contentView.clipsToBounds = YES;
     
     [self.contentView addSubview:self.photoImageView];
-    [self.contentView addSubview:self.petsAvatarImageView];
+    [self.contentView addSubview:self.petsAvatarImageBgView];
     [self.contentView addSubview:self.detailsLabel];
     [self.contentView addSubview:self.contentLabel];
     [self.contentView addSubview:self.daysLabel];
     [self.contentView addSubview:self.bottomView];
     [self.contentView addSubview:self.dateWeatherView];
+    
+    [self.petsAvatarImageBgView addSubview:self.petsAvatarImageView];
     
     [self.dateWeatherView addSubview:self.weatherImageView];
     [self.dateWeatherView addSubview:self.monthLabel];
@@ -280,6 +289,14 @@
 - (void)layoutSubviews {
     
     self.bottomView.top = self.height - self.bottomView.height;
+    
+}
+
+- (void)tapPetAvatar {
+    
+    if (self.delegate && [self.delegate respondsToSelector:@selector(tapPetAvatarWithIndex:)]) {
+        [self.delegate tapPetAvatarWithIndex:self.index];
+    }
     
 }
 

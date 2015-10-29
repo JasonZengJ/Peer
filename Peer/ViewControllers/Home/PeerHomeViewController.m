@@ -8,6 +8,7 @@
 
 #import "PeerHomeViewController.h"
 #import "MomentDetailsViewController.h"
+#import "PetDetailsViewController.h"
 
 #import "HorizontalCardTableView.h"
 #import "CardCollectionViewCell.h"
@@ -23,7 +24,7 @@
 #import "HomeHeaderView.h"
 
 
-@interface PeerHomeViewController () <UICollectionViewDataSource,UICollectionViewDelegate>
+@interface PeerHomeViewController () <UICollectionViewDataSource,UICollectionViewDelegate,CardCollectionViewCellDelegate>
 
 //@property(nonatomic) HorizontalCardTableView *cardTableView;
 @property(nonatomic) UICollectionView *collectionView;
@@ -88,6 +89,7 @@
     [self.view addSubview:self.collectionView];
     [self.view addSubview:self.homeHeaderView];
     [self.view addSubview:self.homeBottomView];
+    
 }
 
 -  (void)viewDidLoad {
@@ -121,6 +123,18 @@
     
 }
 
+#pragma mark - -- <CardCollectionViewCellDelegate>
+
+- (void)tapPetAvatarWithIndex:(NSInteger)index {
+    
+    PetDetailsViewController *petDetailsViewController = [[PetDetailsViewController alloc] init];
+    petDetailsViewController.petsModel = ((MomentModel *)self.momentsArray[index]).pet;
+    petDetailsViewController.backActionType = BackActionTypeDismiss;
+    petDetailsViewController.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
+    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:petDetailsViewController];
+    [self presentViewController:navController animated:YES completion:nil];
+    
+}
 
 #pragma mark - -- <UICollectionViewDataSource>
 
@@ -128,6 +142,7 @@
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     
     return [self.momentsArray count];
+    
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
@@ -136,7 +151,8 @@
     if (!cell) {
         cell = [[CardCollectionViewCell alloc] init];
     }
-    
+    cell.delegate = self;
+    cell.index = indexPath.row;
     [cell configureWithMoments:[self.momentsArray objectAtIndex:indexPath.row]];
     return cell;
     
@@ -150,6 +166,7 @@
     
     MomentDetailsViewController *momentDetailsViewController = [[MomentDetailsViewController alloc] init];
     momentDetailsViewController.momentModel = [self.momentsArray objectAtIndex:indexPath.row];
+    momentDetailsViewController.backActionType = BackActionTypeDismiss;
     momentDetailsViewController.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
     UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:momentDetailsViewController];
     

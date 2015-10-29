@@ -17,6 +17,7 @@
 
 @property(nonatomic) UIImageView *photoImageView;
 @property(nonatomic) UIImageView *petsAvatarImageView;
+@property(nonatomic) UIView      *petsAvatarImageBgView;
 
 
 @property(nonatomic) UILabel     *detailsLabel;
@@ -50,24 +51,31 @@
         _petsAvatarImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, ConvertiPhone5Or6pSize(55), ConvertiPhone5Or6pSize(55))];
         _petsAvatarImageView.backgroundColor =[UIColor clearColor];
         _petsAvatarImageView.clipsToBounds = YES;
-        _petsAvatarImageView.centerX = self.photoImageView.centerX;
-        _petsAvatarImageView.centerY = self.photoImageView.bottom;
+        _petsAvatarImageView.centerX = self.petsAvatarImageBgView.width / 2;
+        _petsAvatarImageView.centerY = self.petsAvatarImageBgView.height / 2;
         _petsAvatarImageView.layer.cornerRadius = _petsAvatarImageView.width / 2;
         
-        UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, ConvertiPhone5Or6pSize(59), ConvertiPhone5Or6pSize(59))];
-        view.backgroundColor = [UIColor whiteColor];
-        view.center = _petsAvatarImageView.center;
-        view.layer.cornerRadius = view.width / 2;
-        [self addSubview:view];
     }
     
     return _petsAvatarImageView;
 }
 
+- (UIView *)petsAvatarImageBgView {
+    if (!_petsAvatarImageBgView) {
+        _petsAvatarImageBgView =  [[UIView alloc] initWithFrame:CGRectMake(0, 0, ConvertiPhone5Or6pSize(59), ConvertiPhone5Or6pSize(59))];
+        _petsAvatarImageBgView.backgroundColor = [UIColor whiteColor];
+        _petsAvatarImageBgView.centerX = self.photoImageView.centerX;
+        _petsAvatarImageBgView.centerY = self.photoImageView.bottom;
+        _petsAvatarImageBgView.layer.cornerRadius = _petsAvatarImageBgView.width / 2;
+        [_petsAvatarImageBgView addTapGestureWithTarget:self action:@selector(tapPetAvatar)];
+    }
+    return _petsAvatarImageBgView;
+}
+
 
 - (UILabel *)detailsLabel {
     if (!_detailsLabel) {
-        _detailsLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, self.petsAvatarImageView.bottom + 5, self.width, ConvertToiPhone6XYZ(20))];
+        _detailsLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, self.petsAvatarImageBgView.bottom + 5, self.width, ConvertToiPhone6XYZ(20))];
         _detailsLabel.font = [UIFont systemFontOfSize:ConvertiPhone5Or6pSize(12)];
         _detailsLabel.textColor = [UIColor colorWithHex:0x999999 alpha:1.0];
         _detailsLabel.textAlignment = NSTextAlignmentCenter;
@@ -143,7 +151,7 @@
         _likeImageView = [[UIImageView alloc] initWithFrame:CGRectMake(self.LikedUsersView.width - ConvertiPhone5Or6pSize(30), 0, ConvertiPhone5Or6pSize(30), ConvertiPhone5Or6pSize(30))];
         _likeImageView.centerY = self.LikedUsersView.height / 2;
         _likeImageView.userInteractionEnabled = YES;
-        [_likeImageView addTapGestureWithTarget:self action:@selector(tapLikePets)];
+        [_likeImageView addTapGestureWithTarget:self action:@selector(tapLikeMoment)];
     }
     return _likeImageView;
 }
@@ -166,12 +174,15 @@
 }
 
 - (void)initSubviews {
+    
     [self addSubview:self.photoImageView];
-    [self addSubview:self.petsAvatarImageView];
+    [self addSubview:self.petsAvatarImageBgView];
     [self addSubview:self.detailsLabel];
     [self addSubview:self.contentLabel];
     [self addSubview:self.bottomView];
     [self addSubview:self.LikedUsersView];
+    
+    [self.petsAvatarImageBgView addSubview:self.petsAvatarImageView];
     
     [self.bottomView addSubview:self.locationIcon];
     [self.bottomView addSubview:self.locationLabel];
@@ -259,11 +270,19 @@
     
 }
 
+- (void)tapPetAvatar {
+    
+    if (self.delegate && [self.delegate respondsToSelector:@selector(tapPetAvatar)]) {
+        [self.delegate tapPetAvatar];
+    }
+    
+}
+
 - (void)tapUserAvatar {
     
 }
 
-- (void)tapLikePets {
+- (void)tapLikeMoment {
     
 }
 

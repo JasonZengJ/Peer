@@ -7,9 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "RootNavViewController.h"
 @class MomentModel;
 
-@interface MomentDetailsViewController : UIViewController
+@interface MomentDetailsViewController : RootNavViewController
 
 @property(nonatomic) MomentModel *momentModel;
 
