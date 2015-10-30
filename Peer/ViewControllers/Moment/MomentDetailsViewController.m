@@ -25,6 +25,7 @@
 @property(nonatomic) MomentDetailsBottomView *bottomView;
 @property(nonatomic) MomentsService *momentsService;
 @property(nonatomic) NSArray *commentsDataArray;
+@property(nonatomic) NSArray *likedUsersArray;
 @property(nonatomic) NSMutableArray *cellHeightArray;
 
 @end
@@ -74,10 +75,7 @@
     
     [self.view addSubview:self.tableView];
     [self.view addSubview:self.bottomView];
-    
-    UIView *navbarBgView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.width, 64.0f)];
-    navbarBgView.backgroundColor = self.tableView.backgroundColor;
-    [self.view addSubview:navbarBgView];
+    [self.view addSubview:self.navbarBgView];
 }
 
 - (void)viewDidLoad {
@@ -86,8 +84,8 @@
     self.cellHeightArray      = [NSMutableArray array];
     self.commentsDataArray    = [NSArray array];
     
-    [self.headerView configureLikedUsersAvatarWithArray:@[]];
     [self loadCommentData];
+    [self loadLikedUsers];
 }
 
 - (void)loadCommentData {
@@ -132,6 +130,18 @@
     
 }
 
+- (void)loadLikedUsers {
+    
+    [self.momentsService getLikedUsersWithMomentId:self.momentModel.momentId callBackBlock:^(NSArray *likedUsers) {
+        
+        self.likedUsersArray = likedUsers;
+        [self.headerView configureLikedUsersWithArray:likedUsers];
+        
+    }];
+    
+    
+}
+
 - (void)reloadData {
     
 }
@@ -153,7 +163,8 @@
     
 }
 
-- (void)tapUserAvatar {
+- (void)tapUserAvatarWithUserId:(NSInteger)userId {
+    
     
 }
 

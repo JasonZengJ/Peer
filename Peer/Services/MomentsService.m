@@ -9,6 +9,7 @@
 #import "MomentsService.h"
 #import "MomentModel.h"
 #import "CommentModel.h"
+#import "PetsModel.h"
 #import "PeerNetworkManager.h"
 #import "NSDictionary+AddObject.h"
 
@@ -19,6 +20,7 @@
 #define DeleteMomentPath         @"v1/moments/delete-moment"
 #define LikeMomentPath           @"v1/moments/like-moment"
 #define UnlikeMomentPath         @"v1/moments/unlike-moment"
+#define LikedUsersPath           @"v1/moments/liked-users"
 
 #define CommentsPath             @"v1/moments/comments"
 #define SendCommentPath          @"v1/moments/send-comment"
@@ -132,6 +134,20 @@
     
     [self.peerNetworkManager securePostWithParams:@{@"momentId":momentId} apiPath:ViewPetsMomentCountPath callBackBlock:^(id responseObject) {
     
+    }];
+    
+}
+
+- (void)getLikedUsersWithMomentId:(NSNumber *)momentId callBackBlock:(void(^)(NSArray *likedUsers))callBackBlock {
+    
+    [self.peerNetworkManager securePostWithParams:@{@"momentId":momentId} apiPath:LikedUsersPath callBackBlock:^(id responseObject) {
+        
+        if (responseObject && ![[responseObject objectForKey:@"code"] integerValue]) {
+            callBackBlock(responseObject[@"data"]);
+        } else {
+            callBackBlock(nil);
+        }
+        
     }];
     
 }

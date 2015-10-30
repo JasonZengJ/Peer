@@ -27,6 +27,11 @@
 - (void)deleteMomentWithMomentId:(NSNumber *)momentId callBackBlock:(void(^)(BOOL isSuccess))callBackBlock;
 
 - (void)likeMomentWithMomentId:(NSNumber *)momentId userId:(NSNumber *)userId;
+
+- (void)unlikeMomentWithMomentId:(NSNumber *)momentId userId:(NSNumber *)userId;
+
+- (void)getLikedUsersWithMomentId:(NSNumber *)momentId callBackBlock:(void(^)(NSArray *likedUsers))callBackBlock;
+
 /**
  * 统计moment的浏览次数
  */

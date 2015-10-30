@@ -10,6 +10,14 @@
 
 @implementation RootNavViewController
 
+- (UIView *)navbarBgView {
+    if (!_navbarBgView) {
+        _navbarBgView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.width, 64.0f)];
+        _navbarBgView.backgroundColor = [UIColor colorWithHex:0xfafafa alpha:1.0];
+    }
+    return _navbarBgView;
+}
+
 - (instancetype)init {
     self = [super init];
     if (self) {

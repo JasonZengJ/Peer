@@ -40,6 +40,7 @@
 }
 
 - (UICollectionView *)collectionView {
+    
     if (!_collectionView) {
         
         PetDetailsHorizonCardFlowLayout *horizonLayout = [[PetDetailsHorizonCardFlowLayout alloc] init];
@@ -62,17 +63,20 @@
 }
 
 - (void)loadView {
+    
     [super loadView];
     [self.view addSubview:self.headerView];
     [self.view addSubview:self.collectionView];
-    
+    [self.navbarBgView removeFromSuperview];
     
 }
 
 - (void)viewDidLoad {
+    
     [super viewDidLoad];
     self.momentsArray = [NSArray array];
     [self reloadData];
+    
 }
 
 - (void)reloadData {

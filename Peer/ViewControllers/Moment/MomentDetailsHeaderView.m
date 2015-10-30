@@ -226,26 +226,20 @@
     
 }
 
-- (void)configureLikedUsersAvatarWithArray:(NSArray *)likedUsersAvatarUrlArray {
+- (void)configureLikedUsersWithArray:(NSArray *)likedUsersArray {
    
     
-#warning Test
-    
-    self.momentModel.likeAmount = @(43);
-    likedUsersAvatarUrlArray = @[@{},@{},@{},@{},@{},@{}];
-    
-#warning Test
-    
-    
     CGFloat left = 0;
-    
-    for (NSDictionary *dataDic in likedUsersAvatarUrlArray) {
+    for (NSDictionary *dataDic in likedUsersArray) {
         
         UIImageView *userAvatarImageView = [[UIImageView alloc] initWithFrame:CGRectMake(left, 0, ConvertiPhone5Or6pSize(30.0), ConvertiPhone5Or6pSize(30.0))];
-        userAvatarImageView.image              = [UIImage imageNamed:@"avatar"];
+        [userAvatarImageView setImageWithURL:[NSURL URLWithString:dataDic[@"avatar"]]];
         userAvatarImageView.centerY            = self.LikedUsersView.height / 2;
         userAvatarImageView.clipsToBounds      = YES;
         userAvatarImageView.layer.cornerRadius = userAvatarImageView.width / 2;
+        userAvatarImageView.tag                = [dataDic[@"id"] integerValue];
+        userAvatarImageView.userInteractionEnabled = YES;
+        [userAvatarImageView addTapGestureWithTarget:self action:@selector(tapUserAvatar:)];
         
         left = userAvatarImageView.right + 5;
         [self.LikedUsersView addSubview:userAvatarImageView ];
@@ -265,7 +259,6 @@
         likedUserAmountLabel.centerY            = self.LikedUsersView.height / 2;
         [self.LikedUsersView addSubview:likedUserAmountLabel];
         
-        
     }
     
 }
@@ -278,8 +271,10 @@
     
 }
 
-- (void)tapUserAvatar {
-    
+- (void)tapUserAvatar:(UITapGestureRecognizer *)tapGR {
+    if (self.delegate && [self.delegate respondsToSelector:@selector(tapPetAvatar)]) {
+        [self.delegate tapUserAvatarWithUserId:tapGR.view.tag];
+    }
 }
 
 - (void)tapLikeMoment {

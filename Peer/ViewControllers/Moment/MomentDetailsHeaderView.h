@@ -12,7 +12,7 @@
 
 
 - (void)tapPetAvatar;
-- (void)tapUserAvatar;
+- (void)tapUserAvatarWithUserId:(NSInteger)userId;
 - (void)tapLikeMoment;
 
 @end
@@ -26,6 +26,6 @@
 - (void)configureWithMomentModel:(MomentModel *)momentModel;
 
 
-- (void)configureLikedUsersAvatarWithArray:(NSArray *)likedUsersAvatarUrlArray;
+- (void)configureLikedUsersWithArray:(NSArray *)likedUsersArray;
 
 @end

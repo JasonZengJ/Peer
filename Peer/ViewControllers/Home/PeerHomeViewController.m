@@ -9,8 +9,6 @@
 #import "PeerHomeViewController.h"
 #import "MomentDetailsViewController.h"
 #import "PetDetailsViewController.h"
-
-#import "HorizontalCardTableView.h"
 #import "CardCollectionViewCell.h"
 
 #import "HorizonCardFlowLayout.h"
@@ -26,7 +24,6 @@
 
 @interface PeerHomeViewController () <UICollectionViewDataSource,UICollectionViewDelegate,CardCollectionViewCellDelegate>
 
-//@property(nonatomic) HorizontalCardTableView *cardTableView;
 @property(nonatomic) UICollectionView *collectionView;
 @property(nonatomic) MomentsService   *momentService;
 @property(nonatomic) HomeHeaderView   *homeHeaderView;
