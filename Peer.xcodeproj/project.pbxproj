@@ -36,6 +36,7 @@
 		9608100B1BDFD11300F6F9E2 /* PeerDateFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9608100A1BDFD11300F6F9E2 /* PeerDateFormatter.m */; settings = {ASSET_TAGS = (); }; };
 		96105B111BDE932200F9BEFA /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96105B101BDE932200F9BEFA /* CoreText.framework */; };
 		961C962F1BE3CB4E008EDF91 /* PeerLoadingImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 961C962E1BE3CB4E008EDF91 /* PeerLoadingImageView.m */; settings = {ASSET_TAGS = (); }; };
+		961C96381BE3CEBD008EDF91 /* LocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 961C96371BE3CEBD008EDF91 /* LocationManager.m */; settings = {ASSET_TAGS = (); }; };
 		961D2E4A1BA715C200C84C8B /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 961D2E491BA715C200C84C8B /* QuartzCore.framework */; };
 		961D2E4C1BA715D500C84C8B /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 961D2E4B1BA715D500C84C8B /* Accelerate.framework */; };
 		9653C6A51BDCA31100D517C8 /* MomentDetailsCommentTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9653C6991BDCA31100D517C8 /* MomentDetailsCommentTableViewCell.m */; settings = {ASSET_TAGS = (); }; };
@@ -142,6 +143,8 @@
 		96105B101BDE932200F9BEFA /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 		961C962D1BE3CB4E008EDF91 /* PeerLoadingImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PeerLoadingImageView.h; sourceTree = "<group>"; };
 		961C962E1BE3CB4E008EDF91 /* PeerLoadingImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PeerLoadingImageView.m; sourceTree = "<group>"; };
+		961C96361BE3CEBD008EDF91 /* LocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationManager.h; sourceTree = "<group>"; };
+		961C96371BE3CEBD008EDF91 /* LocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationManager.m; sourceTree = "<group>"; };
 		961D2E491BA715C200C84C8B /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		961D2E4B1BA715D500C84C8B /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
 		9653C6981BDCA31100D517C8 /* MomentDetailsCommentTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MomentDetailsCommentTableViewCell.h; sourceTree = "<group>"; };
@@ -446,11 +449,21 @@
 			path = PeerLoadingImageView;
 			sourceTree = "<group>";
 		};
+		961C96341BE3CE79008EDF91 /* LocationManager */ = {
+			isa = PBXGroup;
+			children = (
+				961C96361BE3CEBD008EDF91 /* LocationManager.h */,
+				961C96371BE3CEBD008EDF91 /* LocationManager.m */,
+			);
+			path = LocationManager;
+			sourceTree = "<group>";
+		};
 		961F04991BDA90E9002A475E /* Framework */ = {
 			isa = PBXGroup;
 			children = (
-				961C962C1BE3CB3C008EDF91 /* PeerLoadingImageView */,
 				96E2F4A51BE3042900E6625B /* LayoutUtils */,
+				961C96341BE3CE79008EDF91 /* LocationManager */,
+				961C962C1BE3CB3C008EDF91 /* PeerLoadingImageView */,
 				960810081BDFD0F200F6F9E2 /* Formatter */,
 				9653C6B51BDCF1F200D517C8 /* RootNavViewController */,
 			);
@@ -814,6 +827,7 @@
 				968B3BE01BCAA67000B8723A /* CommentModel.m in Sources */,
 				968B3BDA1BCAA59400B8723A /* Pagination.m in Sources */,
 				9656F9451BD1321C0043FA38 /* CardCollectionViewCell.m in Sources */,
+				961C96381BE3CEBD008EDF91 /* LocationManager.m in Sources */,
 				96E2F4A41BE278EB00E6625B /* PetDetailsHorizonCardFlowLayout.m in Sources */,
 				960104561BAE80C100152908 /* ValidationService.m in Sources */,
 				968B3BDD1BCAA60B00B8723A /* MomentModel.m in Sources */,
