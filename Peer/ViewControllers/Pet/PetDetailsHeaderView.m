@@ -8,7 +8,7 @@
 
 #import "PetDetailsHeaderView.h"
 #import "PetsModel.h"
-#import <UIImageView+AFNetworking.h>
+#import <SDWebImage/UIImageView+WebCache.h>
 
 @interface PetDetailsHeaderView ()
 
@@ -183,7 +183,7 @@
 
 - (void)configureWithPetsModel:(PetsModel *)pet {
     
-    [self.petsAvatarImageView setImageWithURL:[NSURL URLWithString:pet.petsAvatar]];
+    [self.petsAvatarImageView sd_setImageWithURL:[NSURL URLWithString:pet.petsAvatar]];
     NSString  *sex = pet.petsSex.integerValue == 1 ? @"DD" : @"MM";
     self.detailsLabel.text      = [NSString stringWithFormat:@"%@ - %@ - %@个月",pet.petsName,sex,pet.petsMonth];
     

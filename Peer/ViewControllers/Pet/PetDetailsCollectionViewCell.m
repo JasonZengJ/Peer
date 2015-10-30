@@ -10,7 +10,7 @@
 #import "MomentModel.h"
 #import "PeerDateFormatter.h"
 #import "NSString+Size.h"
-#import <UIImageView+AFNetworking.h>
+#import <SDWebImage/UIImageView+WebCache.h>
 
 @interface PetDetailsCollectionViewCell ()
 
@@ -183,9 +183,9 @@
     self.daysLabel.left  = self.monthLabel.left;
     
     if ([momentModel.momentType integerValue] == 1) {
-        [self.photoImageView setImageWithURL:[NSURL URLWithString:momentModel.momentTargetUrl]];
+        [self.photoImageView sd_setImageWithURL:[NSURL URLWithString:momentModel.momentTargetUrl]];
     } else {
-        [self.photoImageView setImageWithURL:[NSURL URLWithString:momentModel.momentThumbnailUrl]];
+        [self.photoImageView sd_setImageWithURL:[NSURL URLWithString:momentModel.momentThumbnailUrl]];
     }
     
     self.commentAmountLabel.text  = momentModel.commentsAmount.stringValue;

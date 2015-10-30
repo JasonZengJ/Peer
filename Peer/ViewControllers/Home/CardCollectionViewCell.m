@@ -13,7 +13,7 @@
 #import "LayoutUtil.h"
 #import "NSString+Size.h"
 #import "PeerDateFormatter.h"
-#import <UIImageView+AFNetworking.h>
+#import <SDWebImage/UIImageView+WebCache.h>
 
 @interface CardCollectionViewCell ()
 
@@ -262,10 +262,10 @@
     self.daysLabel.left  = self.monthLabel.left;
     
     if ([momentModel.momentType integerValue] == 1) {
-        [self.photoImageView setImageWithURL:[NSURL URLWithString:momentModel.momentTargetUrl]];
+        [self.photoImageView sd_setImageWithURL:[NSURL URLWithString:momentModel.momentTargetUrl]];
     }
     
-    [self.petsAvatarImageView setImageWithURL:[NSURL URLWithString:momentModel.pet.petsAvatar]];
+    [self.petsAvatarImageView sd_setImageWithURL:[NSURL URLWithString:momentModel.pet.petsAvatar]];
     
     NSString  *sex = momentModel.pet.petsSex.integerValue == 1 ? @"DD" : @"MM";
     self.detailsLabel.text   = [NSString stringWithFormat:@"%@ - %@ - %@个月",momentModel.pet.petsName,sex,momentModel.pet.petsMonth];

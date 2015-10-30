@@ -10,7 +10,7 @@
 #import "CommentModel.h"
 #import "NSString+Size.h"
 #import "LoginService.h"
-#import <UIImageView+AFNetworking.h>
+#import <SDWebImage/UIImageView+WebCache.h>
 
 @interface MomentDetailsCommentTableViewCell ()
 
@@ -95,7 +95,7 @@
 
 - (CGFloat)configureWithCommentModel:(CommentModel *)commentModel {
  
-    [self.userAvatarImageView setImageWithURL:[NSURL URLWithString:commentModel.user.avatar]];
+    [self.userAvatarImageView sd_setImageWithURL:[NSURL URLWithString:commentModel.user.avatar]];
     self.timeLabel.text     = @"12:33";
     
     self.userNameLabel.text = commentModel.user.nickname;

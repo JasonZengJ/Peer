@@ -9,7 +9,7 @@
 #import "MomentDetailsHeaderView.h"
 #import "MomentModel.h"
 #import "NSString+Size.h"
-#import <UIImageView+AFNetworking.h>
+#import <SDWebImage/UIImageView+WebCache.h>
 
 @interface MomentDetailsHeaderView ()
 
@@ -203,12 +203,12 @@
     
     self.momentModel = momentModel;
     if ([momentModel.momentType integerValue] == 1) {
-        [self.photoImageView setImageWithURL:[NSURL URLWithString:momentModel.momentTargetUrl]];
+        [self.photoImageView sd_setImageWithURL:[NSURL URLWithString:momentModel.momentTargetUrl]];
     }
     
     NSString  *sex = momentModel.pet.petsSex.integerValue == 1 ? @"DD" : @"MM";
     self.detailsLabel.text   = [NSString stringWithFormat:@"%@ - %@ - %@个月",momentModel.pet.petsName,sex,momentModel.pet.petsMonth];
-    [self.petsAvatarImageView setImageWithURL:[NSURL URLWithString:momentModel.pet.petsAvatar]];
+    [self.petsAvatarImageView sd_setImageWithURL:[NSURL URLWithString:momentModel.pet.petsAvatar]];
     
     self.contentLabel.text   = momentModel.momentDescription;
     self.contentLabel.height = [self.contentLabel.text heightWithFont:self.contentLabel.font width:self.contentLabel.width];
@@ -233,7 +233,9 @@
     for (NSDictionary *dataDic in likedUsersArray) {
         
         UIImageView *userAvatarImageView = [[UIImageView alloc] initWithFrame:CGRectMake(left, 0, ConvertiPhone5Or6pSize(30.0), ConvertiPhone5Or6pSize(30.0))];
-        [userAvatarImageView setImageWithURL:[NSURL URLWithString:dataDic[@"avatar"]]];
+        [userAvatarImageView sd_setImageWithURL:[NSURL URLWithString:dataDic[@"avatar"]] completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+            
+        }];
         userAvatarImageView.centerY            = self.LikedUsersView.height / 2;
         userAvatarImageView.clipsToBounds      = YES;
         userAvatarImageView.layer.cornerRadius = userAvatarImageView.width / 2;
