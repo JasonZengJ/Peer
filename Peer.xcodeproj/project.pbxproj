@@ -46,7 +46,6 @@
 		9653C6B81BDCF20400D517C8 /* RootNavViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9653C6B71BDCF20400D517C8 /* RootNavViewController.m */; settings = {ASSET_TAGS = (); }; };
 		9656F9451BD1321C0043FA38 /* CardCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9656F9441BD1321C0043FA38 /* CardCollectionViewCell.m */; settings = {ASSET_TAGS = (); }; };
 		9656F9481BD145240043FA38 /* HorizonCardFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 9656F9471BD145240043FA38 /* HorizonCardFlowLayout.m */; settings = {ASSET_TAGS = (); }; };
-		9656F94C1BD147B00043FA38 /* LayoutUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 9656F94B1BD147B00043FA38 /* LayoutUtil.m */; settings = {ASSET_TAGS = (); }; };
 		966144591BE129E4003BD75A /* PetDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 966144581BE129E4003BD75A /* PetDetailsViewController.m */; settings = {ASSET_TAGS = (); }; };
 		966B517F1B7F8D70000F0EF2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 966B517E1B7F8D70000F0EF2 /* main.m */; };
 		966B51821B7F8D70000F0EF2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 966B51811B7F8D70000F0EF2 /* AppDelegate.m */; };
@@ -60,14 +59,13 @@
 		96A2D8D41BC032200016AE3F /* ApplicationDirectoryService.m in Sources */ = {isa = PBXBuildFile; fileRef = 96A2D8D31BC032200016AE3F /* ApplicationDirectoryService.m */; settings = {ASSET_TAGS = (); }; };
 		96A2D8DA1BC118AA0016AE3F /* ALBB_OSS_IOS_SDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96A2D8D91BC118AA0016AE3F /* ALBB_OSS_IOS_SDK.framework */; settings = {ASSET_TAGS = (); }; };
 		96A2D8DD1BC119C70016AE3F /* OSSFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 96A2D8DC1BC119C70016AE3F /* OSSFileManager.m */; settings = {ASSET_TAGS = (); }; };
-		96DC2C4A1BCF5F8F00126AB6 /* HorizontalCardTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 96DC2C491BCF5F8F00126AB6 /* HorizontalCardTableView.m */; settings = {ASSET_TAGS = (); }; };
 		96DC2C541BCF7CF500126AB6 /* libMobClickLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 96DC2C511BCF7CF500126AB6 /* libMobClickLibrary.a */; settings = {ASSET_TAGS = (); }; };
 		96DC2C561BCF7E0800126AB6 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 96DC2C551BCF7E0800126AB6 /* libz.tbd */; };
 		96DC2C591BCF82F800126AB6 /* PeerHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96DC2C581BCF82F800126AB6 /* PeerHomeViewController.m */; settings = {ASSET_TAGS = (); }; };
-		96DC2C5C1BCF84E300126AB6 /* HCTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 96DC2C5B1BCF84E300126AB6 /* HCTableViewCell.m */; settings = {ASSET_TAGS = (); }; };
 		96E2F49E1BE2619300E6625B /* PetDetailsHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E2F49D1BE2619300E6625B /* PetDetailsHeaderView.m */; settings = {ASSET_TAGS = (); }; };
 		96E2F4A11BE2768800E6625B /* PetDetailsCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E2F4A01BE2768800E6625B /* PetDetailsCollectionViewCell.m */; settings = {ASSET_TAGS = (); }; };
 		96E2F4A41BE278EB00E6625B /* PetDetailsHorizonCardFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E2F4A31BE278EB00E6625B /* PetDetailsHorizonCardFlowLayout.m */; settings = {ASSET_TAGS = (); }; };
+		96E2F4A81BE3042900E6625B /* LayoutUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E2F4A71BE3042900E6625B /* LayoutUtil.m */; settings = {ASSET_TAGS = (); }; };
 		96E5CB2A1BB1A9C3005503CD /* PetsService.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E5CB291BB1A9C3005503CD /* PetsService.m */; };
 		96E5CB2D1BB1A9EA005503CD /* PetsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E5CB2C1BB1A9EA005503CD /* PetsModel.m */; };
 		96E5CB301BB1B18E005503CD /* NSDictionary+AddObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E5CB2F1BB1B18E005503CD /* NSDictionary+AddObject.m */; };
@@ -161,8 +159,6 @@
 		9656F9441BD1321C0043FA38 /* CardCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardCollectionViewCell.m; sourceTree = "<group>"; };
 		9656F9461BD145240043FA38 /* HorizonCardFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HorizonCardFlowLayout.h; sourceTree = "<group>"; };
 		9656F9471BD145240043FA38 /* HorizonCardFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HorizonCardFlowLayout.m; sourceTree = "<group>"; };
-		9656F94A1BD147B00043FA38 /* LayoutUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LayoutUtil.h; sourceTree = "<group>"; };
-		9656F94B1BD147B00043FA38 /* LayoutUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LayoutUtil.m; sourceTree = "<group>"; };
 		966144571BE129E4003BD75A /* PetDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PetDetailsViewController.h; sourceTree = "<group>"; };
 		966144581BE129E4003BD75A /* PetDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PetDetailsViewController.m; sourceTree = "<group>"; };
 		966B51791B7F8D70000F0EF2 /* Peer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Peer.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -190,22 +186,20 @@
 		96A2D8D91BC118AA0016AE3F /* ALBB_OSS_IOS_SDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ALBB_OSS_IOS_SDK.framework; sourceTree = "<group>"; };
 		96A2D8DB1BC119C70016AE3F /* OSSFileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSSFileManager.h; sourceTree = "<group>"; };
 		96A2D8DC1BC119C70016AE3F /* OSSFileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSSFileManager.m; sourceTree = "<group>"; };
-		96DC2C481BCF5F8F00126AB6 /* HorizontalCardTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HorizontalCardTableView.h; sourceTree = "<group>"; };
-		96DC2C491BCF5F8F00126AB6 /* HorizontalCardTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HorizontalCardTableView.m; sourceTree = "<group>"; };
 		96DC2C511BCF7CF500126AB6 /* libMobClickLibrary.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libMobClickLibrary.a; sourceTree = "<group>"; };
 		96DC2C521BCF7CF500126AB6 /* MobClick.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MobClick.h; sourceTree = "<group>"; };
 		96DC2C531BCF7CF500126AB6 /* MobClickSocialAnalytics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MobClickSocialAnalytics.h; sourceTree = "<group>"; };
 		96DC2C551BCF7E0800126AB6 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		96DC2C571BCF82F800126AB6 /* PeerHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PeerHomeViewController.h; sourceTree = "<group>"; };
 		96DC2C581BCF82F800126AB6 /* PeerHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PeerHomeViewController.m; sourceTree = "<group>"; };
-		96DC2C5A1BCF84E300126AB6 /* HCTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCTableViewCell.h; sourceTree = "<group>"; };
-		96DC2C5B1BCF84E300126AB6 /* HCTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCTableViewCell.m; sourceTree = "<group>"; };
 		96E2F49C1BE2619300E6625B /* PetDetailsHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PetDetailsHeaderView.h; sourceTree = "<group>"; };
 		96E2F49D1BE2619300E6625B /* PetDetailsHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PetDetailsHeaderView.m; sourceTree = "<group>"; };
 		96E2F49F1BE2768800E6625B /* PetDetailsCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PetDetailsCollectionViewCell.h; sourceTree = "<group>"; };
 		96E2F4A01BE2768800E6625B /* PetDetailsCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PetDetailsCollectionViewCell.m; sourceTree = "<group>"; };
 		96E2F4A21BE278EB00E6625B /* PetDetailsHorizonCardFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PetDetailsHorizonCardFlowLayout.h; sourceTree = "<group>"; };
 		96E2F4A31BE278EB00E6625B /* PetDetailsHorizonCardFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PetDetailsHorizonCardFlowLayout.m; sourceTree = "<group>"; };
+		96E2F4A61BE3042900E6625B /* LayoutUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LayoutUtil.h; sourceTree = "<group>"; };
+		96E2F4A71BE3042900E6625B /* LayoutUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LayoutUtil.m; sourceTree = "<group>"; };
 		96E5CB281BB1A9C3005503CD /* PetsService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PetsService.h; sourceTree = "<group>"; };
 		96E5CB291BB1A9C3005503CD /* PetsService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PetsService.m; sourceTree = "<group>"; };
 		96E5CB2B1BB1A9EA005503CD /* PetsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PetsModel.h; sourceTree = "<group>"; };
@@ -443,6 +437,7 @@
 		961F04991BDA90E9002A475E /* Framework */ = {
 			isa = PBXGroup;
 			children = (
+				96E2F4A51BE3042900E6625B /* LayoutUtils */,
 				960810081BDFD0F200F6F9E2 /* Formatter */,
 				9653C6B51BDCF1F200D517C8 /* RootNavViewController */,
 			);
@@ -485,15 +480,6 @@
 				9653C6B71BDCF20400D517C8 /* RootNavViewController.m */,
 			);
 			path = RootNavViewController;
-			sourceTree = "<group>";
-		};
-		9656F9491BD147840043FA38 /* LayoutUtils */ = {
-			isa = PBXGroup;
-			children = (
-				9656F94A1BD147B00043FA38 /* LayoutUtil.h */,
-				9656F94B1BD147B00043FA38 /* LayoutUtil.m */,
-			);
-			path = LayoutUtils;
 			sourceTree = "<group>";
 		};
 		966144561BE129C7003BD75A /* Pet */ = {
@@ -590,21 +576,8 @@
 			isa = PBXGroup;
 			children = (
 				961F04991BDA90E9002A475E /* Framework */,
-				9656F9491BD147840043FA38 /* LayoutUtils */,
-				96DC2C471BCF5F7800126AB6 /* HorizontalCardTableView */,
 			);
 			path = Peer;
-			sourceTree = "<group>";
-		};
-		96DC2C471BCF5F7800126AB6 /* HorizontalCardTableView */ = {
-			isa = PBXGroup;
-			children = (
-				96DC2C481BCF5F8F00126AB6 /* HorizontalCardTableView.h */,
-				96DC2C491BCF5F8F00126AB6 /* HorizontalCardTableView.m */,
-				96DC2C5A1BCF84E300126AB6 /* HCTableViewCell.h */,
-				96DC2C5B1BCF84E300126AB6 /* HCTableViewCell.m */,
-			);
-			path = HorizontalCardTableView;
 			sourceTree = "<group>";
 		};
 		96DC2C4B1BCF6DF300126AB6 /* Home */ = {
@@ -632,6 +605,15 @@
 				96DC2C531BCF7CF500126AB6 /* MobClickSocialAnalytics.h */,
 			);
 			path = UMeng;
+			sourceTree = "<group>";
+		};
+		96E2F4A51BE3042900E6625B /* LayoutUtils */ = {
+			isa = PBXGroup;
+			children = (
+				96E2F4A61BE3042900E6625B /* LayoutUtil.h */,
+				96E2F4A71BE3042900E6625B /* LayoutUtil.m */,
+			);
+			path = LayoutUtils;
 			sourceTree = "<group>";
 		};
 		A5EF66DA01FA01C7F7BB91CC /* Pods */ = {
@@ -795,18 +777,16 @@
 				968B3BD71BCAA52400B8723A /* MomentsService.m in Sources */,
 				96A2D8D41BC032200016AE3F /* ApplicationDirectoryService.m in Sources */,
 				CE2C570E1BD3889700DEAF32 /* HomeBottomView.m in Sources */,
+				96E2F4A81BE3042900E6625B /* LayoutUtil.m in Sources */,
 				9656F9481BD145240043FA38 /* HorizonCardFlowLayout.m in Sources */,
-				96DC2C4A1BCF5F8F00126AB6 /* HorizontalCardTableView.m in Sources */,
 				96E5CB2D1BB1A9EA005503CD /* PetsModel.m in Sources */,
 				96E2F49E1BE2619300E6625B /* PetDetailsHeaderView.m in Sources */,
 				9601042B1BAB1C4600152908 /* PhoneVerifyViewController.m in Sources */,
-				96DC2C5C1BCF84E300126AB6 /* HCTableViewCell.m in Sources */,
 				960104131BA879F600152908 /* LoginView.m in Sources */,
 				9653C6B21BDCA32700D517C8 /* SendMomentViewController.m in Sources */,
 				9653C6A61BDCA31100D517C8 /* MomentDetailsHeaderView.m in Sources */,
 				9608100B1BDFD11300F6F9E2 /* PeerDateFormatter.m in Sources */,
 				960104241BAB117200152908 /* AppModel.m in Sources */,
-				9656F94C1BD147B00043FA38 /* LayoutUtil.m in Sources */,
 				96E5CB2A1BB1A9C3005503CD /* PetsService.m in Sources */,
 				968B3BD41BCAA21D00B8723A /* FileUploadService.m in Sources */,
 				960810041BDFBB6F00F6F9E2 /* MomentDetailsBottomView.m in Sources */,
