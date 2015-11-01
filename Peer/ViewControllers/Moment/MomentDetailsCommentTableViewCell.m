@@ -120,7 +120,7 @@
     }
     
     self.commentView.size  = CGSizeMake(self.contentLabel.width + 20.0, self.contentLabel.height + 20.0f);
-    if ([commentModel.userId isEqualToNumber:[LoginService currentUser].userId]) {
+    if ([LoginService currentUser] && [commentModel.userId isEqualToNumber:[LoginService currentUser].userId]) {
         [self configureUserComments];
     } else {
         [self configurePeopleComments];

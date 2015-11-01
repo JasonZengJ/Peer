@@ -10,6 +10,8 @@
 
 @interface UIColor (Hex)
 
++ (UIColor *)colorWithHex:(uint)hex;
+
 + (UIColor*)colorWithHex:(uint)hex alpha:(CGFloat)alpha;
 
 @end

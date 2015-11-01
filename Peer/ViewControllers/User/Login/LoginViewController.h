@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "RootNavViewController.h"
 
-@interface LoginViewController : UIViewController
+@interface LoginViewController : RootNavViewController
 
 @end

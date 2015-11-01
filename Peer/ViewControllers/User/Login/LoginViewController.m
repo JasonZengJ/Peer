@@ -26,7 +26,7 @@
 
 - (LoginView *)loginView {
     if (!_loginView) {
-        _loginView = [[LoginView alloc] initWithFrame:self.view.frame];
+        _loginView = [[LoginView alloc] initWithFrame:CGRectMake(0, 0, self.view.width, self.view.height)];
         _loginView.delegate = self;
     }
     return _loginView;
@@ -49,8 +49,6 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 
-    
-    [[PeerNetworkManager shareInstance] securePostWithParams:@{} apiPath:@"user/login" target:self callBack:@selector(back)];
    
 }
 
@@ -63,8 +61,33 @@
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent animated:YES];
 }
 
+- (UIBarButtonItem *)leftBackBarButtonItem {
+    
+    UIButton *aButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    aButton.titleEdgeInsets = UIEdgeInsetsMake(1, 0, 0, 0);
+    aButton.titleLabel.adjustsFontSizeToFitWidth = YES;
+    
+    UIImage *backImage = [UIImage imageNamed:@"UserLoginClose"];
+    aButton.frame= CGRectMake(-2, 0.0f,ConvertiPhone5Or6pSize(25), ConvertiPhone5Or6pSize(25));
+    [aButton setImage:backImage forState:UIControlStateNormal];
+    [aButton addTarget:self action:@selector(backButtonAction:) forControlEvents:UIControlEventTouchUpInside];
+    UIBarButtonItem *barButton = [[UIBarButtonItem alloc] initWithCustomView:aButton];
+    return barButton;
+    
+}
+
+
+- (UIBarButtonItem *)rightBarButtonItem {
+    return nil;
+}
+
 
 #pragma mark - -- <LoginViewDelegate>
+
+
+- (void)tapForgetPassword {
+    
+}
 
 - (void)clickedLoginButtonWithPhone:(NSString *)phone password:(NSString *)password {
     

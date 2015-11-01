@@ -10,8 +10,12 @@
 
 @implementation UIColor (Hex)
 
-+ (UIColor *)colorWithHex:(uint)hex alpha:(CGFloat)alpha
-{
++ (UIColor *)colorWithHex:(uint)hex {
+    
+    return [UIColor colorWithHex:hex alpha:1.0];
+}
+
++ (UIColor *)colorWithHex:(uint)hex alpha:(CGFloat)alpha {
     int red,green,blue;
     
     blue  = (hex  & 0x0000FF);

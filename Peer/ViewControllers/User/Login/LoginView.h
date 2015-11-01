@@ -10,6 +10,8 @@
 
 @protocol LoginViewDelegate <NSObject>
 
+- (void)tapForgetPassword;
+
 - (void)clickedLoginButtonWithPhone:(NSString *)phone password:(NSString *)password;
 - (void)clickedRegisterButton;
 

@@ -23,6 +23,8 @@
     if (!_userInfoImageView) {
         _userInfoImageView = [[UIImageView alloc] initWithFrame:CGRectMake(42.5, 0, ConvertiPhone5Or6pSize(25), ConvertiPhone5Or6pSize(25))];
         _userInfoImageView.image = [UIImage imageNamed:@"HomeUser"];
+        _userInfoImageView.userInteractionEnabled = YES;
+        [_userInfoImageView addTapGestureWithTarget:self action:@selector(tapUserInfo)];
         
     }
     
@@ -56,9 +58,16 @@
 }
 
 - (void)layoutSubviews {
-    self.userInfoImageView.centerY  = self.height / 2;
+    self.userInfoImageView.centerY   = self.height / 2;
     self.sendMomentImageView.centerX = self.width / 2;
     self.sendMomentImageView.centerY = self.height / 2;
+}
+
+- (void)tapUserInfo {
+    
+    if (self.delegate && [self.delegate respondsToSelector:@selector(tapUserInfo)]) {
+        [self.delegate tapUserInfo];
+    }
 }
 
 @end

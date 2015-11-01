@@ -9,6 +9,8 @@
 #import "PeerHomeViewController.h"
 #import "MomentDetailsViewController.h"
 #import "PetDetailsViewController.h"
+#import "LoginViewController.h"
+
 #import "CardCollectionViewCell.h"
 
 #import "HorizonCardFlowLayout.h"
@@ -22,7 +24,8 @@
 #import "HomeHeaderView.h"
 
 
-@interface PeerHomeViewController () <UICollectionViewDataSource,UICollectionViewDelegate,CardCollectionViewCellDelegate>
+@interface PeerHomeViewController () <UICollectionViewDataSource,UICollectionViewDelegate,CardCollectionViewCellDelegate,HomeBottomViewDelegate>
+
 
 @property(nonatomic) UICollectionView *collectionView;
 @property(nonatomic) MomentsService   *momentService;
@@ -57,6 +60,7 @@
         _homeBottomView.height = self.collectionView.height - CardHeight - self.homeHeaderView.height - CardEdge;
         _homeBottomView.width  = self.view.width;
         _homeBottomView.top    = self.view.height - _homeBottomView.height;
+        _homeBottomView.delegate = self;
         
     }
     return _homeBottomView;
@@ -117,6 +121,18 @@
         strongSelf.momentsArray = moments;
         [strongSelf.collectionView reloadData];
     }];
+    
+}
+
+#pragma mark - -- <HomeBottomViewDelegate>
+
+- (void)tapUserInfo {
+    
+    LoginViewController *loginViewController = [[LoginViewController alloc] init];
+    loginViewController.backActionType = BackActionTypeDismiss;
+    
+    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:loginViewController];
+    [self presentViewController:navController animated:YES completion:nil];
     
 }
 

@@ -8,8 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol HomeBottomViewDelegate <NSObject>
+
+- (void)tapUserInfo;
+
+@end
+
 @interface HomeBottomView : UIView
 
 
+@property(nonatomic,weak) id<HomeBottomViewDelegate> delegate;
 
 @end
