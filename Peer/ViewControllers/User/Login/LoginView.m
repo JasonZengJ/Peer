@@ -3,7 +3,7 @@
 //  Peer
 //
 //  Created by jason on 9/14/15.
-//  Copyright (c) 2015 goodpeer. All rights reserved.
+//  Copyright © 2015 peers. All rights reserved.
 //
 
 #import "LoginView.h"
@@ -64,7 +64,7 @@
     if (!_phoneTextField) {
         _phoneTextField = [[UITextField alloc] initWithFrame:CGRectMake(0, 0, self.loginTextFieldView.width, ConvertiPhone5Or6pSize(45.0f))];
         _phoneTextField.textColor   = [UIColor colorWithHex:0x4c4c4c];
-        [_passwordTextField setFont:[UIFont systemFontOfSize:ConvertiPhone5Or6pSize(16.0f)]];
+        [_phoneTextField setFont:[UIFont systemFontOfSize:ConvertiPhone5Or6pSize(16.0f)]];
         NSAttributedString * phone = [[NSAttributedString alloc] initWithString:@"请输入手机号码"
                                                                      attributes:@{NSForegroundColorAttributeName: [UIColor colorWithHex:0xe5e5e5],
                                                                                   NSFontAttributeName: [UIFont systemFontOfSize:ConvertiPhone5Or6pSize(16.0f)]}];

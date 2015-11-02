@@ -3,15 +3,16 @@
 //  Peer
 //
 //  Created by jason on 9/9/15.
-//  Copyright (c) 2015 goodpeer. All rights reserved.
+//  Copyright © 2015 peers. All rights reserved.
 //
 
 #import "LoginViewController.h"
 #import "LoginView.h"
 #import "LoginService.h"
-#import "PeerNetworkManager.h"
-#import "PhoneVerifyViewController.h"
 #import "UserModel.h"
+
+#import "PhoneVerifyViewController.h"
+
 
 @interface LoginViewController () <LoginViewDelegate>
 
@@ -105,7 +106,10 @@
     
 //    NSString *phone = @"18501638736";
     
-//    UINavigationController *nav = [[PhoneVerifyViewController alloc] init];
+    
+    PhoneVerifyViewController *phoneVerifyViewController = [[PhoneVerifyViewController alloc] init];
+    phoneVerifyViewController.backActionType = BackActionTypePop;
+    [self.navigationController pushViewController:phoneVerifyViewController animated:YES];
     
 //    [self presentViewController:nav animated:YES completion:^{
 //        

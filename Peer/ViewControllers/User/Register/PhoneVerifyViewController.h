@@ -3,11 +3,13 @@
 //  Peer
 //
 //  Created by jason on 9/18/15.
-//  Copyright (c) 2015 goodpeer. All rights reserved.
+//  Copyright © 2015 peers. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@interface PhoneVerifyViewController : UIViewController
+#import "RootNavViewController.h"
+
+@interface PhoneVerifyViewController : RootNavViewController
 
 @end

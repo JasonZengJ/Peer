@@ -1,14 +1,14 @@
 //
-//  LoginViewController.h
+//  RegisterInfoViewController.h
 //  Peer
 //
-//  Created by jason on 9/9/15.
+//  Created by jason on 11/2/15.
 //  Copyright © 2015 peers. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 #import "RootNavViewController.h"
 
-@interface LoginViewController : RootNavViewController
+@interface RegisterInfoViewController : RootNavViewController
 
 @end

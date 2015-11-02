@@ -31,6 +31,7 @@
     self.navigationItem.leftBarButtonItem  = [self leftBackBarButtonItem];
     self.navigationItem.rightBarButtonItem = [self rightBarButtonItem];
     self.view.backgroundColor = [UIColor colorWithHex:0xfafafa alpha:1.0];
+    [self setTitleTextAttributes];
 }
 
 - (void)viewDidLoad {
@@ -62,6 +63,16 @@
     [aButton addTarget:self action:@selector(backButtonAction:) forControlEvents:UIControlEventTouchUpInside];
     UIBarButtonItem *barButton = [[UIBarButtonItem alloc] initWithCustomView:aButton];
     return barButton;
+}
+
+- (void)setTitleTextAttributes {
+    
+    NSDictionary * dict = @{
+                            NSForegroundColorAttributeName:[UIColor colorWithHex:0x4c4c4c],
+                            NSFontAttributeName:[UIFont systemFontOfSize:17.0f]
+                            };
+    self.navigationController.navigationBar.titleTextAttributes = dict;
+    
 }
 
 
