@@ -18,7 +18,6 @@
 
 @property(nonatomic) LoginView *loginView;
 @property(nonatomic) LoginService* loginService;
-@property(nonatomic) CGFloat animateDistance;
 @property(nonatomic) SDCycleScrollView *cycleScrollView;
 
 @end
@@ -108,16 +107,16 @@
 
 - (void)keyboardWillShow:(NSNotification *)notification {
     
+    
     CGRect keyboardRect = [[notification.userInfo objectForKey:UIKeyboardFrameEndUserInfoKey] CGRectValue];
     double duration     = [[notification.userInfo objectForKey:UIKeyboardAnimationDurationUserInfoKey] doubleValue];
     NSInteger curve     = [[notification.userInfo objectForKey:UIKeyboardAnimationCurveUserInfoKey] integerValue];
     
     CGFloat animateDistance = keyboardRect.size.height - (self.loginView.height - self.loginView.loginTextFieldView.bottom);
-    self.animateDistance    = animateDistance;
     [UIView animateWithDuration:duration delay:0 options:curve animations:^{
         
-        self.loginView.logoImageView.alpha = 0;
-        self.loginView.top -= animateDistance;
+        self.loginView.logoImageView.hidden = YES;
+        self.loginView.top = -animateDistance;
         
     } completion:^(BOOL finished) {
         
@@ -132,11 +131,10 @@
     
     [UIView animateWithDuration:duration delay:0 options:curve animations:^{
         
-        self.loginView.logoImageView.alpha = 1;
-        self.loginView.top += self.animateDistance;
+        self.loginView.logoImageView.hidden = NO;
+        self.loginView.top = 0;
         
     } completion:^(BOOL finished) {
-        
     }];
 }
 
