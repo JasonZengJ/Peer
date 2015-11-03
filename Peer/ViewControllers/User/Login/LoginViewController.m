@@ -18,6 +18,7 @@
 
 @property(nonatomic) LoginView *loginView;
 @property(nonatomic) LoginService* loginService;
+@property(nonatomic) CGFloat loginTextfieldOriginTop;
 
 @end
 
@@ -50,6 +51,9 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillShow:) name:UIKeyboardWillShowNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillHide:) name:UIKeyboardWillHideNotification object:nil];
+    
    
 }
 
@@ -69,7 +73,7 @@
     aButton.titleLabel.adjustsFontSizeToFitWidth = YES;
     
     UIImage *backImage = [UIImage imageNamed:@"UserLoginClose"];
-    aButton.frame= CGRectMake(-2, 0.0f,ConvertiPhone5Or6pSize(25), ConvertiPhone5Or6pSize(25));
+    aButton.frame = CGRectMake(-2, 0.0f,ConvertiPhone5Or6pSize(25), ConvertiPhone5Or6pSize(25));
     [aButton setImage:backImage forState:UIControlStateNormal];
     [aButton addTarget:self action:@selector(backButtonAction:) forControlEvents:UIControlEventTouchUpInside];
     UIBarButtonItem *barButton = [[UIBarButtonItem alloc] initWithCustomView:aButton];
@@ -80,6 +84,45 @@
 
 - (UIBarButtonItem *)rightBarButtonItem {
     return nil;
+}
+
+- (void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
+#pragma mark - -- KeybordNotification
+
+- (void)keyboardWillShow:(NSNotification *)notification {
+    
+    CGRect keyboardRect = [[notification.userInfo objectForKey:UIKeyboardFrameEndUserInfoKey] CGRectValue];
+    double duration     = [[notification.userInfo objectForKey:UIKeyboardAnimationDurationUserInfoKey] doubleValue];
+    NSInteger curve     = [[notification.userInfo objectForKey:UIKeyboardAnimationCurveUserInfoKey] integerValue];
+    self.loginTextfieldOriginTop = self.loginView.loginTextFieldView.top;
+    [UIView animateWithDuration:duration delay:0 options:curve animations:^{
+        
+        self.loginView.logoImageView.alpha = 0;
+        CGFloat animateDistance = keyboardRect.size.height - (self.loginView.height - self.loginView.loginTextFieldView.bottom);
+        self.loginView.loginTextFieldView.top -= animateDistance;
+        
+    } completion:^(BOOL finished) {
+        
+    }];
+    
+}
+
+- (void)keyboardWillHide:(NSNotification *)notification {
+    
+    double duration     = [[notification.userInfo objectForKey:UIKeyboardAnimationDurationUserInfoKey] doubleValue];
+    NSInteger curve     = [[notification.userInfo objectForKey:UIKeyboardAnimationCurveUserInfoKey] integerValue];
+    
+    [UIView animateWithDuration:duration delay:0 options:curve animations:^{
+        
+        self.loginView.logoImageView.alpha = 1;
+        self.loginView.loginTextFieldView.top = self.loginTextfieldOriginTop;
+        
+    } completion:^(BOOL finished) {
+        
+    }];
 }
 
 

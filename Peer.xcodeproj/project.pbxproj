@@ -63,6 +63,8 @@
 		967E50561BE7A5F50054B1DC /* RegisterInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 967E50551BE7A5F50054B1DC /* RegisterInfoViewController.m */; settings = {ASSET_TAGS = (); }; };
 		967E50591BE7A87E0054B1DC /* PhoneVerifyView.m in Sources */ = {isa = PBXBuildFile; fileRef = 967E50581BE7A87E0054B1DC /* PhoneVerifyView.m */; settings = {ASSET_TAGS = (); }; };
 		967E505C1BE7BB1C0054B1DC /* RegisterInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 967E505B1BE7BB1C0054B1DC /* RegisterInfoView.m */; settings = {ASSET_TAGS = (); }; };
+		967E505F1BE7C0100054B1DC /* RegisterInfoViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 967E505E1BE7C0100054B1DC /* RegisterInfoViewCell.m */; settings = {ASSET_TAGS = (); }; };
+		967E50621BE9112B0054B1DC /* NSString+Condition.m in Sources */ = {isa = PBXBuildFile; fileRef = 967E50611BE9112B0054B1DC /* NSString+Condition.m */; settings = {ASSET_TAGS = (); }; };
 		968B3BD41BCAA21D00B8723A /* FileUploadService.m in Sources */ = {isa = PBXBuildFile; fileRef = 968B3BD31BCAA21D00B8723A /* FileUploadService.m */; settings = {ASSET_TAGS = (); }; };
 		968B3BD71BCAA52400B8723A /* MomentsService.m in Sources */ = {isa = PBXBuildFile; fileRef = 968B3BD61BCAA52400B8723A /* MomentsService.m */; settings = {ASSET_TAGS = (); }; };
 		968B3BDA1BCAA59400B8723A /* Pagination.m in Sources */ = {isa = PBXBuildFile; fileRef = 968B3BD91BCAA59400B8723A /* Pagination.m */; settings = {ASSET_TAGS = (); }; };
@@ -80,7 +82,6 @@
 		96E2F4A81BE3042900E6625B /* LayoutUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E2F4A71BE3042900E6625B /* LayoutUtil.m */; settings = {ASSET_TAGS = (); }; };
 		96E5CB2A1BB1A9C3005503CD /* PetsService.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E5CB291BB1A9C3005503CD /* PetsService.m */; };
 		96E5CB2D1BB1A9EA005503CD /* PetsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E5CB2C1BB1A9EA005503CD /* PetsModel.m */; };
-		96E5CB301BB1B18E005503CD /* NSDictionary+AddObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E5CB2F1BB1B18E005503CD /* NSDictionary+AddObject.m */; };
 		CE2C57081BD37AC900DEAF32 /* NSString+Size.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2C57071BD37AC900DEAF32 /* NSString+Size.m */; settings = {ASSET_TAGS = (); }; };
 		CE2C570B1BD3885800DEAF32 /* HomeHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2C570A1BD3885800DEAF32 /* HomeHeaderView.m */; settings = {ASSET_TAGS = (); }; };
 		CE2C570E1BD3889700DEAF32 /* HomeBottomView.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2C570D1BD3889700DEAF32 /* HomeBottomView.m */; settings = {ASSET_TAGS = (); }; };
@@ -205,6 +206,10 @@
 		967E50581BE7A87E0054B1DC /* PhoneVerifyView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhoneVerifyView.m; sourceTree = "<group>"; };
 		967E505A1BE7BB1C0054B1DC /* RegisterInfoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterInfoView.h; sourceTree = "<group>"; };
 		967E505B1BE7BB1C0054B1DC /* RegisterInfoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterInfoView.m; sourceTree = "<group>"; };
+		967E505D1BE7C0100054B1DC /* RegisterInfoViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterInfoViewCell.h; sourceTree = "<group>"; };
+		967E505E1BE7C0100054B1DC /* RegisterInfoViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterInfoViewCell.m; sourceTree = "<group>"; };
+		967E50601BE9112B0054B1DC /* NSString+Condition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Condition.h"; sourceTree = "<group>"; };
+		967E50611BE9112B0054B1DC /* NSString+Condition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Condition.m"; sourceTree = "<group>"; };
 		968B3BD21BCAA21D00B8723A /* FileUploadService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileUploadService.h; sourceTree = "<group>"; };
 		968B3BD31BCAA21D00B8723A /* FileUploadService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileUploadService.m; sourceTree = "<group>"; };
 		968B3BD51BCAA52400B8723A /* MomentsService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MomentsService.h; sourceTree = "<group>"; };
@@ -238,8 +243,6 @@
 		96E5CB291BB1A9C3005503CD /* PetsService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PetsService.m; sourceTree = "<group>"; };
 		96E5CB2B1BB1A9EA005503CD /* PetsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PetsModel.h; sourceTree = "<group>"; };
 		96E5CB2C1BB1A9EA005503CD /* PetsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PetsModel.m; sourceTree = "<group>"; };
-		96E5CB2E1BB1B18E005503CD /* NSDictionary+AddObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+AddObject.h"; sourceTree = "<group>"; };
-		96E5CB2F1BB1B18E005503CD /* NSDictionary+AddObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+AddObject.m"; sourceTree = "<group>"; };
 		A1FE296EA4C7788C849801D9 /* Pods-Peer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Peer.release.xcconfig"; path = "Pods/Target Support Files/Pods-Peer/Pods-Peer.release.xcconfig"; sourceTree = "<group>"; };
 		CE2C57061BD37AC900DEAF32 /* NSString+Size.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Size.h"; sourceTree = "<group>"; };
 		CE2C57071BD37AC900DEAF32 /* NSString+Size.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Size.m"; sourceTree = "<group>"; };
@@ -345,12 +348,12 @@
 				960103FC1BA879C800152908 /* UIImage+Color.m */,
 				960103FD1BA879C800152908 /* UIView+Layout.h */,
 				960103FE1BA879C800152908 /* UIView+Layout.m */,
-				96E5CB2E1BB1B18E005503CD /* NSDictionary+AddObject.h */,
-				96E5CB2F1BB1B18E005503CD /* NSDictionary+AddObject.m */,
-				CE2C57061BD37AC900DEAF32 /* NSString+Size.h */,
-				CE2C57071BD37AC900DEAF32 /* NSString+Size.m */,
 				960810051BDFCE7300F6F9E2 /* NSDate+Formatter.h */,
 				960810061BDFCE7300F6F9E2 /* NSDate+Formatter.m */,
+				CE2C57061BD37AC900DEAF32 /* NSString+Size.h */,
+				CE2C57071BD37AC900DEAF32 /* NSString+Size.m */,
+				967E50601BE9112B0054B1DC /* NSString+Condition.h */,
+				967E50611BE9112B0054B1DC /* NSString+Condition.m */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -448,6 +451,8 @@
 				9601042A1BAB1C4600152908 /* PhoneVerifyViewController.m */,
 				967E505A1BE7BB1C0054B1DC /* RegisterInfoView.h */,
 				967E505B1BE7BB1C0054B1DC /* RegisterInfoView.m */,
+				967E505D1BE7C0100054B1DC /* RegisterInfoViewCell.h */,
+				967E505E1BE7C0100054B1DC /* RegisterInfoViewCell.m */,
 				967E50541BE7A5F50054B1DC /* RegisterInfoViewController.h */,
 				967E50551BE7A5F50054B1DC /* RegisterInfoViewController.m */,
 			);
@@ -857,7 +862,6 @@
 				960104021BA879C800152908 /* UIView+Layout.m in Sources */,
 				966B51821B7F8D70000F0EF2 /* AppDelegate.m in Sources */,
 				967E50561BE7A5F50054B1DC /* RegisterInfoViewController.m in Sources */,
-				96E5CB301BB1B18E005503CD /* NSDictionary+AddObject.m in Sources */,
 				96A2D8DD1BC119C70016AE3F /* OSSFileManager.m in Sources */,
 				960103FF1BA879C800152908 /* NSData+JSON.m in Sources */,
 				960104271BAB1B2300152908 /* UserModel.m in Sources */,
@@ -874,6 +878,7 @@
 				9601042B1BAB1C4600152908 /* PhoneVerifyViewController.m in Sources */,
 				960104131BA879F600152908 /* LoginView.m in Sources */,
 				9653C6B21BDCA32700D517C8 /* SendMomentViewController.m in Sources */,
+				967E50621BE9112B0054B1DC /* NSString+Condition.m in Sources */,
 				9653C6A61BDCA31100D517C8 /* MomentDetailsHeaderView.m in Sources */,
 				961C964F1BE61D0B008EDF91 /* SDCollectionViewCell.m in Sources */,
 				9608100B1BDFD11300F6F9E2 /* PeerDateFormatter.m in Sources */,
@@ -886,6 +891,7 @@
 				961C964E1BE61D0B008EDF91 /* TAPageControl.m in Sources */,
 				CE2C57081BD37AC900DEAF32 /* NSString+Size.m in Sources */,
 				960104151BA879F600152908 /* ViewController.m in Sources */,
+				967E505F1BE7C0100054B1DC /* RegisterInfoViewCell.m in Sources */,
 				9653C6B41BDCA32700D517C8 /* SendVideoMomentViewController.m in Sources */,
 				960104351BAD6AB700152908 /* TestViewController.m in Sources */,
 				960104091BA879E200152908 /* LoginService.m in Sources */,

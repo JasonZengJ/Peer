@@ -11,7 +11,6 @@
 #import "CommentModel.h"
 #import "PetsModel.h"
 #import "PeerNetworkManager.h"
-#import "NSDictionary+AddObject.h"
 
 #define MomentsAllPath           @"v1/moments/moments-all"
 #define ViewPetsMomentCountPath  @"v1/moments/view-pets-moment-count"

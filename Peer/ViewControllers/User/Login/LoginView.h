@@ -19,6 +19,9 @@
 
 @interface LoginView : UIView
 
+@property(nonatomic) UIView      *loginTextFieldView;
+@property(nonatomic) UIImageView *logoImageView;
+
 @property(nonatomic,weak) id<LoginViewDelegate>delegate;
 
 @end

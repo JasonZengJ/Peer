@@ -8,7 +8,6 @@
 
 #import "PeerNetworkManager.h"
 #import "NSData+JSON.h"
-#import "NSDictionary+AddObject.h"
 #import "OpenUDID.h"
 #import "AppService.h"
 
@@ -165,7 +164,6 @@
 
 - (void)getWithParams:(NSDictionary *)params url:(NSString *)url target:(id)target callBack:(SEL)callBack {
     
-    params = [params addObject:[AppService token] forKey:@"token"];
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     [self printStartRequestWithUrl:url params:params];
     
