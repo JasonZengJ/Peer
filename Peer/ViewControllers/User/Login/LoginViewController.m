@@ -12,17 +12,30 @@
 #import "UserModel.h"
 
 #import "PhoneVerifyViewController.h"
-
+#import "SDCycleScrollView.h"
 
 @interface LoginViewController () <LoginViewDelegate>
 
 @property(nonatomic) LoginView *loginView;
 @property(nonatomic) LoginService* loginService;
-@property(nonatomic) CGFloat loginTextfieldOriginTop;
+@property(nonatomic) CGFloat animateDistance;
+@property(nonatomic) SDCycleScrollView *cycleScrollView;
 
 @end
 
 @implementation LoginViewController
+
+
+- (SDCycleScrollView *)cycleScrollView {
+    if (!_cycleScrollView) {
+        _cycleScrollView = [[SDCycleScrollView alloc] initWithFrame:CGRectMake(0, 0, self.view.width, self.view.height)];
+        _cycleScrollView.localizationImagesGroup = @[[UIImage imageNamed:@"UserLoginBg3"],[UIImage imageNamed:@"UserLoginBg2"],[UIImage imageNamed:@"UserLoginBg1"]];
+        _cycleScrollView.autoScrollTimeInterval  = 3.0;
+        _cycleScrollView.showPageControl = NO;
+        _cycleScrollView.userInteractionEnabled = NO;
+    }
+    return _cycleScrollView;
+}
 
 
 
@@ -44,6 +57,7 @@
 - (void)loadView {
     [super loadView];
     self.view.backgroundColor = [UIColor whiteColor];
+    [self.view addSubview:self.cycleScrollView];
     [self.view addSubview:self.loginView];
 }
 
@@ -97,12 +111,13 @@
     CGRect keyboardRect = [[notification.userInfo objectForKey:UIKeyboardFrameEndUserInfoKey] CGRectValue];
     double duration     = [[notification.userInfo objectForKey:UIKeyboardAnimationDurationUserInfoKey] doubleValue];
     NSInteger curve     = [[notification.userInfo objectForKey:UIKeyboardAnimationCurveUserInfoKey] integerValue];
-    self.loginTextfieldOriginTop = self.loginView.loginTextFieldView.top;
+    
+    CGFloat animateDistance = keyboardRect.size.height - (self.loginView.height - self.loginView.loginTextFieldView.bottom);
+    self.animateDistance    = animateDistance;
     [UIView animateWithDuration:duration delay:0 options:curve animations:^{
         
         self.loginView.logoImageView.alpha = 0;
-        CGFloat animateDistance = keyboardRect.size.height - (self.loginView.height - self.loginView.loginTextFieldView.bottom);
-        self.loginView.loginTextFieldView.top -= animateDistance;
+        self.loginView.top -= animateDistance;
         
     } completion:^(BOOL finished) {
         
@@ -118,7 +133,7 @@
     [UIView animateWithDuration:duration delay:0 options:curve animations:^{
         
         self.loginView.logoImageView.alpha = 1;
-        self.loginView.loginTextFieldView.top = self.loginTextfieldOriginTop;
+        self.loginView.top += self.animateDistance;
         
     } completion:^(BOOL finished) {
         

@@ -23,7 +23,6 @@
 @property(nonatomic) UIButton    *wechatLoginButton;
 @property(nonatomic) UIButton    *weiboLoginButton;
 @property(nonatomic) UIButton    *qqLoginButton;
-@property(nonatomic) SDCycleScrollView *cycleScrollView;
 
 @end
 
@@ -38,16 +37,6 @@
 }
 
 
-- (SDCycleScrollView *)cycleScrollView {
-    if (!_cycleScrollView) {
-        _cycleScrollView = [[SDCycleScrollView alloc] initWithFrame:CGRectMake(0, 0, self.width, self.height)];
-        _cycleScrollView.localizationImagesGroup = @[[UIImage imageNamed:@"UserLoginBg3"],[UIImage imageNamed:@"UserLoginBg2"],[UIImage imageNamed:@"UserLoginBg1"]];
-        _cycleScrollView.autoScrollTimeInterval  = 3.0;
-        _cycleScrollView.showPageControl = NO;
-        _cycleScrollView.userInteractionEnabled = NO;
-    }
-    return _cycleScrollView;
-}
 
 - (UIImageView *)logoImageView {
     if (!_logoImageView) {
@@ -111,16 +100,13 @@
 
 - (UIButton *)loginButton {
     if (!_loginButton) {
-        _loginButton = [[UIButton alloc] initWithFrame:CGRectMake(10, self.passwordTextField.bottom + 30, (self.width - 30.0f) / 2, ConvertiPhone5Or6pSize(45.0f))];
-        _loginButton.bottom = self.height - 15.0f;
-        _loginButton.layer.borderWidth  = 1;
-        _loginButton.layer.borderColor  = [UIColor whiteColor].CGColor;
+        _loginButton = [[UIButton alloc] initWithFrame:CGRectMake(self.registerButton.right + 10.0f, self.registerButton.top,self.registerButton.width, self.registerButton.height)];
         _loginButton.layer.cornerRadius = 4;
         _loginButton.clipsToBounds      = YES;
         [_loginButton setTitle:@"登陆" forState:UIControlStateNormal];
         [_loginButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         [_loginButton setTitleColor:[UIColor colorWithHex:0xFFB100 alpha:1.0] forState:UIControlStateHighlighted];
-        [_loginButton setBackgroundImage:[UIImage imageWithColor:[UIColor colorWithHex:0x2fe000 ]] forState:UIControlStateNormal];
+        [_loginButton setBackgroundImage:[UIImage imageWithColor:[UIColor colorWithHex:0xffb800 ]] forState:UIControlStateNormal];
         [_loginButton addTarget:self action:@selector(clickedLoginButton) forControlEvents:UIControlEventTouchUpInside];
     }
     return _loginButton;
@@ -128,15 +114,14 @@
 
 - (UIButton *)registerButton {
     if (!_registerButton) {
-        _registerButton = [[UIButton alloc] initWithFrame:CGRectMake(self.loginButton.right + 10.0f, self.loginButton.top , self.loginButton.width, ConvertiPhone5Or6pSize(45.0f))];
-        _registerButton.layer.borderWidth  = 1;
-        _registerButton.layer.borderColor  = [UIColor whiteColor].CGColor;
+        _registerButton = [[UIButton alloc] initWithFrame:CGRectMake(10.0f, self.passwordTextField.bottom + 30 , (self.width - 30.0f) / 2, ConvertiPhone5Or6pSize(45.0f))];
+        _registerButton.bottom = self.height - 15.0f;
         _registerButton.layer.cornerRadius = 4;
         _registerButton.clipsToBounds      = YES;
         [_registerButton setTitle:@"注册" forState:UIControlStateNormal];
         [_registerButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         [_registerButton setTitleColor:[UIColor colorWithHex:0xFFB100 alpha:1.0] forState:UIControlStateHighlighted];
-        [_registerButton setBackgroundImage:[UIImage imageWithColor:[UIColor colorWithHex:0xffb800]] forState:UIControlStateNormal];
+        [_registerButton setBackgroundImage:[UIImage imageWithColor:[UIColor colorWithHex:0x2fe000]] forState:UIControlStateNormal];
         [_registerButton addTarget:self action:@selector(clickedRegisterButton) forControlEvents:UIControlEventTouchUpInside];
     }
     return _registerButton;
@@ -157,7 +142,6 @@
     tapGR.numberOfTapsRequired = 1;
     [self addGestureRecognizer:tapGR];
     
-    [self addSubview:self.cycleScrollView];
     [self addSubview:self.backgroundImageView];
     [self addSubview:self.logoImageView];
     [self addSubview:self.loginTextFieldView];
