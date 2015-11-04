@@ -19,10 +19,10 @@
  NSString *HostName = @"http://localhost";
 
 // 本机环境
- NSString *SecureHostName = @"https://localhost";
+// NSString *SecureHostName = @"https://localhost";
 
 // 局域网环境
-// NSString *SecureHostName = @"https://192.168.1.102";
+ NSString *SecureHostName = @"https://192.168.1.101";
 
 // 测试服务器环境
 // NSString *SecureHostName = @"https://api.jasonlife.me";

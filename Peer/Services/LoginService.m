@@ -42,10 +42,12 @@
 // 用户登录完成，如果登录成功，则保存用户数据到本地
 - (void)loginCompleted:(NSDictionary *)dataDic {
     
-    NSDictionary *error = nil;
+    NSError *error = nil;
     if ([dataDic[@"code"] integerValue] == 0) {
         DLog(@"登录成功！");
         [self persistUserData:dataDic[@"data"]];
+    } else {
+        error = [NSError errorWithDomain:dataDic[@"msg"] code:[dataDic[@"code"] integerValue] userInfo:nil];
     }
     
     if (self.delegate && [self.delegate respondsToSelector:@selector(loginCompleteWithError:)]) {
@@ -57,16 +59,17 @@
 #pragma mark - -- Register
 
 
-- (void)getVerificationCodeWithPhone:(NSString *)phone result:(void(^)(BOOL isSuccess))result {
+- (void)getVerificationCodeWithPhone:(NSString *)phone result:(void(^)(NSError *err))result {
     
     [SMS_SDK getVerificationCodeBySMSWithPhone:phone zone:@"86" result:^(SMS_SDKError *error) {
         //注意区号和手机号码前面都不要加“＋”号，有的开发者喜欢这样写，@“＋86”，这种是错误的写法
         if (!error) {
             NSLog(@"获取验证码成功");
-            result(YES);
+            result(nil);
         } else {
             NSLog(@"错误吗：%zi,错误描述：%@",error.errorCode,error.errorDescription);
-            result(NO);
+            NSError *err = [NSError errorWithDomain:error.errorDescription code:error.errorCode userInfo:nil];
+            result(err);
         }
     }];
     

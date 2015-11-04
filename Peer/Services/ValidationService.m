@@ -11,11 +11,11 @@
 @implementation ValidationService
 
 
-- (BOOL)validateNumber:(NSString *) textString
++ (BOOL)checkNumber:(NSString *)number
 {
-    NSString* number=@"^[0-9]+$";
-    NSPredicate *numberPre = [NSPredicate predicateWithFormat:@"SELF MATCHES %@",number];
-    return [numberPre evaluateWithObject:textString];
+    NSString* numberMatch=@"^[0-9]+$";
+    NSPredicate *numberPre = [NSPredicate predicateWithFormat:@"SELF MATCHES %@",numberMatch];
+    return [numberPre evaluateWithObject:number];
 }
 
 + (BOOL)checkPhoneNumber:(NSString *)phoneNumber {
@@ -23,12 +23,12 @@
     NSString *rule = @"^1(3|5|7|8|4)\\d{9}";
     NSPredicate* pred = [NSPredicate predicateWithFormat:@"SELF MATCHES %@",rule];
     BOOL isMatch = [pred evaluateWithObject:phoneNumber];
-    if (isMatch) {
+    if (!isMatch) {
         return false;
     }
-    if (phoneNumber.length != 11) {
-        return false;
-    }
+//    if (phoneNumber.length != 11) {
+//        return false;
+//    }
     
     return YES;
 }

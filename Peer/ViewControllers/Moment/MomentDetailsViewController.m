@@ -24,6 +24,7 @@
 @property(nonatomic) MomentDetailsHeaderView *headerView;
 @property(nonatomic) MomentDetailsBottomView *bottomView;
 @property(nonatomic) MomentsService *momentsService;
+
 @property(nonatomic) NSArray *commentsDataArray;
 @property(nonatomic) NSArray *likedUsersArray;
 @property(nonatomic) NSMutableArray *cellHeightArray;
@@ -51,7 +52,6 @@
         _headerView = [[MomentDetailsHeaderView alloc] initWithFrame:CGRectMake(0, 0, self.view.width, self.view.height - 64.0)];
         _headerView.backgroundColor = [UIColor whiteColor];
         _headerView.delegate        = self;
-        [_headerView configureWithMomentModel:self.momentModel];
     }
     return _headerView;
 }
@@ -70,6 +70,8 @@
     return _momentsService;
 }
 
+
+
 - (void)loadView {
     [super loadView];
     
@@ -84,8 +86,15 @@
     self.cellHeightArray      = [NSMutableArray array];
     self.commentsDataArray    = [NSArray array];
     
+    [self configureHeaderView];
     [self loadCommentData];
     [self loadLikedUsers];
+}
+
+- (void)configureHeaderView {
+    
+    [self.headerView configureWithMomentModel:self.momentModel];
+    
 }
 
 - (void)loadCommentData {

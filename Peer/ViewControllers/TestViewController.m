@@ -91,7 +91,7 @@
 }
 
 - (void)testGetVerificationCode {
-    [self.loginService getVerificationCodeWithPhone:@"18501638736" result:^(BOOL isSuccess) {
+    [self.loginService getVerificationCodeWithPhone:@"18501638736" result:^(NSError *error) {
         
     }];
 }

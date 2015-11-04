@@ -7,13 +7,13 @@
 //
 
 #import "PhoneVerifyView.h"
+#import "UIImage+Color.h"
 
 @interface PhoneVerifyView ()
 
-@property(nonatomic) UITextField *phoneTextField;
-@property(nonatomic) UITextField *verifyCodeTextField;
-@property(nonatomic) UITextField *passwordTextField;
-@property(nonatomic) UIButton    *getVerifyCodeButton;
+@property(nonatomic) UIButton *getVerifyCodeButton;
+@property(nonatomic) NSInteger seconds;
+@property(nonatomic) NSTimer *timer;
 
 @end
 
@@ -74,14 +74,22 @@
         _getVerifyCodeButton = [[UIButton alloc] initWithFrame:CGRectMake(self.verifyCodeTextField.right + 10.0f, self.verifyCodeTextField.top, ConvertiPhone5Or6pSize(130.0f), ConvertiPhone5Or6pSize(45.0f))];
         _getVerifyCodeButton.titleLabel.font    = [UIFont systemFontOfSize:ConvertiPhone5Or6pSize(16.0f)];
         _getVerifyCodeButton.layer.cornerRadius = 3;
-        [_getVerifyCodeButton setBackgroundColor:[UIColor colorWithHex:0xffb800]];
+        _getVerifyCodeButton.clipsToBounds = YES;
+        [_getVerifyCodeButton setBackgroundImage:[UIImage imageWithColor:[UIColor colorWithHex:0xffb800]] forState:UIControlStateNormal];
         [_getVerifyCodeButton setTitle:@"获取验证码" forState:UIControlStateNormal];
         [_getVerifyCodeButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+        [_getVerifyCodeButton addTarget:self action:@selector(clickedGetVerifyCodeButton) forControlEvents:UIControlEventTouchUpInside];
     }
     
     return _getVerifyCodeButton;
 }
 
+- (NSTimer *)timer {
+    if (!_timer) {
+        _timer = [NSTimer timerWithTimeInterval:1 target:self selector:@selector(timerSecond) userInfo:nil repeats:YES];
+    }
+    return _timer;
+}
 
 - (instancetype)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
@@ -115,6 +123,43 @@
     leftImageView.frame   = CGRectMake(10.0, 0, ConvertiPhone5Or6pSize(20.0f), ConvertiPhone5Or6pSize(20.0f));
     leftImageView.centerY = textField.height / 2 - 1;
     [textField.leftView addSubview:leftImageView];
+}
+
+#pragma mark - -- ButtonAction 
+
+- (void)clickedGetVerifyCodeButton {
+    
+    if (self.delegate && [self.delegate respondsToSelector:@selector(clickedGetVerifyCodeButtonWithPhone:)]) {
+        [self.delegate clickedGetVerifyCodeButtonWithPhone:self.phoneTextField.text];
+    }
+}
+
+- (void)disableGetVerifyCodeButtonForSeconds:(NSInteger)seconds {
+    
+    self.seconds = seconds;
+    [self.getVerifyCodeButton setEnabled:NO];
+    [self.getVerifyCodeButton setBackgroundImage:[UIImage imageWithColor:[UIColor colorWithHex:0xcccccc]] forState:UIControlStateNormal];
+    [self.getVerifyCodeButton setTitle:[NSString stringWithFormat:@"获取验证码(%ld)",seconds] forState:UIControlStateNormal];
+    
+    [[NSRunLoop currentRunLoop] addTimer:self.timer forMode:NSRunLoopCommonModes];
+}
+
+
+- (void)recoverGetVerifyCodeButton {
+    [self.getVerifyCodeButton setEnabled:YES];
+    [self.getVerifyCodeButton setBackgroundImage:[UIImage imageWithColor:[UIColor colorWithHex:0xffb800]] forState:UIControlStateNormal];
+    [self.getVerifyCodeButton setTitle:@"获取验证码" forState:UIControlStateNormal];
+}
+
+- (void)timerSecond {
+ 
+    if (self.seconds <= 0) {
+        [self.timer invalidate];
+        _timer = nil;
+        return;
+    }
+    [self.getVerifyCodeButton setTitle:[NSString stringWithFormat:@"获取验证码(%ld)",self.seconds--] forState:UIControlStateNormal];
+    
 }
 
 @end

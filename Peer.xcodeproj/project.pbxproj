@@ -46,6 +46,7 @@
 		961C96511BE61D0B008EDF91 /* UIView+SDExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 961C964A1BE61D0B008EDF91 /* UIView+SDExtension.m */; settings = {ASSET_TAGS = (); }; };
 		961D2E4A1BA715C200C84C8B /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 961D2E491BA715C200C84C8B /* QuartzCore.framework */; };
 		961D2E4C1BA715D500C84C8B /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 961D2E4B1BA715D500C84C8B /* Accelerate.framework */; };
+		962008851BEA442800173EA8 /* UIAlertView+AlertMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 962008841BEA442800173EA8 /* UIAlertView+AlertMessage.m */; settings = {ASSET_TAGS = (); }; };
 		9653C6A51BDCA31100D517C8 /* MomentDetailsCommentTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9653C6991BDCA31100D517C8 /* MomentDetailsCommentTableViewCell.m */; settings = {ASSET_TAGS = (); }; };
 		9653C6A61BDCA31100D517C8 /* MomentDetailsHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9653C69B1BDCA31100D517C8 /* MomentDetailsHeaderView.m */; settings = {ASSET_TAGS = (); }; };
 		9653C6A71BDCA31100D517C8 /* MomentDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9653C69D1BDCA31100D517C8 /* MomentDetailsViewController.m */; settings = {ASSET_TAGS = (); }; };
@@ -170,6 +171,8 @@
 		961C964A1BE61D0B008EDF91 /* UIView+SDExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+SDExtension.m"; sourceTree = "<group>"; };
 		961D2E491BA715C200C84C8B /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		961D2E4B1BA715D500C84C8B /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		962008831BEA442800173EA8 /* UIAlertView+AlertMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertView+AlertMessage.h"; sourceTree = "<group>"; };
+		962008841BEA442800173EA8 /* UIAlertView+AlertMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+AlertMessage.m"; sourceTree = "<group>"; };
 		9653C6981BDCA31100D517C8 /* MomentDetailsCommentTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MomentDetailsCommentTableViewCell.h; sourceTree = "<group>"; };
 		9653C6991BDCA31100D517C8 /* MomentDetailsCommentTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MomentDetailsCommentTableViewCell.m; sourceTree = "<group>"; };
 		9653C69A1BDCA31100D517C8 /* MomentDetailsHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MomentDetailsHeaderView.h; sourceTree = "<group>"; };
@@ -354,6 +357,8 @@
 				CE2C57071BD37AC900DEAF32 /* NSString+Size.m */,
 				967E50601BE9112B0054B1DC /* NSString+Condition.h */,
 				967E50611BE9112B0054B1DC /* NSString+Condition.m */,
+				962008831BEA442800173EA8 /* UIAlertView+AlertMessage.h */,
+				962008841BEA442800173EA8 /* UIAlertView+AlertMessage.m */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -868,6 +873,7 @@
 				96DC2C591BCF82F800126AB6 /* PeerHomeViewController.m in Sources */,
 				960810071BDFCE7300F6F9E2 /* NSDate+Formatter.m in Sources */,
 				961C964B1BE61D0B008EDF91 /* TAAbstractDotView.m in Sources */,
+				962008851BEA442800173EA8 /* UIAlertView+AlertMessage.m in Sources */,
 				968B3BD71BCAA52400B8723A /* MomentsService.m in Sources */,
 				96A2D8D41BC032200016AE3F /* ApplicationDirectoryService.m in Sources */,
 				CE2C570E1BD3889700DEAF32 /* HomeBottomView.m in Sources */,

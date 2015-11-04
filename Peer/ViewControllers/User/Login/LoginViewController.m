@@ -7,14 +7,17 @@
 //
 
 #import "LoginViewController.h"
-#import "LoginView.h"
-#import "LoginService.h"
-#import "UserModel.h"
-
 #import "PhoneVerifyViewController.h"
+
+#import "LoginView.h"
 #import "SDCycleScrollView.h"
 
-@interface LoginViewController () <LoginViewDelegate>
+#import "LoginService.h"
+#import "ValidationService.h"
+#import "UserModel.h"
+
+
+@interface LoginViewController () <LoginViewDelegate,LoginServiceDelegate>
 
 @property(nonatomic) LoginView *loginView;
 @property(nonatomic) LoginService* loginService;
@@ -49,6 +52,7 @@
 - (LoginService *)loginService {
     if (!_loginService) {
         _loginService = [[LoginService alloc] init];
+        _loginService.delegate = self;
     }
     return _loginService;
 }
@@ -150,10 +154,20 @@
     
     //TODO: phone 和 password 校验
     
+    if (![ValidationService checkPhoneNumber:phone]) {
+        [self alertMessage:@"您输入的手机号码无效,请重新填写"];
+        return;
+    }
+    
+    if (!password || password.length < 6) {
+        [self alertMessage:@"请输入至少6位数密码"];
+        return;
+    }
+    
     UserModel *model = [[UserModel alloc] init];
     model.phone      = phone;
     model.password   = password;
-//    [self.loginService loginWithParams:@{@"phone":phone,@"password":password}];
+    [self.loginService loginWithUserModel:model];
     
     
 }
@@ -172,26 +186,21 @@
 //    }];
 }
 
+- (void)alertMessage:(NSString *)message {
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"温馨提示" message:message delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil];
+    [alertView show];
+}
 
 #pragma mark - -- <LoginServiceDelegate>
 
-- (void)loginCompleteWithError:(NSDictionary *)error {
+- (void)loginCompleteWithError:(NSError *)error {
     
     if (error) {
-        
+        [self alertMessage:@"error"];
     } else {
-        
+        [self dismissViewControllerAnimated:YES completion:nil];
     }
     
-}
-
-- (void)loginSuccessWithData:(NSDictionary *)data {
-    
-    DLog(@"Login success:\n%@",data);
-}
-
-- (void)loginFailureWithData:(NSDictionary *)data {
-    DLog(@"Login falure:\n%@",data);
 }
 
 - (void)didReceiveMemoryWarning {

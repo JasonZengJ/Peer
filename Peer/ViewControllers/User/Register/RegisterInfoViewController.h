@@ -8,7 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import "RootNavViewController.h"
+@class UserModel;
 
 @interface RegisterInfoViewController : RootNavViewController
+
+@property(nonatomic)UserModel *user;
 
 @end

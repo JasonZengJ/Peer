@@ -11,9 +11,18 @@
 
 #import "RegisterInfoViewController.h"
 
-@interface PhoneVerifyViewController ()
+#import "ValidationService.h"
+#import "LoginService.h"
+#import "UIAlertView+AlertMessage.h"
+#import "UserModel.h"
+
+@interface PhoneVerifyViewController () <PhoneVerifyViewDelegate>
 
 @property(nonatomic)PhoneVerifyView *phoneVerifyView;
+@property(nonatomic)LoginService *loginService;
+@property(nonatomic)UserModel *user;
+@property(nonatomic)NSTimer   *timer;
+@property(nonatomic)NSInteger countDown; // 倒计时
 
 @end
 
@@ -23,9 +32,17 @@
 - (PhoneVerifyView *)phoneVerifyView {
     if (!_phoneVerifyView) {
         _phoneVerifyView = [[PhoneVerifyView alloc] initWithFrame:CGRectMake(0, 64.0f, self.view.width, self.view.height - 64.0f)];
+        _phoneVerifyView.delegate = self;
         _phoneVerifyView.backgroundColor = [UIColor clearColor];
     }
     return _phoneVerifyView;
+}
+
+- (LoginService *)loginService {
+    if (!_loginService) {
+        _loginService = [[LoginService alloc] init];
+    }
+    return _loginService;
 }
 
 - (void)loadView {
@@ -59,11 +76,59 @@
 
 - (void)rightNavbarButtonAction:(UIButton *)sender {
     
-    RegisterInfoViewController *registerInfoViewController = [[RegisterInfoViewController alloc] init];
-    registerInfoViewController.backActionType = BackActionTypePop;
-    [self.navigationController pushViewController:registerInfoViewController animated:YES];
+    
+    NSString *verifyCode = self.phoneVerifyView.verifyCodeTextField.text;
+    NSString *password   = self.phoneVerifyView.passwordTextField.text;
+    
+    if (![ValidationService checkNumber:verifyCode]) {
+        [UIAlertView alertWithMessage:@"请填写正确的验证码"];
+        return;
+    }
+    
+    if (password.length < 6) {
+        [UIAlertView alertWithMessage:@"密码不能少于6位数"];
+        return;
+    }
+    
+    [self.loginService confirmVerificationCode:verifyCode result:^(BOOL isSuccess) {
+        
+        if (isSuccess) {
+            self.user.password = password;
+            RegisterInfoViewController *registerInfoViewController = [[RegisterInfoViewController alloc] init];
+            registerInfoViewController.user = self.user;
+            registerInfoViewController.backActionType = BackActionTypePop;
+            [self.navigationController pushViewController:registerInfoViewController animated:YES];
+        } else {
+            [UIAlertView alertWithMessage:@"验证码验证失败"];
+        }
+        
+    }];
+    
+
     
 }
+
+#pragma mark - -- <PhoneVerifyViewDelegate>
+
+- (void)clickedGetVerifyCodeButtonWithPhone:(NSString *)phone {
+    
+    if (![ValidationService checkPhoneNumber:phone]) {
+        [UIAlertView alertWithMessage:@"您输入的手机号码无效,请重新填写"];
+        return;
+    }
+    
+    [self.loginService getVerificationCodeWithPhone:phone result:^(NSError *error) {
+        if (error) {
+            [UIAlertView alertWithMessage:error.domain];
+        } else {
+            self.user = [[UserModel alloc] init];
+            self.user.phone = phone;
+        }
+    }];
+    [self.phoneVerifyView disableGetVerifyCodeButtonForSeconds:60];
+    
+}
+
 
 
 - (void)didReceiveMemoryWarning {

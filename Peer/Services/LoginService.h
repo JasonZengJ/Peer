@@ -12,7 +12,7 @@
 
 @protocol LoginServiceDelegate <NSObject>
 
-- (void)loginCompleteWithError:(NSDictionary *)error;
+- (void)loginCompleteWithError:(NSError *)error;
 - (void)registerCompleteWithError:(NSDictionary *)error;
 
 @end
@@ -26,7 +26,7 @@
 
 
 
-- (void)getVerificationCodeWithPhone:(NSString *)phone result:(void(^)(BOOL isSuccess))result;
+- (void)getVerificationCodeWithPhone:(NSString *)phone result:(void(^)(NSError *err))result;
 - (void)confirmVerificationCode:(NSString *)veryficationCode result:(void(^)(BOOL isSuccess))result;
 - (void)registerWithUserModel:(UserModel *)userModel;
 

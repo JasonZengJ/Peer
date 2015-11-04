@@ -124,9 +124,9 @@
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     
-    
     MomentDetailsViewController *momentDetailsViewController = [[MomentDetailsViewController alloc] init];
     momentDetailsViewController.momentModel = [self.momentsArray objectAtIndex:indexPath.row];
+    momentDetailsViewController.momentModel.pet = self.petsModel;
     momentDetailsViewController.backActionType = BackActionTypeDismiss;
     momentDetailsViewController.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
     UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:momentDetailsViewController];

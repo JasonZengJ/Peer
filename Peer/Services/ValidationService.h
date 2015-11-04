@@ -10,6 +10,7 @@
 
 @interface ValidationService : NSObject
 
++ (BOOL)checkNumber:(NSString *)number;
 
 + (BOOL)checkPhoneNumber:(NSString *)phoneNumber;
 

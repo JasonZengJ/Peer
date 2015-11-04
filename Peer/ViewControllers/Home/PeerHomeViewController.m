@@ -15,10 +15,8 @@
 
 #import "HorizonCardFlowLayout.h"
 #import "MomentsService.h"
+#import "LoginService.h"
 #import "MomentModel.h"
-#import "UIColor+Hex.h"
-#import "UIView+Layout.h"
-#import "LayoutUtil.h"
 
 #import "HomeBottomView.h"
 #import "HomeHeaderView.h"
@@ -128,11 +126,18 @@
 
 - (void)tapUserInfo {
     
-    LoginViewController *loginViewController = [[LoginViewController alloc] init];
-    loginViewController.backActionType = BackActionTypeDismiss;
     
-    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:loginViewController];
-    [self presentViewController:navController animated:YES completion:nil];
+    if (![LoginService currentUser]) {
+        LoginViewController *loginViewController = [[LoginViewController alloc] init];
+        loginViewController.backActionType = BackActionTypeDismiss;
+        
+        UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:loginViewController];
+        [self presentViewController:navController animated:YES completion:nil];
+    } else {
+        
+    }
+    
+    
     
 }
 
