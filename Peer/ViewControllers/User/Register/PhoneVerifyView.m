@@ -55,7 +55,6 @@
         
         _passwordTextField = [[UITextField alloc] initWithFrame:CGRectMake(10, self.verifyCodeTextField.bottom + 10.0f, self.phoneTextField.width,self.phoneTextField.height)];
         _passwordTextField.layer.cornerRadius = 3;
-        [_passwordTextField setBackgroundColor:[UIColor whiteColor]];
         NSAttributedString * password = [[NSAttributedString alloc] initWithString:NSLocalizedString(@"LoginPasswordInput", nil)
                                                                         attributes:@{NSForegroundColorAttributeName: [UIColor colorWithHex:0xe5e5e5],
                                                                                      NSFontAttributeName: [UIFont systemFontOfSize:ConvertiPhone5Or6pSize(16.0f)]}];

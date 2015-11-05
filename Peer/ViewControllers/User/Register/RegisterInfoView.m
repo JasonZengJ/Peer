@@ -9,6 +9,7 @@
 #import "RegisterInfoView.h"
 #import "RegisterInfoViewCell.h"
 #import "UIImage+Color.h"
+#import "NSString+Size.h"
 
 
 @interface RegisterInfoView ()
@@ -95,7 +96,7 @@
         _userDescriptionView = [[UIView alloc] initWithFrame:CGRectMake(10.0f, self.baseInfoView.bottom + 15.0f, self.width - 20.0f, ConvertiPhone5Or6pSize(80.0f))];
         [self configureInfoBgView:_userDescriptionView];
         _userDescriptionView.tag = RegisterInfoDescription;
-        [_userDescriptionView addTapGestureWithTarget:self action:@selector(tapCellWithCellTag:)];
+        [_userDescriptionView addTapGestureWithTarget:self action:@selector(tapCell:)];
         
     }
     return _userDescriptionView;
@@ -201,12 +202,25 @@
     } else {
         self.userDescriptionLabel.textColor = [UIColor colorWithHex:0x4c4c4c];
     }
-    self.userDescriptionLabel.text = userDescription;
+    
+    if (!userDescription || [userDescription isEqualToString:@""]) {
+        self.userDescriptionLabel.height = ConvertiPhone5Or6pSize(45.0f);
+    } else {
+        
+        CGFloat height = [userDescription heightWithFont:self.userDescriptionLabel.font width:self.userDescriptionLabel.width];
+        self.userDescriptionLabel.height = ConvertiPhone5Or6pSize(26.0f + height);
+    }
+    
+    self.userDescriptionLabel.text  = userDescription;
+    self.userDescriptionView.height = self.userDescriptionLabel.bottom;
+    
     
 }
 
 - (void)setNickname:(NSString *)nickname {
-    self.nicknameCell.rightTitleLabel.text = nickname;
+    self.nicknameCell.rightTitleLabel.text  = nickname;
+    [self.nicknameCell layoutSubviews];
+    
 }
 
 - (void)setSex:(UserSex)sex {

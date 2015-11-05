@@ -22,7 +22,8 @@
 "RegisterGetVerifyCode" = "Get Code";
 "RegisterVerifyCodeInput" = "Enter Verification code";
 "RegisterFillInUserProfile" =  "Register Infomation";
-"RegisterIntroductionPlaceHolder" = "Introduce yourself~";
+"RegisterIntroductionPlaceHolder"   = "Introduce yourself~";
+"RegisterFillInNicknamePlaceHolder" = "Your nickname";
 
 
 /** 首页与详细页 **/

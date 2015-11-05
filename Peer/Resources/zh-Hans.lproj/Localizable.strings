@@ -23,6 +23,7 @@
 "RegisterVerifyCodeInput" = "请输入验证码";
 "RegisterFillInUserProfile" =  "填写个人信息";
 "RegisterIntroductionPlaceHolder" = "介绍一下自己吧，让大家了解一下呗~";
+"RegisterFillInNicknamePlaceHolder" = "请输入昵称";
 
 /** 首页与详细页 **/
 

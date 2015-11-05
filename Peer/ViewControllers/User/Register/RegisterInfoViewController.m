@@ -12,7 +12,7 @@
 
 #import "FillRegisterInfoViewController.h"
 
-@interface RegisterInfoViewController () <RegisterInfoViewDelegate,LoginServiceDelegate>
+@interface RegisterInfoViewController () <RegisterInfoViewDelegate,LoginServiceDelegate,FillRegisterInfoViewControllerDelegate>
 
 @property(nonatomic)RegisterInfoView *registerInfoView;
 @property(nonatomic)LoginService *loginService;
@@ -76,6 +76,7 @@
             FillRegisterInfoViewController *fillRegisterInfoViewController = [[FillRegisterInfoViewController alloc] init];
             fillRegisterInfoViewController.title = NSLocalizedString(@"RegisterNickname", nil);
             fillRegisterInfoViewController.registerInfoFillType = RegisterInfoFillTypeNickname;
+            fillRegisterInfoViewController.delegate = self;
             [self.navigationController pushViewController:fillRegisterInfoViewController animated:YES];
         }
             break;
@@ -84,8 +85,9 @@
             break;
         case RegisterInfoDescription: {
             FillRegisterInfoViewController *fillRegisterInfoViewController = [[FillRegisterInfoViewController alloc] init];
-            fillRegisterInfoViewController.title = NSLocalizedString(@"RegisterNickname", nil);
+            fillRegisterInfoViewController.title = NSLocalizedString(@"RegisterIntroduction", nil);
             fillRegisterInfoViewController.registerInfoFillType = RegisterInfoFillTypeUserDescription;
+            fillRegisterInfoViewController.delegate = self;
             [self.navigationController pushViewController:fillRegisterInfoViewController animated:YES];
         }
             break;
@@ -104,6 +106,18 @@
 
 - (void)registerCompleteWithError:(NSDictionary *)error {
     
+}
+
+#pragma mark - -- <FillRegisterInfoViewControllerDelegate>
+
+- (void)fillNickname:(NSString *)nickname {
+    [self.registerInfoView setNickname:nickname];
+    self.user.nickname = nickname;
+}
+
+- (void)fillUserDescription:(NSString *)userDescription {
+    [self.registerInfoView setUserDescription:userDescription];
+    self.user.userDescription = userDescription;
 }
 
 @end

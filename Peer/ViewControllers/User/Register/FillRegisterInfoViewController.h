@@ -14,8 +14,16 @@ typedef NS_ENUM(NSInteger,RegisterInfoFillType) {
     
 };
 
+@protocol FillRegisterInfoViewControllerDelegate <NSObject>
+
+- (void)fillNickname:(NSString *)nickname;
+- (void)fillUserDescription:(NSString *)userDescription;
+
+@end
+
 @interface FillRegisterInfoViewController : RootNavViewController
 
+@property(nonatomic,weak) id<FillRegisterInfoViewControllerDelegate> delegate;
 @property(nonatomic,assign) RegisterInfoFillType registerInfoFillType;
 
 @end
