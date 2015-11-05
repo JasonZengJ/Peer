@@ -47,7 +47,7 @@
         DLog(@"登录成功！");
         [self persistUserData:dataDic[@"data"]];
     } else {
-        error = [NSError errorWithDomain:dataDic[@"msg"] code:[dataDic[@"code"] integerValue] userInfo:nil];
+        error = [NSError errorWithDomain:dataDic[@"msg"] code:[dataDic[@"code"] longValue] userInfo:nil];
     }
     
     if (self.delegate && [self.delegate respondsToSelector:@selector(loginCompleteWithError:)]) {
@@ -100,11 +100,11 @@
 
 - (void)registerCompleted:(NSDictionary *)dataDic {
     
-    NSDictionary *error = nil;
-    if (dataDic[@"errCode"] != 0) {
-        error = dataDic;
-    } else {
+    NSError *error = nil;
+    if (dataDic[@"code"] == 0) {
         [self persistUserData:dataDic[@"data"]];
+    } else {
+        error = [NSError errorWithDomain:dataDic[@"msg"] code:[dataDic[@"code"] longValue] userInfo:nil];
     }
     if (self.delegate && [self.delegate respondsToSelector:@selector(registerCompleteWithError:)]) {
         [self.delegate registerCompleteWithError:error];

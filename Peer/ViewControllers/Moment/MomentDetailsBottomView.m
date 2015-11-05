@@ -34,7 +34,7 @@
         _commentTextfield = [[UITextField alloc] initWithFrame:CGRectMake(self.emotionImageView.right + 10, 5, ConvertiPhone5Or6pSize(270.0f), ConvertiPhone5Or6pSize(35.0f))];
         _commentTextfield.font = [UIFont systemFontOfSize:ConvertiPhone5Or6pSize(16.0f)];
         _commentTextfield.backgroundColor = [UIColor whiteColor];
-        _commentTextfield.placeholder     = @"添加评论";
+        _commentTextfield.placeholder     = NSLocalizedString(@"MomentDetailsAddComment", nil);
         _commentTextfield.leftViewMode    = UITextFieldViewModeAlways;
         _commentTextfield.leftView        = [[UIView alloc] initWithFrame:CGRectMake(10, 0, 10, 10)];
         _commentTextfield.layer.cornerRadius = 3.0f;
@@ -49,7 +49,7 @@
         
         _commentButton = [[UIButton alloc] initWithFrame:CGRectMake(self.commentTextfield.right, 0, ConvertiPhone5Or6pSize(60.0f), self.height)];
         _commentButton.titleLabel.font = [UIFont systemFontOfSize:ConvertiPhone5Or6pSize(16.0f)];
-        [_commentButton setTitle:@"发送" forState:UIControlStateNormal];
+        [_commentButton setTitle:NSLocalizedString(@"MomentDetailsSend", nil) forState:UIControlStateNormal];
         [_commentButton setTitleColor:[UIColor colorWithHex:0x333333 alpha:1.0] forState:UIControlStateNormal];
         [_commentButton addTarget:self action:@selector(sendCommentButtonAction:) forControlEvents:UIControlEventTouchUpInside];
         [_commentButton setBackgroundColor:[UIColor clearColor]];

@@ -155,7 +155,7 @@
     //TODO: phone 和 password 校验
     
     if (![ValidationService checkPhoneNumber:phone]) {
-        [self alertMessage:@"您输入的手机号码无效,请重新填写"];
+        [self alertMessage:@"请输入正确的手机号码"];
         return;
     }
     
@@ -174,16 +174,9 @@
 
 - (void)clickedRegisterButton {
     
-//    NSString *phone = @"18501638736";
-    
-    
     PhoneVerifyViewController *phoneVerifyViewController = [[PhoneVerifyViewController alloc] init];
     phoneVerifyViewController.backActionType = BackActionTypePop;
     [self.navigationController pushViewController:phoneVerifyViewController animated:YES];
-    
-//    [self presentViewController:nav animated:YES completion:^{
-//        
-//    }];
 }
 
 - (void)alertMessage:(NSString *)message {

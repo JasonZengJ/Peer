@@ -50,7 +50,7 @@
 - (UITextField *)phoneTextField {
     if (!_phoneTextField) {
         _phoneTextField = [[UITextField alloc] initWithFrame:CGRectMake(0, 0, self.loginTextFieldView.width, ConvertiPhone5Or6pSize(45.0f))];
-        NSAttributedString * phone = [[NSAttributedString alloc] initWithString:@"请输入手机号码"
+        NSAttributedString * phone = [[NSAttributedString alloc] initWithString:NSLocalizedString(@"LoginPhoneInput", nil)
                                                                      attributes:@{NSForegroundColorAttributeName: [UIColor colorWithHex:0xe5e5e5],
                                                                                   NSFontAttributeName: [UIFont systemFontOfSize:ConvertiPhone5Or6pSize(16.0f)]}];
         _phoneTextField.attributedPlaceholder = phone;
@@ -63,7 +63,7 @@
 - (UITextField *)passwordTextField {
     if (!_passwordTextField) {
         _passwordTextField = [[UITextField alloc] initWithFrame:CGRectMake(0, self.phoneTextField.bottom, self.loginTextFieldView.width,self.phoneTextField.height)];
-        NSAttributedString * password = [[NSAttributedString alloc] initWithString:@"请输入密码"
+        NSAttributedString * password = [[NSAttributedString alloc] initWithString:NSLocalizedString(@"LoginPasswordInput", nil)
                                                                         attributes:@{NSForegroundColorAttributeName: [UIColor colorWithHex:0xe5e5e5],
                                                                                      NSFontAttributeName: [UIFont systemFontOfSize:ConvertiPhone5Or6pSize(16.0f)]}];
         _passwordTextField.attributedPlaceholder = password;
@@ -103,7 +103,7 @@
         _loginButton = [[UIButton alloc] initWithFrame:CGRectMake(self.registerButton.right + 10.0f, self.registerButton.top,self.registerButton.width, self.registerButton.height)];
         _loginButton.layer.cornerRadius = 4;
         _loginButton.clipsToBounds      = YES;
-        [_loginButton setTitle:@"登陆" forState:UIControlStateNormal];
+        [_loginButton setTitle:NSLocalizedString(@"Login", nil) forState:UIControlStateNormal];
         [_loginButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         [_loginButton setTitleColor:[UIColor colorWithHex:0xFFB100 alpha:1.0] forState:UIControlStateHighlighted];
         [_loginButton setBackgroundImage:[UIImage imageWithColor:[UIColor colorWithHex:0xffb800 ]] forState:UIControlStateNormal];
@@ -118,7 +118,7 @@
         _registerButton.bottom = self.height - 15.0f;
         _registerButton.layer.cornerRadius = 4;
         _registerButton.clipsToBounds      = YES;
-        [_registerButton setTitle:@"注册" forState:UIControlStateNormal];
+        [_registerButton setTitle:NSLocalizedString(@"Register", nil) forState:UIControlStateNormal];
         [_registerButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         [_registerButton setTitleColor:[UIColor colorWithHex:0xFFB100 alpha:1.0] forState:UIControlStateHighlighted];
         [_registerButton setBackgroundImage:[UIImage imageWithColor:[UIColor colorWithHex:0x2fe000]] forState:UIControlStateNormal];

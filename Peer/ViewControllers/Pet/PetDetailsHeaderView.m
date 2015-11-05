@@ -92,7 +92,7 @@
 
 - (UILabel *)petPhotosTitleLabel {
     if (!_petPhotosTitleLabel) {
-        _petPhotosTitleLabel = [self titleLabelWithText:@"图片" left:0];
+        _petPhotosTitleLabel = [self titleLabelWithText:NSLocalizedString(@"PetDetailsPhotos", nil) left:0];
     }
     return _petPhotosTitleLabel;
 }
@@ -106,7 +106,7 @@
 
 - (UILabel *)petFollowersTitleLabel {
     if (!_petFollowersTitleLabel) {
-        _petFollowersTitleLabel = [self titleLabelWithText:@"粉丝" left:self.petStatisticsView.width / 3];
+        _petFollowersTitleLabel = [self titleLabelWithText:NSLocalizedString(@"PetDetailsFans", nil) left:self.petStatisticsView.width / 3];
     }
     return _petFollowersTitleLabel;
 }
@@ -120,7 +120,7 @@
 
 - (UILabel *)petLikesTitleLabel {
     if (!_petLikesTitleLabel) {
-        _petLikesTitleLabel = [self titleLabelWithText:@"赞" left:self.petStatisticsView.width * 2 / 3];
+        _petLikesTitleLabel = [self titleLabelWithText:NSLocalizedString(@"PetDetailsLikes", nil) left:self.petStatisticsView.width * 2 / 3];
     }
     return _petLikesTitleLabel;
 }

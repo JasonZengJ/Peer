@@ -47,7 +47,7 @@
 
 - (void)loadView {
     [super loadView];
-    self.title = @"注册";
+    self.title = NSLocalizedString(@"Register", nil);
     [self.view addSubview:self.phoneVerifyView];
     
 }
@@ -76,6 +76,13 @@
 
 - (void)rightNavbarButtonAction:(UIButton *)sender {
     
+    
+    RegisterInfoViewController *registerInfoViewController = [[RegisterInfoViewController alloc] init];
+    registerInfoViewController.user = self.user;
+    registerInfoViewController.backActionType = BackActionTypePop;
+    [self.navigationController pushViewController:registerInfoViewController animated:YES];
+    
+    return;
     
     NSString *verifyCode = self.phoneVerifyView.verifyCodeTextField.text;
     NSString *password   = self.phoneVerifyView.passwordTextField.text;
@@ -113,7 +120,7 @@
 - (void)clickedGetVerifyCodeButtonWithPhone:(NSString *)phone {
     
     if (![ValidationService checkPhoneNumber:phone]) {
-        [UIAlertView alertWithMessage:@"您输入的手机号码无效,请重新填写"];
+        [UIAlertView alertWithMessage:@"请填写正确的手机号码"];
         return;
     }
     

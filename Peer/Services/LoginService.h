@@ -12,8 +12,9 @@
 
 @protocol LoginServiceDelegate <NSObject>
 
+@optional
 - (void)loginCompleteWithError:(NSError *)error;
-- (void)registerCompleteWithError:(NSDictionary *)error;
+- (void)registerCompleteWithError:(NSError *)error;
 
 @end
 

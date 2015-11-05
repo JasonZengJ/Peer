@@ -16,6 +16,7 @@
 #import "HorizonCardFlowLayout.h"
 #import "MomentsService.h"
 #import "LoginService.h"
+#import "AppService.h"
 #import "MomentModel.h"
 
 #import "HomeBottomView.h"
@@ -112,6 +113,10 @@
 }
 
 - (void)loadData {
+    
+    if (![AppService token] || [[AppService token] isEqualToString:@""]) {
+        return;
+    }
     
     PeerHomeViewController __weak *weakSelf = self;
     [self.momentService getAllMomentsWithPagination:nil callBackBlock:^(NSArray *moments) {

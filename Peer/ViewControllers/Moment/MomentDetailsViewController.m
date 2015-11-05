@@ -82,7 +82,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"浏览详细";
+    self.title = NSLocalizedString(@"MomentDetailsBrowseInDetail", nil);
     self.cellHeightArray      = [NSMutableArray array];
     self.commentsDataArray    = [NSArray array];
     

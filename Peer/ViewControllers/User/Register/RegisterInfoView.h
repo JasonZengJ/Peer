@@ -8,11 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-typedef NS_ENUM(NSInteger,RegisterInfoCell) {
-    RegisterInfoCellNickname = 1,
-    RegisterInfoCellSex,
-    RegisterInfoCellAge,
-    RegisterInfoCellArea,
+typedef NS_ENUM(NSInteger,RegisterInfo) {
+    RegisterInfoNickname = 1,
+    RegisterInfoSex,
+    RegisterInfoAge,
+    RegisterInfoArea,
+    RegisterInfoDescription,
 };
 
 typedef NS_ENUM(NSInteger,UserSex) {
@@ -22,6 +23,7 @@ typedef NS_ENUM(NSInteger,UserSex) {
 
 @protocol  RegisterInfoViewDelegate <NSObject>
 
+- (void)clickedDoneButton;
 
 @optional
 - (void)tapCellWithCellTag:(NSInteger)tag;

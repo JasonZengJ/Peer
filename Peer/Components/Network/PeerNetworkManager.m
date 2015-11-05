@@ -22,10 +22,10 @@
 // NSString *SecureHostName = @"https://localhost";
 
 // 局域网环境
- NSString *SecureHostName = @"https://192.168.1.101";
+// NSString *SecureHostName = @"https://192.168.1.101";
 
 // 测试服务器环境
-// NSString *SecureHostName = @"https://api.jasonlife.me";
+ NSString *SecureHostName = @"https://api.jasonlife.me";
 
 #else
 

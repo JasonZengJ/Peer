@@ -8,10 +8,14 @@
 
 #import "RegisterInfoViewController.h"
 #import "RegisterInfoView.h"
+#import "LoginService.h"
 
-@interface RegisterInfoViewController () <RegisterInfoViewDelegate>
+#import "FillRegisterInfoViewController.h"
+
+@interface RegisterInfoViewController () <RegisterInfoViewDelegate,LoginServiceDelegate>
 
 @property(nonatomic)RegisterInfoView *registerInfoView;
+@property(nonatomic)LoginService *loginService;
 
 @end
 
@@ -25,10 +29,16 @@
     return _registerInfoView;
 }
 
+- (LoginService *)loginService {
+    if (!_loginService) {
+        _loginService = [[LoginService alloc] init];
+    }
+    return _loginService;
+}
 
 - (void)loadView {
     [super loadView];
-    self.title = @"填写个人信息";
+    self.title = NSLocalizedString(@"RegisterFillInUserProfile", nil);
     [self.view addSubview:self.registerInfoView];
     
 }
@@ -54,26 +64,45 @@
 
 - (void)tapCellWithCellTag:(NSInteger)tag {
     
+    
     switch (tag) {
-        case RegisterInfoCellAge: {
-            
+        case RegisterInfoAge: {
         }
             break;
-        case RegisterInfoCellArea: {
-            
+        case RegisterInfoArea: {
         }
             break;
-        case RegisterInfoCellNickname: {
-            
+        case RegisterInfoNickname: {
+            FillRegisterInfoViewController *fillRegisterInfoViewController = [[FillRegisterInfoViewController alloc] init];
+            fillRegisterInfoViewController.title = NSLocalizedString(@"RegisterNickname", nil);
+            fillRegisterInfoViewController.registerInfoFillType = RegisterInfoFillTypeNickname;
+            [self.navigationController pushViewController:fillRegisterInfoViewController animated:YES];
         }
             break;
-        case RegisterInfoCellSex: {
-            
+        case RegisterInfoSex: {
+        }
+            break;
+        case RegisterInfoDescription: {
+            FillRegisterInfoViewController *fillRegisterInfoViewController = [[FillRegisterInfoViewController alloc] init];
+            fillRegisterInfoViewController.title = NSLocalizedString(@"RegisterNickname", nil);
+            fillRegisterInfoViewController.registerInfoFillType = RegisterInfoFillTypeUserDescription;
+            [self.navigationController pushViewController:fillRegisterInfoViewController animated:YES];
         }
             break;
         default:
             break;
     }
+    
+    
+}
+
+- (void)clickedDoneButton {
+    [self.loginService registerWithUserModel:self.user];
+}
+
+#pragma mark - -- <LoginServiceDelegate>
+
+- (void)registerCompleteWithError:(NSDictionary *)error {
     
 }
 

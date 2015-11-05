@@ -23,7 +23,7 @@
 - (UITextField *)phoneTextField {
     if (!_phoneTextField) {
         _phoneTextField = [[UITextField alloc] initWithFrame:CGRectMake(10.0f, 16.0f, self.width - 20.0f, ConvertiPhone5Or6pSize(45.0f))];
-        NSAttributedString * phone = [[NSAttributedString alloc] initWithString:@"请输入手机号码"
+        NSAttributedString * phone = [[NSAttributedString alloc] initWithString:NSLocalizedString(@"LoginPhoneInput", nil)
                                                                      attributes:@{NSForegroundColorAttributeName: [UIColor colorWithHex:0xe5e5e5],
                                                                                   NSFontAttributeName: [UIFont systemFontOfSize:ConvertiPhone5Or6pSize(16.0f)]}];
         _phoneTextField.attributedPlaceholder = phone;
@@ -38,7 +38,7 @@
     if (!_verifyCodeTextField) {
         
         _verifyCodeTextField = [[UITextField alloc] initWithFrame:CGRectMake(10.0f, self.phoneTextField.bottom + 10.0f, ConvertiPhone5Or6pSize(215.0f), ConvertiPhone5Or6pSize(45.0f))];
-        NSAttributedString * phone = [[NSAttributedString alloc] initWithString:@"请输入验证码"
+        NSAttributedString * phone = [[NSAttributedString alloc] initWithString:NSLocalizedString(@"RegisterVerifyCodeInput", nil)
                                                                      attributes:@{NSForegroundColorAttributeName: [UIColor colorWithHex:0xe5e5e5],
                                                                                   NSFontAttributeName: [UIFont systemFontOfSize:ConvertiPhone5Or6pSize(16.0f)]}];
         _verifyCodeTextField.attributedPlaceholder = phone;
@@ -56,7 +56,7 @@
         _passwordTextField = [[UITextField alloc] initWithFrame:CGRectMake(10, self.verifyCodeTextField.bottom + 10.0f, self.phoneTextField.width,self.phoneTextField.height)];
         _passwordTextField.layer.cornerRadius = 3;
         [_passwordTextField setBackgroundColor:[UIColor whiteColor]];
-        NSAttributedString * password = [[NSAttributedString alloc] initWithString:@"请输入密码"
+        NSAttributedString * password = [[NSAttributedString alloc] initWithString:NSLocalizedString(@"LoginPasswordInput", nil)
                                                                         attributes:@{NSForegroundColorAttributeName: [UIColor colorWithHex:0xe5e5e5],
                                                                                      NSFontAttributeName: [UIFont systemFontOfSize:ConvertiPhone5Or6pSize(16.0f)]}];
         _passwordTextField.attributedPlaceholder = password;
@@ -76,7 +76,7 @@
         _getVerifyCodeButton.layer.cornerRadius = 3;
         _getVerifyCodeButton.clipsToBounds = YES;
         [_getVerifyCodeButton setBackgroundImage:[UIImage imageWithColor:[UIColor colorWithHex:0xffb800]] forState:UIControlStateNormal];
-        [_getVerifyCodeButton setTitle:@"获取验证码" forState:UIControlStateNormal];
+        [_getVerifyCodeButton setTitle:NSLocalizedString(@"RegisterGetVerifyCode", nil) forState:UIControlStateNormal];
         [_getVerifyCodeButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         [_getVerifyCodeButton addTarget:self action:@selector(clickedGetVerifyCodeButton) forControlEvents:UIControlEventTouchUpInside];
     }
@@ -139,7 +139,7 @@
     self.seconds = seconds;
     [self.getVerifyCodeButton setEnabled:NO];
     [self.getVerifyCodeButton setBackgroundImage:[UIImage imageWithColor:[UIColor colorWithHex:0xcccccc]] forState:UIControlStateNormal];
-    [self.getVerifyCodeButton setTitle:[NSString stringWithFormat:@"获取验证码(%ld)",seconds] forState:UIControlStateNormal];
+    [self.getVerifyCodeButton setTitle:[NSString stringWithFormat:@"%@(%ld)",NSLocalizedString(@"RegisterGetVerifyCode", nil),seconds] forState:UIControlStateNormal];
     
     [[NSRunLoop currentRunLoop] addTimer:self.timer forMode:NSRunLoopCommonModes];
 }
@@ -148,7 +148,7 @@
 - (void)recoverGetVerifyCodeButton {
     [self.getVerifyCodeButton setEnabled:YES];
     [self.getVerifyCodeButton setBackgroundImage:[UIImage imageWithColor:[UIColor colorWithHex:0xffb800]] forState:UIControlStateNormal];
-    [self.getVerifyCodeButton setTitle:@"获取验证码" forState:UIControlStateNormal];
+    [self.getVerifyCodeButton setTitle:NSLocalizedString(@"RegisterGetVerifyCode", nil) forState:UIControlStateNormal];
 }
 
 - (void)timerSecond {
@@ -158,7 +158,7 @@
         _timer = nil;
         return;
     }
-    [self.getVerifyCodeButton setTitle:[NSString stringWithFormat:@"获取验证码(%ld)",self.seconds--] forState:UIControlStateNormal];
+    [self.getVerifyCodeButton setTitle:[NSString stringWithFormat:@"%@(%ld)",NSLocalizedString(@"RegisterGetVerifyCode",nil),self.seconds--] forState:UIControlStateNormal];
     
 }
 

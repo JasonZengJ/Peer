@@ -51,8 +51,8 @@
 
 - (RegisterInfoViewCell *)nicknameCell {
     if (!_nicknameCell) {
-        _nicknameCell = [self registerInfoCellWithLeftTitle:@"昵称"];
-        _nicknameCell.tag = RegisterInfoCellNickname;
+        _nicknameCell = [self registerInfoCellWithLeftTitle:NSLocalizedString(@"RegisterNickname", nil)];
+        _nicknameCell.tag = RegisterInfoNickname;
         [_nicknameCell addLineWithFrame:CGRectMake(10.0f, _nicknameCell.height - 0.5, _nicknameCell.width - 20.0f,0.5) border:UIViewBorderBottomLine];
         
     }
@@ -61,8 +61,8 @@
 
 - (RegisterInfoViewCell *)sexCell {
     if (!_sexCell) {
-        _sexCell = [self registerInfoCellWithLeftTitle:@"性别"];
-        _sexCell.tag = RegisterInfoCellSex;
+        _sexCell = [self registerInfoCellWithLeftTitle:NSLocalizedString(@"RegisterSex", nil)];
+        _sexCell.tag = RegisterInfoSex;
         _sexCell.top = self.nicknameCell.bottom;
         _sexCell.rightView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"UserRegisterInfoBoy"]];
         [_sexCell addLineWithFrame:CGRectMake(10.0f, _nicknameCell.height - 0.5, _nicknameCell.width - 20.0f, 0.5) border:UIViewBorderBottomLine];
@@ -73,8 +73,8 @@
 
 - (RegisterInfoViewCell *)ageCell {
     if (!_ageCell) {
-        _ageCell = [self registerInfoCellWithLeftTitle:@"年龄"];
-        _ageCell.tag = RegisterInfoCellAge;
+        _ageCell = [self registerInfoCellWithLeftTitle:NSLocalizedString(@"RegisterAge", nil)];
+        _ageCell.tag = RegisterInfoAge;
         _ageCell.top = self.sexCell.bottom;
         [_ageCell addLineWithFrame:CGRectMake(10.0f, _nicknameCell.height - 0.5, _nicknameCell.width - 20.0f, 0.5) border:UIViewBorderBottomLine];
     }
@@ -83,8 +83,8 @@
 
 - (RegisterInfoViewCell *)areaCell {
     if (!_areaCell) {
-        _areaCell = [self registerInfoCellWithLeftTitle:@"地区"];
-        _areaCell.tag = RegisterInfoCellArea;
+        _areaCell = [self registerInfoCellWithLeftTitle:NSLocalizedString(@"RegisterArea", nil)];
+        _areaCell.tag = RegisterInfoArea;
         _areaCell.top = self.ageCell.bottom;
     }
     return _areaCell;
@@ -94,6 +94,8 @@
     if (!_userDescriptionView) {
         _userDescriptionView = [[UIView alloc] initWithFrame:CGRectMake(10.0f, self.baseInfoView.bottom + 15.0f, self.width - 20.0f, ConvertiPhone5Or6pSize(80.0f))];
         [self configureInfoBgView:_userDescriptionView];
+        _userDescriptionView.tag = RegisterInfoDescription;
+        [_userDescriptionView addTapGestureWithTarget:self action:@selector(tapCellWithCellTag:)];
         
     }
     return _userDescriptionView;
@@ -102,7 +104,7 @@
 - (UILabel *)userDescriptionTitleLabel {
     if (!_userDescriptionTitleLabel) {
         _userDescriptionTitleLabel = [[UILabel alloc] initWithFrame:CGRectMake(10.0f, 0, self.userDescriptionView.width - 20.0f, ConvertiPhone5Or6pSize(35.0f))];
-        _userDescriptionTitleLabel.text = @"我的简介";
+        _userDescriptionTitleLabel.text = NSLocalizedString(@"RegisterIntroduction", nil);
         _userDescriptionTitleLabel.font = [UIFont systemFontOfSize:ConvertiPhone5Or6pSize(16.0f)];
         _userDescriptionTitleLabel.textColor = [UIColor colorWithHex:0x808080];
         [_userDescriptionTitleLabel addLineWithFrame:CGRectMake(0, _userDescriptionTitleLabel.height - 0.5, _userDescriptionTitleLabel.width, 0.5) border:UIViewBorderBottomLine];
@@ -113,10 +115,11 @@
 - (UILabel *)userDescriptionLabel {
     if (!_userDescriptionLabel) {
         _userDescriptionLabel = [[UILabel alloc] initWithFrame:CGRectMake(10.0f, self.userDescriptionTitleLabel.bottom, self.userDescriptionView.width - 20.0f, ConvertiPhone5Or6pSize(45.0f))];
-        _userDescriptionLabel.text = @"介绍一下自己吧，让大家了解一下呗~";
+        _userDescriptionLabel.text = NSLocalizedString(@"RegisterIntroductionPlaceHolder", nil);
         _userDescriptionLabel.font = [UIFont systemFontOfSize:ConvertiPhone5Or6pSize(16.0f)];
         _userDescriptionLabel.textColor = [UIColor colorWithHex:0xe5e5e5];
         _userDescriptionLabel.numberOfLines = 0;
+        
         
     }
     return _userDescriptionLabel;
@@ -128,7 +131,7 @@
         _doneButton.bottom = self.bottom - 10.0f;
         _doneButton.layer.cornerRadius  = 3;
         _doneButton.layer.masksToBounds = YES;
-        [_doneButton setTitle:@"完成" forState:UIControlStateNormal];
+        [_doneButton setTitle:NSLocalizedString(@"Done", nil) forState:UIControlStateNormal];
         [_doneButton setBackgroundImage:[UIImage imageWithColor:[UIColor colorWithHex:0xffb800]] forState:UIControlStateNormal];
         [_doneButton addTarget:self action:@selector(doneButtonClickAction) forControlEvents:UIControlEventTouchUpInside];
     }

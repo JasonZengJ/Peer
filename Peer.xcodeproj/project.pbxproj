@@ -47,6 +47,8 @@
 		961D2E4A1BA715C200C84C8B /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 961D2E491BA715C200C84C8B /* QuartzCore.framework */; };
 		961D2E4C1BA715D500C84C8B /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 961D2E4B1BA715D500C84C8B /* Accelerate.framework */; };
 		962008851BEA442800173EA8 /* UIAlertView+AlertMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 962008841BEA442800173EA8 /* UIAlertView+AlertMessage.m */; settings = {ASSET_TAGS = (); }; };
+		962008881BEA524D00173EA8 /* FillRegisterInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 962008871BEA524D00173EA8 /* FillRegisterInfoViewController.m */; settings = {ASSET_TAGS = (); }; };
+		9620088B1BEA594500173EA8 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9620088D1BEA594500173EA8 /* Localizable.strings */; };
 		9653C6A51BDCA31100D517C8 /* MomentDetailsCommentTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9653C6991BDCA31100D517C8 /* MomentDetailsCommentTableViewCell.m */; settings = {ASSET_TAGS = (); }; };
 		9653C6A61BDCA31100D517C8 /* MomentDetailsHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9653C69B1BDCA31100D517C8 /* MomentDetailsHeaderView.m */; settings = {ASSET_TAGS = (); }; };
 		9653C6A71BDCA31100D517C8 /* MomentDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9653C69D1BDCA31100D517C8 /* MomentDetailsViewController.m */; settings = {ASSET_TAGS = (); }; };
@@ -173,6 +175,10 @@
 		961D2E4B1BA715D500C84C8B /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
 		962008831BEA442800173EA8 /* UIAlertView+AlertMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertView+AlertMessage.h"; sourceTree = "<group>"; };
 		962008841BEA442800173EA8 /* UIAlertView+AlertMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+AlertMessage.m"; sourceTree = "<group>"; };
+		962008861BEA524D00173EA8 /* FillRegisterInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FillRegisterInfoViewController.h; sourceTree = "<group>"; };
+		962008871BEA524D00173EA8 /* FillRegisterInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FillRegisterInfoViewController.m; sourceTree = "<group>"; };
+		9620088C1BEA594500173EA8 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		9620088E1BEA594A00173EA8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		9653C6981BDCA31100D517C8 /* MomentDetailsCommentTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MomentDetailsCommentTableViewCell.h; sourceTree = "<group>"; };
 		9653C6991BDCA31100D517C8 /* MomentDetailsCommentTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MomentDetailsCommentTableViewCell.m; sourceTree = "<group>"; };
 		9653C69A1BDCA31100D517C8 /* MomentDetailsHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MomentDetailsHeaderView.h; sourceTree = "<group>"; };
@@ -424,6 +430,7 @@
 		960104161BA87A1C00152908 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				9620088D1BEA594500173EA8 /* Localizable.strings */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -460,6 +467,8 @@
 				967E505E1BE7C0100054B1DC /* RegisterInfoViewCell.m */,
 				967E50541BE7A5F50054B1DC /* RegisterInfoViewController.h */,
 				967E50551BE7A5F50054B1DC /* RegisterInfoViewController.m */,
+				962008861BEA524D00173EA8 /* FillRegisterInfoViewController.h */,
+				962008871BEA524D00173EA8 /* FillRegisterInfoViewController.m */,
 			);
 			path = Register;
 			sourceTree = "<group>";
@@ -807,6 +816,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				961C963A1BE6189A008EDF91 /* Images.xcassets in Resources */,
+				9620088B1BEA594500173EA8 /* Localizable.strings in Resources */,
 				966B518D1B7F8D70000F0EF2 /* LaunchScreen.xib in Resources */,
 				960104521BADD08600152908 /* SMS_SDKLocalizable.strings in Resources */,
 			);
@@ -885,6 +895,7 @@
 				960104131BA879F600152908 /* LoginView.m in Sources */,
 				9653C6B21BDCA32700D517C8 /* SendMomentViewController.m in Sources */,
 				967E50621BE9112B0054B1DC /* NSString+Condition.m in Sources */,
+				962008881BEA524D00173EA8 /* FillRegisterInfoViewController.m in Sources */,
 				9653C6A61BDCA31100D517C8 /* MomentDetailsHeaderView.m in Sources */,
 				961C964F1BE61D0B008EDF91 /* SDCollectionViewCell.m in Sources */,
 				9608100B1BDFD11300F6F9E2 /* PeerDateFormatter.m in Sources */,
@@ -953,6 +964,15 @@
 				960104511BADD08600152908 /* zh-Hans */,
 			);
 			name = SMS_SDKLocalizable.strings;
+			sourceTree = "<group>";
+		};
+		9620088D1BEA594500173EA8 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9620088C1BEA594500173EA8 /* zh-Hans */,
+				9620088E1BEA594A00173EA8 /* en */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 		966B518B1B7F8D70000F0EF2 /* LaunchScreen.xib */ = {

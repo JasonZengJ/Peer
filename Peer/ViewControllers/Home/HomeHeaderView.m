@@ -30,7 +30,7 @@
 - (UILabel *)recomandLabel {
     if (!_recomandLabel) {
         _recomandLabel = [[UILabel alloc] initWithFrame:CGRectMake(15, 35, 0,0)];
-        _recomandLabel.text = @"推荐";
+        _recomandLabel.text = NSLocalizedString(@"HomeRecommendation", nil);
         _recomandLabel.font = [UIFont boldSystemFontOfSize:ConvertiPhone5Or6pSize(DefaultFont)];
         _recomandLabel.textColor = HighlightColor;
         [_recomandLabel sizeToFit];
@@ -41,7 +41,7 @@
 
 - (UIView *)bottomLineView {
     if (!_bottomLineView) {
-        _bottomLineView = [[UIView alloc] initWithFrame:CGRectMake(0, self.recomandLabel.bottom + 3, ConvertiPhone5Or6pSize(35), ConvertiPhone5Or6pSize(2))];
+        _bottomLineView = [[UIView alloc] initWithFrame:CGRectMake(0, self.recomandLabel.bottom + 3, self.recomandLabel.width + 2, ConvertiPhone5Or6pSize(2))];
         _bottomLineView.backgroundColor = HighlightColor;
         _bottomLineView.centerX = _recomandLabel.centerX;
     }
@@ -51,7 +51,7 @@
 - (UILabel *)followedLabel {
     if (!_followedLabel) {
         _followedLabel = [[UILabel alloc] initWithFrame:CGRectMake(self.recomandLabel.right + 25, self.recomandLabel.top, self.recomandLabel.width, self.recomandLabel.height)];
-        _followedLabel.text = @"关注";
+        _followedLabel.text = NSLocalizedString(@"HomeFollowing", nil);
         _followedLabel.font = [UIFont systemFontOfSize:ConvertiPhone5Or6pSize(DefaultFont)];
         _followedLabel.textColor = DefaultColor;
         [_followedLabel sizeToFit];

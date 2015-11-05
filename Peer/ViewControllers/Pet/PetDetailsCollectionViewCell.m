@@ -98,8 +98,8 @@
 
 - (UILabel *)commentTitleLabel {
     if (!_commentTitleLabel) {
-        _commentTitleLabel = [self labelWithText:@"评论"];
-        _commentTitleLabel.left = 60.0f;
+        _commentTitleLabel = [self labelWithText:NSLocalizedString(@"PetDetailsComments", nil)];
+        _commentTitleLabel.right = self.width / 2 + 10.0f;
     }
     return _commentTitleLabel;
 }
@@ -114,8 +114,8 @@
 
 - (UILabel *)likeTitleLabel {
     if (!_likeTitleLabel) {
-        _likeTitleLabel = [self labelWithText:@"赞"];
-        _likeTitleLabel.left = 145.0f;
+        _likeTitleLabel = [self labelWithText:NSLocalizedString(@"PetDetailsLikes", nil)];
+        _likeTitleLabel.right = self.width - 10.0f;
     }
     return _likeTitleLabel;
 }

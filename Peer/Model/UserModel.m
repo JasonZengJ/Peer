@@ -21,8 +21,10 @@
         self.password = dict[@"password"];
         self.sex      = dict[@"sex"];
         self.city     = dict[@"city"] ? dict[@"city"] : nil;
+        self.area     = dict[@"area"] ? dict[@"area"] : nil;
         self.avatar   = dict[@"avatar"] ? dict[@"avatar"] : nil;
         self.deviceId = dict[@"device_id"];
+        self.userDescription = dict[@"description"] ? dict[@"description"] : nil;
     }
     
     return self;

@@ -17,7 +17,9 @@
 @property(nonatomic)NSString *password;
 @property(nonatomic)NSNumber *sex;
 @property(nonatomic)NSString<Optional> *city;
+@property(nonatomic)NSString<Optional> *area;
 @property(nonatomic)NSString<Optional> *avatar;
+@property(nonatomic)NSString<Optional> *userDescription;
 @property(nonatomic)NSNumber *deviceId;
 
 @end

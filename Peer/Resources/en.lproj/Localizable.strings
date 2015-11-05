@@ -1,0 +1,44 @@
+/* 
+  Localizable.strings
+  Peer
+
+  Created by jason on 11/4/15.
+  Copyright © 2015 peers. All rights reserved.
+*/
+
+
+/** 登录注册流程 **/
+
+"Login"    = "Login";
+"Register" = "Register";
+"Done"     = "Done";
+"LoginPhoneInput"    = "Please enter your phone number";
+"LoginPasswordInput" = "Please enter your password";
+"RegisterNickname"   = "Nickname";
+"RegisterSex"        = "Sex";
+"RegisterAge"        = "Age";
+"RegisterArea"       = "Area";
+"RegisterIntroduction" = "My Introduction";
+"RegisterGetVerifyCode" = "Get Code";
+"RegisterVerifyCodeInput" = "Enter Verification code";
+"RegisterFillInUserProfile" =  "Register Infomation";
+"RegisterIntroductionPlaceHolder" = "Introduce yourself~";
+
+
+/** 首页与详细页 **/
+
+"HomeRecommendation"          = "Recommend";
+"HomeFollowing"               = "Following";
+"MomentDetailsBrowseInDetail" = "Photo Details";
+"MomentDetailsSend"           = "Send";
+"MomentDetailsAddComment"     = "Add comment";
+
+
+/** 宠物主页 **/
+
+"PetDetailsPhotos"   = "Photos";
+"PetDetailsFans"     = "Fans";
+"PetDetailsLikes"    = "Likes";
+"PetDetailsComments" = "Comments";
+
+
