@@ -27,6 +27,33 @@
     [super tearDown];
 }
 
+- (void)testLoadingAddress {
+    
+    
+    NSURL *url = [[NSBundle mainBundle] URLForResource:@"Address_CN" withExtension:@"plist"];
+   
+    NSDictionary *dic = [NSDictionary dictionaryWithContentsOfURL:url];
+    
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    
+    NSString *path = [paths[0] stringByAppendingPathComponent:@"address.plist"];
+    
+    NSURL *fileUlr = [NSURL URLWithString:path];
+    [dic writeToURL:fileUlr atomically:YES];
+    
+//    NSLog(@"%@",dic);
+    
+    
+    
+}
+
+//- (void)testTranslateCNToEn {
+//    
+//    
+//    
+//    
+//}
+
 - (void)testExample {
     // This is an example of a functional test case.
     XCTAssert(YES, @"Pass");

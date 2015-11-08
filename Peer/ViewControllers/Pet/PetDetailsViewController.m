@@ -35,6 +35,7 @@
         _headerView.backgroundColor = [UIColor clearColor];
         [_headerView configureWithPetsModel:self.petsModel];
         
+        
     }
     return _headerView;
 }

@@ -7,15 +7,16 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "JSONModel.h"
+#import "BaseModel.h"
 
-@interface UserModel : JSONModel
+@interface UserModel : BaseModel
 
 @property(nonatomic)NSNumber *userId;
 @property(nonatomic)NSString *nickname;
 @property(nonatomic)NSString *phone;
 @property(nonatomic)NSString *password;
 @property(nonatomic)NSNumber *sex;
+@property(nonatomic)NSNumber *age;
 @property(nonatomic)NSString<Optional> *city;
 @property(nonatomic)NSString<Optional> *area;
 @property(nonatomic)NSString<Optional> *avatar;

@@ -7,9 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "JSONModel.h"
+#import "BaseModel.h"
 
-@interface AppModel : JSONModel
+@interface AppModel : BaseModel
 
 @property(nonatomic)NSString *deviceId;
 @property(nonatomic)NSString *udid;

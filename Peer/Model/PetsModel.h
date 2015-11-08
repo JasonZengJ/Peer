@@ -6,9 +6,9 @@
 //  Copyright (c) 2015 peers. All rights reserved.
 //
 
-#import "JSONModel.h"
+#import "BaseModel.h"
 
-@interface PetsModel : JSONModel
+@interface PetsModel : BaseModel
 
 @property(nonatomic) NSNumber *petsId;
 @property(nonatomic) NSString *petsName;

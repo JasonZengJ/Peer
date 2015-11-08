@@ -192,7 +192,9 @@
 }
 
 - (void)doneButtonClickAction {
-    
+    if (self.delegate && [self.delegate respondsToSelector:@selector(clickedDoneButton)]) {
+        [self.delegate clickedDoneButton];
+    }
 }
 
 - (void)setUserDescription:(NSString *)userDescription {
@@ -206,7 +208,6 @@
     if (!userDescription || [userDescription isEqualToString:@""]) {
         self.userDescriptionLabel.height = ConvertiPhone5Or6pSize(45.0f);
     } else {
-        
         CGFloat height = [userDescription heightWithFont:self.userDescriptionLabel.font width:self.userDescriptionLabel.width];
         self.userDescriptionLabel.height = ConvertiPhone5Or6pSize(26.0f + height);
     }
@@ -214,13 +215,11 @@
     self.userDescriptionLabel.text  = userDescription;
     self.userDescriptionView.height = self.userDescriptionLabel.bottom;
     
-    
 }
 
 - (void)setNickname:(NSString *)nickname {
     self.nicknameCell.rightTitleLabel.text  = nickname;
     [self.nicknameCell layoutSubviews];
-    
 }
 
 - (void)setSex:(UserSex)sex {
@@ -228,11 +227,13 @@
 }
 
 - (void)setAge:(NSString *)age {
-    self.ageCell.rightTitleLabel.text = age;
+    self.ageCell.rightTitleLabel.width = [age widthWithFont:self.ageCell.rightTitleLabel.font];
+    self.ageCell.rightTitleLabel.text  = age;
 }
 
 - (void)setArea:(NSString *)area {
-    self.areaCell.rightTitleLabel.text = area;
+    self.areaCell.rightTitleLabel.width = [area widthWithFont:self.areaCell.rightTitleLabel.font];
+    self.areaCell.rightTitleLabel.text  = area;
 }
 
 @end

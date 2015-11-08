@@ -125,8 +125,10 @@
     
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     [manager.responseSerializer setValue:@(YES) forKey:@"removesKeysWithNullValues"];
+    manager.securityPolicy = [AFSecurityPolicy policyWithPinningMode:AFSSLPinningModeCertificate];
     manager.securityPolicy.allowInvalidCertificates = YES;
     [self printStartRequestWithUrl:url params:params];
+    
     [manager POST:url parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
         
         [self printSuccessResponseData:responseObject url:operation.request.URL.absoluteString];
@@ -146,7 +148,10 @@
     
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     [manager.responseSerializer setValue:@(YES) forKey:@"removesKeysWithNullValues"];
+    manager.securityPolicy = [AFSecurityPolicy policyWithPinningMode:AFSSLPinningModeCertificate];
     manager.securityPolicy.allowInvalidCertificates = YES;
+    manager.securityPolicy.allowInvalidCertificates = YES;
+    
     [self printStartRequestWithUrl:url params:params];
     [manager POST:url parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
        

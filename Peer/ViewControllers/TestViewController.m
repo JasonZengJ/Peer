@@ -37,7 +37,62 @@
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor whiteColor];
   
-    [self testUserLogin];
+    NSURL *url = [[NSBundle mainBundle] URLForResource:@"Address_CN" withExtension:@"plist"];
+    
+    NSDictionary *dic = [NSDictionary dictionaryWithContentsOfURL:url];
+    
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    
+    NSString *path = [paths[0] stringByAppendingPathComponent:@"address_CN.plist"];
+    
+    
+    NSLog(@"path : %@",path);
+    
+    NSMutableDictionary *muteDic = [NSMutableDictionary dictionary];
+    
+    for (NSString *province in dic) {
+        NSArray *cityArray = [dic objectForKey:province];
+        NSMutableArray *cityMuteArray = [NSMutableArray array];
+        for (NSDictionary *cityDic in cityArray) {
+            
+            NSMutableDictionary *cityMuteDic = [NSMutableDictionary dictionary];
+            for (NSString *city in cityDic) {
+                NSArray *areaArray = [cityDic objectForKey:city];
+                NSMutableArray *areaMuteArray = [NSMutableArray array];
+                for (NSString *area in areaArray) {
+                    NSString *muteArea = area;
+                    if (area.length == 3) {
+                        muteArea = [[area stringByReplacingOccurrencesOfString:@"区" withString:@""] stringByReplacingOccurrencesOfString:@"县" withString:@""];
+                    }
+                    [areaMuteArray addObject:[self translatePinYinWithText:muteArea]];
+                }
+                
+                NSString *muteCity = [city stringByReplacingOccurrencesOfString:@"市" withString:@""];
+                [cityMuteDic setObject:[areaMuteArray copy] forKey:[self translatePinYinWithText:muteCity]];
+            }
+            [cityMuteArray addObject:[cityMuteDic copy]];
+            
+        }
+        [muteDic setObject:[cityMuteArray copy] forKey: [self translatePinYinWithText:province]];
+    }
+    
+   BOOL isWrite =  [muteDic writeToFile:path atomically:YES];
+    
+    NSLog(@"%@",isWrite ? @"YES":@"NO");
+    
+}
+
+- (NSString *)translatePinYinWithText:(NSString *)text {
+    
+//    NSMutableString *ms = [[NSMutableString alloc] initWithString:text];
+//    if (CFStringTransform((__bridge CFMutableStringRef)ms, 0, kCFStringTransformMandarinLatin, NO)) {
+////        return ms;
+//    }
+//    if (CFStringTransform((__bridge CFMutableStringRef)ms, 0, kCFStringTransformStripDiacritics, NO)) {
+//        return ms;
+//    }
+    return text;
+    
 }
 
 

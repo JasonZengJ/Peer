@@ -6,10 +6,10 @@
 //  Copyright © 2015 peers. All rights reserved.
 //
 
-#import "JSONModel.h"
+#import "BaseModel.h"
 #import "UserModel.h"
 
-@interface CommentModel : JSONModel
+@interface CommentModel : BaseModel
 
 @property(nonatomic)NSNumber *commentId;
 @property(nonatomic)NSString *content;

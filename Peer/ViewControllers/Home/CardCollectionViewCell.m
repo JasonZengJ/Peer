@@ -14,6 +14,7 @@
 #import "NSString+Size.h"
 #import "PeerDateFormatter.h"
 #import <SDWebImage/UIImageView+WebCache.h>
+#import <POP.h>
 
 @interface CardCollectionViewCell ()
 
@@ -35,7 +36,7 @@
 
 @property(nonatomic) UIImageView *commentsIcon;
 @property(nonatomic) UILabel     *commentsAmountLabel;
-@property(nonatomic) UIImageView *likeImageView;
+@property(nonatomic) UIButton    *likeButton;
 
 @property(nonatomic,assign) BOOL isLiked;
 
@@ -195,14 +196,17 @@
     return _commentsAmountLabel;
 }
 
-- (UIImageView *)likeImageView {
-    if (!_likeImageView) {
-        _likeImageView = [[UIImageView alloc] initWithFrame:CGRectMake(self.bottomView.width - ConvertiPhone5Or6pSize(25), 0, ConvertiPhone5Or6pSize(25), ConvertiPhone5Or6pSize(25))];
-        _likeImageView.centerY = self.bottomView.height / 2;
-        _likeImageView.userInteractionEnabled = YES;
-        [_likeImageView addTapGestureWithTarget:self action:@selector(tapLikePets)];
+- (UIButton *)likeButton {
+    if (!_likeButton) {
+        _likeButton = [[UIButton alloc] initWithFrame:CGRectMake(self.bottomView.width - ConvertiPhone5Or6pSize(25), 0, ConvertiPhone5Or6pSize(25), ConvertiPhone5Or6pSize(25))];
+        _likeButton.centerY = self.bottomView.height / 2;
+        _likeButton.userInteractionEnabled = YES;
+//        [_likeButton addTapGestureWithTarget:self action:@selector(tapLikePets)];
+        [_likeButton addTarget:self action:@selector(likeButtonTouchDown) forControlEvents:UIControlEventTouchDown | UIControlEventTouchDragEnter];
+        [_likeButton addTarget:self action:@selector(likeButtonTouchUp) forControlEvents:UIControlEventTouchUpInside];
+        [_likeButton addTarget:self action:@selector(likeButtonDragExit) forControlEvents:UIControlEventTouchDragExit];
     }
-    return _likeImageView;
+    return _likeButton;
 }
 
 - (instancetype)initWithFrame:(CGRect)frame {
@@ -242,7 +246,7 @@
     [self.bottomView addSubview:self.locationLabel];
     [self.bottomView addSubview:self.commentsIcon];
     [self.bottomView addSubview:self.commentsAmountLabel];
-    [self.bottomView addSubview:self.likeImageView];
+    [self.bottomView addSubview:self.likeButton];
     
 }
 
@@ -281,7 +285,8 @@
     self.commentsAmountLabel.text = [momentModel.commentsAmount stringValue];
     self.commentsAmountLabel.left = self.commentsIcon.right + 3;
     
-    self.likeImageView.image = [UIImage imageNamed:@"HomeUnlikeHeart"];
+    [self.likeButton setBackgroundImage:[UIImage imageNamed:@"HomeUnlikeHeart"] forState:UIControlStateNormal];
+    [self.likeButton setBackgroundImage:[UIImage imageNamed:@"HomeUnlikeHeart"] forState:UIControlStateHighlighted];
     
     
 }
@@ -300,14 +305,47 @@
     
 }
 
+- (void)likeButtonTouchDown {
+    POPBasicAnimation *scaleAnimation = [POPBasicAnimation animationWithPropertyNamed:kPOPLayerScaleXY];
+    scaleAnimation.toValue = [NSValue valueWithCGSize:CGSizeMake(0.7f, 0.7f)];
+    [self.likeButton.layer pop_addAnimation:scaleAnimation forKey:@"layerScaleSmallAnimation"];
+}
+
+- (void)likeButtonTouchUp {
+    
+    POPSpringAnimation *scaleAnimation = [POPSpringAnimation animationWithPropertyNamed:kPOPLayerScaleXY];
+    scaleAnimation.toValue = [NSValue valueWithCGSize:CGSizeMake(1.f, 1.f)];
+    scaleAnimation.velocity = [NSValue valueWithCGSize:CGSizeMake(3.f, 3.f)];
+    if (!self.isLiked) {
+        self.isLiked = YES;
+        [self.likeButton setBackgroundImage:[UIImage imageNamed:@"HomeLikeHeart"] forState:UIControlStateNormal];
+        [self.likeButton setBackgroundImage:[UIImage imageNamed:@"HomeLikeHeart"] forState:UIControlStateHighlighted];
+        scaleAnimation.springBounciness = 20.0f;
+        
+    } else {
+        self.isLiked = NO;
+        [self.likeButton setBackgroundImage:[UIImage imageNamed:@"HomeUnlikeHeart"] forState:UIControlStateNormal];
+        [self.likeButton setBackgroundImage:[UIImage imageNamed:@"HomeUnlikeHeart"] forState:UIControlStateHighlighted];
+        scaleAnimation.springBounciness = 8.0f;
+    }
+    [self.likeButton.layer pop_addAnimation:scaleAnimation forKey:@"layerScaleSpringAnimation"];
+}
+
+- (void)likeButtonDragExit {
+    POPBasicAnimation *scaleAnimation = [POPBasicAnimation animationWithPropertyNamed:kPOPLayerScaleXY];
+    scaleAnimation.toValue = [NSValue valueWithCGSize:CGSizeMake(1.f, 1.f)];
+    [self.likeButton.layer pop_addAnimation:scaleAnimation forKey:@"layerScaleDefaultAnimation"];
+}
+
+
 - (void)tapLikePets {
     
     if (!self.isLiked) {
         self.isLiked = YES;
-        self.likeImageView.image = [UIImage imageNamed:@"HomeLikeHeart"];
+//        self.likeButton.image = [UIImage imageNamed:@"HomeLikeHeart"];
     } else {
         self.isLiked = NO;
-        self.likeImageView.image = [UIImage imageNamed:@"HomeUnlikeHeart"];
+//        self.likeButton.image = [UIImage imageNamed:@"HomeUnlikeHeart"];
     }
     
 }

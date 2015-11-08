@@ -5,6 +5,7 @@ target "Peer" do
 pod 'SDWebImage', '~>3.7'
 pod 'JSONModel'
 pod 'AFNetworking', '~> 2.0'
-pod 'Masonry'
-pod 'Aspects'
+#pod 'Masonry'
+#pod 'Aspects'
+pod 'pop', '~> 1.0'
 end

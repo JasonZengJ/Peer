@@ -1,0 +1,3933 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>an hui</key>
+	<array>
+		<dict>
+			<key>an qing</key>
+			<array>
+				<string>ying jiang</string>
+				<string>da guan</string>
+				<string>jiao qu</string>
+				<string>huai ning</string>
+				<string>cong yang</string>
+				<string>qian shan</string>
+				<string>tai hu</string>
+				<string>su song</string>
+				<string>wang jiang</string>
+				<string>yue xi</string>
+				<string>tong cheng</string>
+			</array>
+			<key>bang bu</key>
+			<array>
+				<string>long zi hu qu</string>
+				<string>bang shan</string>
+				<string>yu hui</string>
+				<string>huai shang</string>
+				<string>huai yuan</string>
+				<string>wu he</string>
+				<string>gu zhen</string>
+			</array>
+			<key>bo zhou</key>
+			<array>
+				<string>qiao cheng</string>
+				<string>wo yang</string>
+				<string>meng cheng</string>
+				<string>li xin</string>
+			</array>
+			<key>chao hu</key>
+			<array>
+				<string>ju chao</string>
+				<string>lu jiang</string>
+				<string>wu wei</string>
+				<string>han shan</string>
+				<string>he xian</string>
+			</array>
+			<key>chi zhou</key>
+			<array>
+				<string>gui chi</string>
+				<string>dong zhi</string>
+				<string>shi tai</string>
+				<string>qing yang</string>
+			</array>
+			<key>chu zhou</key>
+			<array>
+				<string>lang ya</string>
+				<string>nan qiao</string>
+				<string>lai an</string>
+				<string>quan jiao</string>
+				<string>ding yuan</string>
+				<string>feng yang</string>
+				<string>tian zhang</string>
+				<string>ming guang</string>
+			</array>
+			<key>fu yang</key>
+			<array>
+				<string>ying zhou</string>
+				<string>ying dong</string>
+				<string>ying quan</string>
+				<string>lin quan</string>
+				<string>tai he</string>
+				<string>fu nan</string>
+				<string>ying shang</string>
+				<string>jie shou</string>
+			</array>
+			<key>he fei</key>
+			<array>
+				<string>yao hai</string>
+				<string>lu yang</string>
+				<string>shu shan</string>
+				<string>bao he</string>
+				<string>zhang feng</string>
+				<string>fei dong</string>
+				<string>fei xi</string>
+			</array>
+			<key>huai bei</key>
+			<array>
+				<string>jin jia zhuang qu</string>
+				<string>hua shan</string>
+				<string>yu shan</string>
+				<string>dang tu</string>
+				<string>du ji</string>
+				<string>xiang shan</string>
+				<string>lie shan</string>
+				<string>sui xi</string>
+			</array>
+			<key>huai nan</key>
+			<array>
+				<string>da tong</string>
+				<string>tian jia an qu</string>
+				<string>xie jia ji qu</string>
+				<string>ba gong shan qu</string>
+				<string>pan ji</string>
+				<string>feng tai</string>
+			</array>
+			<key>huang shan</key>
+			<array>
+				<string>tun xi</string>
+				<string>huang shan</string>
+				<string>hui zhou</string>
+				<string>she xian</string>
+				<string>xiu ning</string>
+				<string>yi xian</string>
+				<string>qi men</string>
+			</array>
+			<key>liu an</key>
+			<array>
+				<string>jin an</string>
+				<string>yu an</string>
+				<string>shou xian</string>
+				<string>huo qiu</string>
+				<string>shu cheng</string>
+				<string>jin zhai</string>
+				<string>huo shan</string>
+			</array>
+			<key>ma an shan</key>
+			<array>
+				<string>jin jia zhuang qu</string>
+				<string>hua shan</string>
+				<string>yu shan</string>
+				<string>dang tu</string>
+				<string>du ji</string>
+				<string>xiang shan</string>
+				<string>lie shan</string>
+				<string>sui xi</string>
+			</array>
+			<key>su zhou</key>
+			<array>
+				<string>yong qiao</string>
+				<string>dang shan</string>
+				<string>xiao xian</string>
+				<string>ling bi</string>
+				<string>si xian</string>
+			</array>
+			<key>tong ling</key>
+			<array>
+				<string>tong guan shan qu</string>
+				<string>shi zi shan qu</string>
+				<string>jiao qu</string>
+				<string>tong ling</string>
+			</array>
+			<key>wu hu</key>
+			<array>
+				<string>jing hu</string>
+				<string>ma tang</string>
+				<string>xin wu</string>
+				<string>jiu jiang</string>
+				<string>wu hu</string>
+				<string>fan chang</string>
+				<string>nan ling</string>
+			</array>
+			<key>xuan cheng</key>
+			<array>
+				<string>xuan zhou</string>
+				<string>lang xi</string>
+				<string>guang de</string>
+				<string>jing xian</string>
+				<string>ji xi</string>
+				<string>jing de</string>
+				<string>ning guo</string>
+			</array>
+		</dict>
+	</array>
+	<key>ao men</key>
+	<array>
+		<dict>
+			<key>ao men te bie xing zheng qu</key>
+			<array>
+				<string>ao men</string>
+			</array>
+		</dict>
+	</array>
+	<key>bei jing</key>
+	<array>
+		<dict>
+			<key>bei jing</key>
+			<array>
+				<string>dong cheng</string>
+				<string>xi cheng</string>
+				<string>chong wen</string>
+				<string>xuan wu</string>
+				<string>chao yang</string>
+				<string>feng tai</string>
+				<string>shi jing shan qu</string>
+				<string>hai dian</string>
+				<string>men tou gou qu</string>
+				<string>fang shan</string>
+				<string>tong zhou</string>
+				<string>shun yi</string>
+				<string>chang ping</string>
+				<string>da xing</string>
+				<string>huai rou</string>
+				<string>ping gu</string>
+				<string>mi yun</string>
+				<string>yan qing</string>
+			</array>
+		</dict>
+	</array>
+	<key>chong qing</key>
+	<array>
+		<dict>
+			<key>chong qing</key>
+			<array>
+				<string>chong qing</string>
+				<string>wan zhou</string>
+				<string>fu ling</string>
+				<string>yu zhong</string>
+				<string>da du kou </string>
+				<string>jiang bei</string>
+				<string>sha ping ba</string>
+				<string>jiu long po</string>
+				<string>nan an</string>
+				<string>bei bei</string>
+				<string>wan sheng</string>
+				<string>shuang qiao</string>
+				<string>yu bei</string>
+				<string>ba nan</string>
+				<string>qian jiang</string>
+				<string>zhang shou</string>
+				<string>qi jiang</string>
+				<string>tong nan</string>
+				<string>tong liang</string>
+				<string>da zu</string>
+				<string>rong chang</string>
+				<string>bi shan</string>
+				<string>liang ping</string>
+				<string>cheng kou</string>
+				<string>feng dou</string>
+				<string>dian jiang</string>
+				<string>wu long</string>
+				<string>zhong xian</string>
+				<string>kai xian</string>
+				<string>yun yang</string>
+				<string>feng jie</string>
+				<string>wu shan</string>
+				<string>wu xi</string>
+				<string>shi zhu </string>
+				<string>xiu shan</string>
+				<string>you yang</string>
+				<string>peng shui</string>
+				<string>jiang jin</string>
+				<string>he chuan</string>
+				<string>yong chuan</string>
+				<string>nan chuan</string>
+			</array>
+		</dict>
+	</array>
+	<key>fu jian</key>
+	<array>
+		<dict>
+			<key>fu zhou</key>
+			<array>
+				<string>gu lou</string>
+				<string>tai jiang</string>
+				<string>cang shan</string>
+				<string>ma wei</string>
+				<string>jin an</string>
+				<string>min hou</string>
+				<string>lian jiang</string>
+				<string>luo yuan</string>
+				<string>min qing</string>
+				<string>yong tai</string>
+				<string>ping tan</string>
+				<string>fu qing</string>
+				<string>zhang le</string>
+			</array>
+			<key>long yan</key>
+			<array>
+				<string>xin luo</string>
+				<string>zhang ting</string>
+				<string>yong ding</string>
+				<string>shang hang</string>
+				<string>wu ping</string>
+				<string>lian cheng</string>
+				<string>zhang ping</string>
+			</array>
+			<key>nan ping</key>
+			<array>
+				<string>yan ping</string>
+				<string>shun chang</string>
+				<string>pu cheng</string>
+				<string>guang ze</string>
+				<string>song xi</string>
+				<string>zheng he</string>
+				<string>shao wu</string>
+				<string>wu yi shan</string>
+				<string>jian ou</string>
+				<string>jian yang</string>
+			</array>
+			<key>ning de</key>
+			<array>
+				<string>jiao cheng</string>
+				<string>xia pu</string>
+				<string>gu tian</string>
+				<string>ping nan</string>
+				<string>shou ning</string>
+				<string>zhou ning</string>
+				<string>zhe rong</string>
+				<string>fu an</string>
+				<string>fu ding</string>
+			</array>
+			<key>pu tian</key>
+			<array>
+				<string>cheng xiang</string>
+				<string>han jiang</string>
+				<string>li cheng</string>
+				<string>xiu yu</string>
+				<string>xian you</string>
+			</array>
+			<key>quan zhou</key>
+			<array>
+				<string>li cheng</string>
+				<string>feng ze</string>
+				<string>luo jiang</string>
+				<string>quan gang</string>
+				<string>hui an</string>
+				<string>an xi</string>
+				<string>yong chun</string>
+				<string>de hua</string>
+				<string>jin men</string>
+				<string>shi shi</string>
+				<string>jin jiang</string>
+				<string>nan an</string>
+			</array>
+			<key>san ming</key>
+			<array>
+				<string>mei lie</string>
+				<string>san yuan</string>
+				<string>ming xi</string>
+				<string>qing liu</string>
+				<string>ning hua</string>
+				<string>da tian</string>
+				<string>you xi</string>
+				<string>sha xian</string>
+				<string>jiang le</string>
+				<string>tai ning</string>
+				<string>jian ning</string>
+				<string>yong an</string>
+			</array>
+			<key>sha men</key>
+			<array>
+				<string>si ming</string>
+				<string>hai cang</string>
+				<string>hu li</string>
+				<string>ji mei</string>
+				<string>tong an</string>
+				<string>xiang an</string>
+			</array>
+			<key>zhang zhou</key>
+			<array>
+				<string>xiang cheng</string>
+				<string>long wen</string>
+				<string>yun xiao</string>
+				<string>zhang pu</string>
+				<string>zhao an</string>
+				<string>zhang tai</string>
+				<string>dong shan</string>
+				<string>nan jing</string>
+				<string>ping he</string>
+				<string>hua an</string>
+				<string>long hai</string>
+			</array>
+		</dict>
+	</array>
+	<key>gan su</key>
+	<array>
+		<dict>
+			<key>bai yin</key>
+			<array>
+				<string>bai yin</string>
+				<string>ping chuan</string>
+				<string>jing yuan</string>
+				<string>hui ning</string>
+				<string>jing tai</string>
+			</array>
+			<key>ding xi</key>
+			<array>
+				<string>an ding</string>
+				<string>tong wei</string>
+				<string>long xi</string>
+				<string>wei yuan</string>
+				<string>lin tao</string>
+				<string>zhang xian</string>
+				<string>min xian</string>
+			</array>
+			<key>gan nan </key>
+			<array>
+				<string>he zuo</string>
+				<string>lin tan</string>
+				<string>zhuo ni</string>
+				<string>zhou qu</string>
+				<string>die bu</string>
+				<string>ma qu</string>
+				<string>lu qu</string>
+				<string>xia he</string>
+			</array>
+			<key>jia yu guan</key>
+			<array/>
+			<key>jin chang</key>
+			<array>
+				<string>jin chuan</string>
+				<string>yong chang</string>
+			</array>
+			<key>jiu quan</key>
+			<array>
+				<string>su zhou</string>
+				<string>jin ta</string>
+				<string>an xi</string>
+				<string>su bei meng gu zu zi zhi xian</string>
+				<string>a ke sai ha sa ke zu zi zhi xian</string>
+				<string>yu men</string>
+				<string>dun huang</string>
+			</array>
+			<key>lan zhou</key>
+			<array>
+				<string>cheng guan</string>
+				<string>qi li he qu</string>
+				<string>xi gu</string>
+				<string>an ning</string>
+				<string>hong gu</string>
+				<string>yong deng</string>
+				<string>gao lan</string>
+				<string>yu zhong</string>
+			</array>
+			<key>lin xia</key>
+			<array>
+				<string>lin xia</string>
+				<string>lin xia</string>
+				<string>kang le</string>
+				<string>yong jing</string>
+				<string>guang he</string>
+				<string>he zheng</string>
+				<string>dong xiang zu zi zhi xian</string>
+				<string>ji shi shan bao an zu dong xiang zu sa la zu zi zhi xian</string>
+			</array>
+			<key>long nan</key>
+			<array>
+				<string>wu dou</string>
+				<string>cheng xian</string>
+				<string>wen xian</string>
+				<string>dang chang</string>
+				<string>kang xian</string>
+				<string>xi he</string>
+				<string>li xian</string>
+				<string>hui xian</string>
+				<string>liang dang</string>
+			</array>
+			<key>ping liang</key>
+			<array>
+				<string>kong dong</string>
+				<string>jing chuan</string>
+				<string>ling tai</string>
+				<string>chong xin</string>
+				<string>hua ting</string>
+				<string>zhuang lang</string>
+				<string>jing ning</string>
+			</array>
+			<key>qing yang</key>
+			<array>
+				<string>xi feng</string>
+				<string>qing cheng</string>
+				<string>huan xian</string>
+				<string>hua chi</string>
+				<string>he shui</string>
+				<string>zheng ning</string>
+				<string>ning xian</string>
+				<string>zhen yuan</string>
+			</array>
+			<key>tian shui</key>
+			<array>
+				<string>qin cheng</string>
+				<string>bei dao</string>
+				<string>qing shui</string>
+				<string>qin an</string>
+				<string>gan gu</string>
+				<string>wu shan</string>
+				<string>zhang jia chuan hui zu zi zhi xian</string>
+			</array>
+			<key>wu wei</key>
+			<array>
+				<string>liang zhou</string>
+				<string>min qin</string>
+				<string>gu lang</string>
+				<string>tian zhu cang zu zi zhi xian</string>
+			</array>
+			<key>zhang ye</key>
+			<array>
+				<string>gan zhou</string>
+				<string>su nan yu gu zu zi zhi xian</string>
+				<string>min le</string>
+				<string>lin ze</string>
+				<string>gao tai</string>
+				<string>shan dan</string>
+			</array>
+		</dict>
+	</array>
+	<key>guang dong</key>
+	<array>
+		<dict>
+			<key>chao zhou</key>
+			<array>
+				<string>xiang qiao</string>
+				<string>chao an</string>
+				<string>rao ping</string>
+			</array>
+			<key>dong guan</key>
+			<array>
+				<string>dong guan</string>
+			</array>
+			<key>fu shan</key>
+			<array>
+				<string>chan cheng</string>
+				<string>nan hai</string>
+				<string>shun de</string>
+				<string>san shui</string>
+				<string>gao ming</string>
+			</array>
+			<key>guang zhou</key>
+			<array>
+				<string>dong shan</string>
+				<string>li wan</string>
+				<string>yue xiu</string>
+				<string>hai zhu</string>
+				<string>tian he</string>
+				<string>fang cun</string>
+				<string>bai yun</string>
+				<string>huang bu</string>
+				<string>fan yu</string>
+				<string>hua dou</string>
+				<string>zeng cheng</string>
+				<string>cong hua</string>
+			</array>
+			<key>he yuan</key>
+			<array>
+				<string>yuan cheng</string>
+				<string>zi jin</string>
+				<string>long chuan</string>
+				<string>lian ping</string>
+				<string>he ping</string>
+				<string>dong yuan</string>
+			</array>
+			<key>hui zhou</key>
+			<array>
+				<string>hui cheng</string>
+				<string>hui yang</string>
+				<string>bo luo</string>
+				<string>hui dong</string>
+				<string>long men</string>
+			</array>
+			<key>jiang men</key>
+			<array>
+				<string>peng jiang</string>
+				<string>jiang hai</string>
+				<string>xin hui</string>
+				<string>tai shan</string>
+				<string>kai ping</string>
+				<string>he shan</string>
+				<string>en ping</string>
+			</array>
+			<key>jie yang</key>
+			<array>
+				<string>rong cheng</string>
+				<string>jie dong</string>
+				<string>jie xi</string>
+				<string>hui lai</string>
+				<string>pu ning</string>
+			</array>
+			<key>mao ming</key>
+			<array>
+				<string>mao nan</string>
+				<string>mao gang</string>
+				<string>dian bai</string>
+				<string>gao zhou</string>
+				<string>hua zhou</string>
+				<string>xin yi</string>
+			</array>
+			<key>mei zhou</key>
+			<array>
+				<string>mei jiang</string>
+				<string>mei xian</string>
+				<string>da bu</string>
+				<string>feng shun</string>
+				<string>wu hua</string>
+				<string>ping yuan</string>
+				<string>jiao ling</string>
+				<string>xing ning</string>
+			</array>
+			<key>qing yuan</key>
+			<array>
+				<string>qing cheng</string>
+				<string>fu gang</string>
+				<string>yang shan</string>
+				<string>lian shan zhuang zu yao zu zi zhi xian</string>
+				<string>lian nan yao zu zi zhi xian</string>
+				<string>qing xin</string>
+				<string>ying de</string>
+				<string>lian zhou</string>
+			</array>
+			<key>shan tou</key>
+			<array>
+				<string>long hu</string>
+				<string>jin ping</string>
+				<string>hao jiang</string>
+				<string>chao yang</string>
+				<string>chao nan</string>
+				<string>cheng hai</string>
+				<string>nan ao</string>
+			</array>
+			<key>shan wei</key>
+			<array>
+				<string>cheng qu</string>
+				<string>hai feng</string>
+				<string>lu he</string>
+				<string>lu feng</string>
+			</array>
+			<key>shao guan</key>
+			<array>
+				<string>wu jiang</string>
+				<string>zhen jiang</string>
+				<string>qu jiang</string>
+				<string>shi xing</string>
+				<string>ren hua</string>
+				<string>weng yuan</string>
+				<string>ru yuan yao zu zi zhi xian</string>
+				<string>xin feng</string>
+				<string>le chang</string>
+				<string>nan xiong</string>
+			</array>
+			<key>shen zhen</key>
+			<array>
+				<string>luo hu</string>
+				<string>fu tian</string>
+				<string>nan shan</string>
+				<string>bao an</string>
+				<string>long gang</string>
+				<string>yan tian</string>
+			</array>
+			<key>yang jiang</key>
+			<array>
+				<string>jiang cheng</string>
+				<string>yang xi</string>
+				<string>yang dong</string>
+				<string>yang chun</string>
+			</array>
+			<key>yun fu</key>
+			<array>
+				<string>yun cheng</string>
+				<string>xin xing</string>
+				<string>yu nan</string>
+				<string>yun an</string>
+				<string>luo ding</string>
+			</array>
+			<key>zhan jiang</key>
+			<array>
+				<string>chi kan</string>
+				<string>xia shan</string>
+				<string>po tou</string>
+				<string>ma zhang</string>
+				<string>sui xi</string>
+				<string>xu wen</string>
+				<string>lian jiang</string>
+				<string>lei zhou</string>
+				<string>wu chuan</string>
+			</array>
+			<key>zhao qing</key>
+			<array>
+				<string>duan zhou</string>
+				<string>ding hu</string>
+				<string>guang ning</string>
+				<string>huai ji</string>
+				<string>feng kai</string>
+				<string>de qing</string>
+				<string>gao yao</string>
+				<string>si hui</string>
+			</array>
+			<key>zhong shan</key>
+			<array>
+				<string>zhong shan</string>
+			</array>
+			<key>zhu hai</key>
+			<array>
+				<string>xiang zhou</string>
+				<string>dou men</string>
+				<string>jin wan</string>
+			</array>
+		</dict>
+	</array>
+	<key>guang xi</key>
+	<array>
+		<dict>
+			<key>bai se</key>
+			<array>
+				<string>you jiang</string>
+				<string>tian yang</string>
+				<string>tian dong</string>
+				<string>ping guo</string>
+				<string>de bao</string>
+				<string>jing xi</string>
+				<string>na po</string>
+				<string>ling yun</string>
+				<string>le ye</string>
+				<string>tian lin</string>
+				<string>xi lin</string>
+				<string>long lin ge zu zi zhi xian</string>
+			</array>
+			<key>bei hai</key>
+			<array>
+				<string>hai cheng</string>
+				<string>yin hai</string>
+				<string>tie shan gang qu</string>
+				<string>he pu</string>
+			</array>
+			<key>chong zuo</key>
+			<array>
+				<string>jiang zhou</string>
+				<string>fu sui</string>
+				<string>ning ming</string>
+				<string>long zhou</string>
+				<string>da xin</string>
+				<string>tian deng</string>
+				<string>ping xiang</string>
+			</array>
+			<key>fang cheng gang</key>
+			<array>
+				<string>gang kou</string>
+				<string>fang cheng</string>
+				<string>shang si</string>
+				<string>dong xing</string>
+			</array>
+			<key>gui gang</key>
+			<array>
+				<string>gang bei</string>
+				<string>gang nan</string>
+				<string>tan tang</string>
+				<string>ping nan</string>
+				<string>gui ping</string>
+			</array>
+			<key>gui lin</key>
+			<array>
+				<string>xiu feng</string>
+				<string>die cai</string>
+				<string>xiang shan</string>
+				<string>qi xing</string>
+				<string>yan shan</string>
+				<string>yang shuo</string>
+				<string>lin gui</string>
+				<string>ling chuan</string>
+				<string>quan zhou</string>
+				<string>xing an</string>
+				<string>yong fu</string>
+				<string>guan yang</string>
+				<string>long sheng ge zu zi zhi xian</string>
+				<string>zi yuan</string>
+				<string>ping le</string>
+				<string>li pu</string>
+				<string>gong cheng yao zu zi zhi xian</string>
+			</array>
+			<key>he chi</key>
+			<array>
+				<string>jin cheng jiang qu</string>
+				<string>nan dan</string>
+				<string>tian e</string>
+				<string>feng shan</string>
+				<string>dong lan</string>
+				<string>luo cheng mu lao zu zi zhi xian</string>
+				<string>huan jiang mao nan zu zi zhi xian</string>
+				<string>ba ma yao zu zi zhi xian</string>
+				<string>dou an yao zu zi zhi xian</string>
+				<string>da hua yao zu zi zhi xian</string>
+				<string>yi zhou</string>
+			</array>
+			<key>he zhou</key>
+			<array>
+				<string>ba bu</string>
+				<string>zhao ping</string>
+				<string>zhong shan</string>
+				<string>fu chuan yao zu zi zhi xian</string>
+			</array>
+			<key>lai bin</key>
+			<array>
+				<string>xing bin</string>
+				<string>xin cheng</string>
+				<string>xiang zhou</string>
+				<string>wu xuan</string>
+				<string>jin xiu yao zu zi zhi xian</string>
+				<string>he shan</string>
+			</array>
+			<key>liu zhou</key>
+			<array>
+				<string>cheng zhong</string>
+				<string>yu feng</string>
+				<string>liu nan</string>
+				<string>liu bei</string>
+				<string>liu jiang</string>
+				<string>liu cheng</string>
+				<string>lu zhai</string>
+				<string>rong an</string>
+				<string>rong shui miao zu zi zhi xian</string>
+				<string>san jiang dong zu zi zhi xian</string>
+			</array>
+			<key>nan ning</key>
+			<array>
+				<string>xing ning</string>
+				<string>qing xiu</string>
+				<string>jiang nan</string>
+				<string>xi xiang tang qu</string>
+				<string>liang qing</string>
+				<string>yong ning</string>
+				<string>wu ming</string>
+				<string>long an</string>
+				<string>ma shan</string>
+				<string>shang lin</string>
+				<string>bin yang</string>
+				<string>heng xian</string>
+			</array>
+			<key>qin zhou</key>
+			<array>
+				<string>qin nan</string>
+				<string>qin bei</string>
+				<string>ling shan</string>
+				<string>pu bei</string>
+			</array>
+			<key>wu zhou</key>
+			<array>
+				<string>wan xiu</string>
+				<string>die shan</string>
+				<string>zhang zhou</string>
+				<string>cang wu</string>
+				<string>teng xian</string>
+				<string>meng shan</string>
+				<string>cen xi</string>
+			</array>
+			<key>yu lin</key>
+			<array>
+				<string>yu zhou</string>
+				<string>rong xian</string>
+				<string>lu chuan</string>
+				<string>bo bai</string>
+				<string>xing ye</string>
+				<string>bei liu</string>
+			</array>
+		</dict>
+	</array>
+	<key>gui zhou</key>
+	<array>
+		<dict>
+			<key>an shun</key>
+			<array>
+				<string>xi xiu</string>
+				<string>ping ba</string>
+				<string>pu ding</string>
+				<string>zhen ning bu yi zu miao zu zi zhi xian</string>
+				<string>guan ling bu yi zu miao zu zi zhi xian</string>
+				<string>zi yun miao zu bu yi zu zi zhi xian</string>
+			</array>
+			<key>bi jie</key>
+			<array>
+				<string>bi jie</string>
+				<string>da fang</string>
+				<string>qian xi</string>
+				<string>jin sha</string>
+				<string>zhi jin</string>
+				<string>na yong</string>
+				<string>wei ning yi zu hui zu miao zu zi zhi xian</string>
+				<string>he zhang</string>
+			</array>
+			<key>gui yang</key>
+			<array>
+				<string>nan ming</string>
+				<string>yun yan</string>
+				<string>hua xi</string>
+				<string>wu dang</string>
+				<string>bai yun</string>
+				<string>xiao he</string>
+				<string>kai yang</string>
+				<string>xi feng</string>
+				<string>xiu wen</string>
+				<string>qing zhen</string>
+			</array>
+			<key>liu pan shui</key>
+			<array>
+				<string>zhong shan</string>
+				<string>liu zhi te qu</string>
+				<string>shui cheng</string>
+				<string>pan xian</string>
+			</array>
+			<key>qian dong nan</key>
+			<array>
+				<string>kai li</string>
+				<string>huang ping</string>
+				<string>shi bing</string>
+				<string>san sui</string>
+				<string>zhen yuan</string>
+				<string>cen gong</string>
+				<string>tian zhu</string>
+				<string>jin ping</string>
+				<string>jian he</string>
+				<string>tai jiang</string>
+				<string>li ping</string>
+				<string>rong jiang</string>
+				<string>cong jiang</string>
+				<string>lei shan</string>
+				<string>ma jiang</string>
+				<string>dan zhai</string>
+			</array>
+			<key>qian nan </key>
+			<array>
+				<string>dou yun</string>
+				<string>fu quan</string>
+				<string>li bo</string>
+				<string>gui ding</string>
+				<string>weng an</string>
+				<string>du shan</string>
+				<string>ping tang</string>
+				<string>luo dian</string>
+				<string>zhang shun</string>
+				<string>long li</string>
+				<string>hui shui</string>
+				<string>san dou shui zu zi zhi xian</string>
+			</array>
+			<key>qian xi nan </key>
+			<array>
+				<string>xing yi</string>
+				<string>xing ren</string>
+				<string>pu an</string>
+				<string>qing long</string>
+				<string>zhen feng</string>
+				<string>wang mo</string>
+				<string>ce heng</string>
+				<string>an long</string>
+			</array>
+			<key>tong ren</key>
+			<array>
+				<string>xing yi</string>
+				<string>tong ren</string>
+				<string>jiang kou</string>
+				<string>yu ping dong zu zi zhi xian</string>
+				<string>shi qian</string>
+				<string>si nan</string>
+				<string>yin jiang tu jia zu miao zu zi zhi xian</string>
+				<string>de jiang</string>
+				<string>yan he tu jia zu zi zhi xian</string>
+				<string>song tao miao zu zi zhi xian</string>
+				<string>wan shan te qu</string>
+			</array>
+			<key>zun yi</key>
+			<array>
+				<string>hong hua gang qu</string>
+				<string>hui chuan</string>
+				<string>zun yi</string>
+				<string>tong zi</string>
+				<string>sui yang</string>
+				<string>zheng an</string>
+				<string>dao zhen ge lao zu miao zu zi zhi xian</string>
+				<string>wu chuan ge lao zu miao zu zi zhi xian</string>
+				<string>feng gang</string>
+				<string>mei tan</string>
+				<string>yu qing</string>
+				<string>xi shui</string>
+				<string>chi shui</string>
+				<string>ren huai</string>
+			</array>
+		</dict>
+	</array>
+	<key>hai nan</key>
+	<array>
+		<dict>
+			<key>hai kou</key>
+			<array>
+				<string>xiu ying</string>
+				<string>long hua</string>
+				<string>qiong shan</string>
+				<string>mei lan</string>
+			</array>
+			<key>san ya</key>
+			<array>
+				<string>wu zhi shan</string>
+				<string>qiong hai</string>
+				<string>dan zhou</string>
+				<string>wen chang</string>
+				<string>wan ning</string>
+				<string>dong fang</string>
+				<string>ding an</string>
+				<string>tun chang</string>
+				<string>cheng mai</string>
+				<string>lin gao</string>
+				<string>bai sha li zu zi zhi xian</string>
+				<string>chang jiang li zu zi zhi xian</string>
+				<string>le dong li zu zi zhi xian</string>
+				<string>ling shui li zu zi zhi xian</string>
+				<string>bao ting li zu miao zu zi zhi xian</string>
+				<string>qiong zhong li zu miao zu zi zhi xian</string>
+				<string>xi sha qun dao</string>
+				<string>nan sha qun dao</string>
+				<string>zhong sha qun dao de dao jiao ji qi hai yu</string>
+			</array>
+		</dict>
+	</array>
+	<key>he bei</key>
+	<array>
+		<dict>
+			<key>bao ding</key>
+			<array>
+				<string>xin qu</string>
+				<string>bei qu</string>
+				<string>nan qu</string>
+				<string>man cheng</string>
+				<string>qing yuan</string>
+				<string>lai shui</string>
+				<string>fu ping</string>
+				<string>xu shui</string>
+				<string>ding xing</string>
+				<string>tang xian</string>
+				<string>gao yang</string>
+				<string>rong cheng</string>
+				<string>lai yuan</string>
+				<string>wang dou</string>
+				<string>an xin</string>
+				<string>yi xian</string>
+				<string>qu yang</string>
+				<string>li xian</string>
+				<string>shun ping</string>
+				<string>bo ye</string>
+				<string>xiong xian</string>
+				<string>zhuo zhou</string>
+				<string>ding zhou</string>
+				<string>an guo</string>
+				<string>gao bei dian</string>
+			</array>
+			<key>cang zhou</key>
+			<array>
+				<string>xin hua</string>
+				<string>yun he</string>
+				<string>cang xian</string>
+				<string>qing xian</string>
+				<string>dong guang</string>
+				<string>hai xing</string>
+				<string>yan shan</string>
+				<string>su ning</string>
+				<string>nan pi</string>
+				<string>wu qiao</string>
+				<string>xian xian</string>
+				<string>meng cun hui zu zi zhi xian</string>
+				<string>po tou</string>
+				<string>ren qiu</string>
+				<string>huang hua</string>
+				<string>he jian</string>
+			</array>
+			<key>cheng de</key>
+			<array>
+				<string>shuang qiao</string>
+				<string>shuang luan</string>
+				<string>ying shou ying zi kuang qu</string>
+				<string>cheng de</string>
+				<string>xing long</string>
+				<string>ping quan</string>
+				<string>luan ping</string>
+				<string>long hua</string>
+				<string>feng ning man zu zi zhi xian</string>
+				<string>kuan cheng man zu zi zhi xian</string>
+				<string>wei chang man zu meng gu zu zi zhi xian</string>
+			</array>
+			<key>han dan</key>
+			<array>
+				<string>han shan</string>
+				<string>cong tai</string>
+				<string>fu xing</string>
+				<string>feng feng kuang qu</string>
+				<string>han dan</string>
+				<string>lin zhang</string>
+				<string>cheng an</string>
+				<string>da ming</string>
+				<string>she xian</string>
+				<string>ci xian</string>
+				<string>fei xiang</string>
+				<string>yong nian</string>
+				<string>qiu xian</string>
+				<string>ji ze</string>
+				<string>guang ping</string>
+				<string>guan tao</string>
+				<string>wei xian</string>
+				<string>qu zhou</string>
+				<string>wu an</string>
+			</array>
+			<key>heng shui</key>
+			<array>
+				<string>tao cheng</string>
+				<string>zao qiang</string>
+				<string>wu yi</string>
+				<string>wu qiang</string>
+				<string>rao yang</string>
+				<string>an ping</string>
+				<string>gu cheng</string>
+				<string>jing xian</string>
+				<string>fu cheng</string>
+				<string>ji zhou</string>
+				<string>shen zhou</string>
+			</array>
+			<key>lang fang</key>
+			<array>
+				<string>an ci</string>
+				<string>guang yang</string>
+				<string>gu an</string>
+				<string>yong qing</string>
+				<string>xiang he</string>
+				<string>da cheng</string>
+				<string>wen an</string>
+				<string>da chang hui zu zi zhi xian</string>
+				<string>ba zhou</string>
+				<string>san he</string>
+			</array>
+			<key>qin huang dao</key>
+			<array>
+				<string>hai gang</string>
+				<string>shan hai guan qu</string>
+				<string>dai he</string>
+				<string>qing long man zu zi zhi xian</string>
+				<string>chang li</string>
+				<string>fu ning</string>
+				<string>lu long</string>
+			</array>
+			<key>shi jia zhuang</key>
+			<array>
+				<string>zhang an</string>
+				<string>qiao dong</string>
+				<string>qiao xi</string>
+				<string>xin hua</string>
+				<string>jing xing kuang qu</string>
+				<string>yu hua</string>
+				<string>jing xing</string>
+				<string>zheng ding</string>
+				<string>luan cheng</string>
+				<string>xing tang</string>
+				<string>ling shou</string>
+				<string>gao yi</string>
+				<string>shen ze</string>
+				<string>zan huang</string>
+				<string>wu ji</string>
+				<string>ping shan</string>
+				<string>yuan shi</string>
+				<string>zhao xian</string>
+				<string>xin ji</string>
+				<string>gao cheng</string>
+				<string>jin zhou</string>
+				<string>xin le</string>
+				<string>lu quan</string>
+			</array>
+			<key>tang shan</key>
+			<array>
+				<string>lu nan</string>
+				<string>lu bei</string>
+				<string>gu ye</string>
+				<string>kai ping</string>
+				<string>feng nan</string>
+				<string>feng run</string>
+				<string>luan xian</string>
+				<string>luan nan</string>
+				<string>le ting</string>
+				<string>qian xi</string>
+				<string>yu tian</string>
+				<string>tang hai</string>
+				<string>zun hua</string>
+				<string>qian an</string>
+			</array>
+			<key>xing tai</key>
+			<array>
+				<string>qiao dong</string>
+				<string>qiao xi</string>
+				<string>xing tai</string>
+				<string>lin cheng</string>
+				<string>nei qiu</string>
+				<string>bai xiang</string>
+				<string>long yao</string>
+				<string>ren xian</string>
+				<string>nan he</string>
+				<string>ning jin</string>
+				<string>ju lu</string>
+				<string>xin he</string>
+				<string>guang zong</string>
+				<string>ping xiang</string>
+				<string>wei xian</string>
+				<string>qing he</string>
+				<string>lin xi</string>
+				<string>nan gong</string>
+				<string>sha he</string>
+			</array>
+			<key>zhang jia kou</key>
+			<array>
+				<string>qiao dong</string>
+				<string>qiao xi</string>
+				<string>xuan hua</string>
+				<string>xia hua yuan qu</string>
+				<string>xuan hua</string>
+				<string>zhang bei</string>
+				<string>kang bao</string>
+				<string>gu yuan</string>
+				<string>shang yi</string>
+				<string>wei xian</string>
+				<string>yang yuan</string>
+				<string>huai an</string>
+				<string>wan quan</string>
+				<string>huai lai</string>
+				<string>zhuo lu</string>
+				<string>chi cheng</string>
+				<string>chong li</string>
+			</array>
+		</dict>
+	</array>
+	<key>he nan</key>
+	<array>
+		<dict>
+			<key>an yang</key>
+			<array>
+				<string>wen feng</string>
+				<string>bei guan</string>
+				<string>yin dou</string>
+				<string>long an</string>
+				<string>an yang</string>
+				<string>tang yin</string>
+				<string>hua xian</string>
+				<string>nei huang</string>
+				<string>lin zhou</string>
+			</array>
+			<key>he bi</key>
+			<array>
+				<string>he shan</string>
+				<string>shan cheng</string>
+				<string>qi bin</string>
+				<string>jun xian</string>
+				<string>qi xian</string>
+			</array>
+			<key>jiao zuo</key>
+			<array>
+				<string>jie fang</string>
+				<string>zhong zhan</string>
+				<string>ma cun</string>
+				<string>shan yang</string>
+				<string>xiu wu</string>
+				<string>bo ai</string>
+				<string>wu zhi</string>
+				<string>wen xian</string>
+				<string>ji yuan</string>
+				<string>qin yang</string>
+				<string>meng zhou</string>
+			</array>
+			<key>kai feng</key>
+			<array>
+				<string>long ting</string>
+				<string>shun he hui zu qu</string>
+				<string>gu lou</string>
+				<string>nan guan</string>
+				<string>jiao qu</string>
+				<string>qi xian</string>
+				<string>tong xu</string>
+				<string>wei shi</string>
+				<string>kai feng</string>
+				<string>lan kao</string>
+			</array>
+			<key>luo he</key>
+			<array>
+				<string>yuan hui</string>
+				<string>yan cheng</string>
+				<string>zhao ling</string>
+				<string>wu yang</string>
+				<string>lin ying</string>
+			</array>
+			<key>luo yang</key>
+			<array>
+				<string>lao cheng</string>
+				<string>xi gong</string>
+				<string>chan he hui zu qu</string>
+				<string>jian xi</string>
+				<string>ji li</string>
+				<string>luo long</string>
+				<string>meng jin</string>
+				<string>xin an</string>
+				<string>luan chuan</string>
+				<string>song xian</string>
+				<string>ru yang</string>
+				<string>yi yang</string>
+				<string>luo ning</string>
+				<string>yi chuan</string>
+				<string>yan shi</string>
+			</array>
+			<key>nan yang</key>
+			<array>
+				<string>wan cheng</string>
+				<string>wo long</string>
+				<string>nan zhao</string>
+				<string>fang cheng</string>
+				<string>xi xia</string>
+				<string>zhen ping</string>
+				<string>nei xiang</string>
+				<string>xi chuan</string>
+				<string>she qi</string>
+				<string>tang he</string>
+				<string>xin ye</string>
+				<string>tong bai</string>
+				<string>deng zhou</string>
+			</array>
+			<key>ping ding shan</key>
+			<array>
+				<string>xin hua</string>
+				<string>wei dong</string>
+				<string>shi long</string>
+				<string>zhan he</string>
+				<string>bao feng</string>
+				<string>ye xian</string>
+				<string>lu shan</string>
+				<string>jia xian</string>
+				<string>wu gang</string>
+				<string>ru zhou</string>
+			</array>
+			<key>pu yang</key>
+			<array>
+				<string>hua long</string>
+				<string>qing feng</string>
+				<string>nan le</string>
+				<string>fan xian</string>
+				<string>tai qian</string>
+				<string>pu yang</string>
+			</array>
+			<key>san men xia</key>
+			<array>
+				<string>xia qu</string>
+				<string>hu bin</string>
+				<string>mian chi</string>
+				<string>shan xian</string>
+				<string>lu shi</string>
+				<string>yi ma</string>
+				<string>ling bao</string>
+			</array>
+			<key>shang qiu</key>
+			<array>
+				<string>liang yuan</string>
+				<string>sui yang</string>
+				<string>min quan</string>
+				<string>sui xian</string>
+				<string>ning ling</string>
+				<string>zhe cheng</string>
+				<string>yu cheng</string>
+				<string>xia yi</string>
+				<string>yong cheng</string>
+			</array>
+			<key>xin xiang</key>
+			<array>
+				<string>hong qi</string>
+				<string>wei bin</string>
+				<string>feng quan</string>
+				<string>mu ye</string>
+				<string>xin xiang</string>
+				<string>huo jia</string>
+				<string>yuan yang</string>
+				<string>yan jin</string>
+				<string>feng qiu</string>
+				<string>zhang yuan</string>
+				<string>wei hui</string>
+				<string>hui xian</string>
+			</array>
+			<key>xin yang</key>
+			<array>
+				<string>shi he</string>
+				<string>ping qiao</string>
+				<string>luo shan</string>
+				<string>guang shan</string>
+				<string>xin xian</string>
+				<string>shang cheng</string>
+				<string>gu shi</string>
+				<string>huang chuan</string>
+				<string>huai bin</string>
+				<string>xi xian</string>
+			</array>
+			<key>xu chang</key>
+			<array>
+				<string>wei dou</string>
+				<string>xu chang</string>
+				<string>yan ling</string>
+				<string>xiang cheng</string>
+				<string>yu zhou</string>
+				<string>zhang ge</string>
+			</array>
+			<key>zheng zhou</key>
+			<array>
+				<string>zhong yuan</string>
+				<string>er qi</string>
+				<string>guan cheng hui zu qu</string>
+				<string>jin shui</string>
+				<string>shang jie</string>
+				<string>hui ji</string>
+				<string>zhong mou</string>
+				<string>gong yi</string>
+				<string>xing yang</string>
+				<string>xin mi</string>
+				<string>xin zheng</string>
+				<string>deng feng</string>
+			</array>
+			<key>zhou kou</key>
+			<array>
+				<string>chuan hui</string>
+				<string>fu gou</string>
+				<string>xi hua</string>
+				<string>shang shui</string>
+				<string>chen qiu</string>
+				<string>dan cheng</string>
+				<string>huai yang</string>
+				<string>tai kang</string>
+				<string>lu yi</string>
+				<string>xiang cheng</string>
+			</array>
+			<key>zhu ma dian</key>
+			<array>
+				<string>yi cheng</string>
+				<string>xi ping</string>
+				<string>shang cai</string>
+				<string>ping yu</string>
+				<string>zheng yang</string>
+				<string>que shan</string>
+				<string>mi yang</string>
+				<string>ru nan</string>
+				<string>sui ping</string>
+				<string>xin cai</string>
+			</array>
+		</dict>
+	</array>
+	<key>hei long jiang</key>
+	<array>
+		<dict>
+			<key>da qing</key>
+			<array>
+				<string>sa er tu qu</string>
+				<string>long feng</string>
+				<string>rang hu lu qu</string>
+				<string>hong gang</string>
+				<string>da tong</string>
+				<string>zhao zhou</string>
+				<string>zhao yuan</string>
+				<string>lin dian</string>
+				<string>du er bo te meng gu zu zi zhi xian</string>
+			</array>
+			<key>da xing an ling</key>
+			<array>
+				<string>hu ma</string>
+				<string>ta he</string>
+				<string>mo he</string>
+			</array>
+			<key>ha er bin</key>
+			<array>
+				<string>dao li</string>
+				<string>nan gang</string>
+				<string>dao wai</string>
+				<string>xiang fang</string>
+				<string>dong li</string>
+				<string>ping fang</string>
+				<string>song bei</string>
+				<string>hu lan</string>
+				<string>yi lan</string>
+				<string>fang zheng</string>
+				<string>bin xian</string>
+				<string>ba yan</string>
+				<string>mu lan</string>
+				<string>tong he</string>
+				<string>yan shou</string>
+				<string>a cheng</string>
+				<string>shuang cheng</string>
+				<string>shang zhi</string>
+				<string>wu chang</string>
+			</array>
+			<key>he gang</key>
+			<array>
+				<string>xiang yang</string>
+				<string>gong nong</string>
+				<string>nan shan</string>
+				<string>xing an</string>
+				<string>dong shan</string>
+				<string>xing shan</string>
+				<string>luo bei</string>
+				<string>sui bin</string>
+			</array>
+			<key>hei he</key>
+			<array>
+				<string>ai hui</string>
+				<string>nen jiang</string>
+				<string>xun ke</string>
+				<string>sun wu</string>
+				<string>bei an</string>
+				<string>wu da lian chi</string>
+			</array>
+			<key>ji xi</key>
+			<array>
+				<string>ji guan</string>
+				<string>heng shan</string>
+				<string>di dao</string>
+				<string>li shu</string>
+				<string>cheng zi he qu</string>
+				<string>ma shan</string>
+				<string>ji dong</string>
+				<string>hu lin</string>
+				<string>mi shan</string>
+			</array>
+			<key>jia mu si</key>
+			<array>
+				<string>yong hong</string>
+				<string>xiang yang</string>
+				<string>qian jin</string>
+				<string>dong feng</string>
+				<string>jiao qu</string>
+				<string>hua nan</string>
+				<string>hua chuan</string>
+				<string>tang yuan</string>
+				<string>fu yuan</string>
+				<string>tong jiang</string>
+				<string>fu jin</string>
+			</array>
+			<key>mu dan jiang</key>
+			<array>
+				<string>dong an</string>
+				<string>yang ming</string>
+				<string>ai min</string>
+				<string>xi an</string>
+				<string>dong ning</string>
+				<string>lin kou</string>
+				<string>sui fen he</string>
+				<string>hai lin</string>
+				<string>ning an</string>
+				<string>mu leng</string>
+			</array>
+			<key>qi qi ha er</key>
+			<array>
+				<string>long sha</string>
+				<string>jian hua</string>
+				<string>tie feng</string>
+				<string>ang ang xi qu</string>
+				<string>fu la er ji qu</string>
+				<string>nian zi shan qu</string>
+				<string>mei li si da wo er zu qu</string>
+				<string>long jiang</string>
+				<string>yi an</string>
+				<string>tai lai</string>
+				<string>gan nan</string>
+				<string>fu yu</string>
+				<string>ke shan</string>
+				<string>ke dong</string>
+				<string>bai quan</string>
+				<string>ne he</string>
+			</array>
+			<key>qi tai he</key>
+			<array>
+				<string>xin xing</string>
+				<string>tao shan</string>
+				<string>jia zi he qu</string>
+				<string>bo li</string>
+			</array>
+			<key>shuang ya shan</key>
+			<array>
+				<string>jian shan</string>
+				<string>ling dong</string>
+				<string>si fang tai qu</string>
+				<string>bao shan</string>
+				<string>ji xian</string>
+				<string>you yi</string>
+				<string>bao qing</string>
+				<string>rao he</string>
+			</array>
+			<key>sui hua</key>
+			<array>
+				<string>bei lin</string>
+				<string>wang kui</string>
+				<string>lan xi</string>
+				<string>qing gang</string>
+				<string>qing an</string>
+				<string>ming shui</string>
+				<string>sui leng</string>
+				<string>an da</string>
+				<string>zhao dong</string>
+				<string>hai lun</string>
+			</array>
+			<key>yi chun</key>
+			<array>
+				<string>yi chun</string>
+				<string>nan cha</string>
+				<string>you hao</string>
+				<string>xi lin</string>
+				<string>cui luan</string>
+				<string>xin qing</string>
+				<string>mei xi</string>
+				<string>jin shan tun qu</string>
+				<string>wu ying</string>
+				<string>wu ma he qu</string>
+				<string>tang wang he qu</string>
+				<string>dai ling</string>
+				<string>wu yi ling qu</string>
+				<string>hong xing</string>
+				<string>shang gan ling qu</string>
+				<string>jia yin</string>
+				<string>tie li</string>
+			</array>
+		</dict>
+	</array>
+	<key>hu bei</key>
+	<array>
+		<dict>
+			<key>e zhou</key>
+			<array>
+				<string>liang zi hu qu</string>
+				<string>hua rong</string>
+				<string>e cheng</string>
+			</array>
+			<key>en shi</key>
+			<array>
+				<string>en shi</string>
+				<string>li chuan</string>
+				<string>jian shi</string>
+				<string>ba dong</string>
+				<string>xuan en</string>
+				<string>xian feng</string>
+				<string>lai feng</string>
+				<string>he feng</string>
+			</array>
+			<key>huang gang</key>
+			<array>
+				<string>huang zhou</string>
+				<string>tuan feng</string>
+				<string>hong an</string>
+				<string>luo tian</string>
+				<string>ying shan</string>
+				<string>xi shui</string>
+				<string>qi chun</string>
+				<string>huang mei</string>
+				<string>ma cheng</string>
+				<string>wu xue</string>
+			</array>
+			<key>huang shi</key>
+			<array>
+				<string>huang shi gang qu</string>
+				<string>xi sai shan qu</string>
+				<string>xia lu</string>
+				<string>tie shan</string>
+				<string>yang xin</string>
+				<string>da ye</string>
+			</array>
+			<key>jing men</key>
+			<array>
+				<string>dong bao</string>
+				<string>duo dao</string>
+				<string>jing shan</string>
+				<string>sha yang</string>
+				<string>zhong xiang</string>
+			</array>
+			<key>jing zhou</key>
+			<array>
+				<string>sha qu</string>
+				<string>jing zhou</string>
+				<string>gong an</string>
+				<string>jian li</string>
+				<string>jiang ling</string>
+				<string>shi shou</string>
+				<string>hong hu</string>
+				<string>song zi</string>
+			</array>
+			<key>shen nong jia</key>
+			<array>
+				<string>xian tao</string>
+				<string>qian jiang</string>
+				<string>tian men</string>
+				<string>shen nong jia lin qu</string>
+			</array>
+			<key>shi yan</key>
+			<array>
+				<string>mao jian</string>
+				<string>zhang wan</string>
+				<string>yun xian</string>
+				<string>yun xi</string>
+				<string>zhu shan</string>
+				<string>zhu xi</string>
+				<string>fang xian</string>
+				<string>dan jiang kou</string>
+			</array>
+			<key>sui zhou</key>
+			<array>
+				<string>ceng dou</string>
+				<string>guang shui</string>
+			</array>
+			<key>wu han</key>
+			<array>
+				<string>jiang an</string>
+				<string>jiang han</string>
+				<string>qiao kou</string>
+				<string>han yang</string>
+				<string>wu chang</string>
+				<string>qing shan</string>
+				<string>hong shan</string>
+				<string>dong xi hu qu</string>
+				<string>han nan</string>
+				<string>cai dian</string>
+				<string>jiang xia</string>
+				<string>huang bei</string>
+				<string>xin zhou</string>
+			</array>
+			<key>xian ning</key>
+			<array>
+				<string>xian an</string>
+				<string>jia yu</string>
+				<string>tong cheng</string>
+				<string>chong yang</string>
+				<string>tong shan</string>
+				<string>chi bi</string>
+			</array>
+			<key>xiang yang</key>
+			<array>
+				<string>xiang cheng</string>
+				<string>fan cheng</string>
+				<string>xiang yang</string>
+				<string>nan zhang</string>
+				<string>gu cheng</string>
+				<string>bao kang</string>
+				<string>lao he kou</string>
+				<string>zao yang</string>
+				<string>yi cheng</string>
+			</array>
+			<key>xiao gan</key>
+			<array>
+				<string>xiao nan</string>
+				<string>xiao chang</string>
+				<string>da wu</string>
+				<string>yun meng</string>
+				<string>ying cheng</string>
+				<string>an lu</string>
+				<string>han chuan</string>
+			</array>
+			<key>yi chang</key>
+			<array>
+				<string>xi ling</string>
+				<string>wu jia gang qu</string>
+				<string>dian jun</string>
+				<string>xiao ting</string>
+				<string>yi ling</string>
+				<string>yuan an</string>
+				<string>xing shan</string>
+				<string>zi gui</string>
+				<string>zhang yang tu jia zu zi zhi xian</string>
+				<string>wu feng tu jia zu zi zhi xian</string>
+				<string>yi dou</string>
+				<string>dang yang</string>
+				<string>zhi jiang</string>
+			</array>
+		</dict>
+	</array>
+	<key>hu nan</key>
+	<array>
+		<dict>
+			<key>chang de</key>
+			<array>
+				<string>wu ling</string>
+				<string>ding cheng</string>
+				<string>an xiang</string>
+				<string>han shou</string>
+				<string>li xian</string>
+				<string>lin li</string>
+				<string>tao yuan</string>
+				<string>shi men</string>
+				<string>jin</string>
+			</array>
+			<key>chen zhou</key>
+			<array>
+				<string>bei hu</string>
+				<string>su xian</string>
+				<string>gui yang</string>
+				<string>yi zhang</string>
+				<string>yong xing</string>
+				<string>jia he</string>
+				<string>lin wu</string>
+				<string>ru cheng</string>
+				<string>gui dong</string>
+				<string>an ren</string>
+				<string>zi xing</string>
+			</array>
+			<key>heng yang</key>
+			<array>
+				<string>zhu hui</string>
+				<string>yan feng</string>
+				<string>shi gu</string>
+				<string>zheng xiang</string>
+				<string>nan yue</string>
+				<string>heng yang</string>
+				<string>heng nan</string>
+				<string>heng shan</string>
+				<string>heng dong</string>
+				<string>qi dong</string>
+				<string>lei yang</string>
+				<string>chang ning</string>
+			</array>
+			<key>huai hua</key>
+			<array>
+				<string>he cheng</string>
+				<string>zhong fang</string>
+				<string>yuan ling</string>
+				<string>chen xi</string>
+				<string>xu pu</string>
+				<string>hui tong</string>
+				<string>ma yang miao zu zi zhi xian</string>
+				<string>xin huang dong zu zi zhi xian</string>
+				<string>zhi jiang dong zu zi zhi xian</string>
+				<string>jing zhou miao zu dong zu zi zhi xian</string>
+				<string>tong dao dong zu zi zhi xian</string>
+				<string>hong jiang</string>
+			</array>
+			<key>lou di</key>
+			<array>
+				<string>lou xing</string>
+				<string>shuang feng</string>
+				<string>xin hua</string>
+				<string>leng shui jiang</string>
+				<string>lian yuan</string>
+			</array>
+			<key>shao yang</key>
+			<array>
+				<string>shuang qing</string>
+				<string>da xiang</string>
+				<string>bei ta</string>
+				<string>shao dong</string>
+				<string>xin shao</string>
+				<string>shao yang</string>
+				<string>long hui</string>
+				<string>dong kou</string>
+				<string>sui ning</string>
+				<string>xin ning</string>
+				<string>cheng bu miao zu zi zhi xian</string>
+				<string>wu gang</string>
+			</array>
+			<key>xiang tan</key>
+			<array>
+				<string>yu hu</string>
+				<string>yue tang</string>
+				<string>xiang tan</string>
+				<string>xiang xiang</string>
+				<string>shao shan</string>
+			</array>
+			<key>xiang xi</key>
+			<array>
+				<string>ji shou</string>
+				<string>lu xi</string>
+				<string>feng huang</string>
+				<string>hua yuan</string>
+				<string>bao jing</string>
+				<string>gu zhang</string>
+				<string>yong shun</string>
+				<string>long shan</string>
+			</array>
+			<key>yi yang</key>
+			<array>
+				<string>zi yang</string>
+				<string>he shan</string>
+				<string>nan xian</string>
+				<string>tao jiang</string>
+				<string>an hua</string>
+				<string>yuan jiang</string>
+			</array>
+			<key>yong zhou</key>
+			<array>
+				<string>zhi shan</string>
+				<string>leng shui tan qu</string>
+				<string>qi yang</string>
+				<string>dong an</string>
+				<string>shuang pai</string>
+				<string>dao xian</string>
+				<string>jiang yong</string>
+				<string>ning yuan</string>
+				<string>lan shan</string>
+				<string>xin tian</string>
+				<string>jiang hua yao zu zi zhi xian</string>
+			</array>
+			<key>yue yang</key>
+			<array>
+				<string>yue yang lou qu</string>
+				<string>yun xi</string>
+				<string>jun shan</string>
+				<string>yue yang</string>
+				<string>hua rong</string>
+				<string>xiang yin</string>
+				<string>ping jiang</string>
+				<string>mi luo</string>
+				<string>lin xiang</string>
+			</array>
+			<key>zhang jia jie</key>
+			<array>
+				<string>yong ding</string>
+				<string>wu ling yuan qu</string>
+				<string>ci li</string>
+				<string>sang zhi</string>
+			</array>
+			<key>zhang sha</key>
+			<array>
+				<string>fu rong</string>
+				<string>tian xin</string>
+				<string>yue lu</string>
+				<string>kai fu</string>
+				<string>yu hua</string>
+				<string>zhang sha</string>
+				<string>wang cheng</string>
+				<string>ning xiang</string>
+				<string>liu yang</string>
+			</array>
+			<key>zhu zhou</key>
+			<array>
+				<string>he tang</string>
+				<string>lu song</string>
+				<string>shi feng</string>
+				<string>tian yuan</string>
+				<string>zhu zhou</string>
+				<string>you xian</string>
+				<string>cha ling</string>
+				<string>yan ling</string>
+				<string>li ling</string>
+			</array>
+		</dict>
+	</array>
+	<key>ji lin</key>
+	<array>
+		<dict>
+			<key>bai cheng</key>
+			<array>
+				<string>tao bei</string>
+				<string>zhen lai</string>
+				<string>tong yu</string>
+				<string>tao nan</string>
+				<string>da an</string>
+			</array>
+			<key>bai shan</key>
+			<array>
+				<string>ba dao jiang qu</string>
+				<string>fu song</string>
+				<string>jing yu</string>
+				<string>zhang bai chao xian zu zi zhi xian</string>
+				<string>jiang yuan</string>
+				<string>lin jiang</string>
+			</array>
+			<key>ji lin</key>
+			<array>
+				<string>chang yi</string>
+				<string>long tan</string>
+				<string>chuan ying</string>
+				<string>feng man</string>
+				<string>yong ji</string>
+				<string>jiao he</string>
+				<string>hua dian</string>
+				<string>shu lan</string>
+				<string>pan shi</string>
+			</array>
+			<key>liao yuan</key>
+			<array>
+				<string>long shan</string>
+				<string>xi an</string>
+				<string>dong feng</string>
+				<string>dong liao</string>
+			</array>
+			<key>si ping</key>
+			<array>
+				<string>tie xi</string>
+				<string>tie dong</string>
+				<string>li shu</string>
+				<string>yi tong man zu zi zhi xian</string>
+				<string>gong zhu ling</string>
+				<string>shuang liao</string>
+			</array>
+			<key>song yuan</key>
+			<array>
+				<string>ning jiang</string>
+				<string>qian guo er luo si meng gu zu zi zhi xian</string>
+				<string>zhang ling</string>
+				<string>gan an</string>
+				<string>fu yu</string>
+			</array>
+			<key>tong hua</key>
+			<array>
+				<string>dong chang</string>
+				<string>er dao jiang qu</string>
+				<string>tong hua</string>
+				<string>hui nan</string>
+				<string>liu he</string>
+				<string>mei he kou</string>
+				<string>ji an</string>
+			</array>
+			<key>yan bian</key>
+			<array>
+				<string>yan ji</string>
+				<string>tu men</string>
+				<string>dun hua</string>
+				<string>hui chun</string>
+				<string>long jing</string>
+				<string>he long</string>
+				<string>wang qing</string>
+				<string>an tu</string>
+			</array>
+			<key>zhang chun</key>
+			<array>
+				<string>nan guan</string>
+				<string>kuan cheng</string>
+				<string>chao yang</string>
+				<string>er dao</string>
+				<string>lu yuan</string>
+				<string>shuang yang</string>
+				<string>nong an</string>
+				<string>jiu tai</string>
+				<string>yu shu</string>
+				<string>de hui</string>
+			</array>
+		</dict>
+	</array>
+	<key>jiang su</key>
+	<array>
+		<dict>
+			<key>chang zhou</key>
+			<array>
+				<string>tian ning</string>
+				<string>zhong lou</string>
+				<string>qi shu yan qu</string>
+				<string>xin bei</string>
+				<string>wu jin</string>
+				<string>li yang</string>
+				<string>jin tan</string>
+			</array>
+			<key>huai an</key>
+			<array>
+				<string>qing he</string>
+				<string>chu zhou</string>
+				<string>huai yin</string>
+				<string>qing pu</string>
+				<string>lian shui</string>
+				<string>hong ze</string>
+				<string>xu yi</string>
+				<string>jin hu</string>
+			</array>
+			<key>lian yun gang</key>
+			<array>
+				<string>lian yun</string>
+				<string>xin pu</string>
+				<string>hai zhou</string>
+				<string>gan yu</string>
+				<string>dong hai</string>
+				<string>guan yun</string>
+				<string>guan nan</string>
+			</array>
+			<key>nan jing</key>
+			<array>
+				<string>xuan wu</string>
+				<string>bai xia</string>
+				<string>qin huai</string>
+				<string>jian ye</string>
+				<string>gu lou</string>
+				<string>xia guan</string>
+				<string>pu kou</string>
+				<string>qi xia</string>
+				<string>yu hua tai qu</string>
+				<string>jiang ning</string>
+				<string>liu he</string>
+				<string>li shui</string>
+				<string>gao chun</string>
+			</array>
+			<key>nan tong</key>
+			<array>
+				<string>chong chuan</string>
+				<string>gang zha</string>
+				<string>hai an</string>
+				<string>ru dong</string>
+				<string>qi dong</string>
+				<string>ru gao</string>
+				<string>tong zhou</string>
+				<string>hai men</string>
+			</array>
+			<key>su qian</key>
+			<array>
+				<string>su cheng</string>
+				<string>su yu</string>
+				<string>shu yang</string>
+				<string>si yang</string>
+				<string>si hong</string>
+			</array>
+			<key>su zhou</key>
+			<array>
+				<string>cang lang</string>
+				<string>ping jiang</string>
+				<string>jin chang</string>
+				<string>hu qiu</string>
+				<string>wu zhong</string>
+				<string>xiang cheng</string>
+				<string>chang shu</string>
+				<string>zhang jia gang</string>
+				<string>kun shan</string>
+				<string>wu jiang</string>
+				<string>tai cang</string>
+			</array>
+			<key>tai zhou</key>
+			<array>
+				<string>hai ling</string>
+				<string>gao gang</string>
+				<string>xing hua</string>
+				<string>jing jiang</string>
+				<string>tai xing</string>
+				<string>jiang yan</string>
+			</array>
+			<key>wu xi</key>
+			<array>
+				<string>chong an</string>
+				<string>nan zhang</string>
+				<string>bei tang</string>
+				<string>xi shan</string>
+				<string>hui shan</string>
+				<string>bin hu</string>
+				<string>jiang yin</string>
+				<string>yi xing</string>
+			</array>
+			<key>xu zhou</key>
+			<array>
+				<string>gu lou</string>
+				<string>yun long</string>
+				<string>jiu li</string>
+				<string>jia wang</string>
+				<string>quan shan</string>
+				<string>feng xian</string>
+				<string>pei xian</string>
+				<string>tong shan</string>
+				<string>sui ning</string>
+				<string>xin yi</string>
+				<string>pi zhou</string>
+			</array>
+			<key>yan cheng</key>
+			<array>
+				<string>ting hu</string>
+				<string>yan dou</string>
+				<string>xiang shui</string>
+				<string>bin hai</string>
+				<string>fu ning</string>
+				<string>she yang</string>
+				<string>jian hu</string>
+				<string>dong tai</string>
+				<string>da feng</string>
+			</array>
+			<key>yang zhou</key>
+			<array>
+				<string>guang ling</string>
+				<string>han jiang</string>
+				<string>wei yang</string>
+				<string>bao ying</string>
+				<string>yi zheng</string>
+				<string>gao you</string>
+				<string>jiang dou</string>
+			</array>
+			<key>zhen jiang</key>
+			<array>
+				<string>jing kou</string>
+				<string>run zhou</string>
+				<string>dan tu</string>
+				<string>dan yang</string>
+				<string>yang zhong</string>
+				<string>ju rong</string>
+			</array>
+		</dict>
+	</array>
+	<key>jiang xi</key>
+	<array>
+		<dict>
+			<key>fu zhou</key>
+			<array>
+				<string>lin chuan</string>
+				<string>nan cheng</string>
+				<string>li chuan</string>
+				<string>nan feng</string>
+				<string>chong ren</string>
+				<string>le an</string>
+				<string>yi huang</string>
+				<string>jin xi</string>
+				<string>zi xi</string>
+				<string>dong xiang</string>
+				<string>guang chang</string>
+			</array>
+			<key>gan zhou</key>
+			<array>
+				<string>zhang gong</string>
+				<string>gan xian</string>
+				<string>xin feng</string>
+				<string>da yu</string>
+				<string>shang you</string>
+				<string>chong yi</string>
+				<string>an yuan</string>
+				<string>long nan</string>
+				<string>ding nan</string>
+				<string>quan nan</string>
+				<string>ning dou</string>
+				<string>yu dou</string>
+				<string>xing guo</string>
+				<string>hui chang</string>
+				<string>xun wu</string>
+				<string>shi cheng</string>
+				<string>rui jin</string>
+				<string>nan kang</string>
+			</array>
+			<key>ji an</key>
+			<array>
+				<string>ji zhou</string>
+				<string>qing yuan</string>
+				<string>ji an</string>
+				<string>ji shui</string>
+				<string>xia jiang</string>
+				<string>xin gan</string>
+				<string>yong feng</string>
+				<string>tai he</string>
+				<string>sui chuan</string>
+				<string>wan an</string>
+				<string>an fu</string>
+				<string>yong xin</string>
+				<string>jing gang shan</string>
+			</array>
+			<key>jing de zhen</key>
+			<array>
+				<string>chang jiang</string>
+				<string>zhu shan</string>
+				<string>fu liang</string>
+				<string>le ping</string>
+			</array>
+			<key>jiu jiang</key>
+			<array>
+				<string>lu shan</string>
+				<string>xun yang</string>
+				<string>jiu jiang</string>
+				<string>wu ning</string>
+				<string>xiu shui</string>
+				<string>yong xiu</string>
+				<string>de an</string>
+				<string>xing zi</string>
+				<string>dou chang</string>
+				<string>hu kou</string>
+				<string>peng ze</string>
+				<string>rui chang</string>
+			</array>
+			<key>nan chang</key>
+			<array>
+				<string>dong hu</string>
+				<string>xi hu</string>
+				<string>qing yun pu qu</string>
+				<string>wan li</string>
+				<string>qing shan hu qu</string>
+				<string>nan chang</string>
+				<string>xin jian</string>
+				<string>an yi</string>
+				<string>jin xian</string>
+			</array>
+			<key>ping xiang</key>
+			<array>
+				<string>an yuan</string>
+				<string>xiang dong</string>
+				<string>lian hua</string>
+				<string>shang li</string>
+				<string>lu xi</string>
+			</array>
+			<key>shang rao</key>
+			<array>
+				<string>xin zhou</string>
+				<string>shang rao</string>
+				<string>guang feng</string>
+				<string>yu shan</string>
+				<string>qian shan</string>
+				<string>heng feng</string>
+				<string>yi yang</string>
+				<string>yu gan</string>
+				<string>po yang</string>
+				<string>wan nian</string>
+				<string>wu yuan</string>
+				<string>de xing</string>
+			</array>
+			<key>xin yu</key>
+			<array>
+				<string>yu shui</string>
+				<string>fen yi</string>
+			</array>
+			<key>yi chun</key>
+			<array>
+				<string>yuan zhou</string>
+				<string>feng xin</string>
+				<string>wan zai</string>
+				<string>shang gao</string>
+				<string>yi feng</string>
+				<string>jing an</string>
+				<string>tong gu</string>
+				<string>feng cheng</string>
+				<string>zhang shu</string>
+				<string>gao an</string>
+			</array>
+			<key>ying tan</key>
+			<array>
+				<string>yue hu</string>
+				<string>yu jiang</string>
+				<string>gui xi</string>
+			</array>
+		</dict>
+	</array>
+	<key>liao ning</key>
+	<array>
+		<dict>
+			<key>an shan</key>
+			<array>
+				<string>tie dong</string>
+				<string>tie xi</string>
+				<string>li shan</string>
+				<string>qian shan</string>
+				<string>tai an</string>
+				<string>xiu yan man zu zi zhi xian</string>
+				<string>hai cheng</string>
+			</array>
+			<key>ben xi</key>
+			<array>
+				<string>ping shan</string>
+				<string>xi hu</string>
+				<string>ming shan</string>
+				<string>nan fen</string>
+				<string>ben xi man zu zi zhi xian</string>
+				<string>huan ren man zu zi zhi xian</string>
+			</array>
+			<key>chao yang</key>
+			<array>
+				<string>shuang ta</string>
+				<string>long cheng</string>
+				<string>chao yang</string>
+				<string>jian ping</string>
+				<string>ka la qin zuo yi meng gu zu zi zhi xian</string>
+				<string>bei piao</string>
+				<string>ling yuan</string>
+			</array>
+			<key>da lian</key>
+			<array>
+				<string>zhong shan</string>
+				<string>xi gang</string>
+				<string>sha he kou qu</string>
+				<string>gan jing zi qu</string>
+				<string>lu shun kou qu</string>
+				<string>jin zhou</string>
+				<string>zhang hai</string>
+				<string>wa fang dian</string>
+				<string>pu lan dian</string>
+				<string>zhuang he</string>
+			</array>
+			<key>dan dong</key>
+			<array>
+				<string>yuan bao</string>
+				<string>zhen xing</string>
+				<string>zhen an</string>
+				<string>kuan dian man zu zi zhi xian</string>
+				<string>dong gang</string>
+				<string>feng cheng</string>
+			</array>
+			<key>fu shun</key>
+			<array>
+				<string>xin fu</string>
+				<string>dong zhou</string>
+				<string>wang hua</string>
+				<string>shun cheng</string>
+				<string>fu shun</string>
+				<string>xin bin man zu zi zhi xian</string>
+				<string>qing yuan man zu zi zhi xian</string>
+			</array>
+			<key>fu xin</key>
+			<array>
+				<string>hai zhou</string>
+				<string>xin qiu</string>
+				<string>tai ping</string>
+				<string>qing he men qu</string>
+				<string>xi he</string>
+				<string>fu xin meng gu zu zi zhi xian</string>
+				<string>zhang wu</string>
+			</array>
+			<key>hu lu dao</key>
+			<array>
+				<string>lian shan</string>
+				<string>long gang</string>
+				<string>nan piao</string>
+				<string>sui zhong</string>
+				<string>jian chang</string>
+				<string>xing cheng</string>
+			</array>
+			<key>jin zhou</key>
+			<array>
+				<string>gu ta</string>
+				<string>ling he</string>
+				<string>tai he</string>
+				<string>hei shan</string>
+				<string>yi xian</string>
+				<string>ling hai</string>
+				<string>bei ning</string>
+			</array>
+			<key>liao yang</key>
+			<array>
+				<string>bai ta</string>
+				<string>wen sheng</string>
+				<string>hong wei</string>
+				<string>gong zhang ling qu</string>
+				<string>tai zi he qu</string>
+				<string>liao yang</string>
+				<string>deng ta</string>
+			</array>
+			<key>pan jin</key>
+			<array>
+				<string>shuang tai zi qu</string>
+				<string>xing long tai qu</string>
+				<string>da wa</string>
+				<string>pan shan</string>
+			</array>
+			<key>shen yang</key>
+			<array>
+				<string>he ping</string>
+				<string>chen he</string>
+				<string>da dong</string>
+				<string>huang gu</string>
+				<string>tie xi</string>
+				<string>su jia tun qu</string>
+				<string>dong ling</string>
+				<string>xin cheng zi qu</string>
+				<string>yu hong</string>
+				<string>liao zhong</string>
+				<string>kang ping</string>
+				<string>fa ku</string>
+				<string>xin min</string>
+			</array>
+			<key>tie ling</key>
+			<array>
+				<string>yin zhou</string>
+				<string>qing he</string>
+				<string>tie ling</string>
+				<string>xi feng</string>
+				<string>chang tu</string>
+				<string>diao bing shan</string>
+				<string>kai yuan</string>
+			</array>
+			<key>ying kou</key>
+			<array>
+				<string>zhan qian</string>
+				<string>xi qu</string>
+				<string>ba yu quan qu</string>
+				<string>lao bian</string>
+				<string>gai zhou</string>
+				<string>da shi qiao</string>
+			</array>
+		</dict>
+	</array>
+	<key>nei meng gu</key>
+	<array>
+		<dict>
+			<key>a la shan meng</key>
+			<array>
+				<string>a la shan zuo qi</string>
+				<string>a la shan you qi</string>
+				<string>e ji na qi</string>
+			</array>
+			<key>ba yan nao er</key>
+			<array>
+				<string>lin he</string>
+				<string>wu yuan</string>
+				<string>deng kou</string>
+				<string>wu la te qian qi</string>
+				<string>wu la te zhong qi</string>
+				<string>wu la te hou qi</string>
+				<string>hang jin hou qi</string>
+			</array>
+			<key>bao tou</key>
+			<array>
+				<string>dong he</string>
+				<string>kun dou lun qu</string>
+				<string>qing shan</string>
+				<string>shi guai</string>
+				<string>bai yun kuang qu</string>
+				<string>jiu yuan</string>
+				<string>tu mo te you qi</string>
+				<string>gu yang</string>
+				<string>da er han mao ming an lian he qi</string>
+			</array>
+			<key>chi feng</key>
+			<array>
+				<string>hong shan</string>
+				<string>yuan bao shan qu</string>
+				<string>song shan</string>
+				<string>a lu ke er qin qi</string>
+				<string>ba lin zuo qi</string>
+				<string>ba lin you qi</string>
+				<string>lin xi</string>
+				<string>ke shen ke teng qi</string>
+				<string>weng niu te qi</string>
+				<string>ka la qin qi</string>
+				<string>ning cheng</string>
+				<string>ao han qi</string>
+			</array>
+			<key>e er duo si</key>
+			<array>
+				<string>dong sheng</string>
+				<string>da la te qi</string>
+				<string>zhun ge er qi</string>
+				<string>e tuo ke qian qi</string>
+				<string>e tuo ke qi</string>
+				<string>hang jin qi</string>
+				<string>wu shen qi</string>
+				<string>yi jin huo luo qi</string>
+			</array>
+			<key>hu he hao te</key>
+			<array>
+				<string>xin cheng</string>
+				<string>hui min</string>
+				<string>yu quan</string>
+				<string>sai han</string>
+				<string>tu mo te zuo qi</string>
+				<string>tuo ke tuo xian</string>
+				<string>he lin ge er xian</string>
+				<string>qing shui he xian</string>
+				<string>wu chuan</string>
+			</array>
+			<key>hu lun bei er</key>
+			<array>
+				<string>hai la er qu</string>
+				<string>a rong qi</string>
+				<string>mo li da wa da wo er zu zi zhi qi</string>
+				<string>e lun chun zi zhi qi</string>
+				<string>e wen ke zu zi zhi qi</string>
+				<string>chen ba er hu qi</string>
+				<string>xin ba er hu zuo qi</string>
+				<string>xin ba er hu you qi</string>
+				<string>man zhou li</string>
+				<string>ya ke shi</string>
+				<string>zha lan tun</string>
+				<string>e er gu na</string>
+				<string>gen he</string>
+			</array>
+			<key>tong liao</key>
+			<array>
+				<string>ke er qin qu</string>
+				<string>ke er qin zuo yi zhong qi</string>
+				<string>ke er qin zuo yi hou qi</string>
+				<string>kai lu</string>
+				<string>ku lun qi</string>
+				<string>nai man qi</string>
+				<string>zha lu te qi</string>
+				<string>huo lin guo lei</string>
+			</array>
+			<key>wu hai</key>
+			<array>
+				<string>hai bo wan qu</string>
+				<string>hai nan</string>
+				<string>wu da</string>
+			</array>
+			<key>wu lan cha bu</key>
+			<array>
+				<string>ji ning</string>
+				<string>zhuo zi</string>
+				<string>hua de</string>
+				<string>shang dou</string>
+				<string>xing he</string>
+				<string>liang cheng</string>
+				<string>cha ha er you yi qian qi</string>
+				<string>cha ha er you yi zhong qi</string>
+				<string>cha ha er you yi hou qi</string>
+				<string>si zi wang qi</string>
+				<string>feng zhen</string>
+			</array>
+			<key>xi lin guo le meng</key>
+			<array>
+				<string>er lian hao te</string>
+				<string>xi lin hao te</string>
+				<string>a ba ga qi</string>
+				<string>su ni te zuo qi</string>
+				<string>su ni te you qi</string>
+				<string>dong wu zhu mu qin qi</string>
+				<string>xi wu zhu mu qin qi</string>
+				<string>tai pu si qi</string>
+				<string>xiang huang qi</string>
+				<string>zheng xiang bai qi</string>
+				<string>zheng lan qi</string>
+				<string>duo lun</string>
+			</array>
+			<key>xing an meng</key>
+			<array>
+				<string>wu lan hao te</string>
+				<string>a er shan</string>
+				<string>ke er qin you yi qian qi</string>
+				<string>ke er qin you yi zhong qi</string>
+				<string>zha lai te qi</string>
+				<string>tu quan</string>
+			</array>
+		</dict>
+	</array>
+	<key>ning xia</key>
+	<array>
+		<dict>
+			<key>gu yuan</key>
+			<array>
+				<string>yuan zhou</string>
+				<string>xi ji</string>
+				<string>long de</string>
+				<string>jing yuan</string>
+				<string>peng yang</string>
+			</array>
+			<key>shi zui shan</key>
+			<array>
+				<string>da wu kou qu</string>
+				<string>hui nong</string>
+				<string>ping luo</string>
+			</array>
+			<key>wu zhong</key>
+			<array>
+				<string>li tong</string>
+				<string>yan chi</string>
+				<string>tong xin</string>
+				<string>qing tong xia</string>
+			</array>
+			<key>yin chuan</key>
+			<array>
+				<string>xing qing</string>
+				<string>xi xia</string>
+				<string>jin feng</string>
+				<string>yong ning</string>
+				<string>he lan</string>
+				<string>ling wu</string>
+			</array>
+			<key>zhong wei</key>
+			<array>
+				<string>sha po tou qu</string>
+				<string>zhong ning</string>
+				<string>hai yuan</string>
+			</array>
+		</dict>
+	</array>
+	<key>qing hai</key>
+	<array>
+		<dict>
+			<key>guo luo</key>
+			<array>
+				<string>ma qin</string>
+				<string>ban ma</string>
+				<string>gan de</string>
+				<string>da ri</string>
+				<string>jiu zhi</string>
+				<string>ma duo</string>
+			</array>
+			<key>hai bei</key>
+			<array>
+				<string>men yuan hui zu zi zhi xian</string>
+				<string>qi lian</string>
+				<string>hai yan</string>
+				<string>gang cha</string>
+			</array>
+			<key>hai dong</key>
+			<array>
+				<string>ping an</string>
+				<string>min he hui zu tu zu zi zhi xian</string>
+				<string>le dou</string>
+				<string>hu zhu tu zu zi zhi xian</string>
+				<string>hua long hui zu zi zhi xian</string>
+				<string>xun hua sa la zu zi zhi xian</string>
+			</array>
+			<key>hai nan</key>
+			<array>
+				<string>gong he</string>
+				<string>tong de</string>
+				<string>gui de</string>
+				<string>xing hai</string>
+				<string>gui nan</string>
+			</array>
+			<key>hai xi</key>
+			<array>
+				<string>ge er mu</string>
+				<string>de ling ha</string>
+				<string>wu lan</string>
+				<string>dou lan</string>
+				<string>tian jun</string>
+			</array>
+			<key>huang nan</key>
+			<array>
+				<string>tong ren</string>
+				<string>jian zha</string>
+				<string>ze ku</string>
+				<string>he nan meng gu zu zi zhi xian</string>
+			</array>
+			<key>xi ning</key>
+			<array>
+				<string>cheng dong</string>
+				<string>cheng zhong</string>
+				<string>cheng xi</string>
+				<string>cheng bei</string>
+				<string>da tong hui zu tu zu zi zhi xian</string>
+				<string>huang zhong</string>
+				<string>huang yuan</string>
+			</array>
+			<key>yu shu</key>
+			<array>
+				<string>yu shu</string>
+				<string>za duo</string>
+				<string>cheng duo</string>
+				<string>zhi duo</string>
+				<string>nang qian</string>
+				<string>qu ma lai xian</string>
+			</array>
+		</dict>
+	</array>
+	<key>shan dong</key>
+	<array>
+		<dict>
+			<key>bin zhou</key>
+			<array>
+				<string>bin cheng</string>
+				<string>hui min</string>
+				<string>yang xin</string>
+				<string>wu di</string>
+				<string>zhan hua</string>
+				<string>bo xing</string>
+				<string>zou ping</string>
+			</array>
+			<key>de zhou</key>
+			<array>
+				<string>de cheng</string>
+				<string>ling xian</string>
+				<string>ning jin</string>
+				<string>qing yun</string>
+				<string>lin yi</string>
+				<string>qi he</string>
+				<string>ping yuan</string>
+				<string>xia jin</string>
+				<string>wu cheng</string>
+				<string>le ling</string>
+				<string>yu cheng</string>
+			</array>
+			<key>dong ying</key>
+			<array>
+				<string>dong ying</string>
+				<string>he kou</string>
+				<string>ken li</string>
+				<string>li jin</string>
+				<string>guang rao</string>
+			</array>
+			<key>he ze</key>
+			<array>
+				<string>mu dan</string>
+				<string>cao xian</string>
+				<string>dan xian</string>
+				<string>cheng wu</string>
+				<string>ju ye</string>
+				<string>yun cheng</string>
+				<string>juan cheng</string>
+				<string>ding tao</string>
+				<string>dong ming</string>
+			</array>
+			<key>ji nan</key>
+			<array>
+				<string>li xia</string>
+				<string>zhong qu</string>
+				<string>huai yin</string>
+				<string>tian qiao</string>
+				<string>li cheng</string>
+				<string>zhang qing</string>
+				<string>ping yin</string>
+				<string>ji yang</string>
+				<string>shang he</string>
+				<string>zhang qiu</string>
+			</array>
+			<key>ji ning</key>
+			<array>
+				<string>zhong qu</string>
+				<string>ren cheng</string>
+				<string>wei shan</string>
+				<string>yu tai</string>
+				<string>jin xiang</string>
+				<string>jia xiang</string>
+				<string>wen shang</string>
+				<string>si shui</string>
+				<string>liang shan</string>
+				<string>qu fu</string>
+				<string>yan zhou</string>
+				<string>zou cheng</string>
+			</array>
+			<key>lai wu</key>
+			<array>
+				<string>lai cheng</string>
+				<string>gang cheng</string>
+			</array>
+			<key>liao cheng</key>
+			<array>
+				<string>dong chang fu qu</string>
+				<string>yang gu</string>
+				<string>shen xian</string>
+				<string>chi ping</string>
+				<string>dong a</string>
+				<string>guan xian</string>
+				<string>gao tang</string>
+				<string>lin qing</string>
+			</array>
+			<key>lin yi</key>
+			<array>
+				<string>lan shan</string>
+				<string>luo zhuang</string>
+				<string>he dong</string>
+				<string>yi nan</string>
+				<string>tan cheng</string>
+				<string>yi shui</string>
+				<string>cang shan</string>
+				<string>fei xian</string>
+				<string>ping yi</string>
+				<string>ju nan</string>
+				<string>meng yin</string>
+				<string>lin shu</string>
+			</array>
+			<key>qing dao</key>
+			<array>
+				<string>nan qu</string>
+				<string>bei qu</string>
+				<string>si fang</string>
+				<string>huang dao</string>
+				<string>lao shan</string>
+				<string>li cang</string>
+				<string>cheng yang</string>
+				<string>jiao zhou</string>
+				<string>ji mo</string>
+				<string>ping du</string>
+				<string>jiao nan</string>
+				<string>lai xi</string>
+			</array>
+			<key>ri zhao</key>
+			<array>
+				<string>dong gang</string>
+				<string>lan shan</string>
+				<string>wu lian</string>
+				<string>ju xian</string>
+			</array>
+			<key>tai an</key>
+			<array>
+				<string>tai shan</string>
+				<string>dai yue</string>
+				<string>ning yang</string>
+				<string>dong ping</string>
+				<string>xin tai</string>
+				<string>fei cheng</string>
+			</array>
+			<key>wei fang</key>
+			<array>
+				<string>wei cheng</string>
+				<string>han ting</string>
+				<string>fang zi</string>
+				<string>kui wen</string>
+				<string>lin qu</string>
+				<string>chang le</string>
+				<string>qing zhou</string>
+				<string>zhu cheng</string>
+				<string>shou guang</string>
+				<string>an qiu</string>
+				<string>gao mi</string>
+				<string>chang yi</string>
+			</array>
+			<key>wei hai</key>
+			<array>
+				<string>huan cui</string>
+				<string>wen deng</string>
+				<string>rong cheng</string>
+				<string>ru shan</string>
+			</array>
+			<key>yan tai</key>
+			<array>
+				<string>zhi fu</string>
+				<string>fu shan</string>
+				<string>mou ping</string>
+				<string>lai shan</string>
+				<string>zhang dao</string>
+				<string>long kou</string>
+				<string>lai yang</string>
+				<string>lai zhou</string>
+				<string>peng lai</string>
+				<string>zhao yuan</string>
+				<string>qi xia</string>
+				<string>hai yang</string>
+			</array>
+			<key>zao zhuang</key>
+			<array>
+				<string>zhong qu</string>
+				<string>xue cheng</string>
+				<string>yi cheng</string>
+				<string>tai er zhuang qu</string>
+				<string>shan ting</string>
+				<string>teng zhou</string>
+			</array>
+			<key>zi bo</key>
+			<array>
+				<string>zi chuan</string>
+				<string>zhang dian</string>
+				<string>bo shan</string>
+				<string>lin zi</string>
+				<string>zhou cun</string>
+				<string>huan tai</string>
+				<string>gao qing</string>
+				<string>yi yuan</string>
+			</array>
+		</dict>
+	</array>
+	<key>shan xi</key>
+	<array>
+		<dict>
+			<key>an kang</key>
+			<array>
+				<string>han bin</string>
+				<string>han yin</string>
+				<string>shi quan</string>
+				<string>ning shan</string>
+				<string>zi yang</string>
+				<string>lan gao</string>
+				<string>ping li</string>
+				<string>zhen ping</string>
+				<string>xun yang</string>
+				<string>bai he</string>
+			</array>
+			<key>bao ji</key>
+			<array>
+				<string>wei bin</string>
+				<string>jin tai</string>
+				<string>chen cang</string>
+				<string>feng xiang</string>
+				<string>qi shan</string>
+				<string>fu feng</string>
+				<string>mei xian</string>
+				<string>long xian</string>
+				<string>qian yang</string>
+				<string>lin you</string>
+				<string>feng xian</string>
+				<string>tai bai</string>
+			</array>
+			<key>han zhong</key>
+			<array>
+				<string>han tai</string>
+				<string>nan zheng</string>
+				<string>cheng gu</string>
+				<string>yang xian</string>
+				<string>xi xiang</string>
+				<string>mian xian</string>
+				<string>ning qiang</string>
+				<string>e yang</string>
+				<string>zhen ba</string>
+				<string>liu ba</string>
+				<string>fu ping</string>
+			</array>
+			<key>shang luo</key>
+			<array>
+				<string>shang zhou</string>
+				<string>luo nan</string>
+				<string>dan feng</string>
+				<string>shang nan</string>
+				<string>shan yang</string>
+				<string>zhen an</string>
+				<string>zha shui</string>
+			</array>
+			<key>tong chuan</key>
+			<array>
+				<string>wang yi</string>
+				<string>yin tai</string>
+				<string>yao zhou</string>
+				<string>yi jun</string>
+			</array>
+			<key>wei nan</key>
+			<array>
+				<string>lin wei</string>
+				<string>hua xian</string>
+				<string>tong guan</string>
+				<string>da li</string>
+				<string>he yang</string>
+				<string>cheng cheng</string>
+				<string>pu cheng</string>
+				<string>bai shui</string>
+				<string>fu ping</string>
+				<string>han cheng</string>
+				<string>hua yin</string>
+			</array>
+			<key>xi an</key>
+			<array>
+				<string>xin cheng</string>
+				<string>bei lin</string>
+				<string>lian hu</string>
+				<string>ba qiao</string>
+				<string>wei yang</string>
+				<string>yan ta</string>
+				<string>yan liang</string>
+				<string>lin tong</string>
+				<string>zhang an</string>
+				<string>lan tian</string>
+				<string>zhou zhi</string>
+				<string>hu xian</string>
+				<string>gao ling</string>
+			</array>
+			<key>xian yang</key>
+			<array>
+				<string>qin dou</string>
+				<string>yang ling</string>
+				<string>wei cheng</string>
+				<string>san yuan</string>
+				<string>jing yang</string>
+				<string>gan xian</string>
+				<string>li quan</string>
+				<string>yong shou</string>
+				<string>bin xian</string>
+				<string>zhang wu</string>
+				<string>xun yi</string>
+				<string>chun hua</string>
+				<string>wu gong</string>
+				<string>xing ping</string>
+			</array>
+			<key>yan an</key>
+			<array>
+				<string>bao ta</string>
+				<string>yan zhang</string>
+				<string>yan chuan</string>
+				<string>zi zhang</string>
+				<string>an sai</string>
+				<string>zhi dan</string>
+				<string>wu qi</string>
+				<string>gan quan</string>
+				<string>fu xian</string>
+				<string>luo chuan</string>
+				<string>yi chuan</string>
+				<string>huang long</string>
+				<string>huang ling</string>
+			</array>
+			<key>yu lin</key>
+			<array>
+				<string>yu yang</string>
+				<string>shen mu</string>
+				<string>fu gu</string>
+				<string>heng shan</string>
+				<string>jing bian</string>
+				<string>ding bian</string>
+				<string>sui de</string>
+				<string>mi zhi</string>
+				<string>jia xian</string>
+				<string>wu bao</string>
+				<string>qing jian</string>
+				<string>zi zhou</string>
+			</array>
+		</dict>
+	</array>
+	<key>shang hai</key>
+	<array>
+		<dict>
+			<key>shang hai</key>
+			<array>
+				<string>huang pu</string>
+				<string>lu wan</string>
+				<string>xu hui</string>
+				<string>zhang ning</string>
+				<string>jing an</string>
+				<string>pu tuo</string>
+				<string>zha bei</string>
+				<string>hong kou</string>
+				<string>yang pu</string>
+				<string>min xing</string>
+				<string>bao shan</string>
+				<string>jia ding</string>
+				<string>pu dong</string>
+				<string>jin shan</string>
+				<string>song jiang</string>
+				<string>qing pu</string>
+				<string>nan hui</string>
+				<string>feng xian</string>
+				<string>chong ming</string>
+			</array>
+		</dict>
+	</array>
+	<key>si chuan</key>
+	<array>
+		<dict>
+			<key>a ba</key>
+			<array>
+				<string>wen chuan</string>
+				<string>li xian</string>
+				<string>mao xian</string>
+				<string>song pan</string>
+				<string>jiu zhai gou xian</string>
+				<string>jin chuan</string>
+				<string>xiao jin</string>
+				<string>hei shui</string>
+				<string>ma er kang xian</string>
+				<string>rang tang</string>
+				<string>a ba</string>
+				<string>ruo er gai xian</string>
+				<string>hong yuan</string>
+			</array>
+			<key>ba zhong</key>
+			<array>
+				<string>ba zhou</string>
+				<string>tong jiang</string>
+				<string>nan jiang</string>
+				<string>ping chang</string>
+			</array>
+			<key>cheng dou</key>
+			<array>
+				<string>jin jiang</string>
+				<string>qing yang</string>
+				<string>jin niu</string>
+				<string>wu hou</string>
+				<string>cheng hua</string>
+				<string>long quan yi qu</string>
+				<string>qing bai jiang qu</string>
+				<string>xin dou</string>
+				<string>wen jiang</string>
+				<string>jin tang</string>
+				<string>shuang liu</string>
+				<string>pi xian</string>
+				<string>da yi</string>
+				<string>pu jiang</string>
+				<string>xin jin</string>
+				<string>dou jiang yan</string>
+				<string>peng zhou</string>
+				<string>qiong lai</string>
+				<string>chong zhou</string>
+			</array>
+			<key>da zhou</key>
+			<array>
+				<string>tong chuan</string>
+				<string>da xian</string>
+				<string>xuan han</string>
+				<string>kai jiang</string>
+				<string>da zhu</string>
+				<string>qu xian</string>
+				<string>wan yuan</string>
+			</array>
+			<key>de yang</key>
+			<array>
+				<string>jing yang</string>
+				<string>zhong jiang</string>
+				<string>luo jiang</string>
+				<string>guang han</string>
+				<string>shen fang</string>
+				<string>mian zhu</string>
+			</array>
+			<key>gan zi </key>
+			<array>
+				<string>kang ding</string>
+				<string>lu ding</string>
+				<string>dan ba</string>
+				<string>jiu long</string>
+				<string>ya jiang</string>
+				<string>dao fu</string>
+				<string>lu huo</string>
+				<string>gan zi</string>
+				<string>xin long</string>
+				<string>de ge</string>
+				<string>bai yu</string>
+				<string>shi qu</string>
+				<string>se da</string>
+				<string>li tang</string>
+				<string>ba tang</string>
+				<string>xiang cheng</string>
+				<string>dao cheng</string>
+				<string>de rong</string>
+			</array>
+			<key>guang an</key>
+			<array>
+				<string>guang an</string>
+				<string>yue chi</string>
+				<string>wu sheng</string>
+				<string>lin shui</string>
+				<string>hua ying</string>
+			</array>
+			<key>guang yuan</key>
+			<array>
+				<string>zhong qu</string>
+				<string>yuan ba</string>
+				<string>chao tian</string>
+				<string>wang cang</string>
+				<string>qing chuan</string>
+				<string>jian ge</string>
+				<string>cang xi</string>
+			</array>
+			<key>le shan</key>
+			<array>
+				<string>zhong qu</string>
+				<string>sha wan</string>
+				<string>wu tong qiao qu</string>
+				<string>jin kou he qu</string>
+				<string>jian wei</string>
+				<string>jing yan</string>
+				<string>jia jiang</string>
+				<string>mu chuan</string>
+				<string>e bian yi zu zi zhi xian</string>
+				<string>ma bian yi zu zi zhi xian</string>
+			</array>
+			<key>liang shan </key>
+			<array>
+				<string>xi chang</string>
+				<string>mu li cang zu zi zhi xian</string>
+				<string>yan yuan</string>
+				<string>de chang</string>
+				<string>hui li</string>
+				<string>hui dong</string>
+				<string>ning nan</string>
+				<string>pu ge</string>
+				<string>bu tuo</string>
+				<string>jin yang</string>
+				<string>zhao jue</string>
+				<string>xi de</string>
+				<string>mian ning</string>
+				<string>yue xi</string>
+				<string>gan luo</string>
+				<string>mei gu</string>
+				<string>lei bo</string>
+			</array>
+			<key>lu zhou</key>
+			<array>
+				<string>jiang yang</string>
+				<string>na xi</string>
+				<string>long ma tan qu</string>
+				<string>lu xian</string>
+				<string>he jiang</string>
+				<string>xu yong</string>
+				<string>gu lin</string>
+			</array>
+			<key>mei shan</key>
+			<array>
+				<string>dong po</string>
+				<string>ren shou</string>
+				<string>peng shan</string>
+				<string>hong ya</string>
+				<string>dan leng</string>
+				<string>qing shen</string>
+			</array>
+			<key>mian yang</key>
+			<array>
+				<string>fu cheng</string>
+				<string>you xian</string>
+				<string>san tai</string>
+				<string>yan ting</string>
+				<string>an xian</string>
+				<string>zi tong</string>
+				<string>bei chuan qiang zu zi zhi xian</string>
+				<string>ping wu</string>
+				<string>jiang you</string>
+			</array>
+			<key>nan chong</key>
+			<array>
+				<string>e mei shan</string>
+				<string>shun qing</string>
+				<string>gao ping</string>
+				<string>jia ling</string>
+				<string>nan bu</string>
+				<string>ying shan</string>
+				<string>peng an</string>
+				<string>yi long</string>
+				<string>xi chong</string>
+				<string>lang zhong</string>
+			</array>
+			<key>nei jiang</key>
+			<array>
+				<string>zhong qu</string>
+				<string>dong xing</string>
+				<string>wei yuan</string>
+				<string>zi zhong</string>
+				<string>long chang</string>
+			</array>
+			<key>pan zhi hua</key>
+			<array>
+				<string>dong qu</string>
+				<string>xi qu</string>
+				<string>ren he</string>
+				<string>mi yi</string>
+				<string>yan bian</string>
+			</array>
+			<key>sui ning</key>
+			<array>
+				<string>chuan shan</string>
+				<string>an ju</string>
+				<string>peng xi</string>
+				<string>she hong</string>
+				<string>da ying</string>
+			</array>
+			<key>ya an</key>
+			<array>
+				<string>yu cheng</string>
+				<string>ming shan</string>
+				<string>xing jing</string>
+				<string>han yuan</string>
+				<string>shi mian</string>
+				<string>tian quan</string>
+				<string>lu shan</string>
+				<string>bao xing</string>
+			</array>
+			<key>yi bin</key>
+			<array>
+				<string>cui ping</string>
+				<string>yi bin</string>
+				<string>nan xi</string>
+				<string>jiang an</string>
+				<string>zhang ning</string>
+				<string>gao xian</string>
+				<string>gong xian</string>
+				<string>yun lian</string>
+				<string>xing wen</string>
+				<string>ping shan</string>
+			</array>
+			<key>zi gong</key>
+			<array>
+				<string>zi liu jing qu</string>
+				<string>gong jing</string>
+				<string>da an</string>
+				<string>yan tan</string>
+				<string>rong xian</string>
+				<string>fu shun</string>
+			</array>
+			<key>zi yang</key>
+			<array>
+				<string>yan jiang</string>
+				<string>an yue</string>
+				<string>le zhi</string>
+				<string>jian yang</string>
+			</array>
+		</dict>
+	</array>
+	<key>tai wan</key>
+	<array>
+		<dict>
+			<key>tai wan sheng</key>
+			<array>
+				<string>tai wan</string>
+			</array>
+		</dict>
+	</array>
+	<key>tian jin</key>
+	<array>
+		<dict>
+			<key>tian jin</key>
+			<array>
+				<string>he ping</string>
+				<string>he dong</string>
+				<string>he xi</string>
+				<string>nan kai</string>
+				<string>he bei</string>
+				<string>hong qiao</string>
+				<string>tang gu</string>
+				<string>han gu</string>
+				<string>da gang</string>
+				<string>dong li</string>
+				<string>xi qing</string>
+				<string>jin nan</string>
+				<string>bei chen</string>
+				<string>wu qing</string>
+				<string>bao chi</string>
+				<string>ning he</string>
+				<string>jing hai</string>
+				<string>ji xian</string>
+			</array>
+		</dict>
+	</array>
+	<key>xi zang</key>
+	<array>
+		<dict>
+			<key>a li </key>
+			<array>
+				<string>pu lan</string>
+				<string>zha da</string>
+				<string>ga er</string>
+				<string>ri tu</string>
+				<string>ge ji</string>
+				<string>gai ze</string>
+				<string>cuo qin</string>
+			</array>
+			<key>chang dou </key>
+			<array>
+				<string>chang dou</string>
+				<string>jiang da</string>
+				<string>gong jue</string>
+				<string>lei wu qi xian</string>
+				<string>ding qing</string>
+				<string>cha ya</string>
+				<string>ba su</string>
+				<string>zuo gong</string>
+				<string>mang kang</string>
+				<string>luo long</string>
+				<string>bian ba</string>
+			</array>
+			<key>la sa</key>
+			<array>
+				<string>cheng guan</string>
+				<string>lin zhou</string>
+				<string>dang xiong</string>
+				<string>ni mu</string>
+				<string>qu shui</string>
+				<string>dui long de qing xian</string>
+				<string>da zi</string>
+				<string>mo zhu gong ka xian</string>
+			</array>
+			<key>lin zhi </key>
+			<array>
+				<string>lin zhi</string>
+				<string>gong bu jiang da xian</string>
+				<string>mi lin</string>
+				<string>mo tuo</string>
+				<string>bo mi</string>
+				<string>cha yu</string>
+				<string>lang xian</string>
+			</array>
+			<key>na qu </key>
+			<array>
+				<string>na qu</string>
+				<string>jia li</string>
+				<string>bi ru</string>
+				<string>nie rong</string>
+				<string>an duo</string>
+				<string>shen zha</string>
+				<string>suo xian</string>
+				<string>ban ge</string>
+				<string>ba qing</string>
+				<string>ni ma</string>
+			</array>
+			<key>ri ka ze </key>
+			<array>
+				<string>ri ka ze</string>
+				<string>nan mu lin xian</string>
+				<string>jiang zi</string>
+				<string>ding ri</string>
+				<string>sa jia</string>
+				<string>la zi</string>
+				<string>ang ren</string>
+				<string>xie tong men xian</string>
+				<string>bai lang</string>
+				<string>ren bu</string>
+				<string>kang ma</string>
+				<string>ding jie</string>
+				<string>zhong ba</string>
+				<string>ya dong</string>
+				<string>ji long</string>
+				<string>nie la mu xian</string>
+				<string>sa ga</string>
+				<string>gang ba</string>
+			</array>
+			<key>shan nan</key>
+			<array>
+				<string>nai dong</string>
+				<string>zha nang</string>
+				<string>gong ga</string>
+				<string>sang ri</string>
+				<string>qiong jie</string>
+				<string>qu song</string>
+				<string>cuo mei</string>
+				<string>luo zha</string>
+				<string>jia cha</string>
+				<string>long zi</string>
+				<string>cuo na</string>
+				<string>lang ka zi xian</string>
+			</array>
+		</dict>
+	</array>
+	<key>xiang gang</key>
+	<array>
+		<dict>
+			<key>xiang gang te bie xing zheng qu</key>
+			<array>
+				<string>xiang gang</string>
+			</array>
+		</dict>
+	</array>
+	<key>xin jiang</key>
+	<array>
+		<dict>
+			<key>a ke su</key>
+			<array>
+				<string>a ke su</string>
+				<string>wen su</string>
+				<string>ku che</string>
+				<string>sha ya</string>
+				<string>xin he</string>
+				<string>bai cheng</string>
+				<string>wu shen</string>
+				<string>a wa ti xian</string>
+			</array>
+			<key>a la er</key>
+			<array>
+				<string>a la er</string>
+			</array>
+			<key>a lei tai </key>
+			<array>
+				<string>a lei tai</string>
+				<string>bu er jin xian</string>
+				<string>fu yun</string>
+				<string>fu hai</string>
+				<string>ha ba he xian</string>
+				<string>qing he</string>
+				<string>ji mu nai xian</string>
+			</array>
+			<key>ba yin guo leng</key>
+			<array>
+				<string>ku er lei</string>
+				<string>lun tai</string>
+				<string>wei li</string>
+				<string>ruo qiang</string>
+				<string>qie mo</string>
+				<string>yan qi hui zu zi zhi xian</string>
+				<string>he jing</string>
+				<string>he shuo</string>
+				<string>bo hu</string>
+			</array>
+			<key>bo er ta la </key>
+			<array>
+				<string>bo le</string>
+				<string>jing he</string>
+				<string>wen quan</string>
+			</array>
+			<key>chang ji</key>
+			<array>
+				<string>chang ji</string>
+				<string>fu kang</string>
+				<string>mi quan</string>
+				<string>hu tu bi xian</string>
+				<string>ma na si xian</string>
+				<string>qi tai</string>
+				<string>ji mu sa er xian</string>
+				<string>mu lei ha sa ke zi zhi xian</string>
+			</array>
+			<key>ha mi </key>
+			<array>
+				<string>ha mi</string>
+				<string>ba li kun ha sa ke zi zhi xian</string>
+				<string>yi wu</string>
+			</array>
+			<key>he tian </key>
+			<array>
+				<string>he tian</string>
+				<string>he tian</string>
+				<string>mo yu</string>
+				<string>pi shan</string>
+				<string>luo pu</string>
+				<string>ce lei</string>
+				<string>yu tian</string>
+				<string>min feng</string>
+			</array>
+			<key>ka shen </key>
+			<array>
+				<string>ka shen</string>
+				<string>shu fu</string>
+				<string>shu lei</string>
+				<string>ying ji sha xian</string>
+				<string>ze pu</string>
+				<string>sha che</string>
+				<string>ye cheng</string>
+				<string>mai gai ti xian</string>
+				<string>yue pu hu xian</string>
+				<string>jia shi</string>
+				<string>ba chu</string>
+				<string>ta shen ku er gan ta ji ke zi zhi xian</string>
+			</array>
+			<key>ke la ma yi</key>
+			<array>
+				<string>du shan zi qu</string>
+				<string>ke la ma yi qu</string>
+				<string>bai jian tan qu</string>
+				<string>wu er he qu</string>
+			</array>
+			<key>ke zi lei su ke er ke zi</key>
+			<array>
+				<string>a tu shen</string>
+				<string>a ke tao xian</string>
+				<string>a he qi xian</string>
+				<string>wu qia</string>
+			</array>
+			<key>shi he zi</key>
+			<array>
+				<string>shi he zi</string>
+			</array>
+			<key>ta cheng</key>
+			<array>
+				<string>ta cheng</string>
+				<string>wu su</string>
+				<string>e min</string>
+				<string>sha wan</string>
+				<string>tuo li</string>
+				<string>yu min</string>
+				<string>he bu ke sai er meng gu zi zhi xian</string>
+			</array>
+			<key>tu lu fan</key>
+			<array>
+				<string>tu lu fan</string>
+				<string>shan shan</string>
+				<string>tuo ke xun xian</string>
+			</array>
+			<key>tu mu shu ke</key>
+			<array>
+				<string>tu mu shu ke</string>
+			</array>
+			<key>wu jia qu</key>
+			<array>
+				<string>wu jia qu</string>
+			</array>
+			<key>wu lu mu qi</key>
+			<array>
+				<string>tian shan</string>
+				<string>sha yi ba ke qu</string>
+				<string>xin qu</string>
+				<string>shui mo gou qu</string>
+				<string>tou tun he qu</string>
+				<string>da ban cheng qu</string>
+				<string>dong shan</string>
+				<string>wu lu mu qi xian</string>
+			</array>
+			<key>yi li ha sa ke</key>
+			<array>
+				<string>yi ning</string>
+				<string>kui tun</string>
+				<string>yi ning</string>
+				<string>cha bu cha er xi bo zi zhi xian</string>
+				<string>huo cheng</string>
+				<string>gong liu</string>
+				<string>xin yuan</string>
+				<string>zhao su</string>
+				<string>te ke si xian</string>
+				<string>ni lei ke xian</string>
+			</array>
+		</dict>
+	</array>
+	<key>yun nan</key>
+	<array>
+		<dict>
+			<key>bao shan</key>
+			<array>
+				<string>long yang</string>
+				<string>shi dian</string>
+				<string>teng chong</string>
+				<string>long ling</string>
+				<string>chang ning</string>
+			</array>
+			<key>chu xiong </key>
+			<array>
+				<string>chu xiong</string>
+				<string>shuang bai</string>
+				<string>mou ding</string>
+				<string>nan hua</string>
+				<string>yao an</string>
+				<string>da yao</string>
+				<string>yong ren</string>
+				<string>yuan mou</string>
+				<string>wu ding</string>
+				<string>lu feng</string>
+			</array>
+			<key>da li </key>
+			<array>
+				<string>da li</string>
+				<string>yang bi yi zu zi zhi xian</string>
+				<string>xiang yun</string>
+				<string>bin chuan</string>
+				<string>mi du</string>
+				<string>nan jian yi zu zi zhi xian</string>
+				<string>wei shan yi zu hui zu zi zhi xian</string>
+				<string>yong ping</string>
+				<string>yun long</string>
+				<string>er yuan</string>
+				<string>jian chuan</string>
+				<string>he qing</string>
+			</array>
+			<key>de hong</key>
+			<array>
+				<string>rui li</string>
+				<string>lu xi</string>
+				<string>liang he</string>
+				<string>ying jiang</string>
+				<string>long chuan</string>
+			</array>
+			<key>di qing </key>
+			<array>
+				<string>xiang ge li la xian</string>
+				<string>de qin</string>
+				<string>wei xi li su zu zi zhi xian</string>
+			</array>
+			<key>hong he </key>
+			<array>
+				<string>ge jiu</string>
+				<string>kai yuan</string>
+				<string>meng zi</string>
+				<string>ping bian miao zu zi zhi xian</string>
+				<string>jian shui</string>
+				<string>shi ping</string>
+				<string>mi lei</string>
+				<string>lu xi</string>
+				<string>yuan yang</string>
+				<string>hong he</string>
+				<string>jin ping miao zu yao zu dai zu zi zhi xian</string>
+				<string>lu chun</string>
+				<string>he kou yao zu zi zhi xian</string>
+			</array>
+			<key>kun ming</key>
+			<array>
+				<string>wu hua</string>
+				<string>pan long</string>
+				<string>guan du</string>
+				<string>xi shan</string>
+				<string>dong chuan</string>
+				<string>cheng gong</string>
+				<string>jin ning</string>
+				<string>fu min</string>
+				<string>yi liang</string>
+				<string>shi lin yi zu zi zhi xian</string>
+				<string>song ming</string>
+				<string>lu quan yi zu miao zu zi zhi xian</string>
+				<string>xun dian hui zu yi zu zi zhi xian</string>
+				<string>an ning</string>
+			</array>
+			<key>li jiang</key>
+			<array>
+				<string>gu cheng</string>
+				<string>yu long na xi zu zi zhi xian</string>
+				<string>yong sheng</string>
+				<string>hua ping</string>
+				<string>ning lang yi zu zi zhi xian</string>
+			</array>
+			<key>lin cang</key>
+			<array>
+				<string>lin xiang</string>
+				<string>feng qing</string>
+				<string>yun xian</string>
+				<string>yong de</string>
+				<string>zhen kang</string>
+				<string>shuang jiang la hu zu wa zu bu lang zu dai zu zi zhi xian</string>
+				<string>geng ma dai zu wa zu zi zhi xian</string>
+				<string>cang yuan wa zu zi zhi xian</string>
+			</array>
+			<key>nu jiang </key>
+			<array>
+				<string>lu shui</string>
+				<string>fu gong</string>
+				<string>gong shan du long zu nu zu zi zhi xian</string>
+				<string>lan ping bai zu pu mi zu zi zhi xian</string>
+			</array>
+			<key>qu jing</key>
+			<array>
+				<string>qi lin</string>
+				<string>ma long</string>
+				<string>lu liang</string>
+				<string>shi zong</string>
+				<string>luo ping</string>
+				<string>fu yuan</string>
+				<string>hui ze</string>
+				<string>zhan yi</string>
+				<string>xuan wei</string>
+			</array>
+			<key>si mao</key>
+			<array>
+				<string>cui yun</string>
+				<string>pu er ha ni zu yi zu zi zhi xian</string>
+				<string>mo jiang ha ni zu zi zhi xian</string>
+				<string>jing dong yi zu zi zhi xian</string>
+				<string>jing gu dai zu yi zu zi zhi xian</string>
+				<string>zhen yuan yi zu ha ni zu la hu zu zi zhi xian</string>
+				<string>jiang cheng ha ni zu yi zu zi zhi xian</string>
+				<string>meng lian dai zu la hu zu wa zu zi zhi xian</string>
+				<string>lan cang la hu zu zi zhi xian</string>
+				<string>xi meng wa zu zi zhi xian</string>
+			</array>
+			<key>wen shan </key>
+			<array>
+				<string>wen shan</string>
+				<string>yan shan</string>
+				<string>xi chou</string>
+				<string>ma li po xian</string>
+				<string>ma guan</string>
+				<string>qiu bei</string>
+				<string>guang nan</string>
+				<string>fu ning</string>
+			</array>
+			<key>xi shuang ban na </key>
+			<array>
+				<string>jing hong</string>
+				<string>meng hai</string>
+				<string>meng la</string>
+			</array>
+			<key>yu xi</key>
+			<array>
+				<string>hong ta</string>
+				<string>jiang chuan</string>
+				<string>cheng jiang</string>
+				<string>tong hai</string>
+				<string>hua ning</string>
+				<string>yi men</string>
+				<string>e shan yi zu zi zhi xian</string>
+				<string>xin ping yi zu dai zu zi zhi xian</string>
+				<string>yuan jiang ha ni zu yi zu dai zu zi zhi xian</string>
+			</array>
+			<key>zhao tong</key>
+			<array>
+				<string>zhao yang</string>
+				<string>lu dian</string>
+				<string>qiao jia</string>
+				<string>yan jin</string>
+				<string>da guan</string>
+				<string>yong shan</string>
+				<string>sui jiang</string>
+				<string>zhen xiong</string>
+				<string>yi liang</string>
+				<string>wei xin</string>
+				<string>shui fu</string>
+			</array>
+		</dict>
+	</array>
+	<key>zhe jiang</key>
+	<array>
+		<dict>
+			<key>hang zhou</key>
+			<array>
+				<string>shang cheng</string>
+				<string>xia cheng</string>
+				<string>jiang gan</string>
+				<string>gong shu</string>
+				<string>xi hu</string>
+				<string>bin jiang</string>
+				<string>xiao shan</string>
+				<string>yu hang</string>
+				<string>tong lu</string>
+				<string>chun an</string>
+				<string>jian de</string>
+				<string>fu yang</string>
+				<string>lin an</string>
+			</array>
+			<key>hu zhou</key>
+			<array>
+				<string>wu xing</string>
+				<string>nan xun</string>
+				<string>de qing</string>
+				<string>zhang xing</string>
+				<string>an ji</string>
+			</array>
+			<key>jia xing</key>
+			<array>
+				<string>xiu cheng</string>
+				<string>xiu zhou</string>
+				<string>jia shan</string>
+				<string>hai yan</string>
+				<string>hai ning</string>
+				<string>ping hu</string>
+				<string>tong xiang</string>
+			</array>
+			<key>jin hua</key>
+			<array>
+				<string>wu cheng</string>
+				<string>jin dong</string>
+				<string>wu yi</string>
+				<string>pu jiang</string>
+				<string>pan an</string>
+				<string>lan xi</string>
+				<string>yi wu</string>
+				<string>dong yang</string>
+				<string>yong kang</string>
+			</array>
+			<key>li shui</key>
+			<array>
+				<string>lian dou</string>
+				<string>qing tian</string>
+				<string>jin yun</string>
+				<string>sui chang</string>
+				<string>song yang</string>
+				<string>yun he</string>
+				<string>qing yuan</string>
+				<string>jing ning she zu zi zhi xian</string>
+				<string>long quan</string>
+			</array>
+			<key>ning bo</key>
+			<array>
+				<string>hai shu</string>
+				<string>jiang dong</string>
+				<string>jiang bei</string>
+				<string>bei lun</string>
+				<string>zhen hai</string>
+				<string>yin zhou</string>
+				<string>xiang shan</string>
+				<string>ning hai</string>
+				<string>yu yao</string>
+				<string>ci xi</string>
+				<string>feng hua</string>
+			</array>
+			<key>qu zhou</key>
+			<array>
+				<string>ke cheng</string>
+				<string>qu jiang</string>
+				<string>chang shan</string>
+				<string>kai hua</string>
+				<string>long you</string>
+				<string>jiang shan</string>
+			</array>
+			<key>shao xing</key>
+			<array>
+				<string>yue cheng</string>
+				<string>shao xing</string>
+				<string>xin chang</string>
+				<string>zhu ji</string>
+				<string>shang yu</string>
+				<string>sheng zhou</string>
+			</array>
+			<key>tai zhou</key>
+			<array>
+				<string>jiao jiang</string>
+				<string>huang yan</string>
+				<string>lu qiao</string>
+				<string>yu huan</string>
+				<string>san men</string>
+				<string>tian tai</string>
+				<string>xian ju</string>
+				<string>wen ling</string>
+				<string>lin hai</string>
+			</array>
+			<key>wen zhou</key>
+			<array>
+				<string>lu cheng</string>
+				<string>long wan</string>
+				<string>ou hai</string>
+				<string>dong tou</string>
+				<string>yong jia</string>
+				<string>ping yang</string>
+				<string>cang nan</string>
+				<string>wen cheng</string>
+				<string>tai shun</string>
+				<string>rui an</string>
+				<string>le qing</string>
+			</array>
+			<key>zhou shan</key>
+			<array>
+				<string>ding hai</string>
+				<string>pu tuo</string>
+				<string>dai shan</string>
+				<string>sheng si</string>
+			</array>
+		</dict>
+	</array>
+</dict>
+</plist>

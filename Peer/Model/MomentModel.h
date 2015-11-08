@@ -6,7 +6,7 @@
 //  Copyright © 2015 peers. All rights reserved.
 //
 
-#import "JSONModel.h"
+#import "BaseModel.h"
 #import "PetsModel.h"
 
 typedef NS_ENUM(NSInteger,MomentType) {
@@ -15,7 +15,7 @@ typedef NS_ENUM(NSInteger,MomentType) {
     
 };
 
-@interface MomentModel : JSONModel
+@interface MomentModel : BaseModel
 
 @property(nonatomic) NSNumber  *momentId;
 @property(nonatomic) NSNumber  *petsId;

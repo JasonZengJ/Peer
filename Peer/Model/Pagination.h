@@ -6,9 +6,9 @@
 //  Copyright © 2015 peers. All rights reserved.
 //
 
-#import "JSONModel.h"
+#import "BaseModel.h"
 
-@interface Pagination : JSONModel
+@interface Pagination : BaseModel
 
 @property(nonatomic)NSInteger page;  // 第几页，默认为0
 @property(nonatomic)NSInteger limit; // 每页多少条数据，默认为10 ,最多15
