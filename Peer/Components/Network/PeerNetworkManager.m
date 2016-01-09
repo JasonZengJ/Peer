@@ -19,13 +19,13 @@
  NSString *HostName = @"http://localhost";
 
 // 本机环境
-// NSString *SecureHostName = @"https://localhost";
+ NSString *SecureHostName = @"http://localhost";
 
 // 局域网环境
 // NSString *SecureHostName = @"https://192.168.1.101";
 
 // 测试服务器环境
- NSString *SecureHostName = @"https://api.jasonlife.me";
+// NSString *SecureHostName = @"https://api.jasonlife.me";
 
 #else
 
@@ -49,16 +49,16 @@
 #pragma mark - -- HTTP POST
 - (void)postWithParams:(NSDictionary *)params apiPath:(NSString *)apiPath target:(id)target callBack:(SEL)callBack {
     
-    NSString *url = [self encapsulationUrlWithApiPath:apiPath host:HostName];
-    params = [self encapsulationParams:params];
-    [self postWithParams:params url:url target:target callBack:callBack];
+//    NSString *url = [self encapsulationUrlWithApiPath:apiPath host:HostName];
+//    params = [self encapsulationParams:params];
+//    [self postWithParams:params url:url target:target callBack:callBack];
 }
 
 - (void)postWithParams:(NSDictionary *)params apiPath:(NSString *)apiPath callBackBlock:(void(^)(id responseObject))callBackBlock {
     
-    NSString *url = [self encapsulationUrlWithApiPath:apiPath host:HostName];
-    params = [self encapsulationParams:params];
-    [self postWithParams:params url:url callBackBlock:callBackBlock];
+//    NSString *url = [self encapsulationUrlWithApiPath:apiPath host:HostName];
+//    params = [self encapsulationParams:params];
+//    [self postWithParams:params url:url callBackBlock:callBackBlock];
     
 }
 
@@ -80,9 +80,9 @@
 #pragma mark - -- HTTP GET
 
 - (void)getWithParams:(NSDictionary *)params apiPath:(NSString *)apiPath target:(id)target callBack:(SEL)callBack {
-    NSString *url = [self encapsulationUrlWithApiPath:apiPath host:HostName];
-    params = [self encapsulationParams:params];
-    [self getWithParams:params apiPath:url target:target callBack:callBack];
+//    NSString *url = [self encapsulationUrlWithApiPath:apiPath host:HostName];
+//    params = [self encapsulationParams:params];
+//    [self getWithParams:params apiPath:url target:target callBack:callBack];
 }
 
 #pragma mark - -- HTTPS GET

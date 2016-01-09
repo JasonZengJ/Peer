@@ -11,6 +11,7 @@
 @protocol HomeBottomViewDelegate <NSObject>
 
 - (void)tapUserInfo;
+- (void)tapSendMoment;
 
 @end
 

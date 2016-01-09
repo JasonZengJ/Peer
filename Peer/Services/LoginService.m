@@ -120,6 +120,11 @@
     
 }
 
+- (void)clearUserData {
+    [[NSUserDefaults standardUserDefaults] setValue:nil forKey:@"user"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+}
+
 
 + (UserModel *)currentUser {
     

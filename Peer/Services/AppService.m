@@ -51,6 +51,16 @@
     
 }
 
++ (void)clearCachedData {
+    
+    NSDictionary *user = [[NSUserDefaults standardUserDefaults] objectForKey:@"user"];
+    if (user && ![user objectForKey:@"userId"]) {
+        [[NSUserDefaults standardUserDefaults] setObject:nil forKey:@"user"];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+    }
+    
+}
+
 + (void)monitorNetwork {
     [[AFNetworkReachabilityManager sharedManager] startMonitoring];
     [[AFNetworkReachabilityManager sharedManager] setReachabilityStatusChangeBlock:^(AFNetworkReachabilityStatus status){
@@ -117,7 +127,7 @@
     return [[[NSUserDefaults standardUserDefaults] objectForKey:@"networkStatus"] integerValue];
 }
 
-+ (NSString *)deviceId {
++ (NSNumber *)deviceId {
     
     return [[[NSUserDefaults standardUserDefaults] objectForKey:@"app"] objectForKey:@"deviceId"];
 }

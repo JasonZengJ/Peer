@@ -15,6 +15,8 @@
 
 + (void)initAppService;
 
++ (void)clearCachedData;
+
 + (BOOL)isRegisteringDevice;
 
 + (void)registerRemoteNotification;

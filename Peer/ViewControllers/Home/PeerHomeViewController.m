@@ -10,6 +10,7 @@
 #import "MomentDetailsViewController.h"
 #import "PetDetailsViewController.h"
 #import "LoginViewController.h"
+#import "PhotoPickerViewController.h"
 
 #import "CardCollectionViewCell.h"
 
@@ -81,6 +82,13 @@
     return _momentService;
 }
 
+- (UIBarButtonItem *)leftBackBarButtonItem {
+    return nil;
+}
+
+- (UIBarButtonItem *)rightBarButtonItem {
+    return nil;
+}
 
 - (void)loadView {
     
@@ -91,6 +99,8 @@
     [self.view addSubview:self.homeBottomView];
     
 }
+
+
 
 -  (void)viewDidLoad {
     [super viewDidLoad];
@@ -131,7 +141,6 @@
 
 - (void)tapUserInfo {
     
-    
     if (![LoginService currentUser]) {
         LoginViewController *loginViewController = [[LoginViewController alloc] init];
         loginViewController.backActionType = BackActionTypeDismiss;
@@ -142,8 +151,24 @@
         
     }
     
-    
-    
+}
+
+- (void)tapSendMoment {
+//    if (![LoginService currentUser]) {
+//        LoginViewController *loginViewController = [[LoginViewController alloc] init];
+//        loginViewController.backActionType = BackActionTypeDismiss;
+//        
+//        UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:loginViewController];
+//        [self presentViewController:navController animated:YES completion:nil];
+//    } else {
+        PhotoPickerViewController *photoViewController = [[PhotoPickerViewController alloc] init];
+        photoViewController.backActionType = BackActionTypeDismiss;
+        UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:photoViewController];
+        [self presentViewController:navController animated:YES completion:^{
+            
+        }];
+        
+//    }
 }
 
 #pragma mark - -- <CardCollectionViewCellDelegate>
@@ -189,13 +214,14 @@
     
     MomentDetailsViewController *momentDetailsViewController = [[MomentDetailsViewController alloc] init];
     momentDetailsViewController.momentModel = [self.momentsArray objectAtIndex:indexPath.row];
-    momentDetailsViewController.backActionType = BackActionTypeDismiss;
+//    momentDetailsViewController.backActionType = BackActionTypeDismiss;
     momentDetailsViewController.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
-    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:momentDetailsViewController];
+    [self.navigationController pushViewController:momentDetailsViewController animated:YES];
+//    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:momentDetailsViewController];
     
-    [self presentViewController:navController animated:YES completion:^{
-        
-    }];
+//    [self presentViewController:navController animated:YES completion:^{
+    
+//    }];
     
     
 }

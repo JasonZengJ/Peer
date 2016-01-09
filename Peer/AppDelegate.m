@@ -37,6 +37,7 @@
             [AppService initAppService];
         });
     } else {
+        [AppService clearCachedData];
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
             [AppService monitorNetwork];
         });
@@ -44,19 +45,16 @@
     
     [AppService registerRemoteNotification];
 // 第三方手机验证码工具初始化
-    [SMS_SDK registerApp:@"a72297a4628e" withSecret:@"52cf6cd4ef00aec3e52f8e7af55bbaa1"];
+//    [SMS_SDK registerApp:@"a72297a4628e" withSecret:@"52cf6cd4ef00aec3e52f8e7af55bbaa1"];
     
 // 友盟统计工具初始化
     [MobClick startWithAppkey:@"561f4307e0f55a8ae2002752" reportPolicy:BATCH   channelId:nil];
     NSString *version = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"];
     [MobClick setAppVersion:version];
     
-// 让启动画面多停留1秒
-    [NSThread sleepForTimeInterval:1.0];
-    
     self.homeViewController = [[PeerHomeViewController alloc] init];
     self.window = [[UIWindow alloc] initWithFrame:ScreenBounds];
-    self.window.rootViewController = self.homeViewController;
+    self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:self.homeViewController];
     [self.window makeKeyAndVisible];
     
     

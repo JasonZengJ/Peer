@@ -166,7 +166,7 @@
     
     PetDetailsViewController *petDetailsViewController = [[PetDetailsViewController alloc] init];
     petDetailsViewController.petsModel = self.momentModel.pet;
-    petDetailsViewController.backActionType = BackActionTypeDismiss;
+//    petDetailsViewController.backActionType = BackActionTypeDismiss;
     petDetailsViewController.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
     [self.navigationController pushViewController:petDetailsViewController animated:YES];
     

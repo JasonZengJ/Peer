@@ -10,7 +10,7 @@
 #import "LayoutUtil.h"
 #import "UIView+Layout.h"
 
-#define CardTop  90.0
+#define CardTop  26.0
 
 @implementation HorizonCardFlowLayout
 
@@ -26,7 +26,7 @@
     [super prepareLayout];
     self.itemSize  = CGSizeMake(CardWidth, CardHeight);
     self.scrollDirection = UICollectionViewScrollDirectionHorizontal;
-    self.sectionInset = UIEdgeInsetsMake(80, 40, 88, 40);
+    self.sectionInset = UIEdgeInsetsMake(16.0, 40, 88, 40);
     self.minimumLineSpacing = ConvertiPhone5Or6pSize(25);
 }
 

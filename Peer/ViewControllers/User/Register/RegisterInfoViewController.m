@@ -10,6 +10,9 @@
 #import "RegisterInfoView.h"
 #import "LoginService.h"
 #import "NSString+Size.h"
+#import "UIAlertView+AlertMessage.h"
+#import "FileUploadService.h"
+#import <UIImageView+WebCache.h>
 
 #import "FillRegisterInfoViewController.h"
 
@@ -19,6 +22,7 @@
 @property(nonatomic)UIView       *pickerContainerView;
 @property(nonatomic)UIPickerView *pickerView;
 @property(nonatomic)LoginService *loginService;
+@property(nonatomic)FileUploadService *uploadService;
 @property(nonatomic)RegisterInfo registerInfo;
 @property(nonatomic)NSArray *pickerViewDataArray;
 @property(nonatomic)NSArray *provinceArray;
@@ -75,8 +79,16 @@
 - (LoginService *)loginService {
     if (!_loginService) {
         _loginService = [[LoginService alloc] init];
+        _loginService.delegate = self;
     }
     return _loginService;
+}
+
+- (FileUploadService *)uploadService {
+    if (!_uploadService) {
+        _uploadService = [[FileUploadService alloc] init];
+    }
+    return _uploadService;
 }
 
 - (void)loadView {
@@ -89,8 +101,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self.registerInfoView setAge:@"0"];
-    [self.registerInfoView.userAvatarImageView setImage:[UIImage imageNamed:@"DuanAvatar"]];
+//    [self.registerInfoView setAge:@"0"];
+    [self.registerInfoView.userAvatarImageView sd_setImageWithURL:[NSURL URLWithString:@"http://jasonlife.oss-cn-shenzhen.aliyuncs.com/DoNRiuquSFFLTQjxV2NimM7FvrM%3D/image/xjQFFtwb2X5gCUXAFqIdMFrCj3w%3D"]];
     
     if (!self.user) {
         self.user = [[UserModel alloc] init];
@@ -137,9 +149,9 @@
 - (void)tapCellWithCellTag:(NSInteger)tag {
     
     
-    self.registerInfo = tag;
     
     if (tag == RegisterInfoAge || tag == RegisterInfoArea || tag == RegisterInfoSex) {
+        self.registerInfo = tag;
         if (![self.view.subviews containsObject:self.pickerContainerView]) {
             [self.view addSubview:self.pickerContainerView];
         }
@@ -162,13 +174,42 @@
 
 - (void)clickedDoneButton {
     
-    [self.loginService registerWithUserModel:self.user];
+    if (!self.user.nickname || [self.user.nickname isEqualToString:@""]) {
+        [UIAlertView alertWithMessage:@"请输入昵称"];
+        return;
+    }
+    
+    if (!self.user.sex || [self.user.sex isEqualToNumber:@(0)]) {
+        [UIAlertView alertWithMessage:@"请选择性别"];
+        return;
+    }
+    
+    NSData *avatarImageData = UIImageJPEGRepresentation(self.registerInfoView.userAvatarImageView.image, 0.6);
+    [self.uploadService uploadImageData:avatarImageData callback:^(BOOL isSuccess, NSError *error, NSString *fileUrl) {
+        
+        if (error) {
+            DLog(@"%@",error);
+        } else {
+            DLog(@"upload success");
+            self.user.avatar = fileUrl;
+            [self.loginService registerWithUserModel:self.user];
+        }
+        
+    }];
+    
     
 }
 
 #pragma mark - -- <LoginServiceDelegate>
 
-- (void)registerCompleteWithError:(NSDictionary *)error {
+- (void)registerCompleteWithError:(NSError *)error {
+    
+    if (!error) {
+        [UIAlertView alertWithMessage:@"注册成功"];
+        [self dismissViewControllerAnimated:YES completion:nil];
+    } else {
+        [UIAlertView alertWithMessage:error.domain];
+    }
     
 }
 

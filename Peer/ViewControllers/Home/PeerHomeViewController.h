@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "RootNavViewController.h"
 
-@interface PeerHomeViewController : UIViewController
+@interface PeerHomeViewController : RootNavViewController
 
 - (void)loadData;
 

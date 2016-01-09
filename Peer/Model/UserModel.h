@@ -11,16 +11,16 @@
 
 @interface UserModel : BaseModel
 
-@property(nonatomic)NSNumber *userId;
-@property(nonatomic)NSString *nickname;
+@property(nonatomic)NSNumber<Optional> *userId;
+@property(nonatomic)NSString<Optional> *nickname;
 @property(nonatomic)NSString *phone;
 @property(nonatomic)NSString *password;
-@property(nonatomic)NSNumber *sex;
-@property(nonatomic)NSNumber *age;
+@property(nonatomic)NSNumber<Optional> *sex;
+@property(nonatomic)NSNumber<Optional> *age;
 @property(nonatomic)NSString<Optional> *city;
 @property(nonatomic)NSString<Optional> *area;
 @property(nonatomic)NSString<Optional> *avatar;
 @property(nonatomic)NSString<Optional> *userDescription;
-@property(nonatomic)NSNumber *deviceId;
+@property(nonatomic)NSNumber<Optional> *deviceId;
 
 @end

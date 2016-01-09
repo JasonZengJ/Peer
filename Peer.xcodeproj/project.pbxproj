@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		374EEB672DF99B043B9F46A3 /* libPods-Peer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 62BB40AEF92723EF99278C70 /* libPods-Peer.a */; };
+		960071ED1C09A2CC00F7528D /* PhotoPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 960071EC1C09A2CC00F7528D /* PhotoPickerViewController.m */; };
 		960103F41BA8795500152908 /* PeerNetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 960103EC1BA8795500152908 /* PeerNetworkManager.m */; };
 		960103F51BA8795500152908 /* OpenUDID.m in Sources */ = {isa = PBXBuildFile; fileRef = 960103F01BA8795500152908 /* OpenUDID.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		960103FF1BA879C800152908 /* NSData+JSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 960103F81BA879C800152908 /* NSData+JSON.m */; };
@@ -59,6 +60,17 @@
 		9656F9451BD1321C0043FA38 /* CardCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9656F9441BD1321C0043FA38 /* CardCollectionViewCell.m */; };
 		9656F9481BD145240043FA38 /* HorizonCardFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 9656F9471BD145240043FA38 /* HorizonCardFlowLayout.m */; };
 		966144591BE129E4003BD75A /* PetDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 966144581BE129E4003BD75A /* PetDetailsViewController.m */; };
+		966666591BF72CF7008A5991 /* back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 966666491BF72CF7008A5991 /* back@2x.png */; };
+		9666665A1BF72CF7008A5991 /* back@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9666664A1BF72CF7008A5991 /* back@3x.png */; };
+		9666665B1BF72CF7008A5991 /* cameraroll-picker-grip@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9666664B1BF72CF7008A5991 /* cameraroll-picker-grip@2x.png */; };
+		9666665C1BF72CF7008A5991 /* cameraroll-picker-grip@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9666664C1BF72CF7008A5991 /* cameraroll-picker-grip@3x.png */; };
+		9666665D1BF72CF7008A5991 /* straighten-grid@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9666664D1BF72CF7008A5991 /* straighten-grid@2x.png */; };
+		9666665E1BF72CF7008A5991 /* straighten-grid@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9666664E1BF72CF7008A5991 /* straighten-grid@3x.png */; };
+		9666665F1BF72CF7008A5991 /* TWImageScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 966666501BF72CF7008A5991 /* TWImageScrollView.m */; };
+		966666601BF72CF7008A5991 /* TWPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = 966666521BF72CF7008A5991 /* TWPhoto.m */; };
+		966666611BF72CF7008A5991 /* TWPhotoCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 966666541BF72CF7008A5991 /* TWPhotoCollectionViewCell.m */; };
+		966666621BF72CF7008A5991 /* TWPhotoLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 966666561BF72CF7008A5991 /* TWPhotoLoader.m */; };
+		966666631BF72CF7008A5991 /* TWPhotoPickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 966666581BF72CF7008A5991 /* TWPhotoPickerController.m */; };
 		966B517F1B7F8D70000F0EF2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 966B517E1B7F8D70000F0EF2 /* main.m */; };
 		966B51821B7F8D70000F0EF2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 966B51811B7F8D70000F0EF2 /* AppDelegate.m */; };
 		966B518D1B7F8D70000F0EF2 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 966B518B1B7F8D70000F0EF2 /* LaunchScreen.xib */; };
@@ -107,6 +119,8 @@
 /* Begin PBXFileReference section */
 		272BA73686C155AAE8390D47 /* Pods-Peer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Peer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Peer/Pods-Peer.debug.xcconfig"; sourceTree = "<group>"; };
 		62BB40AEF92723EF99278C70 /* libPods-Peer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Peer.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		960071EB1C09A2CC00F7528D /* PhotoPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoPickerViewController.h; sourceTree = "<group>"; };
+		960071EC1C09A2CC00F7528D /* PhotoPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoPickerViewController.m; sourceTree = "<group>"; };
 		960103EB1BA8795500152908 /* PeerNetworkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PeerNetworkManager.h; sourceTree = "<group>"; };
 		960103EC1BA8795500152908 /* PeerNetworkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PeerNetworkManager.m; sourceTree = "<group>"; };
 		960103EF1BA8795500152908 /* OpenUDID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenUDID.h; sourceTree = "<group>"; };
@@ -203,6 +217,22 @@
 		9656F9471BD145240043FA38 /* HorizonCardFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HorizonCardFlowLayout.m; sourceTree = "<group>"; };
 		966144571BE129E4003BD75A /* PetDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PetDetailsViewController.h; sourceTree = "<group>"; };
 		966144581BE129E4003BD75A /* PetDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PetDetailsViewController.m; sourceTree = "<group>"; };
+		966666491BF72CF7008A5991 /* back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "back@2x.png"; sourceTree = "<group>"; };
+		9666664A1BF72CF7008A5991 /* back@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "back@3x.png"; sourceTree = "<group>"; };
+		9666664B1BF72CF7008A5991 /* cameraroll-picker-grip@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cameraroll-picker-grip@2x.png"; sourceTree = "<group>"; };
+		9666664C1BF72CF7008A5991 /* cameraroll-picker-grip@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cameraroll-picker-grip@3x.png"; sourceTree = "<group>"; };
+		9666664D1BF72CF7008A5991 /* straighten-grid@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "straighten-grid@2x.png"; sourceTree = "<group>"; };
+		9666664E1BF72CF7008A5991 /* straighten-grid@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "straighten-grid@3x.png"; sourceTree = "<group>"; };
+		9666664F1BF72CF7008A5991 /* TWImageScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWImageScrollView.h; sourceTree = "<group>"; };
+		966666501BF72CF7008A5991 /* TWImageScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWImageScrollView.m; sourceTree = "<group>"; };
+		966666511BF72CF7008A5991 /* TWPhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWPhoto.h; sourceTree = "<group>"; };
+		966666521BF72CF7008A5991 /* TWPhoto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWPhoto.m; sourceTree = "<group>"; };
+		966666531BF72CF7008A5991 /* TWPhotoCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWPhotoCollectionViewCell.h; sourceTree = "<group>"; };
+		966666541BF72CF7008A5991 /* TWPhotoCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWPhotoCollectionViewCell.m; sourceTree = "<group>"; };
+		966666551BF72CF7008A5991 /* TWPhotoLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWPhotoLoader.h; sourceTree = "<group>"; };
+		966666561BF72CF7008A5991 /* TWPhotoLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWPhotoLoader.m; sourceTree = "<group>"; };
+		966666571BF72CF7008A5991 /* TWPhotoPickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWPhotoPickerController.h; sourceTree = "<group>"; };
+		966666581BF72CF7008A5991 /* TWPhotoPickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWPhotoPickerController.m; sourceTree = "<group>"; };
 		966B51791B7F8D70000F0EF2 /* Peer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Peer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		966B517D1B7F8D70000F0EF2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		966B517E1B7F8D70000F0EF2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -337,6 +367,7 @@
 		960103ED1BA8795500152908 /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				966666471BF72CF7008A5991 /* TWPhotoPicker */,
 				961C963B1BE61CBA008EDF91 /* SDCycleScrollView */,
 				96DC2C501BCF7CE700126AB6 /* UMeng */,
 				96A2D8D51BC117DF0016AE3F /* OSS1.3 */,
@@ -589,6 +620,8 @@
 				9653C6AF1BDCA32700D517C8 /* SendPhotoMomentViewController.m */,
 				9653C6B01BDCA32700D517C8 /* SendVideoMomentViewController.h */,
 				9653C6B11BDCA32700D517C8 /* SendVideoMomentViewController.m */,
+				960071EB1C09A2CC00F7528D /* PhotoPickerViewController.h */,
+				960071EC1C09A2CC00F7528D /* PhotoPickerViewController.m */,
 			);
 			path = SendMoment;
 			sourceTree = "<group>";
@@ -615,6 +648,37 @@
 				96E2F4A31BE278EB00E6625B /* PetDetailsHorizonCardFlowLayout.m */,
 			);
 			path = Pet;
+			sourceTree = "<group>";
+		};
+		966666471BF72CF7008A5991 /* TWPhotoPicker */ = {
+			isa = PBXGroup;
+			children = (
+				966666481BF72CF7008A5991 /* Resources */,
+				9666664F1BF72CF7008A5991 /* TWImageScrollView.h */,
+				966666501BF72CF7008A5991 /* TWImageScrollView.m */,
+				966666511BF72CF7008A5991 /* TWPhoto.h */,
+				966666521BF72CF7008A5991 /* TWPhoto.m */,
+				966666531BF72CF7008A5991 /* TWPhotoCollectionViewCell.h */,
+				966666541BF72CF7008A5991 /* TWPhotoCollectionViewCell.m */,
+				966666551BF72CF7008A5991 /* TWPhotoLoader.h */,
+				966666561BF72CF7008A5991 /* TWPhotoLoader.m */,
+				966666571BF72CF7008A5991 /* TWPhotoPickerController.h */,
+				966666581BF72CF7008A5991 /* TWPhotoPickerController.m */,
+			);
+			path = TWPhotoPicker;
+			sourceTree = "<group>";
+		};
+		966666481BF72CF7008A5991 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				966666491BF72CF7008A5991 /* back@2x.png */,
+				9666664A1BF72CF7008A5991 /* back@3x.png */,
+				9666664B1BF72CF7008A5991 /* cameraroll-picker-grip@2x.png */,
+				9666664C1BF72CF7008A5991 /* cameraroll-picker-grip@3x.png */,
+				9666664D1BF72CF7008A5991 /* straighten-grid@2x.png */,
+				9666664E1BF72CF7008A5991 /* straighten-grid@3x.png */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		966B51701B7F8D70000F0EF2 = {
@@ -830,12 +894,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				96C71F951BEE5B1100CEE655 /* address_CN.plist in Resources */,
+				9666665E1BF72CF7008A5991 /* straighten-grid@3x.png in Resources */,
+				966666591BF72CF7008A5991 /* back@2x.png in Resources */,
 				96C71F961BEE5B1100CEE655 /* address_EN.plist in Resources */,
+				9666665D1BF72CF7008A5991 /* straighten-grid@2x.png in Resources */,
 				96BB1B8F1BED109500DAEBE1 /* ca.cer in Resources */,
 				961C963A1BE6189A008EDF91 /* Images.xcassets in Resources */,
 				9620088B1BEA594500173EA8 /* Localizable.strings in Resources */,
+				9666665C1BF72CF7008A5991 /* cameraroll-picker-grip@3x.png in Resources */,
+				9666665B1BF72CF7008A5991 /* cameraroll-picker-grip@2x.png in Resources */,
 				966B518D1B7F8D70000F0EF2 /* LaunchScreen.xib in Resources */,
 				960104521BADD08600152908 /* SMS_SDKLocalizable.strings in Resources */,
+				9666665A1BF72CF7008A5991 /* back@3x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -892,9 +962,13 @@
 				960104081BA879E200152908 /* AppService.m in Sources */,
 				960104201BA9CAC300152908 /* UserService.m in Sources */,
 				960104021BA879C800152908 /* UIView+Layout.m in Sources */,
+				966666621BF72CF7008A5991 /* TWPhotoLoader.m in Sources */,
 				966B51821B7F8D70000F0EF2 /* AppDelegate.m in Sources */,
+				966666611BF72CF7008A5991 /* TWPhotoCollectionViewCell.m in Sources */,
 				967E50561BE7A5F50054B1DC /* RegisterInfoViewController.m in Sources */,
 				96A2D8DD1BC119C70016AE3F /* OSSFileManager.m in Sources */,
+				966666601BF72CF7008A5991 /* TWPhoto.m in Sources */,
+				966666631BF72CF7008A5991 /* TWPhotoPickerController.m in Sources */,
 				960103FF1BA879C800152908 /* NSData+JSON.m in Sources */,
 				960104271BAB1B2300152908 /* UserModel.m in Sources */,
 				96DC2C591BCF82F800126AB6 /* PeerHomeViewController.m in Sources */,
@@ -903,6 +977,7 @@
 				962008851BEA442800173EA8 /* UIAlertView+AlertMessage.m in Sources */,
 				968B3BD71BCAA52400B8723A /* MomentsService.m in Sources */,
 				96A2D8D41BC032200016AE3F /* ApplicationDirectoryService.m in Sources */,
+				9666665F1BF72CF7008A5991 /* TWImageScrollView.m in Sources */,
 				CE2C570E1BD3889700DEAF32 /* HomeBottomView.m in Sources */,
 				96E2F4A81BE3042900E6625B /* LayoutUtil.m in Sources */,
 				9656F9481BD145240043FA38 /* HorizonCardFlowLayout.m in Sources */,
@@ -942,6 +1017,7 @@
 				961C964C1BE61D0B008EDF91 /* TAAnimatedDotView.m in Sources */,
 				968B3BDD1BCAA60B00B8723A /* MomentModel.m in Sources */,
 				9653C6A51BDCA31100D517C8 /* MomentDetailsCommentTableViewCell.m in Sources */,
+				960071ED1C09A2CC00F7528D /* PhotoPickerViewController.m in Sources */,
 				96E2F4A11BE2768800E6625B /* PetDetailsCollectionViewCell.m in Sources */,
 				9653C6B81BDCF20400D517C8 /* RootNavViewController.m in Sources */,
 				9653C6B31BDCA32700D517C8 /* SendPhotoMomentViewController.m in Sources */,

@@ -155,6 +155,7 @@
     if (self.seconds <= 0) {
         [self.timer invalidate];
         _timer = nil;
+        [self recoverGetVerifyCodeButton];
         return;
     }
     [self.getVerifyCodeButton setTitle:[NSString stringWithFormat:@"%@(%ld)",NSLocalizedString(@"RegisterGetVerifyCode",nil),self.seconds--] forState:UIControlStateNormal];

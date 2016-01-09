@@ -8,6 +8,52 @@
 
 #import "RootNavViewController.h"
 
+/**
+ *  自定义控制器的pop转场动画
+ */
+
+@interface PopAnimation : NSObject <UIViewControllerAnimatedTransitioning>
+
+@end
+
+@implementation PopAnimation
+
+- (NSTimeInterval)transitionDuration:(id<UIViewControllerContextTransitioning>)transitionContext {
+    return 0.25;
+}
+
+- (void)animateTransition:(id<UIViewControllerContextTransitioning>)transitionContext {
+    
+    UIViewController *fromViewController = [transitionContext viewControllerForKey:UITransitionContextFromViewControllerKey];
+    
+    UIViewController *toViewController   = [transitionContext viewControllerForKey:UITransitionContextToViewControllerKey];
+    
+    UIView *containerView = [transitionContext containerView];
+    [containerView insertSubview:toViewController.view belowSubview:fromViewController.view];
+    toViewController.view.transform = CGAffineTransformMakeTranslation(- ScreenWidth / 3, 0);
+    
+    NSTimeInterval duration = [self transitionDuration:transitionContext];
+    
+    [UIView animateWithDuration:duration delay:0 options:UIViewAnimationOptionCurveEaseOut animations:^{
+        fromViewController.view.transform = CGAffineTransformMakeTranslation(ScreenWidth, 0);
+        toViewController.view.transform   = CGAffineTransformMakeTranslation(0, 0);
+    } completion:^(BOOL finished) {
+        [transitionContext completeTransition:!transitionContext.transitionWasCancelled];
+    }];
+    
+    
+}
+
+
+@end
+
+@interface RootNavViewController () <UINavigationControllerDelegate>
+
+
+@property(nonatomic) UIPercentDrivenInteractiveTransition *interactivePopTransition;
+
+@end
+
 @implementation RootNavViewController
 
 - (UIView *)navbarBgView {
@@ -36,6 +82,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.navigationController.delegate = self;
+//    UIPanGestureRecognizer *pan = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(handleControllerPop:)];
+//    pan.maximumNumberOfTouches  = 1;
+//    [self.view addGestureRecognizer:pan];
 }
 
 - (UIBarButtonItem *)rightBarButtonItem {
@@ -90,4 +140,71 @@
     
 }
 
+- (void)handleControllerPop:(UIPanGestureRecognizer *)recognizer {
+    
+    CGFloat progress = [recognizer translationInView:self.view].x / self.view.width;
+    
+    
+    progress = MIN(1.0, MAX(0.0, progress));
+    if (recognizer.state == UIGestureRecognizerStateBegan) {
+        
+        self.interactivePopTransition = [[UIPercentDrivenInteractiveTransition alloc] init];
+        [self.navigationController popViewControllerAnimated:YES];
+        
+    } else if (recognizer.state == UIGestureRecognizerStateChanged) {
+        
+        [self.interactivePopTransition updateInteractiveTransition:progress];
+        
+    } else if (recognizer.state == UIGestureRecognizerStateCancelled || recognizer.state == UIGestureRecognizerStateEnded ) {
+        
+        if (progress > 0.5) {
+            [self.interactivePopTransition finishInteractiveTransition];
+        } else {
+            [self.interactivePopTransition cancelInteractiveTransition];
+        }
+        
+        self.interactivePopTransition = nil;
+        
+    }
+    
+}
+
+
+#pragma mark - -- <UINavigationControllerDelegate>
+
+//- (id<UIViewControllerAnimatedTransitioning>)navigationController:(UINavigationController *)navigationController animationControllerForOperation:(UINavigationControllerOperation)operation fromViewController:(UIViewController *)fromVC toViewController:(UIViewController *)toVC {
+//    
+//    if (operation == UINavigationControllerOperationPop) {
+//        return [[PopAnimation alloc] init];
+//    }
+//    
+//    return nil;
+//}
+//
+//
+//- (id<UIViewControllerInteractiveTransitioning>)navigationController:(UINavigationController *)navigationController interactionControllerForAnimationController:(id<UIViewControllerAnimatedTransitioning>)animationController {
+// 
+//    if ([animationController isKindOfClass:[PopAnimation class]]) {
+//        return self.interactivePopTransition;
+//    }
+//    
+//    return nil;
+//}
+
+
 @end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

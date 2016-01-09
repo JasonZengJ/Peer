@@ -35,6 +35,9 @@
     if (!_sendMomentImageView) {
         _sendMomentImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, ConvertiPhone5Or6pSize(50.0f), ConvertiPhone5Or6pSize(50.0f))];
         _sendMomentImageView.image = [UIImage imageNamed:@"HomeSendMoment"];
+        _sendMomentImageView.userInteractionEnabled = YES;
+        [_sendMomentImageView addTapGestureWithTarget:self action:@selector(tapSendMoment)];
+        
         
     }
     return _sendMomentImageView;
@@ -68,6 +71,14 @@
     if (self.delegate && [self.delegate respondsToSelector:@selector(tapUserInfo)]) {
         [self.delegate tapUserInfo];
     }
+}
+
+- (void)tapSendMoment {
+    
+    if (self.delegate && [self.delegate respondsToSelector:@selector(tapSendMoment)]) {
+        [self.delegate tapSendMoment];
+    }
+    
 }
 
 @end

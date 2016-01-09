@@ -13,6 +13,7 @@
 
 #import "ValidationService.h"
 #import "LoginService.h"
+#import "AppService.h"
 #import "UIAlertView+AlertMessage.h"
 #import "UserModel.h"
 
@@ -76,13 +77,13 @@
 
 - (void)rightNavbarButtonAction:(UIButton *)sender {
     
-    
-    RegisterInfoViewController *registerInfoViewController = [[RegisterInfoViewController alloc] init];
-    registerInfoViewController.user = self.user;
-    registerInfoViewController.backActionType = BackActionTypePop;
-    [self.navigationController pushViewController:registerInfoViewController animated:YES];
-    
-    return;
+//    
+//    RegisterInfoViewController *registerInfoViewController = [[RegisterInfoViewController alloc] init];
+//    registerInfoViewController.user = self.user;
+//    registerInfoViewController.backActionType = BackActionTypePop;
+//    [self.navigationController pushViewController:registerInfoViewController animated:YES];
+//    
+//    return;
     
     NSString *verifyCode = self.phoneVerifyView.verifyCodeTextField.text;
     NSString *password   = self.phoneVerifyView.passwordTextField.text;
@@ -101,10 +102,14 @@
         
         if (isSuccess) {
             self.user.password = password;
+            self.user.deviceId = [AppService deviceId];
+            [self.loginService persistUserData:[self.user toDictionary]];
             RegisterInfoViewController *registerInfoViewController = [[RegisterInfoViewController alloc] init];
             registerInfoViewController.user = self.user;
             registerInfoViewController.backActionType = BackActionTypePop;
-            [self.navigationController pushViewController:registerInfoViewController animated:YES];
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [self.navigationController pushViewController:registerInfoViewController animated:YES];
+            });
         } else {
             [UIAlertView alertWithMessage:@"验证码验证失败"];
         }
@@ -124,7 +129,9 @@
         return;
     }
     
+    DLog(@"开始发送验证码");
     [self.loginService getVerificationCodeWithPhone:phone result:^(NSError *error) {
+        DLog(@"发送验证码接收到回调");
         if (error) {
             [UIAlertView alertWithMessage:error.domain];
         } else {

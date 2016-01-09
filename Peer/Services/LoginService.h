@@ -25,11 +25,11 @@
 
 - (void)loginWithUserModel:(UserModel *)userModel ;
 
-
-
 - (void)getVerificationCodeWithPhone:(NSString *)phone result:(void(^)(NSError *err))result;
 - (void)confirmVerificationCode:(NSString *)veryficationCode result:(void(^)(BOOL isSuccess))result;
 - (void)registerWithUserModel:(UserModel *)userModel;
+- (void)persistUserData:(NSDictionary *)userData;
+- (void)clearUserData;
 
 + (UserModel *)currentUser;
 

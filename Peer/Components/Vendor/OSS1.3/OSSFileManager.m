@@ -92,7 +92,9 @@ NSString *const Bucket      = @"jasonlife";
     [uploadImageData uploadWithUploadCallback:^(BOOL isSuccess,  NSError *error) {
         callback(isSuccess,error,[uploadImageData getResourceURL]);
     } withProgressCallback:^(float progress) {
-        progressCallback(progress);
+        if (progressCallback) {
+            progressCallback(progress);
+        }
     }];
     
 }
@@ -110,7 +112,9 @@ NSString *const Bucket      = @"jasonlife";
      [uploadVideoData uploadWithUploadCallback:^(BOOL isSuccess,  NSError *error) {
         callback(isSuccess,error,[uploadVideoData getResourceURL]);
     } withProgressCallback:^(float progress) {
-        progressCallback(progress);
+        if (progressCallback) {
+            progressCallback(progress);
+        }
     }];
     
     
@@ -130,7 +134,9 @@ NSString *const Bucket      = @"jasonlife";
     [uploadVideoData uploadWithUploadCallback:^(BOOL isSuccess,  NSError *error) {
         callback(isSuccess,error,[uploadVideoData getResourceURL]);
     } withProgressCallback:^(float progress) {
-        progressCallback(progress);
+        if (progressCallback) {
+            progressCallback(progress);
+        }
     }];
     
 }
