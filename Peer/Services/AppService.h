@@ -25,7 +25,7 @@
 
 + (void)monitorNetwork;
 
-+ (NSString *)deviceId;
++ (NSNumber *)deviceId;
 
 + (NSString *)token;
 

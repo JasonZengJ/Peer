@@ -56,7 +56,7 @@
 - (void)formateDateString:(NSString *)dateString {
     
     NSDate *date        = [self.dateFormatter dateFromString:dateString];
-    NSInteger unitFlags =  NSMonthCalendarUnit | NSDayCalendarUnit;
+    NSInteger unitFlags =  NSCalendarUnitMonth | NSCalendarUnitDay;
     self.dateComponents = [self.calendar components:unitFlags fromDate:date];
     
 }

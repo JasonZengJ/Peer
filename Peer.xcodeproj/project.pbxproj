@@ -101,6 +101,7 @@
 		96E2F4A81BE3042900E6625B /* LayoutUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E2F4A71BE3042900E6625B /* LayoutUtil.m */; };
 		96E5CB2A1BB1A9C3005503CD /* PetsService.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E5CB291BB1A9C3005503CD /* PetsService.m */; };
 		96E5CB2D1BB1A9EA005503CD /* PetsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E5CB2C1BB1A9EA005503CD /* PetsModel.m */; };
+		96E9C6951C4550C200256942 /* MineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E9C6941C4550C200256942 /* MineViewController.m */; };
 		CE2C57081BD37AC900DEAF32 /* NSString+Size.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2C57071BD37AC900DEAF32 /* NSString+Size.m */; };
 		CE2C570B1BD3885800DEAF32 /* HomeHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2C570A1BD3885800DEAF32 /* HomeHeaderView.m */; };
 		CE2C570E1BD3889700DEAF32 /* HomeBottomView.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2C570D1BD3889700DEAF32 /* HomeBottomView.m */; };
@@ -291,6 +292,8 @@
 		96E5CB291BB1A9C3005503CD /* PetsService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PetsService.m; sourceTree = "<group>"; };
 		96E5CB2B1BB1A9EA005503CD /* PetsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PetsModel.h; sourceTree = "<group>"; };
 		96E5CB2C1BB1A9EA005503CD /* PetsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PetsModel.m; sourceTree = "<group>"; };
+		96E9C6931C4550C200256942 /* MineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineViewController.h; sourceTree = "<group>"; };
+		96E9C6941C4550C200256942 /* MineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineViewController.m; sourceTree = "<group>"; };
 		A1FE296EA4C7788C849801D9 /* Pods-Peer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Peer.release.xcconfig"; path = "Pods/Target Support Files/Pods-Peer/Pods-Peer.release.xcconfig"; sourceTree = "<group>"; };
 		CE2C57061BD37AC900DEAF32 /* NSString+Size.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Size.h"; sourceTree = "<group>"; };
 		CE2C57071BD37AC900DEAF32 /* NSString+Size.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Size.m"; sourceTree = "<group>"; };
@@ -450,6 +453,7 @@
 		9601040B1BA879F600152908 /* User */ = {
 			isa = PBXGroup;
 			children = (
+				96E9C6921C454FE300256942 /* Mine */,
 				960104281BAB1C2E00152908 /* Register */,
 				9601040C1BA879F600152908 /* Login */,
 			);
@@ -800,6 +804,15 @@
 			path = LayoutUtils;
 			sourceTree = "<group>";
 		};
+		96E9C6921C454FE300256942 /* Mine */ = {
+			isa = PBXGroup;
+			children = (
+				96E9C6931C4550C200256942 /* MineViewController.h */,
+				96E9C6941C4550C200256942 /* MineViewController.m */,
+			);
+			path = Mine;
+			sourceTree = "<group>";
+		};
 		A5EF66DA01FA01C7F7BB91CC /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -975,6 +988,7 @@
 				960810071BDFCE7300F6F9E2 /* NSDate+Formatter.m in Sources */,
 				961C964B1BE61D0B008EDF91 /* TAAbstractDotView.m in Sources */,
 				962008851BEA442800173EA8 /* UIAlertView+AlertMessage.m in Sources */,
+				96E9C6951C4550C200256942 /* MineViewController.m in Sources */,
 				968B3BD71BCAA52400B8723A /* MomentsService.m in Sources */,
 				96A2D8D41BC032200016AE3F /* ApplicationDirectoryService.m in Sources */,
 				9666665F1BF72CF7008A5991 /* TWImageScrollView.m in Sources */,
@@ -1177,7 +1191,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Peer/Peer-Prefix.pch";
 				INFOPLIST_FILE = Peer/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1204,7 +1218,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Peer/Peer-Prefix.pch";
 				INFOPLIST_FILE = Peer/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
