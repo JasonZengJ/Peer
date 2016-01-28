@@ -164,10 +164,12 @@
 + (void)setAppLaunched {
     
     [[NSUserDefaults standardUserDefaults] setObject:@(YES) forKey:@"appLaunched"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
     
 }
 
 + (BOOL)appLaunched {
+    
     return [[NSUserDefaults standardUserDefaults] objectForKey:@"appLaunched"];
 }
 

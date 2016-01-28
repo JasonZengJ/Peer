@@ -189,7 +189,7 @@
 - (void)loginCompleteWithError:(NSError *)error {
     
     if (error) {
-        [self alertMessage:@"error"];
+        [self alertMessage:error.domain];
     } else {
         [self dismissViewControllerAnimated:YES completion:nil];
     }

@@ -11,6 +11,7 @@
 #import "PetDetailsViewController.h"
 #import "LoginViewController.h"
 #import "PhotoPickerViewController.h"
+#import "MineViewController.h"
 
 #import "CardCollectionViewCell.h"
 
@@ -22,6 +23,8 @@
 
 #import "HomeBottomView.h"
 #import "HomeHeaderView.h"
+
+#import "UIImage+Color.h"
 
 
 @interface PeerHomeViewController () <UICollectionViewDataSource,UICollectionViewDelegate,CardCollectionViewCellDelegate,HomeBottomViewDelegate>
@@ -141,34 +144,39 @@
 
 - (void)tapUserInfo {
     
-    if (![LoginService currentUser]) {
-        LoginViewController *loginViewController = [[LoginViewController alloc] init];
-        loginViewController.backActionType = BackActionTypeDismiss;
-        
-        UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:loginViewController];
-        [self presentViewController:navController animated:YES completion:nil];
-    } else {
-        
-    }
+    
+    UIViewController *controller = nil;
+//    if (![LoginService currentUser]) {
+//        LoginViewController *loginViewController = [[LoginViewController alloc] init];
+//        loginViewController.backActionType = BackActionTypeDismiss;
+//        controller = loginViewController;
+//    } else {
+        MineViewController *mineViewController = [[MineViewController alloc] init];
+        mineViewController.backActionType = BackActionTypeDismiss;
+        mineViewController.homePageCaptureImage = [UIImage captureView:self.view];
+        mineViewController.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
+        controller = mineViewController;
+    
+//    }
+    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:controller];
+    [self presentViewController:navController animated:YES completion:nil];
     
 }
 
 - (void)tapSendMoment {
-//    if (![LoginService currentUser]) {
-//        LoginViewController *loginViewController = [[LoginViewController alloc] init];
-//        loginViewController.backActionType = BackActionTypeDismiss;
-//        
-//        UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:loginViewController];
-//        [self presentViewController:navController animated:YES completion:nil];
-//    } else {
+    if (![LoginService currentUser]) {
+        LoginViewController *loginViewController = [[LoginViewController alloc] init];
+        loginViewController.backActionType = BackActionTypeDismiss;
+//
+        UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:loginViewController];
+        [self presentViewController:navController animated:YES completion:nil];
+    } else {
         PhotoPickerViewController *photoViewController = [[PhotoPickerViewController alloc] init];
         photoViewController.backActionType = BackActionTypeDismiss;
         UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:photoViewController];
-        [self presentViewController:navController animated:YES completion:^{
-            
-        }];
+        [self presentViewController:navController animated:YES completion:nil];
         
-//    }
+    }
 }
 
 #pragma mark - -- <CardCollectionViewCellDelegate>

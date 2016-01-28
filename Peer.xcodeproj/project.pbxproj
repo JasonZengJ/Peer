@@ -85,6 +85,10 @@
 		968B3BDA1BCAA59400B8723A /* Pagination.m in Sources */ = {isa = PBXBuildFile; fileRef = 968B3BD91BCAA59400B8723A /* Pagination.m */; };
 		968B3BDD1BCAA60B00B8723A /* MomentModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 968B3BDC1BCAA60B00B8723A /* MomentModel.m */; };
 		968B3BE01BCAA67000B8723A /* CommentModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 968B3BDF1BCAA67000B8723A /* CommentModel.m */; };
+		968C03F11C53955F0061454D /* MineCardCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 968C03F01C53955F0061454D /* MineCardCollectionViewCell.m */; };
+		968C03F41C5399BF0061454D /* MineCollectionViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 968C03F31C5399BF0061454D /* MineCollectionViewFlowLayout.m */; };
+		968C03FA1C539B140061454D /* MineInfoCollectionHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 968C03F91C539B140061454D /* MineInfoCollectionHeaderView.m */; };
+		968C03FD1C53A52F0061454D /* MineCollectionFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 968C03FC1C53A52F0061454D /* MineCollectionFooterView.m */; };
 		96A2D8D41BC032200016AE3F /* ApplicationDirectoryService.m in Sources */ = {isa = PBXBuildFile; fileRef = 96A2D8D31BC032200016AE3F /* ApplicationDirectoryService.m */; };
 		96A2D8DA1BC118AA0016AE3F /* ALBB_OSS_IOS_SDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96A2D8D91BC118AA0016AE3F /* ALBB_OSS_IOS_SDK.framework */; };
 		96A2D8DD1BC119C70016AE3F /* OSSFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 96A2D8DC1BC119C70016AE3F /* OSSFileManager.m */; };
@@ -264,6 +268,14 @@
 		968B3BDC1BCAA60B00B8723A /* MomentModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MomentModel.m; sourceTree = "<group>"; };
 		968B3BDE1BCAA67000B8723A /* CommentModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommentModel.h; sourceTree = "<group>"; };
 		968B3BDF1BCAA67000B8723A /* CommentModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommentModel.m; sourceTree = "<group>"; };
+		968C03EF1C53955F0061454D /* MineCardCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineCardCollectionViewCell.h; sourceTree = "<group>"; };
+		968C03F01C53955F0061454D /* MineCardCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineCardCollectionViewCell.m; sourceTree = "<group>"; };
+		968C03F21C5399BF0061454D /* MineCollectionViewFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineCollectionViewFlowLayout.h; sourceTree = "<group>"; };
+		968C03F31C5399BF0061454D /* MineCollectionViewFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineCollectionViewFlowLayout.m; sourceTree = "<group>"; };
+		968C03F81C539B140061454D /* MineInfoCollectionHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineInfoCollectionHeaderView.h; sourceTree = "<group>"; };
+		968C03F91C539B140061454D /* MineInfoCollectionHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineInfoCollectionHeaderView.m; sourceTree = "<group>"; };
+		968C03FB1C53A52F0061454D /* MineCollectionFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineCollectionFooterView.h; sourceTree = "<group>"; };
+		968C03FC1C53A52F0061454D /* MineCollectionFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineCollectionFooterView.m; sourceTree = "<group>"; };
 		96A2D8D21BC032200016AE3F /* ApplicationDirectoryService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApplicationDirectoryService.h; sourceTree = "<group>"; };
 		96A2D8D31BC032200016AE3F /* ApplicationDirectoryService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApplicationDirectoryService.m; sourceTree = "<group>"; };
 		96A2D8D91BC118AA0016AE3F /* ALBB_OSS_IOS_SDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ALBB_OSS_IOS_SDK.framework; sourceTree = "<group>"; };
@@ -809,6 +821,14 @@
 			children = (
 				96E9C6931C4550C200256942 /* MineViewController.h */,
 				96E9C6941C4550C200256942 /* MineViewController.m */,
+				968C03EF1C53955F0061454D /* MineCardCollectionViewCell.h */,
+				968C03F01C53955F0061454D /* MineCardCollectionViewCell.m */,
+				968C03F21C5399BF0061454D /* MineCollectionViewFlowLayout.h */,
+				968C03F31C5399BF0061454D /* MineCollectionViewFlowLayout.m */,
+				968C03F81C539B140061454D /* MineInfoCollectionHeaderView.h */,
+				968C03F91C539B140061454D /* MineInfoCollectionHeaderView.m */,
+				968C03FB1C53A52F0061454D /* MineCollectionFooterView.h */,
+				968C03FC1C53A52F0061454D /* MineCollectionFooterView.m */,
 			);
 			path = Mine;
 			sourceTree = "<group>";
@@ -868,7 +888,7 @@
 		966B51711B7F8D70000F0EF2 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0640;
+				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = peers;
 				TargetAttributes = {
 					966B51781B7F8D70000F0EF2 = {
@@ -978,6 +998,7 @@
 				966666621BF72CF7008A5991 /* TWPhotoLoader.m in Sources */,
 				966B51821B7F8D70000F0EF2 /* AppDelegate.m in Sources */,
 				966666611BF72CF7008A5991 /* TWPhotoCollectionViewCell.m in Sources */,
+				968C03FD1C53A52F0061454D /* MineCollectionFooterView.m in Sources */,
 				967E50561BE7A5F50054B1DC /* RegisterInfoViewController.m in Sources */,
 				96A2D8DD1BC119C70016AE3F /* OSSFileManager.m in Sources */,
 				966666601BF72CF7008A5991 /* TWPhoto.m in Sources */,
@@ -994,6 +1015,7 @@
 				9666665F1BF72CF7008A5991 /* TWImageScrollView.m in Sources */,
 				CE2C570E1BD3889700DEAF32 /* HomeBottomView.m in Sources */,
 				96E2F4A81BE3042900E6625B /* LayoutUtil.m in Sources */,
+				968C03F41C5399BF0061454D /* MineCollectionViewFlowLayout.m in Sources */,
 				9656F9481BD145240043FA38 /* HorizonCardFlowLayout.m in Sources */,
 				96E5CB2D1BB1A9EA005503CD /* PetsModel.m in Sources */,
 				96E2F49E1BE2619300E6625B /* PetDetailsHeaderView.m in Sources */,
@@ -1012,6 +1034,7 @@
 				960810041BDFBB6F00F6F9E2 /* MomentDetailsBottomView.m in Sources */,
 				966144591BE129E4003BD75A /* PetDetailsViewController.m in Sources */,
 				96BB1B8C1BECF59B00DAEBE1 /* BaseModel.m in Sources */,
+				968C03F11C53955F0061454D /* MineCardCollectionViewCell.m in Sources */,
 				961C964E1BE61D0B008EDF91 /* TAPageControl.m in Sources */,
 				CE2C57081BD37AC900DEAF32 /* NSString+Size.m in Sources */,
 				960104151BA879F600152908 /* ViewController.m in Sources */,
@@ -1025,6 +1048,7 @@
 				9656F9451BD1321C0043FA38 /* CardCollectionViewCell.m in Sources */,
 				961C96511BE61D0B008EDF91 /* UIView+SDExtension.m in Sources */,
 				961C96381BE3CEBD008EDF91 /* LocationManager.m in Sources */,
+				968C03FA1C539B140061454D /* MineInfoCollectionHeaderView.m in Sources */,
 				96E2F4A41BE278EB00E6625B /* PetDetailsHorizonCardFlowLayout.m in Sources */,
 				961C96501BE61D0B008EDF91 /* SDCycleScrollView.m in Sources */,
 				960104561BAE80C100152908 /* ValidationService.m in Sources */,
@@ -1115,6 +1139,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -1197,6 +1222,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Peer/Components/Vendor/UMeng",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.peers.peer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -1224,6 +1250,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Peer/Components/Vendor/UMeng",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.peers.peer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -1248,6 +1275,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Pods/build/Debug-iphoneos",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.goodpeer.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Peer.app/Peer";
 			};
@@ -1269,6 +1297,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Pods/build/Debug-iphoneos",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.goodpeer.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Peer.app/Peer";
 			};

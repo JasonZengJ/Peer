@@ -32,11 +32,13 @@
     [[UINavigationBar appearance] setBackgroundImage:[[UIImage alloc] init] forBarMetrics:UIBarMetricsDefault];
     [[UINavigationBar appearance] setShadowImage:[[UIImage alloc] init]];
     
+    
     if (![AppService appLaunched]) {
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
             [AppService initAppService];
         });
     } else {
+        
         [AppService clearCachedData];
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
             [AppService monitorNetwork];
