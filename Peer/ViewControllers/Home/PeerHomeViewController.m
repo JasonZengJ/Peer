@@ -144,20 +144,19 @@
 
 - (void)tapUserInfo {
     
-    
     UIViewController *controller = nil;
-//    if (![LoginService currentUser]) {
-//        LoginViewController *loginViewController = [[LoginViewController alloc] init];
-//        loginViewController.backActionType = BackActionTypeDismiss;
-//        controller = loginViewController;
-//    } else {
+    if (![LoginService currentUser]) {
+        LoginViewController *loginViewController = [[LoginViewController alloc] init];
+        loginViewController.backActionType = BackActionTypeDismiss;
+        controller = loginViewController;
+    } else {
         MineViewController *mineViewController = [[MineViewController alloc] init];
         mineViewController.backActionType = BackActionTypeDismiss;
         mineViewController.homePageCaptureImage = [UIImage captureView:self.view];
         mineViewController.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
         controller = mineViewController;
     
-//    }
+    }
     UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:controller];
     [self presentViewController:navController animated:YES completion:nil];
     

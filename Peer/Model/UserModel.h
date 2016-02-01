@@ -9,6 +9,11 @@
 #import <Foundation/Foundation.h>
 #import "BaseModel.h"
 
+typedef NS_ENUM(NSInteger,UserSex) {
+    UserSexBoy  = 1,
+    UserSexGirl,
+};
+
 @interface UserModel : BaseModel
 
 @property(nonatomic)NSNumber<Optional> *userId;

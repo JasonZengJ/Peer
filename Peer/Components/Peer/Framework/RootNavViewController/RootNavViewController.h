@@ -17,6 +17,7 @@ typedef NS_ENUM(NSInteger,BackActionType) {
 
 @property(nonatomic,strong)UIView *navbarBgView;
 @property(nonatomic,assign)BackActionType backActionType;
+@property(nonatomic,strong)UIButton *rightBarButton;
 
 - (UIBarButtonItem *)rightBarButtonItem;
 

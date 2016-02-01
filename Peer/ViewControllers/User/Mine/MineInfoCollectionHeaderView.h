@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
+@class UserModel;
+
 @interface MineInfoCollectionHeaderView : UICollectionReusableView
+- (void)configureWithUserModel:(UserModel *)userModel;
 
 @end

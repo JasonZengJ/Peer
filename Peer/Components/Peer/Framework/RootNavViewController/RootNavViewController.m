@@ -72,6 +72,7 @@
     return self;
 }
 
+
 - (void)loadView {
     [super loadView];
     self.navigationItem.leftBarButtonItem  = [self leftBackBarButtonItem];
@@ -97,6 +98,8 @@
     aButton.frame= CGRectMake(-2, 0.0f,ConvertiPhone5Or6pSize(25), ConvertiPhone5Or6pSize(25));
     [aButton setImage:backImage forState:UIControlStateNormal];
     [aButton addTarget:self action:@selector(rightNavbarButtonAction:) forControlEvents:UIControlEventTouchUpInside];
+    self.rightBarButton = aButton;
+    
     UIBarButtonItem *barButton = [[UIBarButtonItem alloc] initWithCustomView:aButton];
     return barButton;
 }
@@ -104,14 +107,16 @@
 - (UIBarButtonItem *)leftBackBarButtonItem {
     
     UIButton *aButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    aButton.titleEdgeInsets = UIEdgeInsetsMake(1, 0, 0, 0);
-    aButton.titleLabel.adjustsFontSizeToFitWidth = YES;
     
     UIImage *backImage = [UIImage imageNamed:@"MomentDetailsLeftArrow"];
-    aButton.frame= CGRectMake(-2, 0.0f,ConvertiPhone5Or6pSize(25), ConvertiPhone5Or6pSize(25));
+    
+    aButton.frame= CGRectMake(- 20.0f, 0.0f,ConvertiPhone5Or6pSize(25), ConvertiPhone5Or6pSize(25));
     [aButton setImage:backImage forState:UIControlStateNormal];
     [aButton addTarget:self action:@selector(backButtonAction:) forControlEvents:UIControlEventTouchUpInside];
+    [aButton setImageEdgeInsets:UIEdgeInsetsMake(0.0, - 20.0, 0.0, 0.0)];
+    
     UIBarButtonItem *barButton = [[UIBarButtonItem alloc] initWithCustomView:aButton];
+    
     return barButton;
 }
 

@@ -13,7 +13,7 @@
 @property(nonatomic) NSNumber *petsId;
 @property(nonatomic) NSString *petsName;
 @property(nonatomic) NSNumber *petsSex;
-@property(nonatomic) NSNumber *petsAge;
+@property(nonatomic) NSNumber *petsYear;
 @property(nonatomic) NSNumber *petsMonth;
 @property(nonatomic) NSString *petsAvatar;
 @property(nonatomic) NSNumber *petsBreedId;

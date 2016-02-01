@@ -10,4 +10,7 @@
 
 @interface MineCardCollectionViewCell : UICollectionViewCell
 
+
+- (void)configureWithData:(NSDictionary *)data;
+
 @end

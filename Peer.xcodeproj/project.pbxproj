@@ -32,7 +32,6 @@
 		960104531BADD08600152908 /* SMS_SDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 960104501BADD08600152908 /* SMS_SDK.framework */; };
 		960104561BAE80C100152908 /* ValidationService.m in Sources */ = {isa = PBXBuildFile; fileRef = 960104551BAE80C100152908 /* ValidationService.m */; };
 		960810041BDFBB6F00F6F9E2 /* MomentDetailsBottomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 960810031BDFBB6F00F6F9E2 /* MomentDetailsBottomView.m */; };
-		960810071BDFCE7300F6F9E2 /* NSDate+Formatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 960810061BDFCE7300F6F9E2 /* NSDate+Formatter.m */; };
 		9608100B1BDFD11300F6F9E2 /* PeerDateFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9608100A1BDFD11300F6F9E2 /* PeerDateFormatter.m */; };
 		96105B111BDE932200F9BEFA /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96105B101BDE932200F9BEFA /* CoreText.framework */; };
 		961C962F1BE3CB4E008EDF91 /* PeerLoadingImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 961C962E1BE3CB4E008EDF91 /* PeerLoadingImageView.m */; };
@@ -75,11 +74,13 @@
 		966B51821B7F8D70000F0EF2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 966B51811B7F8D70000F0EF2 /* AppDelegate.m */; };
 		966B518D1B7F8D70000F0EF2 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 966B518B1B7F8D70000F0EF2 /* LaunchScreen.xib */; };
 		966B51991B7F8D70000F0EF2 /* PeerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 966B51981B7F8D70000F0EF2 /* PeerTests.m */; };
+		9674F4C91C5DFC0C00BFC1D3 /* AddPeerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9674F4C81C5DFC0C00BFC1D3 /* AddPeerViewController.m */; };
+		9674F4CC1C5E02C800BFC1D3 /* AddPeerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9674F4CB1C5E02C800BFC1D3 /* AddPeerView.m */; };
+		9674F4CF1C5E5E8B00BFC1D3 /* NSDate+Calendar.m in Sources */ = {isa = PBXBuildFile; fileRef = 9674F4CE1C5E5E8B00BFC1D3 /* NSDate+Calendar.m */; };
 		967E50561BE7A5F50054B1DC /* RegisterInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 967E50551BE7A5F50054B1DC /* RegisterInfoViewController.m */; };
 		967E50591BE7A87E0054B1DC /* PhoneVerifyView.m in Sources */ = {isa = PBXBuildFile; fileRef = 967E50581BE7A87E0054B1DC /* PhoneVerifyView.m */; };
 		967E505C1BE7BB1C0054B1DC /* RegisterInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 967E505B1BE7BB1C0054B1DC /* RegisterInfoView.m */; };
 		967E505F1BE7C0100054B1DC /* RegisterInfoViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 967E505E1BE7C0100054B1DC /* RegisterInfoViewCell.m */; };
-		967E50621BE9112B0054B1DC /* NSString+Condition.m in Sources */ = {isa = PBXBuildFile; fileRef = 967E50611BE9112B0054B1DC /* NSString+Condition.m */; };
 		968B3BD41BCAA21D00B8723A /* FileUploadService.m in Sources */ = {isa = PBXBuildFile; fileRef = 968B3BD31BCAA21D00B8723A /* FileUploadService.m */; };
 		968B3BD71BCAA52400B8723A /* MomentsService.m in Sources */ = {isa = PBXBuildFile; fileRef = 968B3BD61BCAA52400B8723A /* MomentsService.m */; };
 		968B3BDA1BCAA59400B8723A /* Pagination.m in Sources */ = {isa = PBXBuildFile; fileRef = 968B3BD91BCAA59400B8723A /* Pagination.m */; };
@@ -170,8 +171,6 @@
 		960104551BAE80C100152908 /* ValidationService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ValidationService.m; sourceTree = "<group>"; };
 		960810021BDFBB6F00F6F9E2 /* MomentDetailsBottomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MomentDetailsBottomView.h; sourceTree = "<group>"; };
 		960810031BDFBB6F00F6F9E2 /* MomentDetailsBottomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MomentDetailsBottomView.m; sourceTree = "<group>"; };
-		960810051BDFCE7300F6F9E2 /* NSDate+Formatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Formatter.h"; sourceTree = "<group>"; };
-		960810061BDFCE7300F6F9E2 /* NSDate+Formatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Formatter.m"; sourceTree = "<group>"; };
 		960810091BDFD11300F6F9E2 /* PeerDateFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PeerDateFormatter.h; sourceTree = "<group>"; };
 		9608100A1BDFD11300F6F9E2 /* PeerDateFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PeerDateFormatter.m; sourceTree = "<group>"; };
 		96105B101BDE932200F9BEFA /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
@@ -248,6 +247,12 @@
 		966B51971B7F8D70000F0EF2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		966B51981B7F8D70000F0EF2 /* PeerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PeerTests.m; sourceTree = "<group>"; };
 		966B51A91B7FA959000F0EF2 /* Peer-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Peer-Prefix.pch"; sourceTree = "<group>"; };
+		9674F4C71C5DFC0C00BFC1D3 /* AddPeerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddPeerViewController.h; sourceTree = "<group>"; };
+		9674F4C81C5DFC0C00BFC1D3 /* AddPeerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddPeerViewController.m; sourceTree = "<group>"; };
+		9674F4CA1C5E02C800BFC1D3 /* AddPeerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddPeerView.h; sourceTree = "<group>"; };
+		9674F4CB1C5E02C800BFC1D3 /* AddPeerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddPeerView.m; sourceTree = "<group>"; };
+		9674F4CD1C5E5E8B00BFC1D3 /* NSDate+Calendar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Calendar.h"; sourceTree = "<group>"; };
+		9674F4CE1C5E5E8B00BFC1D3 /* NSDate+Calendar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Calendar.m"; sourceTree = "<group>"; };
 		967E50541BE7A5F50054B1DC /* RegisterInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterInfoViewController.h; sourceTree = "<group>"; };
 		967E50551BE7A5F50054B1DC /* RegisterInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterInfoViewController.m; sourceTree = "<group>"; };
 		967E50571BE7A87E0054B1DC /* PhoneVerifyView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhoneVerifyView.h; sourceTree = "<group>"; };
@@ -256,8 +261,6 @@
 		967E505B1BE7BB1C0054B1DC /* RegisterInfoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterInfoView.m; sourceTree = "<group>"; };
 		967E505D1BE7C0100054B1DC /* RegisterInfoViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterInfoViewCell.h; sourceTree = "<group>"; };
 		967E505E1BE7C0100054B1DC /* RegisterInfoViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterInfoViewCell.m; sourceTree = "<group>"; };
-		967E50601BE9112B0054B1DC /* NSString+Condition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Condition.h"; sourceTree = "<group>"; };
-		967E50611BE9112B0054B1DC /* NSString+Condition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Condition.m"; sourceTree = "<group>"; };
 		968B3BD21BCAA21D00B8723A /* FileUploadService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileUploadService.h; sourceTree = "<group>"; };
 		968B3BD31BCAA21D00B8723A /* FileUploadService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileUploadService.m; sourceTree = "<group>"; };
 		968B3BD51BCAA52400B8723A /* MomentsService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MomentsService.h; sourceTree = "<group>"; };
@@ -412,14 +415,12 @@
 				960103FC1BA879C800152908 /* UIImage+Color.m */,
 				960103FD1BA879C800152908 /* UIView+Layout.h */,
 				960103FE1BA879C800152908 /* UIView+Layout.m */,
-				960810051BDFCE7300F6F9E2 /* NSDate+Formatter.h */,
-				960810061BDFCE7300F6F9E2 /* NSDate+Formatter.m */,
 				CE2C57061BD37AC900DEAF32 /* NSString+Size.h */,
 				CE2C57071BD37AC900DEAF32 /* NSString+Size.m */,
-				967E50601BE9112B0054B1DC /* NSString+Condition.h */,
-				967E50611BE9112B0054B1DC /* NSString+Condition.m */,
 				962008831BEA442800173EA8 /* UIAlertView+AlertMessage.h */,
 				962008841BEA442800173EA8 /* UIAlertView+AlertMessage.m */,
+				9674F4CD1C5E5E8B00BFC1D3 /* NSDate+Calendar.h */,
+				9674F4CE1C5E5E8B00BFC1D3 /* NSDate+Calendar.m */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -465,6 +466,7 @@
 		9601040B1BA879F600152908 /* User */ = {
 			isa = PBXGroup;
 			children = (
+				9674F4C61C5DFBFC00BFC1D3 /* AddPeer */,
 				96E9C6921C454FE300256942 /* Mine */,
 				960104281BAB1C2E00152908 /* Register */,
 				9601040C1BA879F600152908 /* Login */,
@@ -762,6 +764,17 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		9674F4C61C5DFBFC00BFC1D3 /* AddPeer */ = {
+			isa = PBXGroup;
+			children = (
+				9674F4C71C5DFC0C00BFC1D3 /* AddPeerViewController.h */,
+				9674F4C81C5DFC0C00BFC1D3 /* AddPeerViewController.m */,
+				9674F4CA1C5E02C800BFC1D3 /* AddPeerView.h */,
+				9674F4CB1C5E02C800BFC1D3 /* AddPeerView.m */,
+			);
+			path = AddPeer;
+			sourceTree = "<group>";
+		};
 		96A2D8D51BC117DF0016AE3F /* OSS1.3 */ = {
 			isa = PBXGroup;
 			children = (
@@ -1006,7 +1019,6 @@
 				960103FF1BA879C800152908 /* NSData+JSON.m in Sources */,
 				960104271BAB1B2300152908 /* UserModel.m in Sources */,
 				96DC2C591BCF82F800126AB6 /* PeerHomeViewController.m in Sources */,
-				960810071BDFCE7300F6F9E2 /* NSDate+Formatter.m in Sources */,
 				961C964B1BE61D0B008EDF91 /* TAAbstractDotView.m in Sources */,
 				962008851BEA442800173EA8 /* UIAlertView+AlertMessage.m in Sources */,
 				96E9C6951C4550C200256942 /* MineViewController.m in Sources */,
@@ -1015,6 +1027,7 @@
 				9666665F1BF72CF7008A5991 /* TWImageScrollView.m in Sources */,
 				CE2C570E1BD3889700DEAF32 /* HomeBottomView.m in Sources */,
 				96E2F4A81BE3042900E6625B /* LayoutUtil.m in Sources */,
+				9674F4CC1C5E02C800BFC1D3 /* AddPeerView.m in Sources */,
 				968C03F41C5399BF0061454D /* MineCollectionViewFlowLayout.m in Sources */,
 				9656F9481BD145240043FA38 /* HorizonCardFlowLayout.m in Sources */,
 				96E5CB2D1BB1A9EA005503CD /* PetsModel.m in Sources */,
@@ -1022,7 +1035,6 @@
 				9601042B1BAB1C4600152908 /* PhoneVerifyViewController.m in Sources */,
 				960104131BA879F600152908 /* LoginView.m in Sources */,
 				9653C6B21BDCA32700D517C8 /* SendMomentViewController.m in Sources */,
-				967E50621BE9112B0054B1DC /* NSString+Condition.m in Sources */,
 				962008881BEA524D00173EA8 /* FillRegisterInfoViewController.m in Sources */,
 				9653C6A61BDCA31100D517C8 /* MomentDetailsHeaderView.m in Sources */,
 				961C964F1BE61D0B008EDF91 /* SDCollectionViewCell.m in Sources */,
@@ -1055,6 +1067,8 @@
 				961C964C1BE61D0B008EDF91 /* TAAnimatedDotView.m in Sources */,
 				968B3BDD1BCAA60B00B8723A /* MomentModel.m in Sources */,
 				9653C6A51BDCA31100D517C8 /* MomentDetailsCommentTableViewCell.m in Sources */,
+				9674F4CF1C5E5E8B00BFC1D3 /* NSDate+Calendar.m in Sources */,
+				9674F4C91C5DFC0C00BFC1D3 /* AddPeerViewController.m in Sources */,
 				960071ED1C09A2CC00F7528D /* PhotoPickerViewController.m in Sources */,
 				96E2F4A11BE2768800E6625B /* PetDetailsCollectionViewCell.m in Sources */,
 				9653C6B81BDCF20400D517C8 /* RootNavViewController.m in Sources */,

@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+#import "UserModel.h"
+
 typedef NS_ENUM(NSInteger,RegisterInfo) {
     RegisterInfoNickname = 1,
     RegisterInfoSex,
@@ -16,10 +18,7 @@ typedef NS_ENUM(NSInteger,RegisterInfo) {
     RegisterInfoDescription,
 };
 
-typedef NS_ENUM(NSInteger,UserSex) {
-    UserSexBoy  = 1,
-    UserSexGirl,
-};
+
 
 @protocol  RegisterInfoViewDelegate <NSObject>
 

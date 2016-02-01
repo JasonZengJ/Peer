@@ -19,6 +19,7 @@
         self.nickname = dict[@"nickname"];
         self.phone    = dict[@"phone"];
         self.password = dict[@"password"];
+        self.age      = dict[@"age"];
         self.sex      = dict[@"sex"];
         self.city     = dict[@"city"] ? dict[@"city"] : nil;
         self.area     = dict[@"area"] ? dict[@"area"] : nil;

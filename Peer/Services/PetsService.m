@@ -26,7 +26,7 @@
 
 
 - (void)likePetsWithPetsId:(NSString *)petsId userId:(NSString *)userId callBackBlock:(void (^)(bool success))callBackBlock {
-    [[PeerNetworkManager shareInstance] postWithParams:@{@"userId":userId,@"petsId":petsId} apiPath:LikePetsPath callBackBlock:^(id responseObject) {
+    [[PeerNetworkManager shareInstance] securePostWithParams:@{@"userId":userId,@"petsId":petsId} apiPath:LikePetsPath callBackBlock:^(id responseObject) {
         if (![[responseObject objectForKey:@"code"] integerValue]) {
             callBackBlock(true);
         } else {
@@ -36,7 +36,7 @@
 }
 
 - (void)unlikePetsWithPetsId:(NSString *)petsId userId:(NSString *)userId callBackBlock:(void (^)(bool success))callBackBlock {
-    [[PeerNetworkManager shareInstance] postWithParams:@{@"userId":userId,@"petsId":petsId} apiPath:UnlikePetsPath callBackBlock:^(id responseObject) {
+    [[PeerNetworkManager shareInstance] securePostWithParams:@{@"userId":userId,@"petsId":petsId} apiPath:UnlikePetsPath callBackBlock:^(id responseObject) {
         if (![[responseObject objectForKey:@"code"] integerValue]) {
             callBackBlock(true);
         } else {
@@ -47,7 +47,7 @@
 
 - (void)followPetsWithPetsId:(NSString *)petsId userId:(NSString *)userId callBackBlock:(void (^)(bool success))callBackBlock {
     
-    [[PeerNetworkManager shareInstance] postWithParams:@{@"userId":userId,@"petsId":petsId} apiPath:FollowPetsPath callBackBlock:^(id responseObject) {
+    [[PeerNetworkManager shareInstance] securePostWithParams:@{@"userId":userId,@"petsId":petsId} apiPath:FollowPetsPath callBackBlock:^(id responseObject) {
         if (![[responseObject objectForKey:@"code"] integerValue]) {
             callBackBlock(true);
         } else {
@@ -59,7 +59,7 @@
 
 - (void)unfollowPetsWithPetsId:(NSString *)petsId userId:(NSString *)userId callBackBlock:(void (^)(bool success))callBackBlock {
     
-    [[PeerNetworkManager shareInstance] postWithParams:@{@"userId":userId,@"petsId":petsId} apiPath:UnfollowPetsPath callBackBlock:^(id responseObject) {
+    [[PeerNetworkManager shareInstance] securePostWithParams:@{@"userId":userId,@"petsId":petsId} apiPath:UnfollowPetsPath callBackBlock:^(id responseObject) {
         if (![[responseObject objectForKey:@"code"] integerValue]) {
             callBackBlock(true);
         } else {
@@ -71,7 +71,7 @@
 
 - (void)getPetsArrayWithBreedId:(NSNumber *)breedId callBackBlock:(void (^)(NSArray *petsArray))callBackBlock {
     
-    [[PeerNetworkManager shareInstance] postWithParams:@{@"breedId":breedId} apiPath:GetPetsWithBreedIdPath callBackBlock:^(id responseObject) {
+    [[PeerNetworkManager shareInstance] securePostWithParams:@{@"breedId":breedId} apiPath:GetPetsWithBreedIdPath callBackBlock:^(id responseObject) {
         
         if ([responseObject objectForKey:@"code"] == 0) {
             
@@ -95,7 +95,7 @@
 - (void)getPetWithPetsId:(NSNumber *)petsId callBackBlock:(void(^)(PetsModel *pets))callBackBlock {
     
     NSString *apiPath = [NSString stringWithFormat:@"%@/%@",GetPetsByIdPath,petsId];
-    [[PeerNetworkManager shareInstance] postWithParams:nil apiPath:apiPath callBackBlock:^(id responseObject) {
+    [[PeerNetworkManager shareInstance] securePostWithParams:nil apiPath:apiPath callBackBlock:^(id responseObject) {
         
         PetsModel *pets = nil;
         if ([[responseObject objectForKey:@"code"] integerValue] == 0) {
@@ -116,7 +116,7 @@
     }
     
     NSDictionary *params = @{@"userId":userModel.userId};
-    [[PeerNetworkManager shareInstance] postWithParams:params apiPath:GetAllPetsPath callBackBlock:^(id responseObject) {
+    [[PeerNetworkManager shareInstance] securePostWithParams:params apiPath:GetAllPetsPath callBackBlock:^(id responseObject) {
         
         if ([responseObject objectForKey:@"code"] == 0) {
             
@@ -139,7 +139,7 @@
 - (void)addOrUpdatePets:(PetsModel *)petsModel callBack:(void(^)(NSDictionary* responseObject))callBackBlock {
     
     NSDictionary *params = [petsModel toDictionary];
-    [[PeerNetworkManager shareInstance] postWithParams:params apiPath:AddPetsPath callBackBlock:^(id responseObject) {
+    [[PeerNetworkManager shareInstance] securePostWithParams:params apiPath:AddPetsPath callBackBlock:^(id responseObject) {
         callBackBlock(responseObject);
     }];
     
