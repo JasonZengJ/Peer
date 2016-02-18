@@ -118,7 +118,7 @@
     NSDictionary *params = @{@"userId":userModel.userId};
     [[PeerNetworkManager shareInstance] securePostWithParams:params apiPath:GetAllPetsPath callBackBlock:^(id responseObject) {
         
-        if ([responseObject objectForKey:@"code"] == 0) {
+        if ([responseObject objectForKey:@"code"] && [[responseObject objectForKey:@"code"] integerValue] == 0) {
             
             NSArray *petsArray = [self makePetsModelArrayWithResponseData:responseObject];
             

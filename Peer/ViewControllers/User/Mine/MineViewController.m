@@ -136,17 +136,24 @@
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
     
     
-    NSInteger sectionNum = (self.petsArray.count + 1) / 2;
+//    NSInteger sectionNum = (self.petsArray.count + 1) / 2;
+//    
+//    if (!sectionNum) {
+//        return 1;
+//    }
+//    
+//    if ((self.petsArray.count + 1 - sectionNum) == 1) {
+//        return sectionNum + 1;
+//    } else {
+//        return sectionNum;
+//    }
     
-    if (!sectionNum) {
+    if (!self.petsArray || !self.petsArray.count) {
         return 1;
+    } else {
+        return 2;
     }
     
-    if ((self.petsArray.count + 1 - sectionNum) == 1) {
-        return sectionNum + 1;
-    } else {
-        return sectionNum;
-    }
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
@@ -166,10 +173,10 @@
 - (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath {
     
     if (indexPath.section > 0) {
-        return nil;
+        return [[UICollectionReusableView alloc] initWithFrame:CGRectZero];
     }
     
-    UICollectionReusableView *view = nil;
+    UICollectionReusableView *view = [[UICollectionReusableView alloc] initWithFrame:CGRectZero];
     if ( kind == UICollectionElementKindSectionHeader) {
         view = [collectionView dequeueReusableSupplementaryViewOfKind:kind withReuseIdentifier:@"MineInfoCollectionHeaderView" forIndexPath:indexPath];
         [(MineInfoCollectionHeaderView *)view configureWithUserModel:[LoginService currentUser]];
@@ -217,6 +224,8 @@
 - (void)tapEditMineInfo {
     
 }
+
+
 
 @end
 
