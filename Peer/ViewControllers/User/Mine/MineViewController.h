@@ -11,5 +11,6 @@
 @interface MineViewController : RootNavViewController
 
 @property(nonatomic,strong) UIImage *homePageCaptureImage;
++ (void)needReloadMineViewControllerData;
 
 @end

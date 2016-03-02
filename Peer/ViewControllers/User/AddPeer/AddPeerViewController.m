@@ -7,15 +7,26 @@
 //
 
 #import "AddPeerViewController.h"
+#import "MineViewController.h"
 #import "AddPeerView.h"
 #import "FillRegisterInfoViewController.h"
 #import "PetsModel.h"
 
+#import "VPImageCropperViewController.h"
 
 #import "NSString+Size.h"
 #import "NSDate+Calendar.h"
+#import "NSString+Check.h"
 
-@interface AddPeerViewController () <AddPeerViewDelegate,FillRegisterInfoViewControllerDelegate,UIPickerViewDataSource,UIPickerViewDelegate>
+#import "FileUploadService.h"
+#import "PetsService.h"
+#import "LoginService.h"
+#import "UserModel.h"
+
+
+#import <MobileCoreServices/MobileCoreServices.h>
+
+@interface AddPeerViewController () <AddPeerViewDelegate,FillRegisterInfoViewControllerDelegate,UIPickerViewDataSource,UIPickerViewDelegate,UIImagePickerControllerDelegate,UINavigationControllerDelegate,VPImageCropperDelegate>
 
 @property(nonatomic,strong) AddPeerView *addPeerView;
 @property(nonatomic) UIView       *pickerContainerView;
@@ -24,7 +35,9 @@
 @property(nonatomic,strong) NSArray *speciesArray; // 物种
 @property(nonatomic,strong) NSArray *breedsArray;  // 品种
 @property(nonatomic,strong) PetsModel *pet;
+@property(nonatomic,strong) FileUploadService *fileUploadService;
 @property(nonatomic,assign) NSInteger currentYear;
+@property(nonatomic,assign) BOOL chosedPetsAvatar;
 //@property(nonatomic,strong) NSArray *sexImageViewArray;
 
 @end
@@ -84,6 +97,7 @@
     [super viewDidLoad];
     self.title = @"添加Peer";
     self.pet = [[PetsModel alloc] init];
+    self.pet.petsSex = @(PetsSexBoy);
     self.currentYear = [NSDate currentYear];
     
     
@@ -126,12 +140,194 @@
 
 - (void)clickedDoneButton {
     
+    if (!self.chosedPetsAvatar) {
+        [self alertWithMessage:@"请选择Peer的头像"];
+        return;
+    }
+    
+    if (![self.pet.petsName isNotEmpty]) {
+        [self alertWithMessage:@"请输入Peer的昵称"];
+        return;
+    }
+    
+    if (!self.pet.petsYear || !self.pet.petsMonth) {
+        [self alertWithMessage:@"请选择Peer的生日"];
+        return;
+    }
+    
+    if (![self.pet.petsSpeciesId integerValue]) {
+        [self alertWithMessage:@"请选择Peer的物种,如猫猫，狗狗..."];
+        return;
+    }
+    
+    if (![self.pet.petsBreedId integerValue]) {
+        [self alertWithMessage:@"请选择Peer的品种"];
+        return;
+    }
+    
+    FileUploadService *fileUploadService = [[FileUploadService alloc] init];
+    NSData *avatarImageData = UIImageJPEGRepresentation(self.addPeerView.petsAvatarImageView.image, 0.6);
+    
+    DefineWeakSelf;
+    [fileUploadService uploadImageData:avatarImageData callback:^(BOOL isSuccess, NSError *error, NSString *fileUrl) {
+        DefineStrongSelf;
+        if (isSuccess) {
+            strongSelf.pet.petsAvatar = fileUrl;
+            strongSelf.pet.userId = [LoginService currentUser].userId;
+            PetsService *petsService = [[PetsService alloc] init];
+            [petsService addOrUpdatePets:strongSelf.pet callBack:^(NSDictionary *responseObject) {
+                
+                if ([responseObject objectForKey:@"code"] && ![[responseObject objectForKey:@"code"] integerValue]) {
+                    [MineViewController needReloadMineViewControllerData];
+                    [strongSelf.navigationController popViewControllerAnimated:YES];
+                } else {
+                    [strongSelf alertWithMessage:responseObject[@"msg"]];
+                }
+                
+            }];
+        }
+    }];
+    
+    
 }
 
 - (void)tapPickerViewDone {
     [self.pickerContainerView removeFromSuperview];
 }
 
+- (void)tapToChoosePetsAvatar {
+    
+    if ([self isPhotoLibraryAvailable]) {
+        UIImagePickerController *controller = [[UIImagePickerController alloc] init];
+        controller.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+        NSMutableArray *mediaTypes = [[NSMutableArray alloc] init];
+        [mediaTypes addObject:(__bridge NSString *)kUTTypeImage];
+        controller.mediaTypes = mediaTypes;
+        controller.delegate = self;
+        [self presentViewController:controller
+                           animated:YES
+                         completion:^(void){
+                             NSLog(@"Picker View Controller is presented");
+                         }];
+    } else {
+        [self alertWithMessage:@"相册访问权限暂未开启，去设置－隐私－照片，然后找到Peer并点击右边的按钮开启权限"];
+    }
+    
+}
+
+- (void)alertWithMessage:(NSString *)message {
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"温馨提示" message:message preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *action = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil];
+    [alertController addAction:action];
+    [self presentViewController:alertController animated:YES completion:nil];
+}
+
+#pragma mark - -- VPImageCropperDelegate
+- (void)imageCropper:(VPImageCropperViewController *)cropperViewController didFinished:(UIImage *)editedImage {
+    self.addPeerView.petsAvatarImageView.image = editedImage;
+    self.chosedPetsAvatar = YES;
+    [cropperViewController dismissViewControllerAnimated:YES completion:^{
+        // TO DO
+    }];
+}
+
+- (void)imageCropperDidCancel:(VPImageCropperViewController *)cropperViewController {
+    [cropperViewController dismissViewControllerAnimated:YES completion:^{
+    }];
+}
+
+#pragma mark - -- <UIImagePickerControllerDelegate>
+
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
+    [picker dismissViewControllerAnimated:YES completion:^() {
+        UIImage *portraitImg = [info objectForKey:@"UIImagePickerControllerOriginalImage"];
+        portraitImg = [self imageByScalingToMaxSize:portraitImg];
+        // present the cropper view controller
+        VPImageCropperViewController *imgCropperVC = [[VPImageCropperViewController alloc] initWithImage:portraitImg cropFrame:CGRectMake(0, 100.0f, self.view.frame.size.width, self.view.frame.size.width) limitScaleRatio:3.0];
+        imgCropperVC.delegate = self;
+        [self presentViewController:imgCropperVC animated:YES completion:^{
+            // TO DO
+        }];
+    }];
+}
+
+- (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
+    [picker dismissViewControllerAnimated:YES completion:^(){
+    }];
+}
+
+#pragma mark - -- image scale utility
+- (UIImage *)imageByScalingToMaxSize:(UIImage *)sourceImage {
+    if (sourceImage.size.width < ScreenWidth) return sourceImage;
+    CGFloat btWidth = 0.0f;
+    CGFloat btHeight = 0.0f;
+    if (sourceImage.size.width > sourceImage.size.height) {
+        btHeight = ScreenWidth;
+        btWidth = sourceImage.size.width * (ScreenWidth / sourceImage.size.height);
+    } else {
+        btWidth = ScreenWidth;
+        btHeight = sourceImage.size.height * (ScreenWidth / sourceImage.size.width);
+    }
+    CGSize targetSize = CGSizeMake(btWidth, btHeight);
+    return [self imageByScalingAndCroppingForSourceImage:sourceImage targetSize:targetSize];
+}
+
+- (UIImage *)imageByScalingAndCroppingForSourceImage:(UIImage *)sourceImage targetSize:(CGSize)targetSize {
+    UIImage *newImage = nil;
+    CGSize imageSize = sourceImage.size;
+    CGFloat width = imageSize.width;
+    CGFloat height = imageSize.height;
+    CGFloat targetWidth = targetSize.width;
+    CGFloat targetHeight = targetSize.height;
+    CGFloat scaleFactor = 0.0;
+    CGFloat scaledWidth = targetWidth;
+    CGFloat scaledHeight = targetHeight;
+    CGPoint thumbnailPoint = CGPointMake(0.0,0.0);
+    if (CGSizeEqualToSize(imageSize, targetSize) == NO)
+    {
+        CGFloat widthFactor = targetWidth / width;
+        CGFloat heightFactor = targetHeight / height;
+        
+        if (widthFactor > heightFactor)
+            scaleFactor = widthFactor; // scale to fit height
+        else
+            scaleFactor = heightFactor; // scale to fit width
+        scaledWidth  = width * scaleFactor;
+        scaledHeight = height * scaleFactor;
+        
+        // center the image
+        if (widthFactor > heightFactor)
+        {
+            thumbnailPoint.y = (targetHeight - scaledHeight) * 0.5;
+        }
+        else
+            if (widthFactor < heightFactor)
+            {
+                thumbnailPoint.x = (targetWidth - scaledWidth) * 0.5;
+            }
+    }
+    UIGraphicsBeginImageContext(targetSize); // this will crop
+    CGRect thumbnailRect = CGRectZero;
+    thumbnailRect.origin = thumbnailPoint;
+    thumbnailRect.size.width  = scaledWidth;
+    thumbnailRect.size.height = scaledHeight;
+    
+    [sourceImage drawInRect:thumbnailRect];
+    
+    newImage = UIGraphicsGetImageFromCurrentImageContext();
+    if(newImage == nil) NSLog(@"could not scale image");
+    
+    //pop the context to get back to the default
+    UIGraphicsEndImageContext();
+    return newImage;
+}
+
+#pragma mark - -- camera utility
+
+- (BOOL) isPhotoLibraryAvailable{
+    return [UIImagePickerController isSourceTypeAvailable:
+            UIImagePickerControllerSourceTypePhotoLibrary];
+}
 
 #pragma mark - -- <FillRegisterInfoViewControllerDelegate>
 
@@ -187,12 +383,13 @@
         }
             break;
         case AddPeerSpecies: {
+            self.pet.petsSpeciesId = self.speciesArray[row][@"speciesId"];
             [self.addPeerView setSpecies:self.speciesArray[row][@"speciesName"]];
         }
             break;
         case AddPeerBreed: {
+            self.pet.petsBreedId = self.breedsArray[row][@"breedId"];
             [self.addPeerView setBreed:self.breedsArray[row][@"breedName"]];
-            
         }
             break;
         default:

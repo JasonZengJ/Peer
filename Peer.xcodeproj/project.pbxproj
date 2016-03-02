@@ -56,6 +56,10 @@
 		9653C6B31BDCA32700D517C8 /* SendPhotoMomentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9653C6AF1BDCA32700D517C8 /* SendPhotoMomentViewController.m */; };
 		9653C6B41BDCA32700D517C8 /* SendVideoMomentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9653C6B11BDCA32700D517C8 /* SendVideoMomentViewController.m */; };
 		9653C6B81BDCF20400D517C8 /* RootNavViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9653C6B71BDCF20400D517C8 /* RootNavViewController.m */; };
+		96553D7E1C8330DF00F310B9 /* MineAddPeerCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 96553D7D1C8330DF00F310B9 /* MineAddPeerCollectionViewCell.m */; };
+		96553D821C849DD900F310B9 /* UILabel+AttributeText.m in Sources */ = {isa = PBXBuildFile; fileRef = 96553D811C849DD900F310B9 /* UILabel+AttributeText.m */; };
+		96553D871C85F58900F310B9 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96553D861C85F58900F310B9 /* MobileCoreServices.framework */; };
+		96553D8B1C85F69F00F310B9 /* VPImageCropperViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96553D8A1C85F69F00F310B9 /* VPImageCropperViewController.m */; };
 		9656F9451BD1321C0043FA38 /* CardCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9656F9441BD1321C0043FA38 /* CardCollectionViewCell.m */; };
 		9656F9481BD145240043FA38 /* HorizonCardFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 9656F9471BD145240043FA38 /* HorizonCardFlowLayout.m */; };
 		966144591BE129E4003BD75A /* PetDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 966144581BE129E4003BD75A /* PetDetailsViewController.m */; };
@@ -95,6 +99,7 @@
 		96A2D8DD1BC119C70016AE3F /* OSSFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 96A2D8DC1BC119C70016AE3F /* OSSFileManager.m */; };
 		96BB1B8C1BECF59B00DAEBE1 /* BaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 96BB1B8B1BECF59B00DAEBE1 /* BaseModel.m */; };
 		96BB1B8F1BED109500DAEBE1 /* ca.cer in Resources */ = {isa = PBXBuildFile; fileRef = 96BB1B8E1BED102600DAEBE1 /* ca.cer */; };
+		96C62F391C873F4F0016FD10 /* NSString+Check.m in Sources */ = {isa = PBXBuildFile; fileRef = 96C62F381C873F4F0016FD10 /* NSString+Check.m */; };
 		96C71F951BEE5B1100CEE655 /* address_CN.plist in Resources */ = {isa = PBXBuildFile; fileRef = 96C71F931BEE5B1100CEE655 /* address_CN.plist */; };
 		96C71F961BEE5B1100CEE655 /* address_EN.plist in Resources */ = {isa = PBXBuildFile; fileRef = 96C71F941BEE5B1100CEE655 /* address_EN.plist */; };
 		96DC2C541BCF7CF500126AB6 /* libMobClickLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 96DC2C511BCF7CF500126AB6 /* libMobClickLibrary.a */; };
@@ -215,6 +220,13 @@
 		9653C6B11BDCA32700D517C8 /* SendVideoMomentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SendVideoMomentViewController.m; sourceTree = "<group>"; };
 		9653C6B61BDCF20400D517C8 /* RootNavViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootNavViewController.h; sourceTree = "<group>"; };
 		9653C6B71BDCF20400D517C8 /* RootNavViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootNavViewController.m; sourceTree = "<group>"; };
+		96553D7C1C8330DF00F310B9 /* MineAddPeerCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineAddPeerCollectionViewCell.h; sourceTree = "<group>"; };
+		96553D7D1C8330DF00F310B9 /* MineAddPeerCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineAddPeerCollectionViewCell.m; sourceTree = "<group>"; };
+		96553D801C849DD900F310B9 /* UILabel+AttributeText.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+AttributeText.h"; sourceTree = "<group>"; };
+		96553D811C849DD900F310B9 /* UILabel+AttributeText.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+AttributeText.m"; sourceTree = "<group>"; };
+		96553D861C85F58900F310B9 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		96553D891C85F69F00F310B9 /* VPImageCropperViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VPImageCropperViewController.h; sourceTree = "<group>"; };
+		96553D8A1C85F69F00F310B9 /* VPImageCropperViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VPImageCropperViewController.m; sourceTree = "<group>"; };
 		9656F9431BD1321C0043FA38 /* CardCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardCollectionViewCell.h; sourceTree = "<group>"; };
 		9656F9441BD1321C0043FA38 /* CardCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardCollectionViewCell.m; sourceTree = "<group>"; };
 		9656F9461BD145240043FA38 /* HorizonCardFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HorizonCardFlowLayout.h; sourceTree = "<group>"; };
@@ -287,6 +299,8 @@
 		96BB1B8A1BECF59B00DAEBE1 /* BaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseModel.h; sourceTree = "<group>"; };
 		96BB1B8B1BECF59B00DAEBE1 /* BaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseModel.m; sourceTree = "<group>"; };
 		96BB1B8E1BED102600DAEBE1 /* ca.cer */ = {isa = PBXFileReference; lastKnownFileType = file; path = ca.cer; sourceTree = "<group>"; };
+		96C62F371C873F4F0016FD10 /* NSString+Check.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Check.h"; sourceTree = "<group>"; };
+		96C62F381C873F4F0016FD10 /* NSString+Check.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Check.m"; sourceTree = "<group>"; };
 		96C71F931BEE5B1100CEE655 /* address_CN.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = address_CN.plist; sourceTree = "<group>"; };
 		96C71F941BEE5B1100CEE655 /* address_EN.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = address_EN.plist; sourceTree = "<group>"; };
 		96DC2C511BCF7CF500126AB6 /* libMobClickLibrary.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libMobClickLibrary.a; sourceTree = "<group>"; };
@@ -323,6 +337,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96553D871C85F58900F310B9 /* MobileCoreServices.framework in Frameworks */,
 				96105B111BDE932200F9BEFA /* CoreText.framework in Frameworks */,
 				96DC2C561BCF7E0800126AB6 /* libz.tbd in Frameworks */,
 				96DC2C541BCF7CF500126AB6 /* libMobClickLibrary.a in Frameworks */,
@@ -349,6 +364,7 @@
 		1B4F7B120EE7351ACEF659A5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				96553D861C85F58900F310B9 /* MobileCoreServices.framework */,
 				96105B101BDE932200F9BEFA /* CoreText.framework */,
 				96DC2C551BCF7E0800126AB6 /* libz.tbd */,
 				9601044B1BADC9EA00152908 /* MessageUI.framework */,
@@ -385,6 +401,7 @@
 		960103ED1BA8795500152908 /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				96553D881C85F69400F310B9 /* VPImageCropper */,
 				966666471BF72CF7008A5991 /* TWPhotoPicker */,
 				961C963B1BE61CBA008EDF91 /* SDCycleScrollView */,
 				96DC2C501BCF7CE700126AB6 /* UMeng */,
@@ -415,12 +432,16 @@
 				960103FC1BA879C800152908 /* UIImage+Color.m */,
 				960103FD1BA879C800152908 /* UIView+Layout.h */,
 				960103FE1BA879C800152908 /* UIView+Layout.m */,
+				96C62F371C873F4F0016FD10 /* NSString+Check.h */,
+				96C62F381C873F4F0016FD10 /* NSString+Check.m */,
 				CE2C57061BD37AC900DEAF32 /* NSString+Size.h */,
 				CE2C57071BD37AC900DEAF32 /* NSString+Size.m */,
 				962008831BEA442800173EA8 /* UIAlertView+AlertMessage.h */,
 				962008841BEA442800173EA8 /* UIAlertView+AlertMessage.m */,
 				9674F4CD1C5E5E8B00BFC1D3 /* NSDate+Calendar.h */,
 				9674F4CE1C5E5E8B00BFC1D3 /* NSDate+Calendar.m */,
+				96553D801C849DD900F310B9 /* UILabel+AttributeText.h */,
+				96553D811C849DD900F310B9 /* UILabel+AttributeText.m */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -653,6 +674,15 @@
 			path = RootNavViewController;
 			sourceTree = "<group>";
 		};
+		96553D881C85F69400F310B9 /* VPImageCropper */ = {
+			isa = PBXGroup;
+			children = (
+				96553D891C85F69F00F310B9 /* VPImageCropperViewController.h */,
+				96553D8A1C85F69F00F310B9 /* VPImageCropperViewController.m */,
+			);
+			path = VPImageCropper;
+			sourceTree = "<group>";
+		};
 		966144561BE129C7003BD75A /* Pet */ = {
 			isa = PBXGroup;
 			children = (
@@ -842,6 +872,8 @@
 				968C03F91C539B140061454D /* MineInfoCollectionHeaderView.m */,
 				968C03FB1C53A52F0061454D /* MineCollectionFooterView.h */,
 				968C03FC1C53A52F0061454D /* MineCollectionFooterView.m */,
+				96553D7C1C8330DF00F310B9 /* MineAddPeerCollectionViewCell.h */,
+				96553D7D1C8330DF00F310B9 /* MineAddPeerCollectionViewCell.m */,
 			);
 			path = Mine;
 			sourceTree = "<group>";
@@ -1026,6 +1058,7 @@
 				96A2D8D41BC032200016AE3F /* ApplicationDirectoryService.m in Sources */,
 				9666665F1BF72CF7008A5991 /* TWImageScrollView.m in Sources */,
 				CE2C570E1BD3889700DEAF32 /* HomeBottomView.m in Sources */,
+				96C62F391C873F4F0016FD10 /* NSString+Check.m in Sources */,
 				96E2F4A81BE3042900E6625B /* LayoutUtil.m in Sources */,
 				9674F4CC1C5E02C800BFC1D3 /* AddPeerView.m in Sources */,
 				968C03F41C5399BF0061454D /* MineCollectionViewFlowLayout.m in Sources */,
@@ -1038,6 +1071,7 @@
 				962008881BEA524D00173EA8 /* FillRegisterInfoViewController.m in Sources */,
 				9653C6A61BDCA31100D517C8 /* MomentDetailsHeaderView.m in Sources */,
 				961C964F1BE61D0B008EDF91 /* SDCollectionViewCell.m in Sources */,
+				96553D821C849DD900F310B9 /* UILabel+AttributeText.m in Sources */,
 				9608100B1BDFD11300F6F9E2 /* PeerDateFormatter.m in Sources */,
 				960104241BAB117200152908 /* AppModel.m in Sources */,
 				96E5CB2A1BB1A9C3005503CD /* PetsService.m in Sources */,
@@ -1061,6 +1095,7 @@
 				961C96511BE61D0B008EDF91 /* UIView+SDExtension.m in Sources */,
 				961C96381BE3CEBD008EDF91 /* LocationManager.m in Sources */,
 				968C03FA1C539B140061454D /* MineInfoCollectionHeaderView.m in Sources */,
+				96553D7E1C8330DF00F310B9 /* MineAddPeerCollectionViewCell.m in Sources */,
 				96E2F4A41BE278EB00E6625B /* PetDetailsHorizonCardFlowLayout.m in Sources */,
 				961C96501BE61D0B008EDF91 /* SDCycleScrollView.m in Sources */,
 				960104561BAE80C100152908 /* ValidationService.m in Sources */,
@@ -1071,6 +1106,7 @@
 				9674F4C91C5DFC0C00BFC1D3 /* AddPeerViewController.m in Sources */,
 				960071ED1C09A2CC00F7528D /* PhotoPickerViewController.m in Sources */,
 				96E2F4A11BE2768800E6625B /* PetDetailsCollectionViewCell.m in Sources */,
+				96553D8B1C85F69F00F310B9 /* VPImageCropperViewController.m in Sources */,
 				9653C6B81BDCF20400D517C8 /* RootNavViewController.m in Sources */,
 				9653C6B31BDCA32700D517C8 /* SendPhotoMomentViewController.m in Sources */,
 				960104141BA879F600152908 /* LoginViewController.m in Sources */,
@@ -1247,7 +1283,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",

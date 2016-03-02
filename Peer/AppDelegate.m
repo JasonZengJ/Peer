@@ -29,6 +29,8 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
+    
+    NSDate *startDate = [NSDate date];
     [[UINavigationBar appearance] setBackgroundImage:[[UIImage alloc] init] forBarMetrics:UIBarMetricsDefault];
     [[UINavigationBar appearance] setShadowImage:[[UIImage alloc] init]];
     
@@ -59,6 +61,8 @@
     self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:self.homeViewController];
     [self.window makeKeyAndVisible];
     
+    double deltaTime = [[NSDate date] timeIntervalSinceDate:startDate];
+    NSLog(@">>>>>>>>>>cost time = %f ms", deltaTime*1000);
     
     return YES;
 }

@@ -11,6 +11,7 @@
 @interface PeerNetworkManager : NSObject
 
 + (PeerNetworkManager *)shareInstance;
++ (PeerNetworkManager *)manager;
 
 - (void)securePostWithParams:(NSDictionary *)params apiPath:(NSString *)apiPath target:(id)target callBack:(SEL)callBack;
 - (void)securePostWithParams:(NSDictionary *)params apiPath:(NSString *)apiPath callBackBlock:(void(^)(id responseObject))callBackBlock;

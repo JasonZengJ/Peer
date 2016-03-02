@@ -8,9 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
+@class PetsModel;
+
+
 @interface MineCardCollectionViewCell : UICollectionViewCell
 
 
-- (void)configureWithData:(NSDictionary *)data;
+- (void)configureWithData:(PetsModel *)petsModel;
 
 @end

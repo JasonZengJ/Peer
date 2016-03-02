@@ -7,6 +7,7 @@
 //
 
 #import "PetsModel.h"
+#import "MomentModel.h"
 #import "NSDate+Calendar.h"
 
 @implementation PetsModel
@@ -33,6 +34,18 @@
         self.petsAvatar = [dict objectForKey:@"pets_avatar"];
         self.petsBreedId   = [dict objectForKey:@"pets_breed_id"];
         self.petsSpeciesId = [dict objectForKey:@"pets_species_id"];
+        self.createdTime   = [dict objectForKey:@"created_at"];
+        
+        if (dict[@"moments"] && [dict[@"moments"] count] > 0) {
+            
+            NSMutableArray *mutableArray = [NSMutableArray array];
+            for (NSDictionary *dataDic in dict[@"moments"]) {
+                MomentModel *momentsModel = [[MomentModel alloc] initWithDictionary:dataDic error:nil];
+                [mutableArray addObject:momentsModel];
+            }
+            self.momentsArray = mutableArray;
+            
+        }
         
     }
     return self;

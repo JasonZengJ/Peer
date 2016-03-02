@@ -11,7 +11,7 @@
 
 @interface MineCollectionFooterView ()
 
-@property(nonatomic,strong)UIView *footerView;
+@property(nonatomic,strong)UIView *contentView;
 @property(nonatomic,strong)UIImageView *addPeerImageView;
 @property(nonatomic,strong)UILabel *addPeerLabel;
 
@@ -29,32 +29,32 @@
 
 - (void)initSubviews {
     
-    [self addSubview:self.footerView];
-    [self.footerView addSubview:self.addPeerImageView];
-    [self.footerView addSubview:self.addPeerLabel];
+    [self addSubview:self.contentView];
+    [self.contentView addSubview:self.addPeerImageView];
+    [self.contentView addSubview:self.addPeerLabel];
     
 }
 
 - (void)layoutSubviews {
     
-    self.addPeerImageView.left = (self.footerView.width - 20.0f - self.addPeerLabel.width - self.addPeerImageView.width) / 2.0f;
-    self.addPeerImageView.centerY = self.height / 2.0f;
+    self.addPeerImageView.left = (self.contentView.width - 20.0f - self.addPeerLabel.width - self.addPeerImageView.width) / 2.0f;
+    self.addPeerImageView.centerY = self.contentView.height / 2.0f;
     
-    self.addPeerLabel.height   = self.height;
+    self.addPeerLabel.height   = self.contentView.height;
     self.addPeerLabel.left     = self.addPeerImageView.right + 20.0f;
     
 }
 
-- (UIView *)footerView {
-    if (!_footerView) {
-        _footerView = [[UIView alloc] initWithFrame:CGRectMake(10, 0, ScreenWidth - 20.0f, 50)];
-        _footerView.backgroundColor = [UIColor whiteColor];
-        _footerView.layer.shadowColor   = [UIColor blackColor].CGColor;
-        _footerView.layer.shadowOffset  = CGSizeMake(0.0, 0.0);
-        _footerView.layer.shadowOpacity = 0.1;
-        _footerView.layer.cornerRadius  = 3;
+- (UIView *)contentView {
+    if (!_contentView) {
+        _contentView = [[UIView alloc] initWithFrame:CGRectMake(10, 0, ScreenWidth - 20.0f, 50)];
+        _contentView.backgroundColor = [UIColor whiteColor];
+        _contentView.layer.shadowColor   = [UIColor blackColor].CGColor;
+        _contentView.layer.shadowOffset  = CGSizeMake(0.0, 0.0);
+        _contentView.layer.shadowOpacity = 0.1;
+        _contentView.layer.cornerRadius  = 3;
     }
-    return _footerView;
+    return _contentView;
 }
 
 - (UIImageView *)addPeerImageView {

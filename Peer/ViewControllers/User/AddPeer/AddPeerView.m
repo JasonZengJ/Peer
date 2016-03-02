@@ -13,7 +13,6 @@
 
 @interface AddPeerView ()
 
-@property(nonatomic,strong)UIImageView *petsAvatarImageView;
 @property(nonatomic) UIView *baseInfoView;
 @property(nonatomic) RegisterInfoViewCell *nicknameCell;
 @property(nonatomic) RegisterInfoViewCell *sexCell;
@@ -77,6 +76,15 @@
 }
 
 
+- (void)tapToChoosePetsAvatar:(UITapGestureRecognizer *)tapGR {
+    
+    if (self.delegate && [self.delegate respondsToSelector:@selector(tapToChoosePetsAvatar)]) {
+        
+        [self.delegate tapToChoosePetsAvatar];
+    }
+    
+}
+
 #pragma mark - -- Data Set
 
 - (void)setNickName:(NSString *)nickName {
@@ -121,6 +129,8 @@
         _petsAvatarImageView.centerX = self.width / 2;
         _petsAvatarImageView.layer.cornerRadius  = _petsAvatarImageView.height / 2;
         _petsAvatarImageView.layer.masksToBounds = YES;
+        _petsAvatarImageView.userInteractionEnabled = YES;
+        [_petsAvatarImageView addTapGestureWithTarget:self action:@selector(tapToChoosePetsAvatar:)];
     }
     return _petsAvatarImageView;
 }

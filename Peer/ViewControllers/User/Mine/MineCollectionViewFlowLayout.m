@@ -12,7 +12,7 @@
 
 - (void)prepareLayout {
     [super prepareLayout];
-    self.itemSize  = CGSizeMake((ScreenWidth - 30.0f) / 2, (ScreenWidth - 30.0f) / 2);
+    self.itemSize  = CGSizeMake((ScreenWidth - 30.0f) / 2, (ScreenWidth - 30.0f) / 2 + 10.0f);
 //    self.scrollDirection = UICollectionViewScrollDirectionHorizontal;
     self.sectionInset = UIEdgeInsetsMake(10.0, 10, 0, 10);
 //    self.minimumLineSpacing = ConvertiPhone5Or6pSize(25);

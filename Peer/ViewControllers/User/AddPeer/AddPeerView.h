@@ -27,11 +27,13 @@ typedef NS_ENUM(NSInteger,PetsSex) {
 
 @optional
 - (void)tapCellWithCellTag:(NSInteger)tag;
+- (void)tapToChoosePetsAvatar;
 
 @end
 
 @interface AddPeerView : UIView
 
+@property(nonatomic,strong)UIImageView *petsAvatarImageView;
 @property(nonatomic,weak)id<AddPeerViewDelegate> delegate;
 
 - (void)setNickName:(NSString *)nickName;

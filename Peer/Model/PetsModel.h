@@ -10,7 +10,7 @@
 
 @interface PetsModel : BaseModel
 
-@property(nonatomic) NSNumber *petsId;
+@property(nonatomic) NSNumber<Optional> *petsId;
 @property(nonatomic) NSString *petsName;
 @property(nonatomic) NSNumber *petsSex;
 @property(nonatomic) NSNumber *petsYear;
@@ -19,5 +19,8 @@
 @property(nonatomic) NSNumber *petsBreedId;
 @property(nonatomic) NSNumber *petsSpeciesId;
 @property(nonatomic) NSNumber *userId;
+@property(nonatomic) NSString<Optional> *createdTime;
+
+@property(nonatomic) NSArray *momentsArray;
 
 @end

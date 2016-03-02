@@ -45,6 +45,10 @@
     return [[PeerNetworkManager alloc] init];
 }
 
++ (PeerNetworkManager *)manager {
+    
+    return [[PeerNetworkManager alloc] init];
+}
 
 #pragma mark - -- HTTP POST
 - (void)postWithParams:(NSDictionary *)params apiPath:(NSString *)apiPath target:(id)target callBack:(SEL)callBack {

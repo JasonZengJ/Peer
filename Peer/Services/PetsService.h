@@ -29,5 +29,6 @@
 - (void)getAllPetsWithCallBackBlock:(void(^)(NSArray* allPets))callBackBlock;
 
 - (void)addOrUpdatePets:(PetsModel *)petsModel callBack:(void(^)(NSDictionary* responseObject))callBackBlock;
+- (void)getAllPetsWithMomentsCount:(NSInteger)momentsCount callBackBlock:(void (^)(NSArray *))callBackBlock;
 
 @end
