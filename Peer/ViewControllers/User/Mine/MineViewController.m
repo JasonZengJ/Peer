@@ -22,6 +22,7 @@
 #import "PetsModel.h"
 
 #import "AddPeerViewController.h"
+#import "PeerSettingsViewController.h"
 
 @interface MineViewController () <UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout>
 
@@ -100,7 +101,6 @@
     
 }
 
-
 - (void)viewWillAppear:(BOOL)animated {
     
     NSUserDefaults *userDefaluts = [NSUserDefaults standardUserDefaults];
@@ -111,8 +111,6 @@
     }
     
 }
-
-
 
 - (UIBarButtonItem *)rightBarButtonItem {
     
@@ -128,13 +126,14 @@
     
     UIBarButtonItem *barButton = [[UIBarButtonItem alloc] initWithCustomView:aButton];
     
-    
     return barButton;
     
 }
 
-
 - (void)rightNavbarButtonAction:(UIButton *)sender {
+    
+    PeerSettingsViewController *settingsViewController = [[PeerSettingsViewController alloc] init];
+    [self.navigationController pushViewController:settingsViewController animated:YES];
     
 }
 

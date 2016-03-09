@@ -49,6 +49,7 @@
 		962008851BEA442800173EA8 /* UIAlertView+AlertMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 962008841BEA442800173EA8 /* UIAlertView+AlertMessage.m */; };
 		962008881BEA524D00173EA8 /* FillRegisterInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 962008871BEA524D00173EA8 /* FillRegisterInfoViewController.m */; };
 		9620088B1BEA594500173EA8 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9620088D1BEA594500173EA8 /* Localizable.strings */; };
+		964DF2321C8BFF9500C26618 /* PeerInfoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 964DF2311C8BFF9500C26618 /* PeerInfoTableViewCell.m */; };
 		9653C6A51BDCA31100D517C8 /* MomentDetailsCommentTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9653C6991BDCA31100D517C8 /* MomentDetailsCommentTableViewCell.m */; };
 		9653C6A61BDCA31100D517C8 /* MomentDetailsHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9653C69B1BDCA31100D517C8 /* MomentDetailsHeaderView.m */; };
 		9653C6A71BDCA31100D517C8 /* MomentDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9653C69D1BDCA31100D517C8 /* MomentDetailsViewController.m */; };
@@ -100,6 +101,9 @@
 		96BB1B8C1BECF59B00DAEBE1 /* BaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 96BB1B8B1BECF59B00DAEBE1 /* BaseModel.m */; };
 		96BB1B8F1BED109500DAEBE1 /* ca.cer in Resources */ = {isa = PBXBuildFile; fileRef = 96BB1B8E1BED102600DAEBE1 /* ca.cer */; };
 		96C62F391C873F4F0016FD10 /* NSString+Check.m in Sources */ = {isa = PBXBuildFile; fileRef = 96C62F381C873F4F0016FD10 /* NSString+Check.m */; };
+		96C62F431C8877850016FD10 /* PeerSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96C62F421C8877850016FD10 /* PeerSettingsViewController.m */; };
+		96C62F4A1C887B8A0016FD10 /* PeerInfoTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 96C62F491C887B8A0016FD10 /* PeerInfoTableView.m */; };
+		96C62F4D1C8884F70016FD10 /* PeerInfoTableSectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 96C62F4C1C8884F70016FD10 /* PeerInfoTableSectionView.m */; };
 		96C71F951BEE5B1100CEE655 /* address_CN.plist in Resources */ = {isa = PBXBuildFile; fileRef = 96C71F931BEE5B1100CEE655 /* address_CN.plist */; };
 		96C71F961BEE5B1100CEE655 /* address_EN.plist in Resources */ = {isa = PBXBuildFile; fileRef = 96C71F941BEE5B1100CEE655 /* address_EN.plist */; };
 		96DC2C541BCF7CF500126AB6 /* libMobClickLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 96DC2C511BCF7CF500126AB6 /* libMobClickLibrary.a */; };
@@ -112,6 +116,7 @@
 		96E5CB2A1BB1A9C3005503CD /* PetsService.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E5CB291BB1A9C3005503CD /* PetsService.m */; };
 		96E5CB2D1BB1A9EA005503CD /* PetsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E5CB2C1BB1A9EA005503CD /* PetsModel.m */; };
 		96E9C6951C4550C200256942 /* MineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E9C6941C4550C200256942 /* MineViewController.m */; };
+		96FBDCFA1C9089090078B390 /* UIView+RoundBorderShadow.m in Sources */ = {isa = PBXBuildFile; fileRef = 96FBDCF91C9089080078B390 /* UIView+RoundBorderShadow.m */; };
 		CE2C57081BD37AC900DEAF32 /* NSString+Size.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2C57071BD37AC900DEAF32 /* NSString+Size.m */; };
 		CE2C570B1BD3885800DEAF32 /* HomeHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2C570A1BD3885800DEAF32 /* HomeHeaderView.m */; };
 		CE2C570E1BD3889700DEAF32 /* HomeBottomView.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2C570D1BD3889700DEAF32 /* HomeBottomView.m */; };
@@ -206,6 +211,8 @@
 		962008871BEA524D00173EA8 /* FillRegisterInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FillRegisterInfoViewController.m; sourceTree = "<group>"; };
 		9620088C1BEA594500173EA8 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		9620088E1BEA594A00173EA8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		964DF2301C8BFF9500C26618 /* PeerInfoTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PeerInfoTableViewCell.h; sourceTree = "<group>"; };
+		964DF2311C8BFF9500C26618 /* PeerInfoTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PeerInfoTableViewCell.m; sourceTree = "<group>"; };
 		9653C6981BDCA31100D517C8 /* MomentDetailsCommentTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MomentDetailsCommentTableViewCell.h; sourceTree = "<group>"; };
 		9653C6991BDCA31100D517C8 /* MomentDetailsCommentTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MomentDetailsCommentTableViewCell.m; sourceTree = "<group>"; };
 		9653C69A1BDCA31100D517C8 /* MomentDetailsHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MomentDetailsHeaderView.h; sourceTree = "<group>"; };
@@ -301,6 +308,12 @@
 		96BB1B8E1BED102600DAEBE1 /* ca.cer */ = {isa = PBXFileReference; lastKnownFileType = file; path = ca.cer; sourceTree = "<group>"; };
 		96C62F371C873F4F0016FD10 /* NSString+Check.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Check.h"; sourceTree = "<group>"; };
 		96C62F381C873F4F0016FD10 /* NSString+Check.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Check.m"; sourceTree = "<group>"; };
+		96C62F411C8877850016FD10 /* PeerSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PeerSettingsViewController.h; sourceTree = "<group>"; };
+		96C62F421C8877850016FD10 /* PeerSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PeerSettingsViewController.m; sourceTree = "<group>"; };
+		96C62F481C887B8A0016FD10 /* PeerInfoTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PeerInfoTableView.h; sourceTree = "<group>"; };
+		96C62F491C887B8A0016FD10 /* PeerInfoTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PeerInfoTableView.m; sourceTree = "<group>"; };
+		96C62F4B1C8884F70016FD10 /* PeerInfoTableSectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PeerInfoTableSectionView.h; sourceTree = "<group>"; };
+		96C62F4C1C8884F70016FD10 /* PeerInfoTableSectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PeerInfoTableSectionView.m; sourceTree = "<group>"; };
 		96C71F931BEE5B1100CEE655 /* address_CN.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = address_CN.plist; sourceTree = "<group>"; };
 		96C71F941BEE5B1100CEE655 /* address_EN.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = address_EN.plist; sourceTree = "<group>"; };
 		96DC2C511BCF7CF500126AB6 /* libMobClickLibrary.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libMobClickLibrary.a; sourceTree = "<group>"; };
@@ -323,6 +336,8 @@
 		96E5CB2C1BB1A9EA005503CD /* PetsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PetsModel.m; sourceTree = "<group>"; };
 		96E9C6931C4550C200256942 /* MineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineViewController.h; sourceTree = "<group>"; };
 		96E9C6941C4550C200256942 /* MineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineViewController.m; sourceTree = "<group>"; };
+		96FBDCF81C9089080078B390 /* UIView+RoundBorderShadow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+RoundBorderShadow.h"; sourceTree = "<group>"; };
+		96FBDCF91C9089080078B390 /* UIView+RoundBorderShadow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+RoundBorderShadow.m"; sourceTree = "<group>"; };
 		A1FE296EA4C7788C849801D9 /* Pods-Peer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Peer.release.xcconfig"; path = "Pods/Target Support Files/Pods-Peer/Pods-Peer.release.xcconfig"; sourceTree = "<group>"; };
 		CE2C57061BD37AC900DEAF32 /* NSString+Size.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Size.h"; sourceTree = "<group>"; };
 		CE2C57071BD37AC900DEAF32 /* NSString+Size.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Size.m"; sourceTree = "<group>"; };
@@ -442,6 +457,8 @@
 				9674F4CE1C5E5E8B00BFC1D3 /* NSDate+Calendar.m */,
 				96553D801C849DD900F310B9 /* UILabel+AttributeText.h */,
 				96553D811C849DD900F310B9 /* UILabel+AttributeText.m */,
+				96FBDCF81C9089080078B390 /* UIView+RoundBorderShadow.h */,
+				96FBDCF91C9089080078B390 /* UIView+RoundBorderShadow.m */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -487,6 +504,7 @@
 		9601040B1BA879F600152908 /* User */ = {
 			isa = PBXGroup;
 			children = (
+				96C62F401C8877610016FD10 /* Settings */,
 				9674F4C61C5DFBFC00BFC1D3 /* AddPeer */,
 				96E9C6921C454FE300256942 /* Mine */,
 				960104281BAB1C2E00152908 /* Register */,
@@ -625,6 +643,7 @@
 		961F04991BDA90E9002A475E /* Framework */ = {
 			isa = PBXGroup;
 			children = (
+				96C62F471C887B410016FD10 /* PeerInfoTableView */,
 				96E2F4A51BE3042900E6625B /* LayoutUtils */,
 				961C96341BE3CE79008EDF91 /* LocationManager */,
 				961C962C1BE3CB3C008EDF91 /* PeerLoadingImageView */,
@@ -813,6 +832,28 @@
 				96A2D8DC1BC119C70016AE3F /* OSSFileManager.m */,
 			);
 			path = OSS1.3;
+			sourceTree = "<group>";
+		};
+		96C62F401C8877610016FD10 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				96C62F411C8877850016FD10 /* PeerSettingsViewController.h */,
+				96C62F421C8877850016FD10 /* PeerSettingsViewController.m */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		96C62F471C887B410016FD10 /* PeerInfoTableView */ = {
+			isa = PBXGroup;
+			children = (
+				96C62F481C887B8A0016FD10 /* PeerInfoTableView.h */,
+				96C62F491C887B8A0016FD10 /* PeerInfoTableView.m */,
+				96C62F4B1C8884F70016FD10 /* PeerInfoTableSectionView.h */,
+				96C62F4C1C8884F70016FD10 /* PeerInfoTableSectionView.m */,
+				964DF2301C8BFF9500C26618 /* PeerInfoTableViewCell.h */,
+				964DF2311C8BFF9500C26618 /* PeerInfoTableViewCell.m */,
+			);
+			path = PeerInfoTableView;
 			sourceTree = "<group>";
 		};
 		96DC2C461BCF5F3200126AB6 /* Peer */ = {
@@ -1037,6 +1078,7 @@
 				960103F51BA8795500152908 /* OpenUDID.m in Sources */,
 				961C962F1BE3CB4E008EDF91 /* PeerLoadingImageView.m in Sources */,
 				CE2C570B1BD3885800DEAF32 /* HomeHeaderView.m in Sources */,
+				96C62F431C8877850016FD10 /* PeerSettingsViewController.m in Sources */,
 				960104081BA879E200152908 /* AppService.m in Sources */,
 				960104201BA9CAC300152908 /* UserService.m in Sources */,
 				960104021BA879C800152908 /* UIView+Layout.m in Sources */,
@@ -1065,6 +1107,7 @@
 				9656F9481BD145240043FA38 /* HorizonCardFlowLayout.m in Sources */,
 				96E5CB2D1BB1A9EA005503CD /* PetsModel.m in Sources */,
 				96E2F49E1BE2619300E6625B /* PetDetailsHeaderView.m in Sources */,
+				96C62F4A1C887B8A0016FD10 /* PeerInfoTableView.m in Sources */,
 				9601042B1BAB1C4600152908 /* PhoneVerifyViewController.m in Sources */,
 				960104131BA879F600152908 /* LoginView.m in Sources */,
 				9653C6B21BDCA32700D517C8 /* SendMomentViewController.m in Sources */,
@@ -1075,14 +1118,17 @@
 				9608100B1BDFD11300F6F9E2 /* PeerDateFormatter.m in Sources */,
 				960104241BAB117200152908 /* AppModel.m in Sources */,
 				96E5CB2A1BB1A9C3005503CD /* PetsService.m in Sources */,
+				964DF2321C8BFF9500C26618 /* PeerInfoTableViewCell.m in Sources */,
 				968B3BD41BCAA21D00B8723A /* FileUploadService.m in Sources */,
 				961C964D1BE61D0B008EDF91 /* TADotView.m in Sources */,
 				960810041BDFBB6F00F6F9E2 /* MomentDetailsBottomView.m in Sources */,
 				966144591BE129E4003BD75A /* PetDetailsViewController.m in Sources */,
 				96BB1B8C1BECF59B00DAEBE1 /* BaseModel.m in Sources */,
 				968C03F11C53955F0061454D /* MineCardCollectionViewCell.m in Sources */,
+				96C62F4D1C8884F70016FD10 /* PeerInfoTableSectionView.m in Sources */,
 				961C964E1BE61D0B008EDF91 /* TAPageControl.m in Sources */,
 				CE2C57081BD37AC900DEAF32 /* NSString+Size.m in Sources */,
+				96FBDCFA1C9089090078B390 /* UIView+RoundBorderShadow.m in Sources */,
 				960104151BA879F600152908 /* ViewController.m in Sources */,
 				967E505F1BE7C0100054B1DC /* RegisterInfoViewCell.m in Sources */,
 				9653C6B41BDCA32700D517C8 /* SendVideoMomentViewController.m in Sources */,

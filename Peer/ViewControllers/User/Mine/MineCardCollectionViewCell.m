@@ -94,6 +94,10 @@
 
 - (void)prepareForReuse {
     
+    for (UIImageView *imageView in self.imageViewArray) {
+        imageView.image = [UIImage imageNamed:@"MinePeerMoment"];
+    }
+    
 }
 
 - (UIImageView *)petsIconImageView {
