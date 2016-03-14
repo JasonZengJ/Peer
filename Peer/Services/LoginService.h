@@ -29,7 +29,7 @@
 - (void)confirmVerificationCode:(NSString *)veryficationCode result:(void(^)(BOOL isSuccess))result;
 - (void)registerWithUserModel:(UserModel *)userModel;
 - (void)persistUserData:(NSDictionary *)userData;
-- (void)clearUserData;
++ (void)clearUserData;
 
 + (UserModel *)currentUser;
 

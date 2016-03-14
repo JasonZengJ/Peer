@@ -10,10 +10,8 @@
 #import "RegisterInfoView.h"
 #import "LoginService.h"
 #import "NSString+Size.h"
-#import "UIAlertView+AlertMessage.h"
 #import "FileUploadService.h"
 #import <UIImageView+WebCache.h>
-
 #import "FillRegisterInfoViewController.h"
 
 @interface RegisterInfoViewController () <RegisterInfoViewDelegate,LoginServiceDelegate,FillRegisterInfoViewControllerDelegate,UIPickerViewDataSource,UIPickerViewDelegate>
@@ -175,12 +173,12 @@
 - (void)clickedDoneButton {
     
     if (!self.user.nickname || [self.user.nickname isEqualToString:@""]) {
-        [UIAlertView alertWithMessage:@"请输入昵称"];
+        [self alertWithMessage:@"请输入昵称"];
         return;
     }
     
     if (!self.user.sex || [self.user.sex isEqualToNumber:@(0)]) {
-        [UIAlertView alertWithMessage:@"请选择性别"];
+        [self alertWithMessage:@"请选择性别"];
         return;
     }
     
@@ -200,15 +198,19 @@
     
 }
 
+
+
+
 #pragma mark - -- <LoginServiceDelegate>
 
 - (void)registerCompleteWithError:(NSError *)error {
     
     if (!error) {
-        [UIAlertView alertWithMessage:@"注册成功"];
-        [self dismissViewControllerAnimated:YES completion:nil];
+        [self alertWithMessage:@"注册成功" callback:^{
+            [self dismissViewControllerAnimated:YES completion:nil];
+        }];
     } else {
-        [UIAlertView alertWithMessage:error.domain];
+        [self alertWithMessage:error.domain];
     }
     
 }

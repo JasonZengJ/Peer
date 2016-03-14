@@ -27,6 +27,36 @@
     [self.navigationController pushViewController:sendPhotoMomentViewController animated:YES];
 }
 
+- (UIBarButtonItem *)leftBackBarButtonItem {
+    
+    UIButton *aButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    UIImage *backImage = [UIImage imageNamed:@"SendMomentCancelIcon"];
+    
+    aButton.frame= CGRectMake(0.0f, 0.0f,ConvertiPhone5Or6pSize(25), ConvertiPhone5Or6pSize(25));
+    [aButton setImage:backImage forState:UIControlStateNormal];
+    [aButton addTarget:self action:@selector(backButtonAction:) forControlEvents:UIControlEventTouchUpInside];
+    [aButton setImageEdgeInsets:UIEdgeInsetsMake(0.0, - 15.0f, 0.0, 0.0)];
+    
+    UIBarButtonItem *barButton = [[UIBarButtonItem alloc] initWithCustomView:aButton];
+    
+    return barButton;
+}
+
+- (UIBarButtonItem *)rightBarButtonItem {
+    UIButton *aButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    
+    aButton.frame= CGRectMake(-2, 0.0f,ConvertiPhone5Or6pSize(100), ConvertiPhone5Or6pSize(25));
+    aButton.titleLabel.font = [UIFont systemFontOfSize:14.0f];
+    [aButton setTitle:@"下一步" forState:UIControlStateNormal];
+    [aButton setTitleColor:[UIColor colorWithHex:0xFFB600] forState:UIControlStateNormal];
+    [aButton addTarget:self action:@selector(rightNavbarButtonAction:) forControlEvents:UIControlEventTouchUpInside];
+    aButton.width = [aButton.titleLabel.text sizeWithAttributes:@{NSFontAttributeName:aButton.titleLabel.font}].width;
+    self.rightBarButton = aButton;
+    
+    UIBarButtonItem *barButton = [[UIBarButtonItem alloc] initWithCustomView:aButton];
+    return barButton;
+}
+
 - (void)backAction {
     
 }

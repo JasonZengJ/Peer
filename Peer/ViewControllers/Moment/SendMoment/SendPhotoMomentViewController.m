@@ -17,6 +17,9 @@
 
 @implementation SendPhotoMomentViewController
 
+- (BOOL)prefersStatusBarHidden {
+    return YES;
+}
 
 - (void)loadView {
     [super loadView];

@@ -14,7 +14,6 @@
 #import "ValidationService.h"
 #import "LoginService.h"
 #import "AppService.h"
-#import "UIAlertView+AlertMessage.h"
 #import "UserModel.h"
 
 @interface PhoneVerifyViewController () <PhoneVerifyViewDelegate>
@@ -89,12 +88,12 @@
     NSString *password   = self.phoneVerifyView.passwordTextField.text;
     
     if (![ValidationService checkNumber:verifyCode]) {
-        [UIAlertView alertWithMessage:@"请填写正确的验证码"];
+        [self alertWithMessage:@"请填写正确的验证码"];
         return;
     }
     
     if (password.length < 6) {
-        [UIAlertView alertWithMessage:@"密码不能少于6位数"];
+        [self alertWithMessage:@"密码不能少于6位数"];
         return;
     }
     
@@ -111,7 +110,7 @@
                 [self.navigationController pushViewController:registerInfoViewController animated:YES];
             });
         } else {
-            [UIAlertView alertWithMessage:@"验证码验证失败"];
+            [self alertWithMessage:@"验证码验证失败"];
         }
         
     }];
@@ -125,7 +124,7 @@
 - (void)clickedGetVerifyCodeButtonWithPhone:(NSString *)phone {
     
     if (![ValidationService checkPhoneNumber:phone]) {
-        [UIAlertView alertWithMessage:@"请填写正确的手机号码"];
+        [self alertWithMessage:@"请填写正确的手机号码"];
         return;
     }
     
@@ -133,7 +132,7 @@
     [self.loginService getVerificationCodeWithPhone:phone result:^(NSError *error) {
         DLog(@"发送验证码接收到回调");
         if (error) {
-            [UIAlertView alertWithMessage:error.domain];
+            [self alertWithMessage:error.domain];
         } else {
             self.user = [[UserModel alloc] init];
             self.user.phone = phone;

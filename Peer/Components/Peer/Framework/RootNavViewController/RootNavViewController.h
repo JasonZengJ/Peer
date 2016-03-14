@@ -26,5 +26,7 @@ typedef NS_ENUM(NSInteger,BackActionType) {
 - (void)backButtonAction:(UIButton *)sender;
 
 - (void)rightNavbarButtonAction:(UIButton *)sender;
+- (void)alertWithMessage:(NSString *)message;
+- (void)alertWithMessage:(NSString *)message callback:(void(^)())callback;
 
 @end

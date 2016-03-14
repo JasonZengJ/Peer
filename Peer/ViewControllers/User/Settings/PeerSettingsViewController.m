@@ -9,6 +9,8 @@
 #import "PeerSettingsViewController.h"
 #import "PeerInfoTableView.h"
 #import "UIView+RoundBorderShadow.h"
+#import "LoginService.h"
+#import "UIAlertController+AlertMessage.h"
 
 typedef NS_ENUM(NSInteger,SettingSection) {
     SettingSectionSecurity,
@@ -64,18 +66,11 @@ typedef NS_ENUM(NSInteger,FeedRow) {
 }
 
 - (void)logoutAction {
-    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"温馨提示" message:@"您确定要退出登陆吗？" preferredStyle:UIAlertControllerStyleAlert];
-    
-    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil];
-    UIAlertAction *alertAction = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-        
-        NSLog(@"log out");
-        
+    UIAlertController *alertController = [UIAlertController defaultAlertWithSubtitle:@"您确定要退出登陆吗？" confirmAction:^(UIAlertAction *action) {
+        [LoginService clearUserData];
+        [self dismissViewControllerAnimated:YES completion:nil];
     }];
-    [alertController addAction:cancelAction];
-    [alertController addAction:alertAction];
     [self presentViewController:alertController animated:YES completion:nil];
-    
 }
 
 #pragma mark - -- <PeerInfoTableViewDelegate>

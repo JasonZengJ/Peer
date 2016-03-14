@@ -7,6 +7,7 @@
 //
 
 #import "RootNavViewController.h"
+#import "UIAlertController+AlertMessage.h"
 
 /**
  *  自定义控制器的pop转场动画
@@ -172,6 +173,18 @@
         
     }
     
+}
+
+- (void)alertWithMessage:(NSString *)message {
+    UIAlertController *alertController = [UIAlertController defaultAlertWithSubtitle:message confirmAction:nil];
+    [self presentViewController:alertController animated:YES completion:nil];
+}
+
+- (void)alertWithMessage:(NSString *)message callback:(void(^)())callback {
+    UIAlertController *alertController = [UIAlertController defaultAlertWithSubtitle:message confirmAction:^(UIAlertAction *action) {
+        callback();
+    }];
+    [self presentViewController:alertController animated:YES completion:nil];
 }
 
 

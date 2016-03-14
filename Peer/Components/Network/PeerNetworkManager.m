@@ -210,7 +210,10 @@
 - (void)performCallBack:(SEL)selector withTarget:(id)target data:(NSDictionary *)data
 {
     if ([target respondsToSelector:selector]) {
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Warc-performSelector-leaks"
         [target performSelector:selector withObject:data];
+#pragma clang diagnostic pop
     }
 }
 

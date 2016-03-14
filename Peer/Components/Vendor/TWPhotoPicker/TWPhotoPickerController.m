@@ -38,8 +38,6 @@
     return YES;
 }
 
-
-
 #pragma mark - UICollectionViewDataSource
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
@@ -105,8 +103,8 @@
             }
             
             CGRect collectionFrame = self.collectionView.frame;
-            collectionFrame.origin.y = CGRectGetMaxY(topFrame);
-            collectionFrame.size.height = CGRectGetHeight(self.view.bounds) - CGRectGetMaxY(topFrame);
+            collectionFrame.origin.y = CGRectGetMaxY(topFrame) - 44.0f;
+            collectionFrame.size.height = CGRectGetHeight(self.view.bounds) - CGRectGetMaxY(topFrame) + 44.0f;
             [UIView animateWithDuration:.3f animations:^{
                 self.topView.frame = topFrame;
                 self.collectionView.frame = collectionFrame;
@@ -125,8 +123,8 @@
             topFrame.origin.y = translation.y + beginOriginY;
             
             CGRect collectionFrame = self.collectionView.frame;
-            collectionFrame.origin.y = CGRectGetMaxY(topFrame);
-            collectionFrame.size.height = CGRectGetHeight(self.view.bounds) - CGRectGetMaxY(topFrame);
+            collectionFrame.origin.y = CGRectGetMaxY(topFrame) - 44.0f;
+            collectionFrame.size.height = CGRectGetHeight(self.view.bounds) - CGRectGetMaxY(topFrame) + 44.0f;
             
             if (topFrame.origin.y <= 0 && (topFrame.origin.y >= -(CGRectGetHeight(self.topView.bounds)-20-44))) {
                 self.topView.frame = topFrame;
@@ -145,8 +143,8 @@
     topFrame.origin.y = topFrame.origin.y == 0 ? -(CGRectGetHeight(self.topView.bounds)-20-44) : 0;
     
     CGRect collectionFrame = self.collectionView.frame;
-    collectionFrame.origin.y = CGRectGetMaxY(topFrame);
-    collectionFrame.size.height = CGRectGetHeight(self.view.bounds) - CGRectGetMaxY(topFrame);
+    collectionFrame.origin.y = CGRectGetMaxY(topFrame) - 44.0f;
+    collectionFrame.size.height = CGRectGetHeight(self.view.bounds) - CGRectGetMaxY(topFrame) + 44.0f;
     [UIView animateWithDuration:.3f animations:^{
         self.topView.frame = topFrame;
         self.collectionView.frame = collectionFrame;
@@ -179,16 +177,15 @@
 
 - (UIView *)topView {
     if (_topView == nil) {
-        CGFloat handleHeight = 64.0f;
-        CGRect rect = CGRectMake(0, 0, CGRectGetWidth(self.view.bounds), CGRectGetWidth(self.view.bounds)+handleHeight*2);
+        CGFloat handleHeight = 40.0f;
+        CGRect rect = CGRectMake(0, 0, CGRectGetWidth(self.view.bounds), CGRectGetWidth(self.view.bounds) * 1.4);
         self.topView = [[UIView alloc] initWithFrame:rect];
         self.topView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleBottomMargin;
-        self.topView.backgroundColor = [UIColor clearColor];
         self.topView.clipsToBounds = YES;
         
         rect = CGRectMake(0, 0, CGRectGetWidth(self.topView.bounds), handleHeight);
         UIView *navView = [[UIView alloc] initWithFrame:rect];//26 29 33
-//        navView.backgroundColor = [[UIColor colorWithRed:26.0/255 green:29.0/255 blue:33.0/255 alpha:1] colorWithAlphaComponent:.8f];
+        navView.backgroundColor = [UIColor colorWithHex:0xfafafa];
         [self.topView addSubview:navView];
         
         rect = CGRectMake(0, 0, 60, CGRectGetHeight(navView.bounds));
@@ -201,11 +198,11 @@
         
         rect = CGRectMake((CGRectGetWidth(navView.bounds)-100)/2, 0, 100, CGRectGetHeight(navView.bounds));
         UILabel *titleLabel = [[UILabel alloc] initWithFrame:rect];
-        titleLabel.text = @"SELECT";
+        titleLabel.text = @"相册";
         titleLabel.textAlignment = NSTextAlignmentCenter;
         titleLabel.backgroundColor = [UIColor clearColor];
-        titleLabel.textColor = [UIColor whiteColor];
-        titleLabel.font = [UIFont boldSystemFontOfSize:18.0f];
+        titleLabel.textColor = [UIColor colorWithHex:0x4c4c4c];
+        titleLabel.font = [UIFont boldSystemFontOfSize:17.0f];
         [navView addSubview:titleLabel];
         
         rect = CGRectMake(CGRectGetWidth(navView.bounds)-80, 0, 80, CGRectGetHeight(navView.bounds));
@@ -216,9 +213,9 @@
 //        [cropBtn addTarget:self action:@selector(cropAction) forControlEvents:UIControlEventTouchUpInside];
 //        [navView addSubview:cropBtn];
         
-        rect = CGRectMake(0, CGRectGetHeight(self.topView.bounds)-handleHeight, CGRectGetWidth(self.topView.bounds), handleHeight);
+        rect = CGRectMake(0, CGRectGetHeight(self.topView.bounds)-handleHeight + 5.0f, CGRectGetWidth(self.topView.bounds), handleHeight - 5.0f);
         UIView *dragView = [[UIView alloc] initWithFrame:rect];
-        dragView.backgroundColor = navView.backgroundColor;
+        dragView.backgroundColor  = [UIColor colorWithHex:0xE6E6E6];
         dragView.autoresizingMask = UIViewAutoresizingFlexibleTopMargin;
         [self.topView addSubview:dragView];
         
@@ -236,7 +233,7 @@
         
         [tapGesture requireGestureRecognizerToFail:panGesture];
         
-        rect = CGRectMake(0, handleHeight, CGRectGetWidth(self.topView.bounds), CGRectGetHeight(self.topView.bounds)-handleHeight*2);
+        rect = CGRectMake(0, handleHeight, CGRectGetWidth(self.topView.bounds), CGRectGetHeight(self.topView.bounds)-handleHeight*2 + 5.0f);
         self.imageScrollView = [[TWImageScrollView alloc] initWithFrame:rect];
         [self.topView addSubview:self.imageScrollView];
         [self.topView sendSubviewToBack:self.imageScrollView];
@@ -260,7 +257,7 @@
         layout.minimumInteritemSpacing      = spacing;
         layout.minimumLineSpacing           = spacing;
         
-        CGRect rect = CGRectMake(0, CGRectGetMaxY(self.topView.frame), CGRectGetWidth(self.view.bounds), CGRectGetHeight(self.view.bounds)-CGRectGetHeight(self.topView.bounds));
+        CGRect rect = CGRectMake(0, CGRectGetMaxY(self.topView.frame) - 44.0f , CGRectGetWidth(self.view.bounds), CGRectGetHeight(self.view.bounds)-CGRectGetHeight(self.topView.bounds) + 44.0f);
         _collectionView = [[UICollectionView alloc] initWithFrame:rect collectionViewLayout:layout];
         _collectionView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
         _collectionView.dataSource = self;
