@@ -20,6 +20,11 @@
     // Put setup code here. This method is called before the invocation of each test method in the class.
 //    DLog(@"test setup");
     
+    
+    [[[XCUIApplication alloc] init] launch];
+    
+    
+    
 }
 
 - (void)tearDown {
@@ -29,6 +34,8 @@
 
 - (void)testLoadingAddress {
     
+    
+    XCUIApplication *app = [XCUIApplication new];
     
     NSURL *url = [[NSBundle mainBundle] URLForResource:@"Address_CN" withExtension:@"plist"];
    

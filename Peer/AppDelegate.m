@@ -62,7 +62,7 @@
     [self.window makeKeyAndVisible];
     
     double deltaTime = [[NSDate date] timeIntervalSinceDate:startDate];
-    NSLog(@">>>>>>>>>>cost time = %f ms", deltaTime*1000);
+    DLog(@">>>>>>>>>>cost time = %f ms", deltaTime*1000);
     
     return YES;
 }
