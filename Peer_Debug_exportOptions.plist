@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+        <key>teamID</key>
+        <string>7K4673R67D</string>
+        <key>method</key>
+        <string>development</string>
+        <key>manifest</key>
+        <dict>
+        	<key>appURL</key>
+        	<string>https://localhost:3000/MyCard.ipa</string>
+        	<key>displayImageURL</key>
+        	<string>https://localhost:3000/MyCard_57x57.png</string>
+        	<key>fullSizeImageURL</key>
+        	<string>https://localhost:3000/MyCard_512x512.jpg</string>
+        </dict>
+        <key>uploadSymbols</key>
+        <true/>
+</dict>
+</plist>
+
