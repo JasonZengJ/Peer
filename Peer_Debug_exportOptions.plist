@@ -7,14 +7,14 @@
         <key>method</key>
         <string>development</string>
         <key>manifest</key>
-        <dict>
-        	<key>appURL</key>
-        	<string>https://localhost:3000/MyCard.ipa</string>
-        	<key>displayImageURL</key>
-        	<string>https://localhost:3000/MyCard_57x57.png</string>
-        	<key>fullSizeImageURL</key>
-        	<string>https://localhost:3000/MyCard_512x512.jpg</string>
-        </dict>
+<dict>
+		<key>appURL</key>
+		<string>https://172.20.218.139.:3001/iPA//iBuildTest_iBuildTest_v1.0.0_2016-06-29_11-10-23/iBuildTest.ipa</string>
+		<key>displayImageURL</key>
+		<string>https://172.20.218.139.:3001/assets/Peer_57x57.png</string>
+		<key>fullSizeImageURL</key>
+		<string>https://172.20.218.139.:3001/assets/Peer_57x57.jpg</string>
+	</dict>
         <key>uploadSymbols</key>
         <true/>
 </dict>
